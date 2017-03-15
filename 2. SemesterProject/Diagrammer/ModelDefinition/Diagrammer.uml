@@ -978,7 +978,88 @@
         Id="10717453-3263-4e0e-ac25-7cdfd909180f"
         name="Restaurant"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="e0c41320-c21e-4389-878f-b8387bd8728a"
+            isDerived="false"
+            sourceEndRoleName="Restaurant"
+            targetEndRoleName="Levering/Hentning"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f77e55ee-d6f3-4da5-9e0d-e9c74d8b72ee"
+              LastKnownName="Levering/Hentning"
+              LastKnownLocation="Diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e825d557-4bca-4ef8-8f76-e7aafb88f17f"
+                  name="Restaurant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6e856c80-bb63-49c2-820d-07a3b0e981f6"
+                  name="Levering/Hentning"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="3f65cb41-46ad-4207-83d4-160a105e67a2"
+            isDerived="false"
+            sourceEndRoleName="Restaurant"
+            targetEndRoleName="Ordrebekræftelse"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="936becd2-b5b1-42fa-94a0-421f9f4de141"
+              LastKnownName="Ordrebekræftelse"
+              LastKnownLocation="Diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3a5f7471-ef07-412b-a923-67997a49c712"
+                  name="Restaurant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8222a49c-6af4-4562-b6d9-d8780f311b29"
+                  name="Ordrebekræftelse"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <actor

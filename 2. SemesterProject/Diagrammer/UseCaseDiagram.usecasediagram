@@ -118,6 +118,40 @@
     <useCaseModelRootHasTypes>
       <actor Id="916f2af8-3542-4706-8319-413e7849291d" name="Restaurant" isAbstract="false" isLeaf="false">
         <elementDefinition Id="10717453-3263-4e0e-ac25-7cdfd909180f" />
+        <targetEnds>
+          <association Id="7efc319f-1d59-4955-8018-e9d8662c07b7" isDerived="false" sourceEndRoleName="Restaurant" targetEndRoleName="Levering/Hentning" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c58048ab-aa82-40a5-a802-c3879d04e26f" LastKnownName="Levering/Hentning" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ea6e2d35-3382-4a9b-8d99-f552051a7715" name="Restaurant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e825d557-4bca-4ef8-8f76-e7aafb88f17f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2927d4b9-8a43-4fae-bc85-87bb0fa5c617" name="Levering/Hentning" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6e856c80-bb63-49c2-820d-07a3b0e981f6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e0c41320-c21e-4389-878f-b8387bd8728a" />
+          </association>
+          <association Id="3eb383e4-9ac6-49ef-8592-5954858356de" isDerived="false" sourceEndRoleName="Restaurant" targetEndRoleName="Ordrebekræftelse" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="deaf80ee-a4d6-43c1-b166-afe423fdee47" LastKnownName="Ordrebekræftelse" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6340f0d5-f97c-4c0f-96b7-0a6b84fd3baf" name="Restaurant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3a5f7471-ef07-412b-a923-67997a49c712" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2332249a-9e2b-4a75-9f19-010114bd3f9d" name="Ordrebekræftelse" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8222a49c-6af4-4562-b6d9-d8780f311b29" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3f65cb41-46ad-4207-83d4-160a105e67a2" />
+          </association>
+        </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
     <packageHasNamedElement>
