@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="4de239bc-7035-4d7e-806a-64e465e6ecf0"
   name="Diagrammer" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -17,28 +17,1156 @@
         name="StandardProfileL3" />
     </packageHasProfileInstances>
   </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction
+        Id="48e9ec30-9574-417d-a602-11564a664643"
+        name="SystemSequenceDiagram"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <combinedFragment
+            Id="44eb5e7e-227c-49b4-a7ab-d34f547b1d3f"
+            name="CombinedFragment1"
+            interactionOperator="Loop">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand
+                Id="20a2aa29-079c-46e6-81fb-7a1f1a0e7184"
+                name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                    LastKnownName="Kunde"
+                    LastKnownLocation="Diagrammer.uml" />
+                  <lifelineMoniker
+                    Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                    LastKnownName="System"
+                    LastKnownLocation="Diagrammer.uml" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint
+                    Id="3b19728f-48e5-421a-afd1-c9871355b9eb">
+                    <maxInt>
+                      <literalString
+                        Id="509404de-effa-4998-8488-dc198bb2cca8"
+                        name="LiteralString1" />
+                    </maxInt>
+                    <minInt>
+                      <literalString
+                        Id="2b9f4b51-686c-42b0-81b5-24a2935ad447"
+                        name="LiteralString2" />
+                    </minInt>
+                  </interactionConstraint>
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="eb03e003-a37e-4efb-bd5c-0fb9308f0e80"
+                    LastKnownName="OperandOccurrenceSpecification1"
+                    LastKnownLocation="Diagrammer.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="f9b5f68e-c123-4664-81fb-81bf361c549d"
+                    LastKnownName="OperandOccurrenceSpecification2"
+                    LastKnownLocation="Diagrammer.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="3056d8b2-b297-4306-849a-4c0ce8fedda5"
+                    LastKnownName="OperandOccurrenceSpecification3"
+                    LastKnownLocation="Diagrammer.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="0eeb1426-a1ac-4f26-8418-efccbdb5f3de"
+                    LastKnownName="OperandOccurrenceSpecification4"
+                    LastKnownLocation="Diagrammer.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification
+            Id="eb03e003-a37e-4efb-bd5c-0fb9308f0e80"
+            name="OperandOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="3056d8b2-b297-4306-849a-4c0ce8fedda5"
+            name="OperandOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="822c9d16-c247-4e25-850d-68e1addd8b65"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="dad003ad-7425-4dab-8a40-6dee9b3acee5"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="Diagrammer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="0607c6e6-9f20-4d7a-91c0-3ea79e43f9b1"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="Diagrammer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="0d6ebbe3-4f83-4b0a-af55-ba32f5706c1c"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="Diagrammer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="0607c6e6-9f20-4d7a-91c0-3ea79e43f9b1"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e1ec1d5c-cb65-4297-bb97-56cfc740c0e2"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8d88c7f3-9311-4acd-8ffc-9e05532eaca7"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0d6ebbe3-4f83-4b0a-af55-ba32f5706c1c"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="dad003ad-7425-4dab-8a40-6dee9b3acee5"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="50167259-2407-4269-99a0-7bde2114592a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="f9b5f68e-c123-4664-81fb-81bf361c549d"
+            name="OperandOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="0eeb1426-a1ac-4f26-8418-efccbdb5f3de"
+            name="OperandOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="1c130c63-a0a8-4e4f-b90a-bc4aad025d91"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="e4d6ca24-66e8-4f22-a290-03fddd6ede18"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="Diagrammer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="ec9d2b6d-cf94-43b9-9308-87e3d07c0bfb"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="Diagrammer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="ac03e584-f687-4e4a-a305-ce6c3d5c9118"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="00eef377-6858-4f27-a0f0-9a30dce25e02"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="271082a7-d128-4055-94af-abbd858571af"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="Diagrammer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="ec9d2b6d-cf94-43b9-9308-87e3d07c0bfb"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a7fdf003-d40c-47ec-be06-84fc3a158bf9"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3c572d85-23a3-439a-bc0e-24f24c36c25a"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ac03e584-f687-4e4a-a305-ce6c3d5c9118"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="d91322bd-f69b-4ee8-be77-de1aa9450afa"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="b2f152c8-0238-48d1-9254-b5d6c0d95742"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="470c54b4-17d1-4719-8345-439c6e27cd53"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="Diagrammer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="a6d7eaa4-0302-4a3f-9252-e2f0c9bd6604"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="Diagrammer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="63ee6b47-ba1e-4b0d-b114-8b4533b9a3ce"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c8db87a9-0ad9-4ac8-8746-65c1cbacbd4e"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="Diagrammer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="a6d7eaa4-0302-4a3f-9252-e2f0c9bd6604"
+            name="ExecutionOccurrenceSpecification7">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a32fc3cf-99e0-46b7-9511-1b4f195ab528"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="b2f152c8-0238-48d1-9254-b5d6c0d95742"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="00eef377-6858-4f27-a0f0-9a30dce25e02"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="63ee6b47-ba1e-4b0d-b114-8b4533b9a3ce"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="b2f152c8-0238-48d1-9254-b5d6c0d95742"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="271082a7-d128-4055-94af-abbd858571af"
+            name="MessageOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c8db87a9-0ad9-4ac8-8746-65c1cbacbd4e"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="b2f152c8-0238-48d1-9254-b5d6c0d95742"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="470c54b4-17d1-4719-8345-439c6e27cd53"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="3d102ec2-213c-48d0-99f3-4e9c596074a3"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="b2f152c8-0238-48d1-9254-b5d6c0d95742"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="e4d6ca24-66e8-4f22-a290-03fddd6ede18"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ccc089cd-a0d8-4885-b8c5-6822c5e1800a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="cf50ba78-edad-48c8-8016-5080aadfbebe"
+            name="BehaviorExecutionSpecification5">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="f5b5746a-f9c4-4943-abf7-e745b6899516"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="Diagrammer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="7fab501a-0282-43f1-8377-1de22b55eca7"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="Diagrammer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="d9999e0b-2386-47ff-8c06-5948bf6fff46"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e19646bb-e58f-485b-89b6-393f0209ec93"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c26305b2-f91c-44a4-a17c-ed7e4bb84077"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="Diagrammer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="7fab501a-0282-43f1-8377-1de22b55eca7"
+            name="ExecutionOccurrenceSpecification9">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="07af5856-030c-4a99-bcf8-20ad690411ec"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f9db8eea-2414-43f5-b5cb-f9f5a987afc9"
+            name="MessageOccurrenceSpecification13">
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d9999e0b-2386-47ff-8c06-5948bf6fff46"
+            name="MessageOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="37f36527-4170-4d8d-a93d-c9a6194d0937"
+            name="BehaviorExecutionSpecification9">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="b2f152c8-0238-48d1-9254-b5d6c0d95742"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="a6288ab0-a558-42ad-9571-ee11b29f168f"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="Diagrammer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="f077d46a-c9f2-4d7c-a4cd-624dd307ffdd"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="Diagrammer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="3ba43af8-54f6-45da-9390-808f62c45454"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="4dbd4a6d-ab60-4a2d-9596-c77a3aa5edd0"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="Diagrammer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="f077d46a-c9f2-4d7c-a4cd-624dd307ffdd"
+            name="ExecutionOccurrenceSpecification17">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="91d7f064-29fd-4e29-9cd6-e4b1bddb9ba3"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="b2f152c8-0238-48d1-9254-b5d6c0d95742"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e19646bb-e58f-485b-89b6-393f0209ec93"
+            name="MessageOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3ba43af8-54f6-45da-9390-808f62c45454"
+            name="MessageOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="b2f152c8-0238-48d1-9254-b5d6c0d95742"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="43be2325-586a-4810-b291-4be0d3f94b15"
+            name="MessageOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c26305b2-f91c-44a4-a17c-ed7e4bb84077"
+            name="MessageOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="f5b5746a-f9c4-4943-abf7-e745b6899516"
+            name="ExecutionOccurrenceSpecification10">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="6c1c5db4-8a40-4410-93b5-35b1ac8e704a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="b9d4c54c-40a4-43d5-8b95-9443dc53cd4d"
+            name="BehaviorExecutionSpecification12">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="ba5957c8-a9ca-4733-b226-f31956ca39bb"
+                LastKnownName="ExecutionOccurrenceSpecification24"
+                LastKnownLocation="Diagrammer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="46104df4-08a9-423f-91e2-57fddb96b928"
+                LastKnownName="ExecutionOccurrenceSpecification23"
+                LastKnownLocation="Diagrammer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="eb3c53db-86b9-4cba-b2f7-150d8901304a"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="Diagrammer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="46104df4-08a9-423f-91e2-57fddb96b928"
+            name="ExecutionOccurrenceSpecification23">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f642e161-85f4-43a3-9cd5-28d9bbbde1ec"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="66d8225c-b751-4796-87ce-226bd401bf83"
+            name="MessageOccurrenceSpecification31">
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="eb3c53db-86b9-4cba-b2f7-150d8901304a"
+            name="MessageOccurrenceSpecification32">
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="ba5957c8-a9ca-4733-b226-f31956ca39bb"
+            name="ExecutionOccurrenceSpecification24">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e8c90eeb-c042-4542-9691-d33bdcf7383a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="2f71e0b2-bacb-45b2-9e5c-a08dbea4fde4"
+            name="BehaviorExecutionSpecification10">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="003dbee7-dde6-4e9e-b387-24de73d88823"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="Diagrammer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="0d6421a4-c841-4003-827b-5ebd3ac9bb05"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="Diagrammer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="0a034053-85e0-4315-865a-690c364b42b5"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="Diagrammer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="0d6421a4-c841-4003-827b-5ebd3ac9bb05"
+            name="ExecutionOccurrenceSpecification19">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="1d5ca7f3-52e3-40e3-9a6c-760a97b51839"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4dbd4a6d-ab60-4a2d-9596-c77a3aa5edd0"
+            name="MessageOccurrenceSpecification27">
+            <covered>
+              <lifelineMoniker
+                Id="b2f152c8-0238-48d1-9254-b5d6c0d95742"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0a034053-85e0-4315-865a-690c364b42b5"
+            name="MessageOccurrenceSpecification28">
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="a6288ab0-a558-42ad-9571-ee11b29f168f"
+            name="ExecutionOccurrenceSpecification18">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="0e1dc79d-7319-48a9-95e1-1eeda986c045"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="b2f152c8-0238-48d1-9254-b5d6c0d95742"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="003dbee7-dde6-4e9e-b387-24de73d88823"
+            name="ExecutionOccurrenceSpecification20">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e1f06b96-e306-4fbe-9f98-0bbf8462f48e"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+            name="Kunde"
+            isActor="false"
+            lifelineDisplayName="Kunde">
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker
+                Id="eb03e003-a37e-4efb-bd5c-0fb9308f0e80"
+                LastKnownName="OperandOccurrenceSpecification1"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8d88c7f3-9311-4acd-8ffc-9e05532eaca7"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="Diagrammer.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="f9b5f68e-c123-4664-81fb-81bf361c549d"
+                LastKnownName="OperandOccurrenceSpecification2"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="3c572d85-23a3-439a-bc0e-24f24c36c25a"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f9db8eea-2414-43f5-b5cb-f9f5a987afc9"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="43be2325-586a-4810-b291-4be0d3f94b15"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="46104df4-08a9-423f-91e2-57fddb96b928"
+                LastKnownName="ExecutionOccurrenceSpecification23"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="ba5957c8-a9ca-4733-b226-f31956ca39bb"
+                LastKnownName="ExecutionOccurrenceSpecification24"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="0d6421a4-c841-4003-827b-5ebd3ac9bb05"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="003dbee7-dde6-4e9e-b387-24de73d88823"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="Diagrammer.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+            name="System"
+            isActor="false"
+            lifelineDisplayName="System">
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker
+                Id="3056d8b2-b297-4306-849a-4c0ce8fedda5"
+                LastKnownName="OperandOccurrenceSpecification3"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="0607c6e6-9f20-4d7a-91c0-3ea79e43f9b1"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="dad003ad-7425-4dab-8a40-6dee9b3acee5"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="Diagrammer.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="0eeb1426-a1ac-4f26-8418-efccbdb5f3de"
+                LastKnownName="OperandOccurrenceSpecification4"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="ec9d2b6d-cf94-43b9-9308-87e3d07c0bfb"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="e4d6ca24-66e8-4f22-a290-03fddd6ede18"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="7fab501a-0282-43f1-8377-1de22b55eca7"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="f5b5746a-f9c4-4943-abf7-e745b6899516"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="66d8225c-b751-4796-87ce-226bd401bf83"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="Diagrammer.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="b2f152c8-0238-48d1-9254-b5d6c0d95742"
+            name="Restaurant"
+            isActor="false"
+            lifelineDisplayName="Restaurant">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="a6d7eaa4-0302-4a3f-9252-e2f0c9bd6604"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="470c54b4-17d1-4719-8345-439c6e27cd53"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="f077d46a-c9f2-4d7c-a4cd-624dd307ffdd"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="a6288ab0-a558-42ad-9571-ee11b29f168f"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="Diagrammer.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="5bd34ab4-defd-4521-a62b-fd0dd3b1eaa9"
+            name="Tilføj vare"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8d88c7f3-9311-4acd-8ffc-9e05532eaca7"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0d6ebbe3-4f83-4b0a-af55-ba32f5706c1c"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="92ff7430-3ec8-41f3-9ea4-269d9d58449c"
+            name="Bekræft ordre"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3c572d85-23a3-439a-bc0e-24f24c36c25a"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ac03e584-f687-4e4a-a305-ce6c3d5c9118"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="a9f51ac8-c3d9-45dc-b9c4-387e69e25c14"
+            name="Send ordre"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="00eef377-6858-4f27-a0f0-9a30dce25e02"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="63ee6b47-ba1e-4b0d-b114-8b4533b9a3ce"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="b578377a-601f-4a49-b7e0-caf370a14ee4"
+            name="Ok"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c8db87a9-0ad9-4ac8-8746-65c1cbacbd4e"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="271082a7-d128-4055-94af-abbd858571af"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="8d795e2a-fe3a-4b5d-a63a-f7c527a9fd60"
+            name="Betaling"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f9db8eea-2414-43f5-b5cb-f9f5a987afc9"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d9999e0b-2386-47ff-8c06-5948bf6fff46"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="c2342bd9-d5ea-459e-b602-31be1a8c9d00"
+            name="Bekræft ordre"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e19646bb-e58f-485b-89b6-393f0209ec93"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3ba43af8-54f6-45da-9390-808f62c45454"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="908cecce-0751-45b6-9695-921b0871aced"
+            name="Bekræftelse"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c26305b2-f91c-44a4-a17c-ed7e4bb84077"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="43be2325-586a-4810-b291-4be0d3f94b15"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="649b852d-ab60-4454-8e63-10e5a4e589ae"
+            name="Kvittering"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="66d8225c-b751-4796-87ce-226bd401bf83"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="eb3c53db-86b9-4cba-b2f7-150d8901304a"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="2dd56818-43b6-42e9-bbb0-db52ed28d66a"
+            name="Afhentning/Udbringning"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4dbd4a6d-ab60-4a2d-9596-c77a3aa5edd0"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0a034053-85e0-4315-865a-690c364b42b5"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e1ec1d5c-cb65-4297-bb97-56cfc740c0e2"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="50167259-2407-4269-99a0-7bde2114592a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a7fdf003-d40c-47ec-be06-84fc3a158bf9"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ccc089cd-a0d8-4885-b8c5-6822c5e1800a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a32fc3cf-99e0-46b7-9511-1b4f195ab528"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="3d102ec2-213c-48d0-99f3-4e9c596074a3"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="07af5856-030c-4a99-bcf8-20ad690411ec"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="6c1c5db4-8a40-4410-93b5-35b1ac8e704a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="91d7f064-29fd-4e29-9cd6-e4b1bddb9ba3"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="0e1dc79d-7319-48a9-95e1-1eeda986c045"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="1d5ca7f3-52e3-40e3-9a6c-760a97b51839"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e1f06b96-e306-4fbe-9f98-0bbf8462f48e"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f642e161-85f4-43a3-9cd5-28d9bbbde1ec"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e8c90eeb-c042-4542-9691-d33bdcf7383a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
     name="Integer"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
     name="Boolean"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
     name="String"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
     name="UnlimitedNatural"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
 </modelStoreModel>
