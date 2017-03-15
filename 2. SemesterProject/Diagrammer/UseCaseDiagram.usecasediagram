@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="06008eac-5116-4505-8369-e89020fb4142" name="UseCaseDiagram" linkedPackageId="84c3cfcf-5af8-4053-bea3-21ad9ddc6af6" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="0934f407-914b-4b54-8fd3-c5d939c05399">
+      <profileInstance Id="cf7b213e-e262-41a7-98e1-3f0d2bfb520a" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="61da7a60-6f9e-470a-aedd-6985a0231842">
+      <profileInstance Id="18555dfc-72b6-4a13-bacf-a35b0e6f230c" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="72b87bda-58a5-4ed2-a320-fc995a1cf850" name="Kunde" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5aba4c06-b2df-4b35-a95f-488c280628ab" />
+        <targetEnds>
+          <association Id="8d850084-e5d8-4b2f-a80f-6f992a75e5e3" isDerived="false" sourceEndRoleName="Kunde" targetEndRoleName="Login" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d5f745cf-37be-4547-8837-65b5834664fd" LastKnownName="Login" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5047aad6-3898-4c98-9765-aa0596e8b46d" name="Kunde" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0ba348a6-bf53-4ec7-8b58-0482b6f71fbb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="617a6057-1aa0-4f14-aad1-30690159871e" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7bc710a6-a9dd-4405-a878-b15e30953013" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e87fc9d0-35d2-4e34-839c-134d0cb8cde6" />
+          </association>
+          <association Id="a2fb6cc6-2f14-433b-a34b-a44373c3945f" isDerived="false" sourceEndRoleName="Kunde" targetEndRoleName="Bestilling" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="046b5d06-b101-4081-9991-765234872352" LastKnownName="Bestilling" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c9f2cae6-6665-48ac-b8ef-df650491eb2c" name="Kunde" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2082f08b-0db1-4f98-826a-c4e267c09de2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="76cdc478-0219-4e83-9286-796a90c6423a" name="Bestilling" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0be926c2-a55f-4513-9c12-946b4c4e0d38" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7dc33556-a692-48d0-95b7-4247271f0c43" />
+          </association>
+          <association Id="d6b63621-3c93-46d6-92d7-168f7ec67e8b" isDerived="false" sourceEndRoleName="Kunde" targetEndRoleName="Betaling" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="056e9fa2-a401-4f65-91a2-0c23afad1e7d" LastKnownName="Betaling" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6f9184bd-a84b-4a20-a3a6-379b4d5c4995" name="Kunde" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c408e931-1f0b-4a3d-8a1c-45d55fba3fc9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cbaeefa3-3989-4d33-9619-75e1aedfe1e9" name="Betaling" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fd1522d3-73bb-492b-9e85-db64c7861adb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="444bb838-fa1c-43f1-88b4-5fca11f12330" />
+          </association>
+          <association Id="e6d69095-0f7e-4777-8248-47bbe11e5923" isDerived="false" sourceEndRoleName="Kunde" targetEndRoleName="Ordrebekræftelse" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="deaf80ee-a4d6-43c1-b166-afe423fdee47" LastKnownName="Ordrebekræftelse" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9d7327ba-ad46-43c5-84e5-6b16088628c3" name="Kunde" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4413761d-1ff0-4098-b6dc-134921d094e0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e499a9f3-fcd0-4f1b-be92-7bd28307d91b" name="Ordrebekræftelse" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9ba61e48-9913-46a4-be1f-1aa20130713d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="941d6488-bde2-4b11-94ff-8720d292b43a" />
+          </association>
+          <association Id="ee96b00e-6f7c-47f5-9978-d43c716e133a" isDerived="false" sourceEndRoleName="Kunde" targetEndRoleName="Levering/Hentning" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c58048ab-aa82-40a5-a802-c3879d04e26f" LastKnownName="Levering/Hentning" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="70cb0c8b-fb5c-4d7d-8b1d-cbe39c1ad076" name="Kunde" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="561ebff8-be9c-4384-b063-c618daf5c523" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8e5baf11-ffab-48ce-9e83-f47afd91ef34" name="Levering/Hentning" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="086a27fb-e2ad-4774-aaf7-129103d3b2d7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="32065d40-bcfe-45e5-93cf-2b7e5c70a59f" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="3b526fb8-fb5d-4ed7-b0ce-d69114b37e50" name="Online bestilling" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3a267bab-7189-49ee-af3e-4d6d295649e2" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="deaf80ee-a4d6-43c1-b166-afe423fdee47" name="Ordrebekræftelse" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="936becd2-b5b1-42fa-94a0-421f9f4de141" />
+        <subjects>
+          <subsystemMoniker Id="3b526fb8-fb5d-4ed7-b0ce-d69114b37e50" LastKnownName="Online bestilling" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="916f2af8-3542-4706-8319-413e7849291d" name="Restaurant" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="10717453-3263-4e0e-ac25-7cdfd909180f" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="056e9fa2-a401-4f65-91a2-0c23afad1e7d" name="Betaling" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="56a43417-6ab3-41a8-a404-318de8a86cff" />
+        <subjects>
+          <subsystemMoniker Id="3b526fb8-fb5d-4ed7-b0ce-d69114b37e50" LastKnownName="Online bestilling" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="046b5d06-b101-4081-9991-765234872352" name="Bestilling" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bac4ed45-207e-476f-85ca-80501c41f4e0" />
+        <subjects>
+          <subsystemMoniker Id="3b526fb8-fb5d-4ed7-b0ce-d69114b37e50" LastKnownName="Online bestilling" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="d5f745cf-37be-4547-8837-65b5834664fd" name="Login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f3746a79-4208-4ef2-ae8a-c8076f330c46" />
+        <subjects>
+          <subsystemMoniker Id="3b526fb8-fb5d-4ed7-b0ce-d69114b37e50" LastKnownName="Online bestilling" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c58048ab-aa82-40a5-a802-c3879d04e26f" name="Levering/Hentning" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f77e55ee-d6f3-4da5-9e0d-e9c74d8b72ee" />
+        <subjects>
+          <subsystemMoniker Id="3b526fb8-fb5d-4ed7-b0ce-d69114b37e50" LastKnownName="Online bestilling" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="84c3cfcf-5af8-4053-bea3-21ad9ddc6af6" name="Diagrammer">
+    <elementDefinition Id="4de239bc-7035-4d7e-806a-64e465e6ecf0" />
+  </package>
+</useCaseModelRoot>

@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>SystemSequenceDiagram.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="UseCaseDiagram.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCaseDiagram.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCaseDiagram.usecasediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\Diagrammer.uml">
       <SubType>Content</SubType>
