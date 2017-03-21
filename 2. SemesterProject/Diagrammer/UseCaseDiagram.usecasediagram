@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="06008eac-5116-4505-8369-e89020fb4142" name="UseCaseDiagram" linkedPackageId="84c3cfcf-5af8-4053-bea3-21ad9ddc6af6" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="0934f407-914b-4b54-8fd3-c5d939c05399">
-      <profileInstance Id="cf7b213e-e262-41a7-98e1-3f0d2bfb520a" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="61da7a60-6f9e-470a-aedd-6985a0231842">
-      <profileInstance Id="18555dfc-72b6-4a13-bacf-a35b0e6f230c" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="72b87bda-58a5-4ed2-a320-fc995a1cf850" name="Kunde" isAbstract="false" isLeaf="false">
@@ -189,5 +175,19 @@
   </packagedElements>
   <package Id="84c3cfcf-5af8-4053-bea3-21ad9ddc6af6" name="Diagrammer">
     <elementDefinition Id="4de239bc-7035-4d7e-806a-64e465e6ecf0" />
+    <profileInstances>
+      <packageHasProfileInstances Id="0934f407-914b-4b54-8fd3-c5d939c05399">
+        <profileInstance Id="cf7b213e-e262-41a7-98e1-3f0d2bfb520a" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="61da7a60-6f9e-470a-aedd-6985a0231842">
+        <profileInstance Id="18555dfc-72b6-4a13-bacf-a35b0e6f230c" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>
