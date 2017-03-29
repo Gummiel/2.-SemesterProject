@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="0e124c98-1969-4f9c-8450-f4faddbbe38e" name="DomainModel" linkedPackageId="bee30bbe-bf90-4a6c-ab25-370d5fb5cbc7" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="e595d4fe-5251-4bd9-9676-8a35d0e36df9">
+      <profileInstance Id="11a36c7c-2387-4af6-bb91-4c537d8ea0a5" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="125ce968-6069-4e74-bc6f-39674e943cbc">
+      <profileInstance Id="03148e99-f31d-4ada-baac-25932c08fa18" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="894e1df8-b9f9-4777-80da-b48a6a46b45b" name="Restaurant" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="376074dc-3466-4796-b91a-0bf7268f94bb" />
+        <targetEnds>
+          <association Id="d37b783f-13b8-46c3-9cee-09317d142d1a" isDerived="false" sourceEndRoleName="Restaurant" targetEndRoleName="Menu" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b1257155-85bc-4b31-b724-d296cc1409e7" LastKnownName="Menu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e4a74b7f-1439-4121-b168-80397c24c5ad" name="Restaurant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="08ce13ab-9596-4f7c-8daf-e5fb151da83f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0b61d043-de91-4046-9251-bce68698e1ef" name="Menu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="50980d59-e05b-45cc-8c07-d23905763ce7" name="Lower" value="1">
+                      <elementDefinition Id="7b24b4ff-2679-4c43-a733-75fc47336eaf" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="a684494b-2fd0-47ad-ad43-b26b529f6e12" name="Upper" value=".*">
+                      <elementDefinition Id="498d5a9f-522a-4caa-b936-e1e26d271fd0" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="baddc62b-1819-4124-ae39-eec6fdc25cdf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bf7d5744-908f-4af7-8236-bd83ad093b9d" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="555460b2-85f7-4d57-b1d8-f6738ce48abc" name="Adresse" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="76e4663b-946b-4ef9-bd60-2cd3e6a2d474" />
+          </property>
+          <property Id="530386ee-a696-493f-a0c4-888f3f695a62" name="Navn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f8d4e871-5ff9-4a3f-8e9a-8f4f8676225d" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b1257155-85bc-4b31-b724-d296cc1409e7" name="Menu" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="145c17ae-ff01-4616-ad02-b19276fb9cb0" />
+        <targetEnds>
+          <association Id="fc2cb04d-e9ba-4e2b-b236-47edb2db81d4" isDerived="false" sourceEndRoleName="Menu" targetEndRoleName="Kunde" isLeaf="false" isAbstract="false">
+            <classMoniker Id="10a32f8b-451c-44ed-8e17-253c6248c49f" LastKnownName="Kunde" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fa48bf71-f92d-4f35-b1e9-f32d0c39df9d" name="Menu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="3591b1fd-3600-4137-bbb2-165de84ccae5" name="Lower" value="1">
+                      <elementDefinition Id="28d476e1-daa5-432e-8e12-0641a685f51b" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="30c58e45-8578-4756-95cd-635ae28a4949" name="Upper" value=".*">
+                      <elementDefinition Id="cc3cc387-7ae0-4f7d-9203-5ad732f33b1b" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="0e5ef555-8dc9-4efd-ad84-b26719c6afd3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1c220011-a728-4c1b-a617-7a49876522a7" name="Kunde" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="25d79cee-00b8-406f-873f-3771a02c00ba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0b42e240-f981-42c6-b425-80fcbd91ee9a" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="0e183026-3fed-4fa4-91b9-0179061459b9" name="Antal" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="da42fa6b-8aa2-4830-9de6-cd6932586956" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="801324e3-ce95-4e84-9ecc-77365d188e0e" name="Bestilling" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f471f55d-a208-4dd2-85d4-a3b1f7db47b1" />
+        <targetEnds>
+          <association Id="73bccbca-3633-4518-9655-fef2356bef6c" isDerived="false" sourceEndRoleName="Bestilling" targetEndRoleName="Menu" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b1257155-85bc-4b31-b724-d296cc1409e7" LastKnownName="Menu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6a6c3d84-b001-4d3a-8ba7-92ca58f77bff" name="Bestilling" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a0b87878-0784-4eb5-b970-34cbfc6b0c29" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6bc22b38-a90b-4224-9c5f-6a54ce98f02a" name="Menu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="8d609f7b-3694-4509-964b-711787e88282" name="Lower" value="1">
+                      <elementDefinition Id="ed3e5ab7-a4a6-41ff-baea-2f3a548284dd" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="49213b85-2d66-4046-9129-fdbea6a353b7" name="Upper" value=".*">
+                      <elementDefinition Id="a8822661-9abd-4730-b9d0-7fff5d326215" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="a744ec0d-b4d2-44a1-bbc7-161e399f6248" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3167fdb5-482a-4134-a34b-5e3fb95488ff" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="3d3eef7d-496d-4836-abcd-068f0355bb29" name="Dato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3c1477fa-bf8e-4de0-87cb-4500c4e340bc" />
+          </property>
+          <property Id="6e514252-14fe-4ae5-ad88-f57433ae22ea" name="Tid" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2daa9754-bfea-4416-ae5b-522fdf2bcff5" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="10a32f8b-451c-44ed-8e17-253c6248c49f" name="Kunde" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b14c3a3f-1381-43cf-b833-206c15f3a2c9" />
+        <targetEnds>
+          <association Id="64231688-3ae6-4c87-a850-77bdb02f3db4" isDerived="false" sourceEndRoleName="Kunde" targetEndRoleName="Bestilling" isLeaf="false" isAbstract="false">
+            <classMoniker Id="801324e3-ce95-4e84-9ecc-77365d188e0e" LastKnownName="Bestilling" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="359f8c17-18c8-47e8-a3c7-aae76847b35a" name="Kunde" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ceb01851-3322-4a03-a970-1140c03a851a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb0d13ca-f833-43af-8b0f-8f5ca78e2133" name="Bestilling" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="04f58add-4b4c-4e6d-abef-6d9cb8334df2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ce1d0ac1-4480-4f2e-8361-85de695944d1" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="75e06394-d9c0-4193-a5ab-f13668d3bd92" name="Adresse" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="63ce1c45-4ed2-4c22-98a1-b1d274a803ab" />
+          </property>
+          <property Id="29641819-3513-47a6-8941-5159c22310c3" name="Navn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="985049a1-2def-43a0-905d-7b13cc87d694" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="394d6ab1-8a7b-4671-ba9e-a479cbdb0bd9" name="Class1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d5d5c7e4-5b66-4d6b-b2a2-41c73eba8093" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="bee30bbe-bf90-4a6c-ab25-370d5fb5cbc7" name="Diagrammer">
+    <elementDefinition Id="4de239bc-7035-4d7e-806a-64e465e6ecf0" />
+  </package>
+</logicalClassDesignerModel>
