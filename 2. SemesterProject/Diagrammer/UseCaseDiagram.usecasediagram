@@ -172,6 +172,11 @@
         </subjects>
       </useCase>
     </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="b0c20ce3-6f25-4355-9469-f1ab77983d14" name="Actor1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e0975b9d-1ce7-4dc1-b1da-4a6e7341db1b" />
+      </actor>
+    </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="84c3cfcf-5af8-4053-bea3-21ad9ddc6af6" name="Diagrammer">
     <elementDefinition Id="4de239bc-7035-4d7e-806a-64e465e6ecf0" />

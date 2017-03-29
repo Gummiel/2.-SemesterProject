@@ -166,6 +166,11 @@
         </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="394d6ab1-8a7b-4671-ba9e-a479cbdb0bd9" name="Class1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d5d5c7e4-5b66-4d6b-b2a2-41c73eba8093" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="bee30bbe-bf90-4a6c-ab25-370d5fb5cbc7" name="Diagrammer">
     <elementDefinition Id="4de239bc-7035-4d7e-806a-64e465e6ecf0" />

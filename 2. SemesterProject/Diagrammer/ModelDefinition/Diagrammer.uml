@@ -578,6 +578,11 @@
                 LastKnownLocation="Diagrammer.uml" />
             </topLevelOccurrences>
           </lifeline>
+          <lifeline
+            Id="47c4b358-2fba-4498-b2ea-25161c617ae0"
+            name="Lifeline1"
+            isActor="false"
+            lifelineDisplayName="Lifeline1" />
         </lifelines>
         <messages>
           <message
@@ -1482,6 +1487,21 @@
             isComposite="false" />
         </ownedAttributesInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d5d5c7e4-5b66-4d6b-b2a2-41c73eba8093"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="e0975b9d-1ce7-4dc1-b1da-4a6e7341db1b"
+        name="Actor1"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
