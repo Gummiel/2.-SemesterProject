@@ -22,6 +22,13 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="BestillingsDomainModel.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="BestillingsDomainModel.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>BestillingsDomainModel.classdiagram</DependentUpon>
+    </Content>
     <Content Include="ClassDiagram.classdiagram">
       <SubType>Content</SubType>
     </Content>
@@ -35,6 +42,13 @@
     <Content Include="DomainModel.classdiagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>DomainModel.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagram.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagram.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagram.sequencediagram</DependentUpon>
     </Content>
     <Content Include="SystemSequenceDiagram.sequencediagram">
       <SubType>Content</SubType>

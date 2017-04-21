@@ -81,17 +81,5 @@
         <umlExecutionSpecificationShapeMoniker Id="a7069256-0d1e-44d5-bac4-46a612cecd20" />
       </nodes>
     </asyncMessageConnector>
-    <lifelineShape Id="cadd872f-9a5a-485c-a3a4-05fd09d54480" absoluteBounds="8.90625, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="757613e5-dcc4-424b-963b-ba146efb6232" LastKnownName="Lifeline1" />
-      <relativeChildShapes>
-        <umlLifelineHeadShape Id="4ef25028-becb-4264-85cd-ff38bcba905a" absoluteBounds="8.48125, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="757613e5-dcc4-424b-963b-ba146efb6232" LastKnownName="Lifeline1" />
-          <relativeChildShapes />
-        </umlLifelineHeadShape>
-        <lifelineHoverShape Id="b1dad4d7-97ef-45fd-9d55-e225e02ad76b" absoluteBounds="8.90625, 1, 0, 7">
-          <lifelineMoniker Id="757613e5-dcc4-424b-963b-ba146efb6232" LastKnownName="Lifeline1" />
-        </lifelineHoverShape>
-      </relativeChildShapes>
-    </lifelineShape>
   </nestedChildShapes>
 </sequenceDesignerDiagram>

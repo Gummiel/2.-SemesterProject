@@ -3,10 +3,6 @@
   dslVersion="1.0.0.0"
   Id="4de239bc-7035-4d7e-806a-64e465e6ecf0"
   name="Diagrammer" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
-  <ownedCommentsInternal>
-    <comment
-      Id="087594ac-3aa0-4576-8765-aac26bf38a8f" />
-  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -582,11 +578,6 @@
                 LastKnownLocation="Diagrammer.uml" />
             </topLevelOccurrences>
           </lifeline>
-          <lifeline
-            Id="47c4b358-2fba-4498-b2ea-25161c617ae0"
-            name="Lifeline1"
-            isActor="false"
-            lifelineDisplayName="Lifeline1" />
         </lifelines>
         <messages>
           <message
@@ -1391,6 +1382,58 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="58929bd2-092e-4574-bf02-cd238a3844ae"
+            isDerived="false"
+            sourceEndRoleName="Bestilling"
+            targetEndRoleName="Restaurant"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="376074dc-3466-4796-b91a-0bf7268f94bb"
+              LastKnownName="Restaurant"
+              LastKnownLocation="Diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="03c7c31d-2bcc-4008-a724-80f2bd617bcc"
+                  name="Bestilling"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="8a5930cf-fddd-440d-9ffd-58216da4e9e2"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="10b22324-93e1-4b91-a56d-d19a8fcfb566"
+                      name="Upper"
+                      value=".*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="093c121a-e32a-4d39-975b-41dd0f6ec84a"
+                  name="Restaurant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -1455,6 +1498,45 @@
                 <memberEnd
                   Id="04f58add-4b4c-4e6d-abef-6d9cb8334df2"
                   name="Bestilling"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="faeae531-3346-4f47-b687-526193293004"
+            isDerived="false"
+            sourceEndRoleName="Kunde"
+            targetEndRoleName="Betaling"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2f71c1d8-a6f8-4c6c-9f27-8dfd8347f4ef"
+              LastKnownName="Betaling"
+              LastKnownLocation="Diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="27231571-3476-4b0a-9c08-7f92bec43ae1"
+                  name="Kunde"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7ca1c4c0-1412-4e7a-b212-b21eaf4ccb80"
+                  name="Betaling"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -2525,6 +2607,1052 @@
       <undefinedType
         Id="b0acf6be-5319-4940-8f38-12534d465321"
         name="void" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="987819a2-e2f0-4b15-8d1c-843540d63c7a"
+        name="Class2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2ed34054-dbaa-413b-b69d-c12bd98f3a35"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8fccd524-7c75-4364-9c57-0265712a517c"
+        name="Class22"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3ea88b26-0d41-4c46-b2b7-7d63e337043f"
+        name="Class23"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6fad43ec-550a-40d1-b35c-c373d429d13a"
+        name="Class24"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="630bb31c-fbcb-4298-a014-45e3b32e67fc"
+        name="Class25"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="168d2485-c325-4b2f-a0cd-90f9fb9bdd2a"
+        name="Class26"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="4de1891c-4b36-4b77-9b20-44220c9a8ed8"
+        name="SequenceDiagram"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="a27ea624-f8fd-492e-9434-a399e7530931"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="de546a36-3b8d-425e-9823-ceb508c8277d"
+                LastKnownName="Menu"
+                LastKnownLocation="Diagrammer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="99543a84-bcff-4912-9bcc-dd4a385aa747"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="Diagrammer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="81656f05-0e96-4ed1-877d-9b73d7830847"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="Diagrammer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="faea0064-35e5-4e19-a593-26371fedf33a"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="25478f1b-8e15-4104-9fb3-b1d6d8729c66"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="7e42b72a-fbf0-4bb3-af56-038c75e4dc49"
+                LastKnownName="MessageOccurrenceSpecification18"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="6088aecc-ca65-4c92-8af3-e15128b83000"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="Diagrammer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="81656f05-0e96-4ed1-877d-9b73d7830847"
+            name="ExecutionOccurrenceSpecification7">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="8f9fea77-8dc1-4011-adba-261ed828da0e"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="de546a36-3b8d-425e-9823-ceb508c8277d"
+                LastKnownName="Menu"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="30f88ea0-ba50-453b-957b-4af978677f5c"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="faea0064-35e5-4e19-a593-26371fedf33a"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="de546a36-3b8d-425e-9823-ceb508c8277d"
+                LastKnownName="Menu"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="568c6513-7900-45e4-ade5-83d520a7435d"
+            name="BehaviorExecutionSpecification7">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="925e9084-69c7-4448-a04a-7cd0b9c99cd3"
+                LastKnownName="Bestilling"
+                LastKnownLocation="Diagrammer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="c04ddaa5-c75b-44e3-b539-cf6c726d84ca"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="Diagrammer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="05ea10e3-11a0-4bec-9bae-79cd7a8917fc"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="Diagrammer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="b0277de4-cc72-4f12-b354-091d80708d3f"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f16ff8a8-a160-434f-bab3-e514da339a88"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="Diagrammer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="05ea10e3-11a0-4bec-9bae-79cd7a8917fc"
+            name="ExecutionOccurrenceSpecification13">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f5a7d003-1f88-480f-9a2a-b690d4386458"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="925e9084-69c7-4448-a04a-7cd0b9c99cd3"
+                LastKnownName="Bestilling"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="25478f1b-8e15-4104-9fb3-b1d6d8729c66"
+            name="MessageOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="de546a36-3b8d-425e-9823-ceb508c8277d"
+                LastKnownName="Menu"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b0277de4-cc72-4f12-b354-091d80708d3f"
+            name="MessageOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="925e9084-69c7-4448-a04a-7cd0b9c99cd3"
+                LastKnownName="Bestilling"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7e42b72a-fbf0-4bb3-af56-038c75e4dc49"
+            name="MessageOccurrenceSpecification18">
+            <covered>
+              <lifelineMoniker
+                Id="de546a36-3b8d-425e-9823-ceb508c8277d"
+                LastKnownName="Menu"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f16ff8a8-a160-434f-bab3-e514da339a88"
+            name="MessageOccurrenceSpecification17">
+            <covered>
+              <lifelineMoniker
+                Id="925e9084-69c7-4448-a04a-7cd0b9c99cd3"
+                LastKnownName="Bestilling"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="c04ddaa5-c75b-44e3-b539-cf6c726d84ca"
+            name="ExecutionOccurrenceSpecification14">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a8c2fc12-92e8-4143-8555-68885fd0c6f9"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="925e9084-69c7-4448-a04a-7cd0b9c99cd3"
+                LastKnownName="Bestilling"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6088aecc-ca65-4c92-8af3-e15128b83000"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="de546a36-3b8d-425e-9823-ceb508c8277d"
+                LastKnownName="Menu"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="844648e8-41c7-48e7-8ca7-57225c36217a"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="99543a84-bcff-4912-9bcc-dd4a385aa747"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="7c00c42c-a844-46c4-99a7-60f6826a9b21"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="de546a36-3b8d-425e-9823-ceb508c8277d"
+                LastKnownName="Menu"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="cf8f7771-fbd0-41b0-8151-3860a86ce277"
+            name="BehaviorExecutionSpecification10">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="a6fa5101-72a8-4f46-8699-21c7c6315ab4"
+                LastKnownName="Log-In"
+                LastKnownLocation="Diagrammer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="7f78fb25-3e2a-4820-a55e-adf3273d8ac0"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="Diagrammer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="97cb3e9c-8f71-43ca-b27f-6bc6fd5d62d8"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="Diagrammer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="b16a5620-bb2f-4bf3-a2d8-1fb007496be6"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="a2b56fe7-4d90-4d12-86e9-708d6b101c55"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="Diagrammer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="97cb3e9c-8f71-43ca-b27f-6bc6fd5d62d8"
+            name="ExecutionOccurrenceSpecification19">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="5475a485-f693-41ec-aaa1-c6ce325e4bb0"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="a6fa5101-72a8-4f46-8699-21c7c6315ab4"
+                LastKnownName="Log-In"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4c855276-247f-4f52-a071-57438b38de83"
+            name="MessageOccurrenceSpecification23">
+            <covered>
+              <lifelineMoniker
+                Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b16a5620-bb2f-4bf3-a2d8-1fb007496be6"
+            name="MessageOccurrenceSpecification24">
+            <covered>
+              <lifelineMoniker
+                Id="a6fa5101-72a8-4f46-8699-21c7c6315ab4"
+                LastKnownName="Log-In"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="bc766301-870c-445e-8450-31c5b4a8576a"
+            name="BehaviorExecutionSpecification11">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="33ab65e2-012b-42c1-80bb-4f3b9f625c86"
+                LastKnownName="Betaling"
+                LastKnownLocation="Diagrammer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="a2c1f8fa-46b3-4372-9ab2-6c05a296d760"
+                LastKnownName="ExecutionOccurrenceSpecification22"
+                LastKnownLocation="Diagrammer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="2660faf2-ad41-4ca7-bd1d-3a26b3a92d02"
+                LastKnownName="ExecutionOccurrenceSpecification21"
+                LastKnownLocation="Diagrammer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="265cac72-e815-4c84-8a5d-0bb254e5696c"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="bb34f1b4-3ce6-47b0-a003-ae12fccecfac"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="Diagrammer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="2660faf2-ad41-4ca7-bd1d-3a26b3a92d02"
+            name="ExecutionOccurrenceSpecification21">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c714add6-2929-416d-9c6f-6031f02c1b29"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="33ab65e2-012b-42c1-80bb-4f3b9f625c86"
+                LastKnownName="Betaling"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a2b56fe7-4d90-4d12-86e9-708d6b101c55"
+            name="MessageOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="a6fa5101-72a8-4f46-8699-21c7c6315ab4"
+                LastKnownName="Log-In"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="265cac72-e815-4c84-8a5d-0bb254e5696c"
+            name="MessageOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="33ab65e2-012b-42c1-80bb-4f3b9f625c86"
+                LastKnownName="Betaling"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="7f78fb25-3e2a-4820-a55e-adf3273d8ac0"
+            name="ExecutionOccurrenceSpecification20">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="86d21018-5a80-4a3a-b2b3-9ecd58f84447"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="a6fa5101-72a8-4f46-8699-21c7c6315ab4"
+                LastKnownName="Log-In"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="509d03d7-4049-4382-9de1-384a6a6d63cd"
+            name="BehaviorExecutionSpecification13">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="71c94446-5839-4d7c-9172-ac6e49ab462a"
+                LastKnownName="ExecutionOccurrenceSpecification26"
+                LastKnownLocation="Diagrammer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="7d37d15d-519a-4ee5-981a-95acbae4688e"
+                LastKnownName="ExecutionOccurrenceSpecification25"
+                LastKnownLocation="Diagrammer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="fa481722-880f-46c0-801e-e631bb7ec4bc"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="Diagrammer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="7d37d15d-519a-4ee5-981a-95acbae4688e"
+            name="ExecutionOccurrenceSpecification25">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ecf70fd4-2008-442f-b67d-2dd5e0ae00f5"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="bb34f1b4-3ce6-47b0-a003-ae12fccecfac"
+            name="MessageOccurrenceSpecification31">
+            <covered>
+              <lifelineMoniker
+                Id="33ab65e2-012b-42c1-80bb-4f3b9f625c86"
+                LastKnownName="Betaling"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="fa481722-880f-46c0-801e-e631bb7ec4bc"
+            name="MessageOccurrenceSpecification32">
+            <covered>
+              <lifelineMoniker
+                Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="a2c1f8fa-46b3-4372-9ab2-6c05a296d760"
+            name="ExecutionOccurrenceSpecification22">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="99c3450c-97a7-4a29-9599-78070287d94d"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="33ab65e2-012b-42c1-80bb-4f3b9f625c86"
+                LastKnownName="Betaling"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="71c94446-5839-4d7c-9172-ac6e49ab462a"
+            name="ExecutionOccurrenceSpecification26">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e06ff182-e7f4-4ce8-b6ed-a0ca0a0f219f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
+            name="Restaurant"
+            isActor="true"
+            lifelineDisplayName="Restaurant">
+            <represents>
+              <propertyMoniker
+                Id="20d81887-5096-4d80-9ced-6b63376bd070"
+                LastKnownLocation="Diagrammer.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="30f88ea0-ba50-453b-957b-4af978677f5c"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="844648e8-41c7-48e7-8ca7-57225c36217a"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="4c855276-247f-4f52-a071-57438b38de83"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="7d37d15d-519a-4ee5-981a-95acbae4688e"
+                LastKnownName="ExecutionOccurrenceSpecification25"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="71c94446-5839-4d7c-9172-ac6e49ab462a"
+                LastKnownName="ExecutionOccurrenceSpecification26"
+                LastKnownLocation="Diagrammer.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="de546a36-3b8d-425e-9823-ceb508c8277d"
+            name="Menu"
+            isActor="false"
+            lifelineDisplayName="Menu">
+            <represents>
+              <propertyMoniker
+                Id="bf863929-0d93-4091-bae2-6de10b8f9d90"
+                LastKnownLocation="Diagrammer.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="81656f05-0e96-4ed1-877d-9b73d7830847"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="99543a84-bcff-4912-9bcc-dd4a385aa747"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="Diagrammer.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="925e9084-69c7-4448-a04a-7cd0b9c99cd3"
+            name="Bestilling"
+            isActor="false"
+            lifelineDisplayName="Bestilling">
+            <represents>
+              <propertyMoniker
+                Id="8bf46cde-2a79-434c-93d7-128c1f84af86"
+                LastKnownLocation="Diagrammer.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="05ea10e3-11a0-4bec-9bae-79cd7a8917fc"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="c04ddaa5-c75b-44e3-b539-cf6c726d84ca"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="Diagrammer.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="a6fa5101-72a8-4f46-8699-21c7c6315ab4"
+            name="Log-In"
+            isActor="false"
+            lifelineDisplayName="Log-In">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="97cb3e9c-8f71-43ca-b27f-6bc6fd5d62d8"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="7f78fb25-3e2a-4820-a55e-adf3273d8ac0"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="Diagrammer.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="33ab65e2-012b-42c1-80bb-4f3b9f625c86"
+            name="Betaling"
+            isActor="false"
+            lifelineDisplayName="Betaling">
+            <represents>
+              <propertyMoniker
+                Id="040d1126-c767-4d4d-8624-59f405397ad0"
+                LastKnownLocation="Diagrammer.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="2660faf2-ad41-4ca7-bd1d-3a26b3a92d02"
+                LastKnownName="ExecutionOccurrenceSpecification21"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="a2c1f8fa-46b3-4372-9ab2-6c05a296d760"
+                LastKnownName="ExecutionOccurrenceSpecification22"
+                LastKnownLocation="Diagrammer.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="c4d02489-6a0c-469e-8ba5-5db95fa84a03"
+            name="getMenu(menu)"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="30f88ea0-ba50-453b-957b-4af978677f5c"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="faea0064-35e5-4e19-a593-26371fedf33a"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="5e4af79a-a54f-4ab1-a295-288451da21e4"
+            name="insertItem(item)"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="25478f1b-8e15-4104-9fb3-b1d6d8729c66"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b0277de4-cc72-4f12-b354-091d80708d3f"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="29765335-4be6-47a9-a59d-5a31ae731286"
+            name="return item"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f16ff8a8-a160-434f-bab3-e514da339a88"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7e42b72a-fbf0-4bb3-af56-038c75e4dc49"
+                LastKnownName="MessageOccurrenceSpecification18"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="d6738156-5f27-4d2b-aed9-4f6c3374287b"
+            name="return menu"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6088aecc-ca65-4c92-8af3-e15128b83000"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="844648e8-41c7-48e7-8ca7-57225c36217a"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="1123c036-f93b-48ef-b64f-3abf9b366366"
+            name="login(user, pass)"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4c855276-247f-4f52-a071-57438b38de83"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b16a5620-bb2f-4bf3-a2d8-1fb007496be6"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="5c686ac1-1156-4aab-b67a-6043d0fb4205"
+            name="makePurchase()"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a2b56fe7-4d90-4d12-86e9-708d6b101c55"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="265cac72-e815-4c84-8a5d-0bb254e5696c"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="03ba68ef-0ccb-42ce-8e08-3c418f8e4e84"
+            name="confirmation()"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="bb34f1b4-3ce6-47b0-a003-ae12fccecfac"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="fa481722-880f-46c0-801e-e631bb7ec4bc"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="20d81887-5096-4d80-9ced-6b63376bd070"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="10717453-3263-4e0e-ac25-7cdfd909180f"
+                LastKnownName="Restaurant"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8a550f06-e358-404b-99d6-eb9cf100d541"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="5aba4c06-b2df-4b35-a95f-488c280628ab"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8bf46cde-2a79-434c-93d7-128c1f84af86"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <useCaseMoniker
+                Id="0f62ef65-5e59-4a17-bf66-f8ba3ff08abd"
+                LastKnownName="Bestilling"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bf863929-0d93-4091-bae2-6de10b8f9d90"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="145c17ae-ff01-4616-ad02-b19276fb9cb0"
+                LastKnownName="Menu"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="040d1126-c767-4d4d-8624-59f405397ad0"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <useCaseMoniker
+                Id="56a43417-6ab3-41a8-a404-318de8a86cff"
+                LastKnownName="Betaling"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2f71c1d8-a6f8-4c6c-9f27-8dfd8347f4ef"
+        name="Betaling"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="f1e0a5c7-8671-4f71-a884-2d6f3350a27a"
+            isDerived="false"
+            sourceEndRoleName="Betaling"
+            targetEndRoleName="Bestilling"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f471f55d-a208-4dd2-85d4-a3b1f7db47b1"
+              LastKnownName="Bestilling"
+              LastKnownLocation="Diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="309f94aa-106e-4f4b-aefc-d9b70486cd23"
+                  name="Betaling"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8208c749-7adf-4334-bce0-f42f35e61534"
+                  name="Bestilling"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="582e44a6-4f4f-450e-b421-2b11e28455c5"
+            isDerived="false"
+            sourceEndRoleName="Betaling"
+            targetEndRoleName="Restaurant"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="376074dc-3466-4796-b91a-0bf7268f94bb"
+              LastKnownName="Restaurant"
+              LastKnownLocation="Diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b015e719-8ebf-4ac8-a155-08d08d5d9459"
+                  name="Betaling"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="75fd3086-12d0-46a2-af7e-7ac079b72412"
+                  name="Restaurant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="761e3416-93bd-47fa-bbf1-fc3078462a72"
+            name="Kreditkort"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="1861a29f-3b5b-405d-a043-9e609f87db99"
+            name="Kontanter"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="8f9fea77-8dc1-4011-adba-261ed828da0e"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="7c00c42c-a844-46c4-99a7-60f6826a9b21"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f5a7d003-1f88-480f-9a2a-b690d4386458"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a8c2fc12-92e8-4143-8555-68885fd0c6f9"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="5475a485-f693-41ec-aaa1-c6ce325e4bb0"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="86d21018-5a80-4a3a-b2b3-9ecd58f84447"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c714add6-2929-416d-9c6f-6031f02c1b29"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="99c3450c-97a7-4a29-9599-78070287d94d"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ecf70fd4-2008-442f-b67d-2dd5e0ae00f5"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e06ff182-e7f4-4ce8-b6ed-a0ca0a0f219f"
+        name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
