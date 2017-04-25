@@ -263,22 +263,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="3c572d85-23a3-439a-bc0e-24f24c36c25a"
-            name="MessageOccurrenceSpecification7">
-            <covered>
-              <lifelineMoniker
-                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
-                LastKnownName="Kunde"
-                LastKnownLocation="Diagrammer.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="ac03e584-f687-4e4a-a305-ce6c3d5c9118"
             name="MessageOccurrenceSpecification8">
             <covered>
               <lifelineMoniker
                 Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
                 LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3c572d85-23a3-439a-bc0e-24f24c36c25a"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -455,22 +455,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="66d8225c-b751-4796-87ce-226bd401bf83"
-            name="MessageOccurrenceSpecification31">
-            <covered>
-              <lifelineMoniker
-                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
-                LastKnownName="System"
-                LastKnownLocation="Diagrammer.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="eb3c53db-86b9-4cba-b2f7-150d8901304a"
             name="MessageOccurrenceSpecification32">
             <covered>
               <lifelineMoniker
                 Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
                 LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="66d8225c-b751-4796-87ce-226bd401bf83"
+            name="MessageOccurrenceSpecification31">
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3692,6 +3692,17 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="01d72e5c-a433-410c-adf2-4c462784d8a2"
+            name="Kvittering"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
@@ -3744,6 +3755,271 @@
       <executionEvent
         Id="e06ff182-e7f4-4ce8-b6ed-a0ca0a0f219f"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="775bd2ed-34d4-4cc9-97a5-8bde9c8b98c0"
+        name="Leverandør"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="bc66a5d8-efda-406d-88bb-8a81546ff532"
+            isDerived="false"
+            sourceEndRoleName="Leverandør"
+            targetEndRoleName="Restaurant"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="376074dc-3466-4796-b91a-0bf7268f94bb"
+              LastKnownName="Restaurant"
+              LastKnownLocation="Diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="80b7309d-2456-47cb-8c6d-2c9ca1124644"
+                  name="Leverandør"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b9885441-668a-4653-b1b4-0eb9a8891c71"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c25f02a8-3817-47e5-8c35-605f74abde35"
+                      name="Upper"
+                      value=".*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d305c37a-1bbf-4076-84c4-10c56489ae62"
+                  name="Restaurant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="71b9f464-501b-42b8-8a0b-f685a9528641"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="1d5b583c-f779-4a09-9d32-a7090a4e2d78"
+                      name="Upper"
+                      value=".*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="5ad5684f-91ea-4573-8380-02747f2de474"
+            name="Adresse"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="fe4f5f5e-5cb6-40bf-81e1-87c069288183"
+            name="Navn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fa237567-6ffa-4f97-a13d-1adaa395b70a"
+        name="Vare"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="957f3ecb-8724-4ebf-9220-4c98bfaae431"
+            isDerived="false"
+            sourceEndRoleName="Vare"
+            targetEndRoleName="Leverandør"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="775bd2ed-34d4-4cc9-97a5-8bde9c8b98c0"
+              LastKnownName="Leverandør"
+              LastKnownLocation="Diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fc536a62-4af3-41d8-a9ca-e71041b065c5"
+                  name="Vare"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5a0e6889-96dd-4b68-926c-0eb0debdc0fa"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2e2dfb8b-e2d2-490f-a93b-211126f0824c"
+                      name="Upper"
+                      value=".*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="043dc809-fff3-427c-8a14-8d9edae04e39"
+                  name="Leverandør"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b4f07ebe-9a98-4553-8b5c-d37e87cc7964"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ec9715ae-3263-40ab-955f-b19e3177a018"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a869a343-9a1f-48b6-96f2-9f2d23fa52a9"
+            isDerived="false"
+            sourceEndRoleName="Vare"
+            targetEndRoleName="Menu"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="145c17ae-ff01-4616-ad02-b19276fb9cb0"
+              LastKnownName="Menu"
+              LastKnownLocation="Diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f30abefc-3dbd-4760-b358-926ace2b3db2"
+                  name="Vare"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c6972103-760e-4107-b5b6-66408423e06c"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b66c1328-1bd3-4ae1-bdfb-50e16c01d745"
+                      name="Upper"
+                      value="..*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5017f955-5a0a-4b0c-81be-f69c415995ac"
+                  name="Menu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="422a1710-69c1-42dd-9674-88519b30c708"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f8acb007-0a40-46a4-a309-f4d2557c2d29"
+                      name="Upper"
+                      value=".*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="85ab30cb-bab3-46d3-b55c-537f49b8170a"
+            name="Type"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a2cfa3e0-e26f-47e7-a435-cb989f9a0c16"
+            name="Pris"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
