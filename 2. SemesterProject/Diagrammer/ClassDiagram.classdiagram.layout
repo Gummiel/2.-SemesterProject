@@ -92,7 +92,7 @@
         <classShapeMoniker Id="a4823820-6213-479d-8875-fe67a3357f09" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(6.125 : 5.52539060264826); (7.07375 : 5.52539060264826); (7.07375 : 5.46289060264826); (8.05125 : 5.46289060264826); (8.05125 : 5.52539060264826); (9 : 5.52539060264826)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="1" targetMultiplicity="*">
+    <associationConnector edgePoints="[(6.125 : 5.52539060264826); (9 : 5.52539060264826)]" manuallyRouted="true" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="1" targetMultiplicity="*">
       <associationMoniker Id="82dc15bc-5a86-4214-bfad-3ba6a3aa73db" />
       <relativeChildShapes />
       <nodes>
