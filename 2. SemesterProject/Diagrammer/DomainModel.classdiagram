@@ -39,6 +39,9 @@
           <property Id="530386ee-a696-493f-a0c4-888f3f695a62" name="Navn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="f8d4e871-5ff9-4a3f-8e9a-8f4f8676225d" />
           </property>
+          <property Id="b0bf3657-19f4-40f0-a316-f6928b7e1e47" name="TelefonNr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5e0d51e1-7d16-42d8-97f0-c9e88d624f43" />
+          </property>
         </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -190,6 +193,9 @@
           </property>
           <property Id="29641819-3513-47a6-8941-5159c22310c3" name="Navn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="985049a1-2def-43a0-905d-7b13cc87d694" />
+          </property>
+          <property Id="dc7831e6-ce13-4505-baac-0cac17953baf" name="TelefonNr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4cce4e08-58d9-4a65-aa75-1b7bd36a1211" />
           </property>
         </ownedAttributesInternal>
       </class>
