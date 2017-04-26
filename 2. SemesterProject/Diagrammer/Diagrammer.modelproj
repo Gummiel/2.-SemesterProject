@@ -43,6 +43,21 @@
       <SubType>Content</SubType>
       <DependentUpon>DomainModel.classdiagram</DependentUpon>
     </Content>
+    <Content Include="ModelDefinition\Package_1248.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1249.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1251.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1253.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1334.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="SequenceDiagram.sequencediagram">
       <SubType>Content</SubType>
     </Content>
