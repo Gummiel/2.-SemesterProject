@@ -32,6 +32,18 @@
       Id="817f1a02-0d82-4c70-b77b-68933f061abf">
       <body>sender kvittering</body>
     </comment>
+    <comment
+      Id="600ac0e7-1508-49b2-857c-817ae2e2b366">
+      <body>Bestiller</body>
+    </comment>
+    <comment
+      Id="994957fe-1bd8-44b3-85d2-976660b26f38">
+      <body>Bestiller fra</body>
+    </comment>
+    <comment
+      Id="8eedc51b-cd63-4341-b9cd-e2a8ccdc7927">
+      <body>Laver</body>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
@@ -3326,6 +3338,166 @@
         Id="ada8416f-5e56-4188-8329-8469f7564d23"
         LastKnownName="Singleton"
         LastKnownLocation="Package_1334.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a9558576-0d7d-4e86-bd9d-2989f6184903"
+        name="Restaurant1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="4834e3a6-54f9-4da6-8bf8-fd475715392f"
+            isDerived="false"
+            sourceEndRoleName="Restaurant"
+            targetEndRoleName="Menu"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d17036a3-8516-4338-9c7d-d34c4ebcbfbf"
+              LastKnownName="Menu1"
+              LastKnownLocation="Diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2fc929bd-74e1-4d6d-a6d0-1fc0e52e23ef"
+                  name="Restaurant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0ba03332-500c-4366-a4b9-3fd523f4f251"
+                  name="Menu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d17036a3-8516-4338-9c7d-d34c4ebcbfbf"
+        name="Menu1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1b243648-e684-4245-87cd-d8987594ed97"
+        name="Kunde1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="36067374-61a1-4779-b91c-d560574c7b21"
+            isDerived="false"
+            sourceEndRoleName="Kunde"
+            targetEndRoleName="Menu"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d17036a3-8516-4338-9c7d-d34c4ebcbfbf"
+              LastKnownName="Menu1"
+              LastKnownLocation="Diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d0af71ff-29de-4e1f-b00b-cc2449321de2"
+                  name="Kunde"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f932c5f3-2562-41f5-8f88-a34e9777ed19"
+                  name="Menu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="90192713-a7d8-4f0c-92e4-b46fbea9a313"
+                      name="Lower"
+                      value="M" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e2d2c58f-a76e-44c8-a952-51a57d654f5c"
+                      name="Upper"
+                      value="M" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="259783b7-1607-43c2-8898-80d1b47fa15a"
+            isDerived="false"
+            sourceEndRoleName="Kunde"
+            targetEndRoleName="Restaurant"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a9558576-0d7d-4e86-bd9d-2989f6184903"
+              LastKnownName="Restaurant1"
+              LastKnownLocation="Diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8f0a69ea-32d7-4a88-8165-ca62ba1bccac"
+                  name="Kunde"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6389d0d5-4aa6-46c7-a075-03ac52cd9013"
+                  name="Restaurant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
