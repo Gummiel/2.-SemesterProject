@@ -3,6 +3,36 @@
   dslVersion="1.0.0.0"
   Id="4de239bc-7035-4d7e-806a-64e465e6ecf0"
   name="Diagrammer" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="ff80afb5-f537-4356-9338-b42840d6c3ef">
+      <body>valg af Menu</body>
+    </comment>
+    <comment
+      Id="af502f6c-0b23-4b90-841d-de529f35657f">
+      <body>menu bliver bestilt</body>
+    </comment>
+    <comment
+      Id="fa4147ee-34f9-45af-9798-6cd964bd8c2c">
+      <body>bestilling fører til betaling</body>
+    </comment>
+    <comment
+      Id="89a0e6ab-4313-4852-a4d7-86018081d1b7">
+      <body>kunden tilføjer infomationer</body>
+    </comment>
+    <comment
+      Id="fd7336c2-e0ed-493c-96d4-eced2bbb8477">
+      <body>sender pengene til resturant</body>
+    </comment>
+    <comment
+      Id="0117630e-b6cc-4759-83b1-a9ecb0d9fa18">
+      <body>bekræfter order</body>
+    </comment>
+    <comment
+      Id="817f1a02-0d82-4c70-b77b-68933f061abf">
+      <body>sender kvittering</body>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -2768,6 +2798,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="f6f1726e-0dbc-4082-858f-b3b1aaa4a6d0"
+            isDerived="false"
+            sourceEndRoleName="Kunden"
+            targetEndRoleName="Betaling"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d511f89f-93cc-4832-a92b-6c5ba7e59323"
+              LastKnownName="Betaling"
+              LastKnownLocation="Diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="420dab65-f6f6-4917-abb6-d2a198680d6a"
+                  name="Kunden"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d663f67d-7c17-41b5-9d25-39f0075b85df"
+                  name="Betaling"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </class>
     </packageHasNamedElement>
@@ -2780,20 +2849,20 @@
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="96b40968-0693-4415-8856-0e304fc5e958"
+            Id="f309a937-badb-4e36-b5d7-56d68ad5e003"
             isDerived="false"
             sourceEndRoleName="Bestilling"
-            targetEndRoleName="Kunden"
+            targetEndRoleName="Betaling"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="987819a2-e2f0-4b15-8d1c-843540d63c7a"
-              LastKnownName="Kunden"
+              Id="d511f89f-93cc-4832-a92b-6c5ba7e59323"
+              LastKnownName="Betaling"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="5c3ae47f-6b79-4cf9-b7ed-139d3cdecfb0"
+                  Id="e47fd0b6-de8a-4f3f-bf9b-d32c33d19ee2"
                   name="Bestilling"
                   isLeaf="false"
                   isStatic="false"
@@ -2806,47 +2875,8 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="b37254db-b8e0-4aaa-a5d8-5f6cb0aac0c1"
-                  name="Kunden"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="8b11ba78-6141-4f07-8cff-5c45a841193a"
-            isDerived="false"
-            sourceEndRoleName="Bestilling"
-            targetEndRoleName="Restuarant"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="168d2485-c325-4b2f-a0cd-90f9fb9bdd2a"
-              LastKnownName="Restuarant"
-              LastKnownLocation="Diagrammer.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="0373e0da-b181-4ba2-b480-3c58e1addc5a"
-                  name="Bestilling"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="8fec924c-5b6e-482e-89c4-610782b900f3"
-                  name="Restuarant"
+                  Id="fa8ec794-0b42-438e-a153-bc57f2bd76f4"
+                  name="Betaling"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -4291,6 +4321,56 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d511f89f-93cc-4832-a92b-6c5ba7e59323"
+        name="Betaling"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="507b9539-5ea0-4974-a8cc-7dfc61084057"
+            isDerived="false"
+            sourceEndRoleName="Betaling"
+            targetEndRoleName="Restuarant"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="168d2485-c325-4b2f-a0cd-90f9fb9bdd2a"
+              LastKnownName="Restuarant"
+              LastKnownLocation="Diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9e167972-a482-47cb-a368-6343e3ecd04c"
+                  name="Betaling"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8efea4b2-decd-4de7-88ce-f57a7c3cf405"
+                  name="Restuarant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
       </class>
     </packageHasNamedElement>
   </packagedElements>

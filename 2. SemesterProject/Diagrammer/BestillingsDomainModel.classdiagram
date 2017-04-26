@@ -1,5 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="fec57fee-4bfb-4afa-9506-e4e2c277c14f" name="BestillingsDomainModel" linkedPackageId="02456edf-55e6-4883-b553-a603df4d287c" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="0bb4cfeb-617a-4eae-b0e6-32668a90c798">
+      <elementDefinition Id="ff80afb5-f537-4356-9338-b42840d6c3ef" />
+      <body>valg af Menu</body>
+    </comment>
+    <comment Id="241ab4b0-1d51-4d84-8266-d695b1fbfe14">
+      <elementDefinition Id="af502f6c-0b23-4b90-841d-de529f35657f" />
+      <body>menu bliver bestilt</body>
+    </comment>
+    <comment Id="7aa7062b-c66a-4092-8258-27879de2ff1d">
+      <elementDefinition Id="fa4147ee-34f9-45af-9798-6cd964bd8c2c" />
+      <body>bestilling fører til betaling</body>
+    </comment>
+    <comment Id="724cb2a5-0fb3-4395-b675-302dcaf4bc7b">
+      <elementDefinition Id="89a0e6ab-4313-4852-a4d7-86018081d1b7" />
+      <body>kunden tilføjer infomationer</body>
+    </comment>
+    <comment Id="eb8fb05a-f62a-4f94-ab76-c5210a2836d1">
+      <elementDefinition Id="fd7336c2-e0ed-493c-96d4-eced2bbb8477" />
+      <body>sender pengene til resturant</body>
+    </comment>
+    <comment Id="9a8277b8-d97a-4299-b433-a3b4446808b7">
+      <elementDefinition Id="0117630e-b6cc-4759-83b1-a9ecb0d9fa18" />
+      <body>bekræfter order</body>
+    </comment>
+    <comment Id="f26958ab-3ad3-4023-beed-b2e1f0d776f3">
+      <elementDefinition Id="817f1a02-0d82-4c70-b77b-68933f061abf" />
+      <body>sender kvittering</body>
+    </comment>
+  </ownedCommentsInternal>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="daff6a9b-26bc-4a66-906d-c82bb561251a" name="Kunden" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -21,6 +51,22 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="8299cdd9-88e0-43f4-8c47-72ef605b6618" />
           </association>
+          <association Id="f5f74a37-5c3b-430d-b599-b0edf3bfd3ed" isDerived="false" sourceEndRoleName="Kunden" targetEndRoleName="Betaling" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e91cd570-1e82-496b-b737-fad5719cbd0a" LastKnownName="Betaling" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="30da999f-53c5-4fab-b92c-ab1dd24aeb4d" name="Kunden" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="420dab65-f6f6-4917-abb6-d2a198680d6a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="db9588c9-9c29-4128-acf9-a51b07005fcd" name="Betaling" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d663f67d-7c17-41b5-9d25-39f0075b85df" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f6f1726e-0dbc-4082-858f-b3b1aaa4a6d0" />
+          </association>
         </targetEnds>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -28,37 +74,21 @@
       <class Id="45e6602c-375f-400e-9dee-d405fb278241" name="Bestilling" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="2ed34054-dbaa-413b-b69d-c12bd98f3a35" />
         <targetEnds>
-          <association Id="d262a2ec-dcd8-4d5f-bb8e-333dc6929091" isDerived="false" sourceEndRoleName="Bestilling" targetEndRoleName="Kunden" isLeaf="false" isAbstract="false">
-            <classMoniker Id="daff6a9b-26bc-4a66-906d-c82bb561251a" LastKnownName="Kunden" />
+          <association Id="6a4784fe-dee1-443e-b210-f167d9245666" isDerived="false" sourceEndRoleName="Bestilling" targetEndRoleName="Betaling" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e91cd570-1e82-496b-b737-fad5719cbd0a" LastKnownName="Betaling" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="c9b353b3-c734-45b3-8518-8177878de6a6" name="Bestilling" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="5c3ae47f-6b79-4cf9-b7ed-139d3cdecfb0" />
+                <memberEnd Id="a2933341-85b5-488f-a68c-391e4132eba4" name="Bestilling" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e47fd0b6-de8a-4f3f-bf9b-d32c33d19ee2" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="1d09a1d3-903d-4811-84c8-de81ab9cf5b0" name="Kunden" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="b37254db-b8e0-4aaa-a5d8-5f6cb0aac0c1" />
+                <memberEnd Id="ccb80a14-d8ce-4253-9e04-d5c54e3fffaa" name="Betaling" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fa8ec794-0b42-438e-a153-bc57f2bd76f4" />
                 </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
-            <elementDefinition Id="96b40968-0693-4415-8856-0e304fc5e958" />
-          </association>
-          <association Id="decd2ef2-8ea8-4f2c-9e68-df51bef9ea13" isDerived="false" sourceEndRoleName="Bestilling" targetEndRoleName="Restuarant" isLeaf="false" isAbstract="false">
-            <classMoniker Id="ab3fe052-ef88-4a7f-a691-cfd7f59d1ca6" LastKnownName="Restuarant" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="e2290372-3283-45c6-a620-119b7f02aef5" name="Bestilling" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="0373e0da-b181-4ba2-b480-3c58e1addc5a" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="951a87ad-4543-4e76-98fd-121b8c3c960d" name="Restuarant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="8fec924c-5b6e-482e-89c4-610782b900f3" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="8b11ba78-6141-4f07-8cff-5c45a841193a" />
+            <elementDefinition Id="f309a937-badb-4e36-b5d7-56d68ad5e003" />
           </association>
         </targetEnds>
       </class>
@@ -128,6 +158,29 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="3737d71b-7417-4a68-918c-77ad4d0e5c5b" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e91cd570-1e82-496b-b737-fad5719cbd0a" name="Betaling" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d511f89f-93cc-4832-a92b-6c5ba7e59323" />
+        <targetEnds>
+          <association Id="fad84b0e-7113-4421-8dd8-91bb604578c8" isDerived="false" sourceEndRoleName="Betaling" targetEndRoleName="Restuarant" isLeaf="false" isAbstract="false">
+            <classMoniker Id="ab3fe052-ef88-4a7f-a691-cfd7f59d1ca6" LastKnownName="Restuarant" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6d4526cb-2859-4ec8-aa5e-2376532f04b9" name="Betaling" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9e167972-a482-47cb-a368-6343e3ecd04c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f279193c-d5e2-4966-a157-dfd996aec7fc" name="Restuarant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8efea4b2-decd-4de7-88ce-f57a7c3cf405" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="507b9539-5ea0-4974-a8cc-7dfc61084057" />
           </association>
         </targetEnds>
       </class>
