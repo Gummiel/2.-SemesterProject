@@ -43,6 +43,13 @@
       <SubType>Content</SubType>
       <DependentUpon>DomainModel.classdiagram</DependentUpon>
     </Content>
+    <Content Include="ErModel.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ErModel.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ErModel.classdiagram</DependentUpon>
+    </Content>
     <Content Include="SequenceDiagram.sequencediagram">
       <SubType>Content</SubType>
     </Content>
