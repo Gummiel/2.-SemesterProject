@@ -126,20 +126,21 @@
           </property>
           <property
             Id="3d5ecaa9-60c2-4e42-8cdc-ccb48f88e2d9"
-            name="totalAmount"
+            name="totalPrice"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="0421bc01-ec82-4f18-92c3-b7b50169ecfa"
-                LastKnownName="Decimal"
-                LastKnownLocation="Diagrammer.uml" />
+                Id="7df79936-5096-4fa6-91cf-06c305140cb6"
+                LastKnownName="Money"
+                LastKnownLocation="Package_1249.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -337,6 +338,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="c0037284-eebd-46ee-8172-ce8049f51006"
+            isDerived="false"
+            sourceEndRoleName="Customer"
+            targetEndRoleName="CustomerSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3d67f97a-9d08-4467-9ec8-2e954ca490b4"
+              LastKnownName="CustomerSingleton"
+              LastKnownLocation="Package_1334.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ec9fba70-ce9f-4ec2-ba94-8e99cc5ba0c6"
+                  name="Customer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="753d97da-d243-4bda-898e-0c27920bde3b"
+                  name="CustomerSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -379,7 +419,7 @@
           </property>
           <property
             Id="6046291d-b30a-486b-8130-2e675e27b3ff"
-            name="zipcode"
+            name="zip"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -436,7 +476,7 @@
           </property>
           <property
             Id="d564646f-d85d-45d0-934b-62255b6667e0"
-            name="TelephoneNo"
+            name="telephoneNo"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -795,7 +835,7 @@
           </property>
           <property
             Id="3e18daa8-ff73-439e-9557-e5911e5aa409"
-            name="TelephoneNo"
+            name="telephoneNo"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -1202,19 +1242,20 @@
         <ownedAttributesInternal>
           <property
             Id="52bff004-758c-48ba-a18d-09299f96768f"
-            name="quantity"
+            name="description"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
               <primitiveTypeMoniker
-                Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                LastKnownName="Integer"
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
                 LastKnownLocation="Diagrammer.uml" />
             </type_NamedElement>
           </property>
@@ -1225,15 +1266,16 @@
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="0421bc01-ec82-4f18-92c3-b7b50169ecfa"
-                LastKnownName="Decimal"
-                LastKnownLocation="Diagrammer.uml" />
+                Id="7df79936-5096-4fa6-91cf-06c305140cb6"
+                LastKnownName="Money"
+                LastKnownLocation="Package_1249.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -1243,14 +1285,15 @@
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="0421bc01-ec82-4f18-92c3-b7b50169ecfa"
-                LastKnownName="Decimal"
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
                 LastKnownLocation="Diagrammer.uml" />
             </type_NamedElement>
           </property>
@@ -1308,7 +1351,8 @@
         <ownedAttributesInternal>
           <property
             Id="ae0fb672-342e-4140-b596-dfaa618a8cda"
-            name="AccountNo"
+            name="accountNo"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1420,6 +1464,16 @@
           </association>
         </targetEnds>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="afb43440-4a3e-4eee-8341-63203cd4acdf"
+        name="Double" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7df79936-5096-4fa6-91cf-06c305140cb6"
+        name="Money" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

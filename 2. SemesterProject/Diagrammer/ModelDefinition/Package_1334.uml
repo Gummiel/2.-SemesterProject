@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="ada8416f-5e56-4188-8329-8469f7564d23"
   name="Singleton" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -15,6 +15,7 @@
           <property
             Id="042cdf2a-1511-4138-bf13-68fe2b4f93b3"
             name="adress"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -33,6 +34,7 @@
           <property
             Id="04722153-f222-4fdf-83b9-45ad62bc26fb"
             name="city"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -51,6 +53,7 @@
           <property
             Id="731fc2d4-76d6-4362-8d00-5ed44bf44f2d"
             name="email"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -69,6 +72,7 @@
           <property
             Id="060cbbab-effb-483f-bc21-ac2e4bc40e38"
             name="name"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -87,6 +91,7 @@
           <property
             Id="2a029ed7-9082-40f9-b91a-78adfb255839"
             name="openHours"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -105,6 +110,7 @@
           <property
             Id="71448d4f-9cbd-4a43-9046-b65c1d93d5ba"
             name="restauarantID"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -122,7 +128,8 @@
           </property>
           <property
             Id="986f9149-d7b9-434a-8700-718f4ed93ae0"
-            name="TelephoneNo"
+            name="telephoneNo"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -132,15 +139,16 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="b97a4354-b256-4c15-a8c1-45e47d462881"
-                LastKnownName="Int"
-                LastKnownLocation="Package_1249.uml" />
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Diagrammer.uml" />
             </type_NamedElement>
           </property>
           <property
             Id="c18434b7-281d-453f-9d72-cefd381fd1fd"
             name="zipcode"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -174,7 +182,8 @@
         <ownedAttributesInternal>
           <property
             Id="729f6670-89d4-417e-a44f-dc5b45778c58"
-            name="ratingStars"
+            name="reviewStars"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -192,7 +201,8 @@
           </property>
           <property
             Id="6326d15c-a333-42b1-b925-b8a063626e64"
-            name="review"
+            name="reviewDescription"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -211,6 +221,7 @@
           <property
             Id="c3b5111d-7867-485a-b59b-d65f6a587aeb"
             name="reviewID"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -226,9 +237,341 @@
                 LastKnownLocation="Package_1249.uml" />
             </type_NamedElement>
           </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3d67f97a-9d08-4467-9ec8-2e954ca490b4"
+        name="CustomerSingleton"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="697c5019-f82f-4fb9-bb7b-86ea5858450f"
+            isDerived="false"
+            sourceEndRoleName="CustomerSingleton"
+            targetEndRoleName="LoginViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="798a306b-c286-48e4-99c2-862fb4941f6c"
+              LastKnownName="LoginViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="898e9bb9-e624-4bd8-8217-5ec79bc727a7"
+                  name="CustomerSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="14c973d0-f4fa-4f1f-aae6-5a89cdea5170"
+                  name="LoginViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8c1afb95-9b5b-4631-bf21-ffca4d0d9dbc"
+            isDerived="false"
+            sourceEndRoleName="CustomerSingleton"
+            targetEndRoleName="PaymentViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="de04cd44-85e1-4bfe-9ff5-020686e15b1e"
+              LastKnownName="PaymentViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6ac1eef9-ad1b-4d82-ba06-13eadb0621bf"
+                  name="CustomerSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8395c72d-caa5-42ad-9b6b-f9c00a3e724c"
+                  name="PaymentViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1e66acd4-222f-49dc-9235-41f3add1f8dc"
+            isDerived="false"
+            sourceEndRoleName="CustomerSingleton"
+            targetEndRoleName="ReceiptViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="db9f5e33-31d0-4bf8-95fa-c0ca938e4b06"
+              LastKnownName="ReceiptViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9d6345b8-2c17-4c77-8abd-c03479624a26"
+                  name="CustomerSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e679d941-bd13-4986-98fb-4a003edc0b7c"
+                  name="ReceiptViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
           <property
-            Id="21cc4fed-23b6-40f0-af2f-8c1cb7e0fa19"
-            name="time"
+            Id="1c43cfbf-f005-4305-88d2-e29865dfb050"
+            name="address"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0cc0d87b-2f4b-4fc0-a15b-5113e63a5ea5"
+            name="city"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d5e1794e-6d6d-4505-bc06-8b78fdd839d6"
+            name="customerID"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="84181509-d7ef-47e5-a97d-d6b3bdd54d9b"
+            name="email"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ccd87475-1368-41a6-9ca4-2b8948e53329"
+            name="name"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e9b22832-3408-4659-9033-6e5501c79747"
+            name="password"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9cc94388-c555-4d70-8938-82222fa651b4"
+            name="telephoneNo"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="badc1426-2e52-4199-986e-6b29b8a613c9"
+            name="username"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f58b7be7-ee60-4b98-8198-01c75b8349be"
+            name="zip"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4994e127-1652-40b4-91cc-18edf654b111"
+        name="OrderSingleton"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="fc30eda3-c2b4-42fa-b019-f993bf8df3fd"
+            name="orderID"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7434f89a-ed7c-494b-be69-4549d13a05c1"
+            name="totalPrice"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -239,14 +582,53 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="394e7453-359e-4262-830a-c08bd8f0b333"
-                LastKnownName="DateTime"
+                Id="7df79936-5096-4fa6-91cf-06c305140cb6"
+                LastKnownName="Money"
+                LastKnownLocation="Package_1249.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="386ac470-a420-405b-b34d-7dcc151c0bf3"
+            name="amount"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
                 LastKnownLocation="Diagrammer.uml" />
             </type_NamedElement>
           </property>
           <property
-            Id="a83b95f7-f434-449e-98d7-e18869f1800e"
-            name="title"
+            Id="86682dd4-4ef5-4f47-a095-6339d1493563"
+            name="price"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="7df79936-5096-4fa6-91cf-06c305140cb6"
+                LastKnownName="Money"
+                LastKnownLocation="Package_1249.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="12f5a000-f4eb-4edd-b366-a66a45aebd0f"
+            name="description"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
