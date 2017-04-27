@@ -338,22 +338,6 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="7c7fe9e7-570f-44ff-b4c3-ad06e24bf9e8" />
                 </association>
-                <association Id="84da6f7f-3e3f-4205-b6e2-5fd74579bb61" isDerived="false" sourceEndRoleName="Order" targetEndRoleName="OrderViewModel" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="d7474730-41f0-404f-854e-e6137b39bab7" LastKnownName="OrderViewModel" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="02271065-5f93-40bf-a876-97d2d3589ff0" name="Order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="6c42c7ca-3c5e-464b-ad2e-256f420e8dd4" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="7d789d89-fa58-43d9-ba4d-1be8daea02a8" name="OrderViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="e22caf19-c657-4409-a003-8d0a670d2718" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="9b232e9c-aa40-4994-982c-4dcc343c4fc2" />
-                </association>
                 <association Id="12cc23ac-4997-4146-9754-9f9f13b2048c" isDerived="false" sourceEndRoleName="Order" targetEndRoleName="OrderSingleton" isLeaf="false" isAbstract="false">
                   <classMoniker Id="f99be1e2-7b27-4eb6-9f03-77aff9dd0232" LastKnownName="OrderSingleton" />
                   <relationshipOwnedElementsInternal>
@@ -390,6 +374,12 @@
           <packageHasNamedElement>
             <class Id="53533f16-cbd0-41ea-b78c-70964019400c" name="Customer" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="ff49d8f9-f1b4-4924-a326-253e9f9f26bf" />
+              <generalsInternal>
+                <generalization Id="083b4228-f0f5-44bd-81d4-ebcaf686b828" isSubstitutable="false">
+                  <classMoniker Id="ac979a02-2e02-4fca-802b-3fd387b87c20" LastKnownName="Payment" />
+                  <elementDefinition Id="80335ec2-1ad9-4899-af48-963185b5d4f8" />
+                </generalization>
+              </generalsInternal>
               <targetEnds>
                 <association Id="790a2b62-03b5-4f1d-be39-f12e5b97afd0" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="Reviews" isLeaf="false" isAbstract="false">
                   <classMoniker Id="32221fcd-977b-4457-b62b-f4b654a28cdb" LastKnownName="Review" />
@@ -442,38 +432,6 @@
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="850f858c-5a20-44d5-bc9a-baf460211368" />
-                </association>
-                <association Id="c069a91b-e9bc-4dd0-9712-e3a072455f1d" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="LoginViewModel" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="8c5d451d-6de5-41c8-aa31-ac52bdd69688" LastKnownName="LoginViewModel" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="b5f1c9e7-367a-46b8-8fa4-145d13088963" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="42f9d41a-399d-4019-bff8-87eceeb1dd55" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="bc940c37-9c06-4869-8f4a-b4f650b702de" name="LoginViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="8c7439be-4218-449a-8a78-ef405e5462cd" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="24a1c0e6-f93b-4af5-aa80-7b5ca93128e7" />
-                </association>
-                <association Id="ec468a33-41d9-4a4c-b749-e20426f9eee1" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="Payment" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="ac979a02-2e02-4fca-802b-3fd387b87c20" LastKnownName="Payment" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="14712b65-7942-49c3-b036-e714b3dac49a" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="eae9465c-2b5e-43b5-b76d-ac62175fc751" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="d9838aca-e8e3-4679-a90d-be2923132a2c" name="Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="7d832747-fa75-4a50-8b4a-08b790d8e93a" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="34028da2-c619-4b26-a6c5-8cfebc64d2e7" />
                 </association>
                 <association Id="9606640a-72ca-437f-8ed8-55868c505fdf" isDerived="false" sourceEndRoleName="Customer" targetEndRoleName="CustomerSingleton" isLeaf="false" isAbstract="false">
                   <classMoniker Id="a84980dc-19f0-4b69-8132-5c18d612e20d" LastKnownName="CustomerSingleton" />
@@ -863,24 +821,6 @@
           <packageHasNamedElement>
             <class Id="ac979a02-2e02-4fca-802b-3fd387b87c20" name="Payment" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="b0a98194-49fa-45a3-a82b-ff76c9bf2c8a" />
-              <targetEnds>
-                <association Id="ec7d3056-ce8f-463d-aaf4-9b9a1dcf1e55" isDerived="false" sourceEndRoleName="Payment" targetEndRoleName="PaymentViewModel" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="9de02631-c70c-4ee6-b9eb-ccf26e0bddaa" LastKnownName="PaymentViewModel" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="b8e94a06-8143-47ec-a9ca-52dd7ec544e8" name="Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="6eb789c9-d354-4cda-b8c6-afc8cd2fe665" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="f8aa8ffd-412c-46cf-a009-301988fb22f4" name="PaymentViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="c251e429-cdc7-43af-8ab9-7906d33657d5" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="c6c68fc0-92f3-4cc5-b13b-ac1eb16abe36" />
-                </association>
-              </targetEnds>
               <ownedAttributesInternal>
                 <property Id="60abdd61-86dc-4cd0-903f-0a59b5810460" name="accountNo" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="ae0fb672-342e-4140-b596-dfaa618a8cda" />
