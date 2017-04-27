@@ -108,6 +108,14 @@
       Id="dd70fa53-c544-4d9f-8e34-698171312760">
       <body>PK</body>
     </comment>
+    <comment
+      Id="fa4bfdd4-cb89-4ad4-8859-26f212aa5acb">
+      <body>FK</body>
+    </comment>
+    <comment
+      Id="825c3f0d-c30e-4940-9c04-4744db449f8f">
+      <body>PK</body>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
@@ -3576,7 +3584,7 @@
         <nodes>
           <objectNode
             Id="ddfb26dc-1d4c-4a4b-b281-64a25f7cb4cc"
-            name="Rewiew"
+            name="Review Stars"
             isLeaf="false"
             ordering="Unordered"
             isControlType="false">
@@ -3771,7 +3779,7 @@
           </objectNode>
           <objectNode
             Id="bacf482d-4ee9-4419-95aa-1c3eeb2b58fe"
-            name="Rewiew"
+            name="Review Id"
             isLeaf="false"
             ordering="Unordered"
             isControlType="false">
@@ -3992,7 +4000,7 @@
           </objectNode>
           <objectNode
             Id="9cffc253-75b5-455a-84a8-19e119615d64"
-            name="Rewiew"
+            name="Review"
             isLeaf="false"
             ordering="Unordered"
             isControlType="false">
@@ -4207,6 +4215,97 @@
             <upperBound>
               <literalInteger
                 Id="c01fb92e-ed05-4357-8d64-039b39a36e52"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="575c5886-9e37-49c2-b485-da346b331891"
+            name="Review Id"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="de604109-721c-447e-ad83-d96d2301ec42"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="407cf5ab-c54d-4a4a-ad5e-488c3b51ee62"
+            name="Review Description"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="5edf2773-f252-4856-aaab-3a33871275af"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="ba617134-3cfd-4841-8d39-95337cd3aeda"
+            name="Review Description"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="8d9f83c0-b276-40b2-9f32-b00aaea1089e"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="2928dda6-7e1f-432e-9c77-3cbe339fd326"
+            name="Review Stars"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="940be825-72b1-40e2-b33b-33d4fb19ffa1"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="4b55c227-a864-4544-99c6-5710c7fe8476"
+            name="Review Id"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="c4c47be4-4ce8-4671-a4bd-14cb6ffca633"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="abb1d2e3-7bc8-418c-873c-53f9921c5a27"
+            name="Review Description"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="ae434863-410d-4784-bd90-fce09a4f90fd"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="38572937-8dd9-460a-ac07-3d826aecdaec"
+            name="Review Stars"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="c5d4bc44-59fa-4528-88db-d98a8544977a"
                 name="2147483647"
                 value="2147483647" />
             </upperBound>

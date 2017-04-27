@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="fdc82692-156c-43ba-82e9-06f025eeb8ad" name="ClassDiagram" linkedPackageId="1cc9908a-cb20-4e96-b5a7-845cb64c1dd8" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="fdc82692-156c-43ba-82e9-06f025eeb8ad" name="ClassDiagram" linkedPackageId="1cc9908a-cb20-4e96-b5a7-845cb64c1dd8" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <referencedType Id="9b4f4249-352d-4412-92d8-4a0ba5252a8e" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
@@ -64,21 +64,6 @@
     <packageHasNamedElement>
       <referencedType Id="d259e5c6-64cb-4787-a3de-5a1983a35f2e" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
         <elementDefinition Id="394e7453-359e-4262-830a-c08bd8f0b333" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="c3c8ee27-dac4-4fd7-aede-430a2bc8cf01" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
-        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="2b85eb99-bda8-4e50-b3e2-2b0ae7156427" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
-        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="31997966-01d0-4af7-9a05-2b9ad51c3b67" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
-        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -630,28 +615,16 @@
                     <referencedTypeMoniker Id="a7234f25-032f-4cd6-bd27-3268b9060984" LastKnownName="Integer" />
                   </type_NamedElement>
                 </property>
-                <property Id="ab554182-b051-4763-83a6-02cd6148960d" name="time" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="909d3851-d1f6-41f0-b9f9-9b145f57ca14" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="d259e5c6-64cb-4787-a3de-5a1983a35f2e" LastKnownName="DateTime" />
-                  </type_NamedElement>
-                </property>
-                <property Id="6d9fdff8-3d66-4262-a3d3-e93a6b408411" name="title" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="7d3e71aa-946a-4056-9a2c-1f6e75285b9d" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="c3c8ee27-dac4-4fd7-aede-430a2bc8cf01" LastKnownName="String" />
-                  </type_NamedElement>
-                </property>
-                <property Id="f0b6ecaf-233a-4759-ae7f-6cace166255d" name="review" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="f0b6ecaf-233a-4759-ae7f-6cace166255d" name="reviewDescription" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="726c3386-e3b0-485a-8051-ee1813b6adaa" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="2b85eb99-bda8-4e50-b3e2-2b0ae7156427" LastKnownName="String" />
+                    <referencedTypeMoniker Id="22eb0f14-4049-40b4-b57c-f5b7116a5c3a" LastKnownName="String" />
                   </type_NamedElement>
                 </property>
-                <property Id="eab385dc-e32b-4090-8e33-08829df5f8b1" name="ratingStars" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="eab385dc-e32b-4090-8e33-08829df5f8b1" name="reviewStars" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="c7f49964-b487-44f8-8c0d-5eca8b2bb8f4" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="31997966-01d0-4af7-9a05-2b9ad51c3b67" LastKnownName="Integer" />
+                    <referencedTypeMoniker Id="1520cc65-284d-40f9-9ade-70898f6a33bc" LastKnownName="Integer" />
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
@@ -1092,6 +1065,16 @@
     <packageHasNamedElement>
       <referencedType Id="0284aabb-4999-4870-b1ae-adfee75f01bf" name="Int" isAbstract="false" isLeaf="false" cachedFullName="Int">
         <elementDefinition Id="b97a4354-b256-4c15-a8c1-45e47d462881" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="22eb0f14-4049-40b4-b57c-f5b7116a5c3a" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1520cc65-284d-40f9-9ade-70898f6a33bc" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
