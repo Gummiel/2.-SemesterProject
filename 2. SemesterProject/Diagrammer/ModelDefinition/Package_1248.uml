@@ -230,93 +230,6 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="632adfaf-efba-4675-a3ca-54328182c572"
-        name="OrderViewModel"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <ownedAttributesInternal>
-          <property
-            Id="18b087f3-982d-4a1b-97f4-b57f5d1903fc"
-            name="amount"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                LastKnownName="Integer"
-                LastKnownLocation="Diagrammer.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="8f21922f-11b5-4521-a589-ee822d85a93e"
-            name="description"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
-                LastKnownLocation="Diagrammer.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="aa280635-6e12-46bc-9380-dce9f7cee9a9"
-            name="price"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="7df79936-5096-4fa6-91cf-06c305140cb6"
-                LastKnownName="Money"
-                LastKnownLocation="Package_1249.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="34ed34df-64c2-4e23-8da5-529780d3e4d1"
-            name="totalPrice"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="7df79936-5096-4fa6-91cf-06c305140cb6"
-                LastKnownName="Money"
-                LastKnownLocation="Package_1249.uml" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
         Id="798a306b-c286-48e4-99c2-862fb4941f6c"
         name="LoginViewModel"
         isAbstract="false"
@@ -520,6 +433,93 @@
           </property>
           <property
             Id="f3e7d1e0-8048-46c7-b332-3fffaf50691a"
+            name="totalPrice"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="7df79936-5096-4fa6-91cf-06c305140cb6"
+                LastKnownName="Money"
+                LastKnownLocation="Package_1249.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="632adfaf-efba-4675-a3ca-54328182c572"
+        name="OrderViewModel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="18b087f3-982d-4a1b-97f4-b57f5d1903fc"
+            name="amount"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8f21922f-11b5-4521-a589-ee822d85a93e"
+            name="description"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="aa280635-6e12-46bc-9380-dce9f7cee9a9"
+            name="price"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="7df79936-5096-4fa6-91cf-06c305140cb6"
+                LastKnownName="Money"
+                LastKnownLocation="Package_1249.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="34ed34df-64c2-4e23-8da5-529780d3e4d1"
             name="totalPrice"
             visibility="Private"
             isLeaf="false"

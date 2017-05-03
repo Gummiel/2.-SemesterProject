@@ -66,45 +66,6 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="9b232e9c-aa40-4994-982c-4dcc343c4fc2"
-            isDerived="false"
-            sourceEndRoleName="Order"
-            targetEndRoleName="OrderViewModel"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="632adfaf-efba-4675-a3ca-54328182c572"
-              LastKnownName="OrderViewModel"
-              LastKnownLocation="Package_1248.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="6c42c7ca-3c5e-464b-ad2e-256f420e8dd4"
-                  name="Order"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="e22caf19-c657-4409-a003-8d0a670d2718"
-                  name="OrderViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
             Id="28718db5-aa8e-47a7-aa39-fe417f517ee8"
             isDerived="false"
             sourceEndRoleName="Order"
@@ -192,6 +153,16 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="80335ec2-1ad9-4899-af48-963185b5d4f8"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b0a98194-49fa-45a3-a82b-ff76c9bf2c8a"
+              LastKnownName="Payment"
+              LastKnownLocation="Package_1249.uml" />
+          </generalization>
+        </generalsInternal>
         <targetEnds>
           <association
             Id="8b74b14e-04c7-450b-807d-29b257f50556"
@@ -296,84 +267,6 @@
                       value="*" />
                   </upperValueInternal>
                 </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="24a1c0e6-f93b-4af5-aa80-7b5ca93128e7"
-            isDerived="false"
-            sourceEndRoleName="Customer"
-            targetEndRoleName="LoginViewModel"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="798a306b-c286-48e4-99c2-862fb4941f6c"
-              LastKnownName="LoginViewModel"
-              LastKnownLocation="Package_1248.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="42f9d41a-399d-4019-bff8-87eceeb1dd55"
-                  name="Customer"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="8c7439be-4218-449a-8a78-ef405e5462cd"
-                  name="LoginViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="34028da2-c619-4b26-a6c5-8cfebc64d2e7"
-            isDerived="false"
-            sourceEndRoleName="Customer"
-            targetEndRoleName="Payment"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="b0a98194-49fa-45a3-a82b-ff76c9bf2c8a"
-              LastKnownName="Payment"
-              LastKnownLocation="Package_1249.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="eae9465c-2b5e-43b5-b76d-ac62175fc751"
-                  name="Customer"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="7d832747-fa75-4a50-8b4a-08b790d8e93a"
-                  name="Payment"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -1308,47 +1201,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="c6c68fc0-92f3-4cc5-b13b-ac1eb16abe36"
-            isDerived="false"
-            sourceEndRoleName="Payment"
-            targetEndRoleName="PaymentViewModel"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="de04cd44-85e1-4bfe-9ff5-020686e15b1e"
-              LastKnownName="PaymentViewModel"
-              LastKnownLocation="Package_1248.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="6eb789c9-d354-4cda-b8c6-afc8cd2fe665"
-                  name="Payment"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="c251e429-cdc7-43af-8ab9-7906d33657d5"
-                  name="PaymentViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="ae0fb672-342e-4140-b596-dfaa618a8cda"
