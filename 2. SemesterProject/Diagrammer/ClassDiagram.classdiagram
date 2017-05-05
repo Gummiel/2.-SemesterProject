@@ -115,7 +115,7 @@
               <elementDefinition Id="ce9dbc5f-ac24-47f3-a5db-b6d437df39fe" />
               <targetEnds>
                 <association Id="aa5da684-b63f-4764-a7a4-aeba7be17a0b" isDerived="false" sourceEndRoleName="MainViewModel" targetEndRoleName="RestaurantSingleton" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="79fcb3d1-cb74-4a32-ab6f-d3efcddd1b02" LastKnownName="RestaurantSingleton" />
+                  <classMoniker Id="79fcb3d1-cb74-4a32-ab6f-d3efcddd1b02" LastKnownName="GasStationSingleton" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
                       <memberEnd Id="256d9884-0af6-4ed2-8c2d-3d01fa31a7e0" name="MainViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -492,7 +492,7 @@
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
-            <class Id="c0030a95-8e6b-4de9-855b-c5b473ed1b09" name="Restaurant" isAbstract="false" isLeaf="false" isActiveClass="false">
+            <class Id="c0030a95-8e6b-4de9-855b-c5b473ed1b09" name="GasStation" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="0664814f-555c-42ce-8f4a-430ea4f94035" />
               <targetEnds>
                 <association Id="82dc15bc-5a86-4214-bfad-3ba6a3aa73db" isDerived="false" sourceEndRoleName="Restaurant" targetEndRoleName="Item" isLeaf="false" isAbstract="false">
@@ -574,7 +574,7 @@
                   <elementDefinition Id="c7cb7585-3c52-469f-b827-d493c0ae9b10" />
                 </association>
                 <association Id="8838d102-d8e1-4dd3-9bf1-ec45fafb1931" isDerived="false" sourceEndRoleName="Restaurant" targetEndRoleName="RestaurantSingleton" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="79fcb3d1-cb74-4a32-ab6f-d3efcddd1b02" LastKnownName="RestaurantSingleton" />
+                  <classMoniker Id="79fcb3d1-cb74-4a32-ab6f-d3efcddd1b02" LastKnownName="GasStationSingleton" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
                       <memberEnd Id="42cb23a2-6f2d-4f8d-9791-86e24963932b" name="Restaurant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -591,7 +591,7 @@
                 </association>
               </targetEnds>
               <ownedAttributesInternal>
-                <property Id="7101573d-253c-4825-bfcd-7c6058e6ead9" name="restaurantID" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="7101573d-253c-4825-bfcd-7c6058e6ead9" name="gasStationID" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="bb67bcd4-3c8a-4479-bda4-62f520d2e17a" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="bf6c0830-d0eb-46c6-8ca7-efa26dac2ddf" LastKnownName="Integer" />
@@ -956,10 +956,10 @@
         <elementDefinition Id="ada8416f-5e56-4188-8329-8469f7564d23" />
         <packagedElements>
           <packageHasNamedElement>
-            <class Id="79fcb3d1-cb74-4a32-ab6f-d3efcddd1b02" name="RestaurantSingleton" isAbstract="false" isLeaf="false" isActiveClass="false">
+            <class Id="79fcb3d1-cb74-4a32-ab6f-d3efcddd1b02" name="GasStationSingleton" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="cf2af258-5a0f-4456-b844-b96c8d11f702" />
               <ownedAttributesInternal>
-                <property Id="22d47d34-8d5d-46ec-8e0a-3195c537722a" name="Restaurants" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="22d47d34-8d5d-46ec-8e0a-3195c537722a" name="GasStation" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="1b57815f-4477-4e38-82f4-e75bd75fc58b" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="59724068-b9ef-4432-b163-34f6215bacc7" LastKnownName="OberservableCollection&lt;Restaurant&gt;" />
