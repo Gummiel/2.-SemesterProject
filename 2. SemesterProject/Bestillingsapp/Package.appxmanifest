@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="ee568e8a-adae-4ead-8038-281f1dbf740d"
+    Name="f3b67e4b-f188-4ed5-b987-13ce87474020"
     Publisher="CN=brorm"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="ee568e8a-adae-4ead-8038-281f1dbf740d" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="f3b67e4b-f188-4ed5-b987-13ce87474020" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>Bestillingsapp</DisplayName>
