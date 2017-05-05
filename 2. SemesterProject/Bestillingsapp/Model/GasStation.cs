@@ -12,7 +12,6 @@ namespace Bestillingsapp.Model
             Zipcode = zipcode;
             Email = email;
             TelNo = telNo;
-            OpenHours = openHours;
         }
 
         public int ID { get; set; }
@@ -22,6 +21,5 @@ namespace Bestillingsapp.Model
         public int Zipcode { get; set; }
         public string Email { get; set; }
         public int TelNo { get; set; }
-        public string OpenHours { get; set; }
     }
 }
