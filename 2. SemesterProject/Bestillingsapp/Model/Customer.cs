@@ -1,32 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EatNow
+﻿namespace Bestillingsapp.Model
 {
-    class Customer
+    internal class Customer
     {
-        public int customerID { get; set; }
-
-        public string name { get; set; }
-        public string email { get; set; }
-        public string address { get; set; }
-        public int telephoneNo { get; set; }
-        public int zipcode { get; set; }
-        public string city { get; set; }
-
-        public Customer(int customerId, string name, string email, string address, int telephoneNo, int zipcode, string city)
+        public Customer(int id, string name, string email, string address, int telNo, int zipcode, string city)
         {
-            customerID = customerId;
-            this.name = name;
-            this.email = email;
-            this.address = address;
-            this.telephoneNo = telephoneNo;
-            this.zipcode = zipcode;
-            this.city = city;
+            ID = id;
+            Name = name;
+            Email = email;
+            Address = address;
+            TelNo = telNo;
+            Zipcode = zipcode;
+            City = city;
         }
 
+        public int ID { get; set; }
+
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
+        public int TelNo { get; set; }
+        public int Zipcode { get; set; }
+        public string City { get; set; }
     }
 }

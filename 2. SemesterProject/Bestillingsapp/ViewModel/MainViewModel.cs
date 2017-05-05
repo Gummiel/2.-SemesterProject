@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#region Directives
 
-namespace EatNow.ViewModel
+using Bestillingsapp.Singleton;
+
+#endregion
+
+namespace Bestillingsapp.ViewModel
 {
-    class MainViewModel
+    internal class MainViewModel
     {
+        public MainViewModel()
+        {
+            CustomerSingleton = CustomerSingleton.Instance;
+        }
+
+        public CustomerSingleton CustomerSingleton { get; set; }
     }
 }

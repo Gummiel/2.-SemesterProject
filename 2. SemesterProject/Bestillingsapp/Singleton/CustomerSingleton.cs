@@ -1,12 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#region Directives
 
-namespace EatNow.Singleton
+using System.Collections.ObjectModel;
+using Bestillingsapp.Model;
+
+#endregion
+
+namespace Bestillingsapp.Singleton
 {
-    class CustomerSingleton
+    internal class CustomerSingleton
     {
+        #region Instancefield
+
+        private static CustomerSingleton _instance;
+
+        #endregion
+
+        #region Constructor
+
+        private CustomerSingleton()
+        {
+        }
+
+        #endregion
+
+        #region Properties
+
+        public static CustomerSingleton Instance => _instance ?? (_instance = new CustomerSingleton());
+
+        public ObservableCollection<Customer> Customers = new ObservableCollection<Customer>();
+
+        #endregion
     }
 }

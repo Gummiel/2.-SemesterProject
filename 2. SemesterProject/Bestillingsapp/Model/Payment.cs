@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EatNow.Model
+﻿namespace Bestillingsapp.Model
 {
-    class Payment
+    internal class Payment
     {
-        public int accountNo { get; set; }
-
         public Payment(int accountNo)
         {
-            this.accountNo = accountNo;
+            AccountNo = accountNo;
         }
+
+        public int AccountNo { get; set; }
     }
 }

@@ -1,25 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EatNow.Model
+﻿namespace Bestillingsapp.Model
 {
-    class Item
+    internal class Item
     {
-        public int itemID { get; set; }
-        public string name { get; set; } 
-        public string description { get; set; }
-        public double price { get; set; }
-
-        public Item(int itemId, string name, string description, double price)
+        public Item(int id, string name, string description, double price)
         {
-            itemID = itemId;
-            this.name = name;
-            this.description = description;
-            this.price = price;
+            ID = id;
+            Name = name;
+            Description = description;
+            Price = price;
         }
 
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public double Price { get; set; }
     }
 }

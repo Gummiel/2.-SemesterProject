@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EatNow.Model
+﻿namespace Bestillingsapp.Model
 {
-    class Review
+    internal class Review
     {
-        public int reviewID { get; set; }
-        public string reviewDescription { get; set; }
-        public int reviewStars { get; set; }
-
-        public Review(int reviewId, string reviewDescription, int reviewStars)
+        public Review(int id, string description, int stars)
         {
-            reviewID = reviewId;
-            this.reviewDescription = reviewDescription;
-            this.reviewStars = reviewStars;
+            ID = id;
+            Description = description;
+            Stars = stars;
         }
+
+        public int ID { get; set; }
+        public string Description { get; set; }
+        public int Stars { get; set; }
     }
 }

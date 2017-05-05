@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EatNow.Singleton
+namespace Bestillingsapp.Handler
 {
-    class RestaurantSingleton
+    class GasStationHandler
     {
     }
 }
