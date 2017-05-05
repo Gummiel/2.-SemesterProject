@@ -7,14 +7,14 @@
     <packageHasNamedElement>
       <class
         Id="cf2af258-5a0f-4456-b844-b96c8d11f702"
-        name="RestaurantSingleton"
+        name="GasStationSingleton"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <ownedAttributesInternal>
           <property
             Id="1b57815f-4477-4e38-82f4-e75bd75fc58b"
-            name="Restaurants"
+            name="GasStation"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"

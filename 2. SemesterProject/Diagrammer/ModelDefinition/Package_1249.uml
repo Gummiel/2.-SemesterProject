@@ -450,7 +450,7 @@
     <packageHasNamedElement>
       <class
         Id="0664814f-555c-42ce-8f4a-430ea4f94035"
-        name="Restaurant"
+        name="GasStation"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -623,7 +623,7 @@
             isAbstract="false">
             <classMoniker
               Id="cf2af258-5a0f-4456-b844-b96c8d11f702"
-              LastKnownName="RestaurantSingleton"
+              LastKnownName="GasStationSingleton"
               LastKnownLocation="Package_1334.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -657,7 +657,7 @@
         <ownedAttributesInternal>
           <property
             Id="bb67bcd4-3c8a-4479-bda4-62f520d2e17a"
-            name="restaurantID"
+            name="gasStationID"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -1246,7 +1246,7 @@
             isAbstract="false">
             <classMoniker
               Id="cf2af258-5a0f-4456-b844-b96c8d11f702"
-              LastKnownName="RestaurantSingleton"
+              LastKnownName="GasStationSingleton"
               LastKnownLocation="Package_1334.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
