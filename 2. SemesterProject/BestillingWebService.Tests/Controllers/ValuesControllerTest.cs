@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿#region References
+
 using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Web.Http;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using BestillingWebService;
 using BestillingWebService.Controllers;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+#endregion
 
 namespace BestillingWebService.Tests.Controllers
 {
@@ -17,10 +15,10 @@ namespace BestillingWebService.Tests.Controllers
         public void Get()
         {
             // Arrange
-            ValuesController controller = new ValuesController();
+            var controller = new ValuesController();
 
             // Act
-            IEnumerable<string> result = controller.Get();
+            var result = controller.Get();
 
             // Assert
             Assert.IsNotNull(result);
@@ -33,10 +31,10 @@ namespace BestillingWebService.Tests.Controllers
         public void GetById()
         {
             // Arrange
-            ValuesController controller = new ValuesController();
+            var controller = new ValuesController();
 
             // Act
-            string result = controller.Get(5);
+            var result = controller.Get(5);
 
             // Assert
             Assert.AreEqual("value", result);
@@ -46,7 +44,7 @@ namespace BestillingWebService.Tests.Controllers
         public void Post()
         {
             // Arrange
-            ValuesController controller = new ValuesController();
+            var controller = new ValuesController();
 
             // Act
             controller.Post("value");
@@ -58,7 +56,7 @@ namespace BestillingWebService.Tests.Controllers
         public void Put()
         {
             // Arrange
-            ValuesController controller = new ValuesController();
+            var controller = new ValuesController();
 
             // Act
             controller.Put(5, "value");
@@ -70,7 +68,7 @@ namespace BestillingWebService.Tests.Controllers
         public void Delete()
         {
             // Arrange
-            ValuesController controller = new ValuesController();
+            var controller = new ValuesController();
 
             // Act
             controller.Delete(5);

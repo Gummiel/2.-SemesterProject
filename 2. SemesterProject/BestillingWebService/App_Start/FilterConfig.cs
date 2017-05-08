@@ -1,5 +1,8 @@
-﻿using System.Web;
+﻿#region References
+
 using System.Web.Mvc;
+
+#endregion
 
 namespace BestillingWebService
 {

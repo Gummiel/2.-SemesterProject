@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2E39A4D0-83A6-4768-9542-A8BE47D4DEFA}</ProjectGuid>
+    <ProjectGuid>{FF7C45AD-81E8-4499-B22E-3BAE5FD747F5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BestillingWebService.Tests</RootNamespace>
@@ -103,7 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BestillingWebService\BestillingWebService.csproj">
-      <Project>{1975B5A8-5F33-4B22-B50F-EF38879DCD3C}</Project>
+      <Project>{23305358-EE77-446E-AB9E-497CC51FE5E5}</Project>
       <Name>BestillingWebService</Name>
     </ProjectReference>
   </ItemGroup>
