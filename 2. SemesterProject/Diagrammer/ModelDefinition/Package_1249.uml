@@ -458,7 +458,7 @@
           <association
             Id="19cdd6af-e121-4d88-8326-e1b3246ebbc9"
             isDerived="false"
-            sourceEndRoleName="Restaurant"
+            sourceEndRoleName="GasStation"
             targetEndRoleName="Item"
             isLeaf="false"
             isAbstract="false">
@@ -470,7 +470,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="a9e6bb2d-8d48-4436-a82a-781e92c1dc22"
-                  name="Restaurant"
+                  name="GasStation"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -511,7 +511,7 @@
           <association
             Id="484f9d09-a0b6-4f6a-b9a4-5dd98a25df81"
             isDerived="false"
-            sourceEndRoleName="Restaurant"
+            sourceEndRoleName="GasStation"
             targetEndRoleName="Order"
             isLeaf="false"
             isAbstract="false">
@@ -523,7 +523,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="eac47bdd-842f-4c3c-b78c-fab07e7db2f3"
-                  name="Restaurant"
+                  name="GasStation"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -564,7 +564,7 @@
           <association
             Id="c7cb7585-3c52-469f-b827-d493c0ae9b10"
             isDerived="false"
-            sourceEndRoleName="Restaurant"
+            sourceEndRoleName="GasStation"
             targetEndRoleName="Reviews"
             isLeaf="false"
             isAbstract="false">
@@ -576,7 +576,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="4b58274a-06c9-4efa-9463-9c920f980aba"
-                  name="Restaurant"
+                  name="GasStation"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -617,8 +617,8 @@
           <association
             Id="61fdcd8b-a1b6-49e3-8419-977790e2f0f9"
             isDerived="false"
-            sourceEndRoleName="Restaurant"
-            targetEndRoleName="RestaurantSingleton"
+            sourceEndRoleName="GasStation"
+            targetEndRoleName="GasStationSingleton"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
@@ -629,7 +629,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="8457ca0b-30b5-46ab-b87b-ddce929a4d31"
-                  name="Restaurant"
+                  name="GasStation"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -642,7 +642,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="67858a57-b924-4aad-bb10-dfee5d6fa65e"
-                  name="RestaurantSingleton"
+                  name="GasStationSingleton"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"

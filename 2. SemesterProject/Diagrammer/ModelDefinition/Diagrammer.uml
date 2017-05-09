@@ -6,11 +6,11 @@
   <ownedCommentsInternal>
     <comment
       Id="ff80afb5-f537-4356-9338-b42840d6c3ef">
-      <body>valg af Menu</body>
+      <body>valg af varer</body>
     </comment>
     <comment
       Id="af502f6c-0b23-4b90-841d-de529f35657f">
-      <body>menu bliver bestilt</body>
+      <body>vareren bliver bestilt</body>
     </comment>
     <comment
       Id="fa4147ee-34f9-45af-9798-6cd964bd8c2c">
@@ -22,7 +22,7 @@
     </comment>
     <comment
       Id="fd7336c2-e0ed-493c-96d4-eced2bbb8477">
-      <body>sender pengene til resturant</body>
+      <body>sender pengene til GasStation</body>
     </comment>
     <comment
       Id="0117630e-b6cc-4759-83b1-a9ecb0d9fa18">
@@ -42,7 +42,8 @@
     </comment>
     <comment
       Id="8eedc51b-cd63-4341-b9cd-e2a8ccdc7927">
-      <body>Laver</body>
+      <body>Bestiller/Reserver
+</body>
     </comment>
     <comment
       Id="0c18975c-5f86-4df3-b1b0-6510645e9137">
@@ -227,8 +228,8 @@
             </covered>
           </operandOccurrenceSpecification>
           <behaviorExecutionSpecification
-            Id="822c9d16-c247-4e25-850d-68e1addd8b65"
-            name="BehaviorExecutionSpecification2">
+            Id="6600786d-1895-49f0-97fa-1e921eb9c9fa"
+            name="BehaviorExecutionSpecification14">
             <coveredLifelines>
               <lifelineMoniker
                 Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
@@ -237,30 +238,34 @@
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
-                Id="dad003ad-7425-4dab-8a40-6dee9b3acee5"
-                LastKnownName="ExecutionOccurrenceSpecification4"
+                Id="de1ba75e-1904-420d-a91e-4edc71926441"
+                LastKnownName="ExecutionOccurrenceSpecification28"
                 LastKnownLocation="Diagrammer.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
-                Id="0607c6e6-9f20-4d7a-91c0-3ea79e43f9b1"
-                LastKnownName="ExecutionOccurrenceSpecification3"
+                Id="4d723015-33f9-4baf-a8b4-64995d9cdab2"
+                LastKnownName="ExecutionOccurrenceSpecification27"
                 LastKnownLocation="Diagrammer.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
-                Id="0d6ebbe3-4f83-4b0a-af55-ba32f5706c1c"
-                LastKnownName="MessageOccurrenceSpecification6"
+                Id="b21fe06e-d116-4aed-ae96-58cfc439fe7d"
+                LastKnownName="MessageOccurrenceSpecification36"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f4da77bd-34fd-454e-9bf0-27efc444bb7e"
+                LastKnownName="MessageOccurrenceSpecification37"
                 LastKnownLocation="Diagrammer.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="0607c6e6-9f20-4d7a-91c0-3ea79e43f9b1"
-            name="ExecutionOccurrenceSpecification3">
+            Id="4d723015-33f9-4baf-a8b4-64995d9cdab2"
+            name="ExecutionOccurrenceSpecification27">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="e1ec1d5c-cb65-4297-bb97-56cfc740c0e2"
+                  Id="1e031558-c9f8-4ebd-a7f8-e9682cd286ac"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="Diagrammer.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
@@ -273,8 +278,18 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="8d88c7f3-9311-4acd-8ffc-9e05532eaca7"
-            name="MessageOccurrenceSpecification5">
+            Id="b21fe06e-d116-4aed-ae96-58cfc439fe7d"
+            name="MessageOccurrenceSpecification36">
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="70e91e1b-3510-4fcc-bbb1-3f8dae5c8bc7"
+            name="MessageOccurrenceSpecification35">
             <covered>
               <lifelineMoniker
                 Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
@@ -283,8 +298,8 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="0d6ebbe3-4f83-4b0a-af55-ba32f5706c1c"
-            name="MessageOccurrenceSpecification6">
+            Id="f4da77bd-34fd-454e-9bf0-27efc444bb7e"
+            name="MessageOccurrenceSpecification37">
             <covered>
               <lifelineMoniker
                 Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
@@ -292,13 +307,23 @@
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d635a0ee-8469-45d2-8b6e-a7083559739f"
+            name="MessageOccurrenceSpecification38">
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
-            Id="dad003ad-7425-4dab-8a40-6dee9b3acee5"
-            name="ExecutionOccurrenceSpecification4">
+            Id="de1ba75e-1904-420d-a91e-4edc71926441"
+            name="ExecutionOccurrenceSpecification28">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="50167259-2407-4269-99a0-7bde2114592a"
+                  Id="598bca9b-6b21-412c-8050-00bfaf8bb40b"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="Diagrammer.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
@@ -465,22 +490,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="f9db8eea-2414-43f5-b5cb-f9f5a987afc9"
-            name="MessageOccurrenceSpecification13">
-            <covered>
-              <lifelineMoniker
-                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
-                LastKnownName="Kunde"
-                LastKnownLocation="Diagrammer.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="d9999e0b-2386-47ff-8c06-5948bf6fff46"
             name="MessageOccurrenceSpecification14">
             <covered>
               <lifelineMoniker
                 Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
                 LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f9db8eea-2414-43f5-b5cb-f9f5a987afc9"
+            name="MessageOccurrenceSpecification13">
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -569,22 +594,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="eb3c53db-86b9-4cba-b2f7-150d8901304a"
-            name="MessageOccurrenceSpecification32">
-            <covered>
-              <lifelineMoniker
-                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
-                LastKnownName="Kunde"
-                LastKnownLocation="Diagrammer.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="66d8225c-b751-4796-87ce-226bd401bf83"
             name="MessageOccurrenceSpecification31">
             <covered>
               <lifelineMoniker
                 Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
                 LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="eb3c53db-86b9-4cba-b2f7-150d8901304a"
+            name="MessageOccurrenceSpecification32">
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -619,8 +644,12 @@
                 LastKnownName="OperandOccurrenceSpecification1"
                 LastKnownLocation="Diagrammer.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="8d88c7f3-9311-4acd-8ffc-9e05532eaca7"
-                LastKnownName="MessageOccurrenceSpecification5"
+                Id="70e91e1b-3510-4fcc-bbb1-3f8dae5c8bc7"
+                LastKnownName="MessageOccurrenceSpecification35"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d635a0ee-8469-45d2-8b6e-a7083559739f"
+                LastKnownName="MessageOccurrenceSpecification38"
                 LastKnownLocation="Diagrammer.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="f9b5f68e-c123-4664-81fb-81bf361c549d"
@@ -659,12 +688,12 @@
                 LastKnownName="OperandOccurrenceSpecification3"
                 LastKnownLocation="Diagrammer.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="0607c6e6-9f20-4d7a-91c0-3ea79e43f9b1"
-                LastKnownName="ExecutionOccurrenceSpecification3"
+                Id="4d723015-33f9-4baf-a8b4-64995d9cdab2"
+                LastKnownName="ExecutionOccurrenceSpecification27"
                 LastKnownLocation="Diagrammer.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="dad003ad-7425-4dab-8a40-6dee9b3acee5"
-                LastKnownName="ExecutionOccurrenceSpecification4"
+                Id="de1ba75e-1904-420d-a91e-4edc71926441"
+                LastKnownName="ExecutionOccurrenceSpecification28"
                 LastKnownLocation="Diagrammer.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="0eeb1426-a1ac-4f26-8418-efccbdb5f3de"
@@ -695,21 +724,40 @@
         </lifelines>
         <messages>
           <message
-            Id="5bd34ab4-defd-4521-a62b-fd0dd3b1eaa9"
-            name="Tilføj vare"
+            Id="c23f4f6a-f337-4f05-916b-00eb4ed7a5cd"
+            name="Tilføj varer"
             messageKind="Complete"
-            messageSort="AsynchCall"
+            messageSort="SynchCall"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="8d88c7f3-9311-4acd-8ffc-9e05532eaca7"
-                LastKnownName="MessageOccurrenceSpecification5"
+                Id="70e91e1b-3510-4fcc-bbb1-3f8dae5c8bc7"
+                LastKnownName="MessageOccurrenceSpecification35"
                 LastKnownLocation="Diagrammer.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="0d6ebbe3-4f83-4b0a-af55-ba32f5706c1c"
-                LastKnownName="MessageOccurrenceSpecification6"
+                Id="b21fe06e-d116-4aed-ae96-58cfc439fe7d"
+                LastKnownName="MessageOccurrenceSpecification36"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="06aefbb5-6c90-4d0b-9805-351de3ced1fc"
+            name="Tilføjelse af varer"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f4da77bd-34fd-454e-9bf0-27efc444bb7e"
+                LastKnownName="MessageOccurrenceSpecification37"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d635a0ee-8469-45d2-8b6e-a7083559739f"
+                LastKnownName="MessageOccurrenceSpecification38"
                 LastKnownLocation="Diagrammer.uml" />
             </receiveEvent>
           </message>
@@ -791,16 +839,6 @@
           </message>
         </messages>
       </interaction>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="e1ec1d5c-cb65-4297-bb97-56cfc740c0e2"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="50167259-2407-4269-99a0-7bde2114592a"
-        name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
@@ -1090,7 +1128,7 @@
     <packageHasNamedElement>
       <actor
         Id="10717453-3263-4e0e-ac25-7cdfd909180f"
-        name="Restaurant"
+        name="GasStation"
         isAbstract="false"
         isLeaf="false">
         <targetEnds>
@@ -1276,7 +1314,7 @@
     <packageHasNamedElement>
       <class
         Id="376074dc-3466-4796-b91a-0bf7268f94bb"
-        name="Restaurant"
+        name="GasStation"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -1284,19 +1322,19 @@
           <association
             Id="bf7d5744-908f-4af7-8236-bd83ad093b9d"
             isDerived="false"
-            sourceEndRoleName="Restaurant"
-            targetEndRoleName="Menu"
+            sourceEndRoleName="GasStation"
+            targetEndRoleName="Varer"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="145c17ae-ff01-4616-ad02-b19276fb9cb0"
-              LastKnownName="Menu"
+              LastKnownName="Varer"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="08ce13ab-9596-4f7c-8daf-e5fb151da83f"
-                  name="Restaurant"
+                  name="GasStation"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1309,7 +1347,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="baddc62b-1819-4124-ae39-eec6fdc25cdf"
-                  name="Menu"
+                  name="Varer"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1374,7 +1412,7 @@
     <packageHasNamedElement>
       <class
         Id="145c17ae-ff01-4616-ad02-b19276fb9cb0"
-        name="Menu"
+        name="Varer"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -1382,7 +1420,7 @@
           <association
             Id="0b42e240-f981-42c6-b425-80fcbd91ee9a"
             isDerived="false"
-            sourceEndRoleName="Menu"
+            sourceEndRoleName="Varer"
             targetEndRoleName="Kunde"
             isLeaf="false"
             isAbstract="false">
@@ -1394,7 +1432,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="0e5ef555-8dc9-4efd-ad84-b26719c6afd3"
-                  name="Menu"
+                  name="Varer"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1431,11 +1469,98 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="78ccad13-eeb8-4d84-863e-ef2435150d44"
+            isDerived="false"
+            sourceEndRoleName="Varer"
+            targetEndRoleName="Leverandør"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="775bd2ed-34d4-4cc9-97a5-8bde9c8b98c0"
+              LastKnownName="Leverandør"
+              LastKnownLocation="Diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d304698c-0be5-4ccd-b85f-84b53ff91874"
+                  name="Varer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="7ddbd0c3-8dce-4e62-865a-d42cc55731da"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8c17d1a3-f3f3-4d9f-8b85-4e3f62ea087c"
+                      name="Upper"
+                      value=".*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3616a989-bcfe-4e11-aead-3f66f2d7770a"
+                  name="Leverandør"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a9062ad2-9693-4bac-ba24-0f316d7c9833"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2246d92f-ee6f-45be-9003-97aa30995e97"
+                      name="Upper"
+                      value="..*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="da42fa6b-8aa2-4830-9de6-cd6932586956"
             name="Antal"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9fe58a23-11c3-4e15-982b-63ddaeafb125"
+            name="Pris"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c65855ed-3a72-4749-8833-ff3490338afb"
+            name="Type"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1459,12 +1584,12 @@
             Id="3167fdb5-482a-4134-a34b-5e3fb95488ff"
             isDerived="false"
             sourceEndRoleName="Bestilling"
-            targetEndRoleName="Menu"
+            targetEndRoleName="Varer"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="145c17ae-ff01-4616-ad02-b19276fb9cb0"
-              LastKnownName="Menu"
+              LastKnownName="Varer"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1483,7 +1608,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="a744ec0d-b4d2-44a1-bbc7-161e399f6248"
-                  name="Menu"
+                  name="Varer"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1511,12 +1636,12 @@
             Id="58929bd2-092e-4574-bf02-cd238a3844ae"
             isDerived="false"
             sourceEndRoleName="Bestilling"
-            targetEndRoleName="Restaurant"
+            targetEndRoleName="GasStation"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="376074dc-3466-4796-b91a-0bf7268f94bb"
-              LastKnownName="Restaurant"
+              LastKnownName="GasStation"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1548,7 +1673,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="093c121a-e32a-4d39-975b-41dd0f6ec84a"
-                  name="Restaurant"
+                  name="GasStation"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1757,12 +1882,12 @@
             Id="8299cdd9-88e0-43f4-8c47-72ef605b6618"
             isDerived="false"
             sourceEndRoleName="Kunden"
-            targetEndRoleName="Menu"
+            targetEndRoleName="Varer"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="6fad43ec-550a-40d1-b35c-c373d429d13a"
-              LastKnownName="Menu"
+              LastKnownName="Varer"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1781,7 +1906,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="89962db2-f64b-40a2-93ef-a529028dfdf0"
-                  name="Menu"
+                  name="Varer"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1903,7 +2028,7 @@
     <packageHasNamedElement>
       <class
         Id="6fad43ec-550a-40d1-b35c-c373d429d13a"
-        name="Menu"
+        name="Varer"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -1911,7 +2036,7 @@
           <association
             Id="4801b0cf-a8ba-4c6f-8cfa-28ad754bd2f1"
             isDerived="false"
-            sourceEndRoleName="Menu"
+            sourceEndRoleName="Varer"
             targetEndRoleName="Bestilling"
             isLeaf="false"
             isAbstract="false">
@@ -1923,7 +2048,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="d37c8427-2e09-4ed4-a3d0-d69b05f32740"
-                  name="Menu"
+                  name="Varer"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -2003,7 +2128,7 @@
     <packageHasNamedElement>
       <class
         Id="168d2485-c325-4b2f-a0cd-90f9fb9bdd2a"
-        name="Restuarant"
+        name="GasStation"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -2011,7 +2136,7 @@
           <association
             Id="3737d71b-7417-4a68-918c-77ad4d0e5c5b"
             isDerived="false"
-            sourceEndRoleName="Restuarant"
+            sourceEndRoleName="GasStation"
             targetEndRoleName="Kvittering"
             isLeaf="false"
             isAbstract="false">
@@ -2023,7 +2148,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="9b9dfe4e-d3a5-43c1-b12b-ced598904556"
-                  name="Restuarant"
+                  name="GasStation"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -2066,7 +2191,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="de546a36-3b8d-425e-9823-ceb508c8277d"
-                LastKnownName="Menu"
+                LastKnownName="Varer"
                 LastKnownLocation="Diagrammer.uml" />
             </coveredLifelines>
             <finish>
@@ -2114,7 +2239,7 @@
             <covered>
               <lifelineMoniker
                 Id="de546a36-3b8d-425e-9823-ceb508c8277d"
-                LastKnownName="Menu"
+                LastKnownName="Varer"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2124,7 +2249,7 @@
             <covered>
               <lifelineMoniker
                 Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
-                LastKnownName="Restaurant"
+                LastKnownName="GasStation"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2134,7 +2259,7 @@
             <covered>
               <lifelineMoniker
                 Id="de546a36-3b8d-425e-9823-ceb508c8277d"
-                LastKnownName="Menu"
+                LastKnownName="Varer"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2194,7 +2319,7 @@
             <covered>
               <lifelineMoniker
                 Id="de546a36-3b8d-425e-9823-ceb508c8277d"
-                LastKnownName="Menu"
+                LastKnownName="Varer"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2214,7 +2339,7 @@
             <covered>
               <lifelineMoniker
                 Id="de546a36-3b8d-425e-9823-ceb508c8277d"
-                LastKnownName="Menu"
+                LastKnownName="Varer"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2252,7 +2377,7 @@
             <covered>
               <lifelineMoniker
                 Id="de546a36-3b8d-425e-9823-ceb508c8277d"
-                LastKnownName="Menu"
+                LastKnownName="Varer"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2262,7 +2387,7 @@
             <covered>
               <lifelineMoniker
                 Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
-                LastKnownName="Restaurant"
+                LastKnownName="GasStation"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2280,7 +2405,7 @@
             <covered>
               <lifelineMoniker
                 Id="de546a36-3b8d-425e-9823-ceb508c8277d"
-                LastKnownName="Menu"
+                LastKnownName="Varer"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2340,7 +2465,7 @@
             <covered>
               <lifelineMoniker
                 Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
-                LastKnownName="Restaurant"
+                LastKnownName="GasStation"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2448,7 +2573,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
-                LastKnownName="Restaurant"
+                LastKnownName="GasStation"
                 LastKnownLocation="Diagrammer.uml" />
             </coveredLifelines>
             <finish>
@@ -2484,7 +2609,7 @@
             <covered>
               <lifelineMoniker
                 Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
-                LastKnownName="Restaurant"
+                LastKnownName="GasStation"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2504,7 +2629,7 @@
             <covered>
               <lifelineMoniker
                 Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
-                LastKnownName="Restaurant"
+                LastKnownName="GasStation"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2540,7 +2665,7 @@
             <covered>
               <lifelineMoniker
                 Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
-                LastKnownName="Restaurant"
+                LastKnownName="GasStation"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2548,9 +2673,9 @@
         <lifelines>
           <lifeline
             Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
-            name="Restaurant"
+            name="GasStation"
             isActor="true"
-            lifelineDisplayName="Restaurant">
+            lifelineDisplayName="GasStation">
             <represents>
               <propertyMoniker
                 Id="20d81887-5096-4d80-9ced-6b63376bd070"
@@ -2581,9 +2706,9 @@
           </lifeline>
           <lifeline
             Id="de546a36-3b8d-425e-9823-ceb508c8277d"
-            name="Menu"
+            name="Varer"
             isActor="false"
-            lifelineDisplayName="Menu">
+            lifelineDisplayName="Varer">
             <represents>
               <propertyMoniker
                 Id="bf863929-0d93-4091-bae2-6de10b8f9d90"
@@ -2662,7 +2787,7 @@
         <messages>
           <message
             Id="c4d02489-6a0c-469e-8ba5-5db95fa84a03"
-            name="getMenu(menu)"
+            name="getProduct(product)"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
@@ -2719,7 +2844,7 @@
           </message>
           <message
             Id="d6738156-5f27-4d2b-aed9-4f6c3374287b"
-            name="return menu"
+            name="return product"
             messageKind="Complete"
             messageSort="Reply"
             createSelfMessage="false">
@@ -2805,9 +2930,9 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <actorMoniker
-                Id="10717453-3263-4e0e-ac25-7cdfd909180f"
-                LastKnownName="Restaurant"
+              <classMoniker
+                Id="376074dc-3466-4796-b91a-0bf7268f94bb"
+                LastKnownName="GasStation"
                 LastKnownLocation="Diagrammer.uml" />
             </type_NamedElement>
           </property>
@@ -2855,7 +2980,7 @@
             <type_NamedElement>
               <classMoniker
                 Id="145c17ae-ff01-4616-ad02-b19276fb9cb0"
-                LastKnownName="Menu"
+                LastKnownName="Varer"
                 LastKnownLocation="Diagrammer.uml" />
             </type_NamedElement>
           </property>
@@ -2929,12 +3054,12 @@
             Id="582e44a6-4f4f-450e-b421-2b11e28455c5"
             isDerived="false"
             sourceEndRoleName="Betaling"
-            targetEndRoleName="Restaurant"
+            targetEndRoleName="GasStation"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="376074dc-3466-4796-b91a-0bf7268f94bb"
-              LastKnownName="Restaurant"
+              LastKnownName="GasStation"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -2953,7 +3078,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="75fd3086-12d0-46a2-af7e-7ac079b72412"
-                  name="Restaurant"
+                  name="GasStation"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -3064,12 +3189,12 @@
             Id="bc66a5d8-efda-406d-88bb-8a81546ff532"
             isDerived="false"
             sourceEndRoleName="Leverandør"
-            targetEndRoleName="Restaurant"
+            targetEndRoleName="GasStation"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="376074dc-3466-4796-b91a-0bf7268f94bb"
-              LastKnownName="Restaurant"
+              LastKnownName="GasStation"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -3101,7 +3226,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="d305c37a-1bbf-4076-84c4-10c56489ae62"
-                  name="Restaurant"
+                  name="GasStation"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -3155,7 +3280,7 @@
     <packageHasNamedElement>
       <class
         Id="fa237567-6ffa-4f97-a13d-1adaa395b70a"
-        name="Vare"
+        name="Produkt"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -3234,7 +3359,7 @@
             isAbstract="false">
             <classMoniker
               Id="145c17ae-ff01-4616-ad02-b19276fb9cb0"
-              LastKnownName="Menu"
+              LastKnownName="Varer"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -3329,12 +3454,12 @@
             Id="507b9539-5ea0-4974-a8cc-7dfc61084057"
             isDerived="false"
             sourceEndRoleName="Betaling"
-            targetEndRoleName="Restuarant"
+            targetEndRoleName="GasStation"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="168d2485-c325-4b2f-a0cd-90f9fb9bdd2a"
-              LastKnownName="Restuarant"
+              LastKnownName="GasStation"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -3353,7 +3478,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="8efea4b2-decd-4de7-88ce-f57a7c3cf405"
-                  name="Restuarant"
+                  name="GasStation"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -3414,7 +3539,7 @@
     <packageHasNamedElement>
       <class
         Id="a9558576-0d7d-4e86-bd9d-2989f6184903"
-        name="Restaurant1"
+        name="GasStation"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -3422,19 +3547,19 @@
           <association
             Id="4834e3a6-54f9-4da6-8bf8-fd475715392f"
             isDerived="false"
-            sourceEndRoleName="Restaurant"
-            targetEndRoleName="Menu"
+            sourceEndRoleName="GasStation"
+            targetEndRoleName="Varer"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="d17036a3-8516-4338-9c7d-d34c4ebcbfbf"
-              LastKnownName="Menu1"
+              LastKnownName="Varer"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="2fc929bd-74e1-4d6d-a6d0-1fc0e52e23ef"
-                  name="Restaurant"
+                  name="GasStation"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -3447,14 +3572,27 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="0ba03332-500c-4366-a4b9-3fd523f4f251"
-                  name="Menu"
+                  name="Varer"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false" />
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="292b053c-1803-4d32-a744-66d0f09a398d"
+                      name="Lower"
+                      value="M" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a8f77ffa-dab2-4465-98a8-3e2848798795"
+                      name="Upper"
+                      value="M" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -3464,7 +3602,7 @@
     <packageHasNamedElement>
       <class
         Id="d17036a3-8516-4338-9c7d-d34c4ebcbfbf"
-        name="Menu1"
+        name="Varer"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
@@ -3472,7 +3610,7 @@
     <packageHasNamedElement>
       <class
         Id="1b243648-e684-4245-87cd-d8987594ed97"
-        name="Kunde1"
+        name="Kunde"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -3481,12 +3619,12 @@
             Id="36067374-61a1-4779-b91c-d560574c7b21"
             isDerived="false"
             sourceEndRoleName="Kunde"
-            targetEndRoleName="Menu"
+            targetEndRoleName="Varer"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="d17036a3-8516-4338-9c7d-d34c4ebcbfbf"
-              LastKnownName="Menu1"
+              LastKnownName="Varer"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -3505,7 +3643,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="f932c5f3-2562-41f5-8f88-a34e9777ed19"
-                  name="Menu"
+                  name="Varer"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -3533,12 +3671,12 @@
             Id="259783b7-1607-43c2-8898-80d1b47fa15a"
             isDerived="false"
             sourceEndRoleName="Kunde"
-            targetEndRoleName="Restaurant"
+            targetEndRoleName="GasStation"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="a9558576-0d7d-4e86-bd9d-2989f6184903"
-              LastKnownName="Restaurant1"
+              LastKnownName="GasStation"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -3557,7 +3695,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="6389d0d5-4aa6-46c7-a075-03ac52cd9013"
-                  name="Restaurant"
+                  name="GasStation"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -4312,6 +4450,16 @@
           </objectNode>
         </nodes>
       </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="1e031558-c9f8-4ebd-a7f8-e9682cd286ac"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="598bca9b-6b21-412c-8050-00bfaf8bb40b"
+        name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

@@ -3,14 +3,14 @@
   <SequenceDesignerModelMoniker Id="a2836c42-65a6-4404-8fa7-58fe3a4bff75" />
   <nestedChildShapes>
     <lifelineShape Id="2dffb8a5-cc5b-48fc-9c23-c2c5589145c9" absoluteBounds="3.7458334922790528, 1, 0.15, 5.1354166666666661" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="Restaurant" />
+      <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="GasStation" />
       <relativeChildShapes>
         <umlLifelineHeadShape Id="2431a94b-daf9-4efc-ad67-fdaee242da55" absoluteBounds="3.320833492279053, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="Restaurant" />
+          <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="GasStation" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="8d77d1d2-c049-4462-bfd3-58263c82701d" absoluteBounds="3.7458334922790528, 1, 0, 5.125">
-          <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="Restaurant" />
+          <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="GasStation" />
         </lifelineHoverShape>
         <umlExecutionSpecificationShape Id="f34ff5e1-34a7-4eb2-9a6f-7e8f99c7c9f7" absoluteBounds="3.7458334922790528, 3.8520833333333329, 0.15, 0.55000000000000071" customColor="184, 204, 215" visualStyleMode="Modified">
           <behaviorExecutionSpecificationMoniker Id="9bddbecd-6b95-40a5-b585-2be64cb0d392" LastKnownName="BehaviorExecutionSpecification13" />
@@ -33,14 +33,14 @@
       </relativeChildShapes>
     </lifelineShape>
     <lifelineShape Id="d46d47db-4814-45dd-89e1-3c180f416823" absoluteBounds="5.9562501589457195, 1, 0.15, 5.1666666666666679" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Menu" />
+      <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Varer" />
       <relativeChildShapes>
         <umlLifelineHeadShape Id="4671c7a0-6c43-44af-bfe0-0e02d750f59d" absoluteBounds="5.53125015894572, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Menu" />
+          <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Varer" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="258ac653-4f75-47f7-9025-eb1c2bbf6d55" absoluteBounds="5.9562501589457195, 1, 0, 5.125">
-          <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Menu" />
+          <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Varer" />
         </lifelineHoverShape>
         <umlExecutionSpecificationShape Id="923d4714-993a-4b0a-8f1d-5493f3417cb6" absoluteBounds="5.9562501589457195, 1.3, 0.15, 1.1500000000000001" customColor="184, 204, 215" visualStyleMode="Modified">
           <behaviorExecutionSpecificationMoniker Id="0b3d8b90-7398-4eba-9800-9e74e31b52d4" LastKnownName="BehaviorExecutionSpecification4" />

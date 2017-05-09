@@ -7,11 +7,7 @@
       <relativeChildShapes />
     </actorShape>
     <actorShape Id="aaeefa27-57bf-4330-be8e-e6385fe9165d" absoluteBounds="9, 3.125, 0.5, 0.5" isReference="false" heightOffset="0">
-      <actorMoniker Id="916f2af8-3542-4706-8319-413e7849291d" LastKnownName="Restaurant" />
-      <relativeChildShapes />
-    </actorShape>
-    <actorShape Id="49025a91-2920-4f98-8ea0-20a789c4c2e7" absoluteBounds="9, 0.75, 0.5, 0.5" isReference="false" heightOffset="0">
-      <actorMoniker Id="b0c20ce3-6f25-4355-9469-f1ab77983d14" LastKnownName="Actor1" />
+      <actorMoniker Id="916f2af8-3542-4706-8319-413e7849291d" LastKnownName="GasStation" />
       <relativeChildShapes />
     </actorShape>
     <SubsystemShape Id="24dce6ee-e925-49c8-8b5b-a44fffdffe97" absoluteBounds="4.5, 0.5, 3, 4" customColor="White">
