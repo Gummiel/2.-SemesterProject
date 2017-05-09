@@ -7,6 +7,7 @@ using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using BestillingApp.View;
 
 #endregion
 
@@ -15,7 +16,7 @@ namespace BestillingApp
     /// <summary>
     ///     Provides application-specific behavior to supplement the default Application class.
     /// </summary>
-    internal sealed partial class App : Application
+    public sealed partial class App : Application
     {
         /// <summary>
         ///     Initializes the singleton application object.  This is the first line of authored code
