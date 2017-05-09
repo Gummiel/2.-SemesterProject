@@ -114,7 +114,7 @@
             <class Id="f7487ff8-c4c0-4e35-9d18-cba71543f650" name="MainViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="ce9dbc5f-ac24-47f3-a5db-b6d437df39fe" />
               <targetEnds>
-                <association Id="aa5da684-b63f-4764-a7a4-aeba7be17a0b" isDerived="false" sourceEndRoleName="MainViewModel" targetEndRoleName="RestaurantSingleton" isLeaf="false" isAbstract="false">
+                <association Id="aa5da684-b63f-4764-a7a4-aeba7be17a0b" isDerived="false" sourceEndRoleName="MainViewModel" targetEndRoleName="GasStationSingleton" isLeaf="false" isAbstract="false">
                   <classMoniker Id="79fcb3d1-cb74-4a32-ab6f-d3efcddd1b02" LastKnownName="GasStationSingleton" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
@@ -123,7 +123,7 @@
                       </memberEnd>
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="7cf6bdfd-3bb8-46ce-921d-92ec33117b4b" name="RestaurantSingleton" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                      <memberEnd Id="7cf6bdfd-3bb8-46ce-921d-92ec33117b4b" name="GasStationSingleton" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                         <elementDefinition Id="8f1b4c92-106f-4115-b76c-c7317668d53d" />
                       </memberEnd>
                     </associationHasOwnedEnds>
@@ -495,11 +495,11 @@
             <class Id="c0030a95-8e6b-4de9-855b-c5b473ed1b09" name="GasStation" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="0664814f-555c-42ce-8f4a-430ea4f94035" />
               <targetEnds>
-                <association Id="82dc15bc-5a86-4214-bfad-3ba6a3aa73db" isDerived="false" sourceEndRoleName="Restaurant" targetEndRoleName="Item" isLeaf="false" isAbstract="false">
+                <association Id="82dc15bc-5a86-4214-bfad-3ba6a3aa73db" isDerived="false" sourceEndRoleName="GasStation" targetEndRoleName="Item" isLeaf="false" isAbstract="false">
                   <classMoniker Id="5c25b137-be1d-4f03-9418-d88710628853" LastKnownName="Item" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="11ea09c7-2f5f-4678-b864-c02fdc9c3439" name="Restaurant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                      <memberEnd Id="11ea09c7-2f5f-4678-b864-c02fdc9c3439" name="GasStation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
                         <elementDefinition Id="a9e6bb2d-8d48-4436-a82a-781e92c1dc22" />
                       </memberEnd>
                     </associationHasOwnedEnds>
@@ -521,11 +521,11 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="19cdd6af-e121-4d88-8326-e1b3246ebbc9" />
                 </association>
-                <association Id="44533f84-8854-4ed1-9500-b8853cb68bf6" isDerived="false" sourceEndRoleName="Restaurant" targetEndRoleName="Order" isLeaf="false" isAbstract="false">
+                <association Id="44533f84-8854-4ed1-9500-b8853cb68bf6" isDerived="false" sourceEndRoleName="GasStation" targetEndRoleName="Order" isLeaf="false" isAbstract="false">
                   <classMoniker Id="653dd21f-d144-4d77-9a6b-75da6e7f8a3e" LastKnownName="Order" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="322d93eb-40f9-4678-9bc7-ccae3176ea05" name="Restaurant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                      <memberEnd Id="322d93eb-40f9-4678-9bc7-ccae3176ea05" name="GasStation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                         <elementDefinition Id="eac47bdd-842f-4c3c-b78c-fab07e7db2f3" />
                       </memberEnd>
                     </associationHasOwnedEnds>
@@ -547,11 +547,11 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="484f9d09-a0b6-4f6a-b9a4-5dd98a25df81" />
                 </association>
-                <association Id="e518c03f-4d51-4a08-9695-4c7ffeb78bb0" isDerived="false" sourceEndRoleName="Restaurant" targetEndRoleName="Reviews" isLeaf="false" isAbstract="false">
+                <association Id="e518c03f-4d51-4a08-9695-4c7ffeb78bb0" isDerived="false" sourceEndRoleName="GasStation" targetEndRoleName="Reviews" isLeaf="false" isAbstract="false">
                   <classMoniker Id="32221fcd-977b-4457-b62b-f4b654a28cdb" LastKnownName="Review" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="1d0ad38b-bc42-4fab-8a1b-806142e72980" name="Restaurant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                      <memberEnd Id="1d0ad38b-bc42-4fab-8a1b-806142e72980" name="GasStation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                         <elementDefinition Id="4b58274a-06c9-4efa-9463-9c920f980aba" />
                       </memberEnd>
                     </associationHasOwnedEnds>
@@ -573,16 +573,16 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="c7cb7585-3c52-469f-b827-d493c0ae9b10" />
                 </association>
-                <association Id="8838d102-d8e1-4dd3-9bf1-ec45fafb1931" isDerived="false" sourceEndRoleName="Restaurant" targetEndRoleName="RestaurantSingleton" isLeaf="false" isAbstract="false">
+                <association Id="8838d102-d8e1-4dd3-9bf1-ec45fafb1931" isDerived="false" sourceEndRoleName="GasStation" targetEndRoleName="GasStationSingleton" isLeaf="false" isAbstract="false">
                   <classMoniker Id="79fcb3d1-cb74-4a32-ab6f-d3efcddd1b02" LastKnownName="GasStationSingleton" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="42cb23a2-6f2d-4f8d-9791-86e24963932b" name="Restaurant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                      <memberEnd Id="42cb23a2-6f2d-4f8d-9791-86e24963932b" name="GasStation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                         <elementDefinition Id="8457ca0b-30b5-46ab-b87b-ddce929a4d31" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="e4a75abf-2e16-4c64-bdc0-19fe6829143b" name="RestaurantSingleton" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                      <memberEnd Id="e4a75abf-2e16-4c64-bdc0-19fe6829143b" name="GasStationSingleton" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                         <elementDefinition Id="67858a57-b924-4aad-bb10-dfee5d6fa65e" />
                       </memberEnd>
                     </associationHasOwnedEnds>

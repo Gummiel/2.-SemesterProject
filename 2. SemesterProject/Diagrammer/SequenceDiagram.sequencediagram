@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="a2836c42-65a6-4404-8fa7-58fe3a4bff75" name="SequenceDiagram" linkedPackageId="f316d1f4-fbd6-4fbb-a867-38fc8deb1cbe" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="a2836c42-65a6-4404-8fa7-58fe3a4bff75" name="SequenceDiagram" linkedPackageId="f316d1f4-fbd6-4fbb-a867-38fc8deb1cbe" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="6b0134aa-8106-4e75-a091-a6f70230acc0" name="SequenceDiagram" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -8,7 +8,7 @@
           <behaviorExecutionSpecification Id="0b3d8b90-7398-4eba-9800-9e74e31b52d4" name="BehaviorExecutionSpecification4">
             <elementDefinition Id="a27ea624-f8fd-492e-9434-a399e7530931" />
             <coveredLifelines>
-              <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Menu" />
+              <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Varer" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="2e1edf3d-bd20-4c32-ae55-48e0e989da65" LastKnownName="ExecutionOccurrenceSpecification8" />
@@ -31,19 +31,19 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Menu" />
+              <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Varer" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="5ad4dbb4-4c52-437a-b11d-785d83a940a8" name="MessageOccurrenceSpecification7">
             <elementDefinition Id="30f88ea0-ba50-453b-957b-4af978677f5c" />
             <covered>
-              <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="Restaurant" />
+              <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="GasStation" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="4af19f31-e62a-4c5e-bcff-f68caab286d8" name="MessageOccurrenceSpecification8">
             <elementDefinition Id="faea0064-35e5-4e19-a593-26371fedf33a" />
             <covered>
-              <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Menu" />
+              <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Varer" />
             </covered>
           </messageOccurrenceSpecification>
           <behaviorExecutionSpecification Id="a5d3e153-6efc-438b-bf71-212b0552d447" name="BehaviorExecutionSpecification7">
@@ -76,7 +76,7 @@
           <messageOccurrenceSpecification Id="4387d306-c223-4718-bf89-d28d6d0aeb03" name="MessageOccurrenceSpecification15">
             <elementDefinition Id="25478f1b-8e15-4104-9fb3-b1d6d8729c66" />
             <covered>
-              <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Menu" />
+              <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Varer" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="ea18e85d-04ae-4929-ade6-1cefc3c7d37c" name="MessageOccurrenceSpecification16">
@@ -88,7 +88,7 @@
           <messageOccurrenceSpecification Id="2ef92dd8-4c39-4fec-a187-92257fc6386b" name="MessageOccurrenceSpecification18">
             <elementDefinition Id="7e42b72a-fbf0-4bb3-af56-038c75e4dc49" />
             <covered>
-              <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Menu" />
+              <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Varer" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="18c970b5-2934-4331-826d-167558850d1f" name="MessageOccurrenceSpecification17">
@@ -111,13 +111,13 @@
           <messageOccurrenceSpecification Id="aa753b4f-dfc0-4bdf-a9dd-6ec6c6daa235" name="MessageOccurrenceSpecification9">
             <elementDefinition Id="6088aecc-ca65-4c92-8af3-e15128b83000" />
             <covered>
-              <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Menu" />
+              <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Varer" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="5e05e8fb-7fca-4249-b756-a8458ffc4b8c" name="MessageOccurrenceSpecification10">
             <elementDefinition Id="844648e8-41c7-48e7-8ca7-57225c36217a" />
             <covered>
-              <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="Restaurant" />
+              <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="GasStation" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="2e1edf3d-bd20-4c32-ae55-48e0e989da65" name="ExecutionOccurrenceSpecification8">
@@ -128,7 +128,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Menu" />
+              <lifelineMoniker Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" LastKnownName="Varer" />
             </covered>
           </executionOccurrenceSpecification>
           <behaviorExecutionSpecification Id="f92465bf-a12d-4939-a1fc-8eb071b518e1" name="BehaviorExecutionSpecification10">
@@ -161,7 +161,7 @@
           <messageOccurrenceSpecification Id="fdb8e274-f56e-43a1-8b60-150e6ed15551" name="MessageOccurrenceSpecification23">
             <elementDefinition Id="4c855276-247f-4f52-a071-57438b38de83" />
             <covered>
-              <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="Restaurant" />
+              <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="GasStation" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="4858afa7-f186-4b8c-87d9-016bf8449911" name="MessageOccurrenceSpecification24">
@@ -223,7 +223,7 @@
           <behaviorExecutionSpecification Id="9bddbecd-6b95-40a5-b585-2be64cb0d392" name="BehaviorExecutionSpecification13">
             <elementDefinition Id="509d03d7-4049-4382-9de1-384a6a6d63cd" />
             <coveredLifelines>
-              <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="Restaurant" />
+              <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="GasStation" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="d3c83639-93a7-4800-bb88-bddc59e1e691" LastKnownName="ExecutionOccurrenceSpecification26" />
@@ -243,7 +243,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="Restaurant" />
+              <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="GasStation" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="a67b4f44-b6c7-46ce-abd2-ed9cead108de" name="MessageOccurrenceSpecification31">
@@ -255,7 +255,7 @@
           <messageOccurrenceSpecification Id="4df1dfd3-158a-40d6-b858-3a193cf32a7d" name="MessageOccurrenceSpecification32">
             <elementDefinition Id="fa481722-880f-46c0-801e-e631bb7ec4bc" />
             <covered>
-              <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="Restaurant" />
+              <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="GasStation" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="572b8f48-abbf-4813-b7b6-6bcb6eb5fce0" name="ExecutionOccurrenceSpecification22">
@@ -277,12 +277,12 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="Restaurant" />
+              <lifelineMoniker Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" LastKnownName="GasStation" />
             </covered>
           </executionOccurrenceSpecification>
         </fragments>
         <lifelines>
-          <lifeline Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" name="Restaurant" isActor="true" lifelineDisplayName="Restaurant">
+          <lifeline Id="3b919cb2-8b61-4064-9bbf-fd7a2bbc95a4" name="GasStation" isActor="true" lifelineDisplayName="GasStation">
             <elementDefinition Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23" />
             <represents>
               <propertyMoniker Id="6707c9ef-ee0b-4451-a58f-aa8600ecf799" />
@@ -295,7 +295,7 @@
               <executionOccurrenceSpecificationMoniker Id="d3c83639-93a7-4800-bb88-bddc59e1e691" LastKnownName="ExecutionOccurrenceSpecification26" />
             </topLevelOccurrences>
           </lifeline>
-          <lifeline Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" name="Menu" isActor="false" lifelineDisplayName="Menu">
+          <lifeline Id="467b9ce5-2bc2-48d0-9cb9-6532a6a47764" name="Varer" isActor="false" lifelineDisplayName="Varer">
             <elementDefinition Id="de546a36-3b8d-425e-9823-ceb508c8277d" />
             <represents>
               <propertyMoniker Id="2f22783d-085f-4637-ae26-063a10c4c75e" />
@@ -334,7 +334,7 @@
           </lifeline>
         </lifelines>
         <messages>
-          <message Id="c3193b98-2b77-4f41-8961-9ede31cbf34e" name="getMenu(menu)" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+          <message Id="c3193b98-2b77-4f41-8961-9ede31cbf34e" name="getProduct(product)" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
             <elementDefinition Id="c4d02489-6a0c-469e-8ba5-5db95fa84a03" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="5ad4dbb4-4c52-437a-b11d-785d83a940a8" LastKnownName="MessageOccurrenceSpecification7" />
@@ -361,7 +361,7 @@
               <messageOccurrenceSpecificationMoniker Id="2ef92dd8-4c39-4fec-a187-92257fc6386b" LastKnownName="MessageOccurrenceSpecification18" />
             </receiveEvent>
           </message>
-          <message Id="73b1810d-7216-4616-8b8f-ba0f57a17f8d" name="return menu" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+          <message Id="73b1810d-7216-4616-8b8f-ba0f57a17f8d" name="return product" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
             <elementDefinition Id="d6738156-5f27-4d2b-aed9-4f6c3374287b" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="aa753b4f-dfc0-4bdf-a9dd-6ec6c6daa235" LastKnownName="MessageOccurrenceSpecification9" />
@@ -402,7 +402,7 @@
           <property Id="6707c9ef-ee0b-4451-a58f-aa8600ecf799" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="20d81887-5096-4d80-9ced-6b63376bd070" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="f62d1c38-143b-4d59-ad05-b5c5d771fcf3" LastKnownName="Restaurant" />
+              <referencedTypeMoniker Id="3e642597-529f-4ba1-b026-f3da12fad3f2" LastKnownName="GasStation" />
             </type_NamedElement>
           </property>
           <property Id="d5bb0e6c-32db-467a-8d81-9a95eb5ea522" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -433,7 +433,7 @@
       </interaction>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="f62d1c38-143b-4d59-ad05-b5c5d771fcf3" name="Restaurant" isAbstract="false" isLeaf="false" cachedFullName="Diagrammer::Restaurant">
+      <referencedType Id="f62d1c38-143b-4d59-ad05-b5c5d771fcf3" name="GasStation" isAbstract="false" isLeaf="false" cachedFullName="Diagrammer::GasStation">
         <elementDefinition Id="10717453-3263-4e0e-ac25-7cdfd909180f" />
       </referencedType>
     </packageHasNamedElement>
@@ -511,6 +511,11 @@
       <executionEvent Id="9c270161-fa36-4795-a6ed-a3a0d5d49d3d" name="ExecutionEvent">
         <elementDefinition Id="e06ff182-e7f4-4ce8-b6ed-a0ca0a0f219f" />
       </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3e642597-529f-4ba1-b026-f3da12fad3f2" name="GasStation" isAbstract="false" isLeaf="false" cachedFullName="Diagrammer::GasStation">
+        <elementDefinition Id="376074dc-3466-4796-b91a-0bf7268f94bb" />
+      </referencedType>
     </packageHasNamedElement>
   </packagedElements>
   <package Id="f316d1f4-fbd6-4fbb-a867-38fc8deb1cbe" name="Diagrammer">

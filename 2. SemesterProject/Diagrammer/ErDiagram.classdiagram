@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="51626cd8-978f-4ff5-baee-8131d910d30d" name="ErDiagram" linkedPackageId="1b0d4824-9a14-4180-a9ba-95ef09af944a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="51626cd8-978f-4ff5-baee-8131d910d30d" name="ErDiagram" linkedPackageId="1b0d4824-9a14-4180-a9ba-95ef09af944a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <ownedCommentsInternal>
     <comment Id="8d0414e0-4495-4dce-b828-e11c15ed8a4f">
       <elementDefinition Id="600ac0e7-1508-49b2-857c-817ae2e2b366" />
@@ -11,38 +11,35 @@
     </comment>
     <comment Id="c8d720ec-4449-44b0-a33a-56a89b58f8ce">
       <elementDefinition Id="8eedc51b-cd63-4341-b9cd-e2a8ccdc7927" />
-      <body>Laver</body>
+      <body>Bestiller/Reserver
+</body>
     </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="1459e77d-195e-4143-b1f4-020af6c415d2">
-      <profileInstance Id="1b7c6475-11d0-4d02-a61a-a816ff664908" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="140b9759-ad2c-4633-b05c-e07e990f212a">
-      <profileInstance Id="ebd6e824-9207-41d7-8ecb-b540159b7a63" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
-      <class Id="4c4aa0e2-1f89-47b4-8ae9-697903d3a04d" name="Restaurant1" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="4c4aa0e2-1f89-47b4-8ae9-697903d3a04d" name="GasStation" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="a9558576-0d7d-4e86-bd9d-2989f6184903" />
         <targetEnds>
-          <association Id="8c013a18-6d6d-48c2-be90-ead363bf5418" isDerived="false" sourceEndRoleName="Restaurant" targetEndRoleName="Menu" isLeaf="false" isAbstract="false">
-            <classMoniker Id="6e9cede7-c09d-423e-8140-51160be45a02" LastKnownName="Menu1" />
+          <association Id="8c013a18-6d6d-48c2-be90-ead363bf5418" isDerived="false" sourceEndRoleName="GasStation" targetEndRoleName="Varer" isLeaf="false" isAbstract="false">
+            <classMoniker Id="6e9cede7-c09d-423e-8140-51160be45a02" LastKnownName="Varer" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="6c1f369f-62dc-4cbd-9b22-60a48d6448b0" name="Restaurant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                <memberEnd Id="6c1f369f-62dc-4cbd-9b22-60a48d6448b0" name="GasStation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <elementDefinition Id="2fc929bd-74e1-4d6d-a6d0-1fc0e52e23ef" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="8e7585d9-71eb-48e1-a216-d9ee8ce6a62b" name="Menu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="8e7585d9-71eb-48e1-a216-d9ee8ce6a62b" name="Varer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="252939f8-85fa-4bc3-9ed0-560403a100d3" name="Lower" value="M">
+                      <elementDefinition Id="292b053c-1803-4d32-a744-66d0f09a398d" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b744a828-3cc7-4bab-92e0-b311ab7d7d68" name="Upper" value="M">
+                      <elementDefinition Id="a8f77ffa-dab2-4465-98a8-3e2848798795" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="0ba03332-500c-4366-a4b9-3fd523f4f251" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -53,16 +50,16 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="6e9cede7-c09d-423e-8140-51160be45a02" name="Menu1" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="6e9cede7-c09d-423e-8140-51160be45a02" name="Varer" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="d17036a3-8516-4338-9c7d-d34c4ebcbfbf" />
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="0e337855-0679-4d6c-a543-07e0300b203d" name="Kunde1" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="0e337855-0679-4d6c-a543-07e0300b203d" name="Kunde" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="1b243648-e684-4245-87cd-d8987594ed97" />
         <targetEnds>
-          <association Id="522f8c7a-da06-4ee6-9cb8-25a8b38f03d5" isDerived="false" sourceEndRoleName="Kunde" targetEndRoleName="Menu" isLeaf="false" isAbstract="false">
-            <classMoniker Id="6e9cede7-c09d-423e-8140-51160be45a02" LastKnownName="Menu1" />
+          <association Id="522f8c7a-da06-4ee6-9cb8-25a8b38f03d5" isDerived="false" sourceEndRoleName="Kunde" targetEndRoleName="Varer" isLeaf="false" isAbstract="false">
+            <classMoniker Id="6e9cede7-c09d-423e-8140-51160be45a02" LastKnownName="Varer" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="2a0ca4c4-45d3-4129-b28e-6e5ba1f23869" name="Kunde" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -70,7 +67,7 @@
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="015f0f7d-2871-4984-9d38-9f95dda296ba" name="Menu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="015f0f7d-2871-4984-9d38-9f95dda296ba" name="Varer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <lowerValueInternal>
                     <literalString Id="7bc81247-abbf-44e9-8e9d-126a59862589" name="Lower" value="M">
                       <elementDefinition Id="90192713-a7d8-4f0c-92e4-b46fbea9a313" />
@@ -87,8 +84,8 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="36067374-61a1-4779-b91c-d560574c7b21" />
           </association>
-          <association Id="aba73bf5-1176-42f5-9c57-b769e9ed4af0" isDerived="false" sourceEndRoleName="Kunde" targetEndRoleName="Restaurant" isLeaf="false" isAbstract="false">
-            <classMoniker Id="4c4aa0e2-1f89-47b4-8ae9-697903d3a04d" LastKnownName="Restaurant1" />
+          <association Id="aba73bf5-1176-42f5-9c57-b769e9ed4af0" isDerived="false" sourceEndRoleName="Kunde" targetEndRoleName="GasStation" isLeaf="false" isAbstract="false">
+            <classMoniker Id="4c4aa0e2-1f89-47b4-8ae9-697903d3a04d" LastKnownName="GasStation" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="27a02184-8416-40e4-b9c2-0b5c63535113" name="Kunde" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -96,7 +93,7 @@
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="edfd3ca9-1750-436b-94a7-f3629bc795c3" name="Restaurant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="edfd3ca9-1750-436b-94a7-f3629bc795c3" name="GasStation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="6389d0d5-4aa6-46c7-a075-03ac52cd9013" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -109,5 +106,19 @@
   </packagedElements>
   <package Id="1b0d4824-9a14-4180-a9ba-95ef09af944a" name="Diagrammer">
     <elementDefinition Id="4de239bc-7035-4d7e-806a-64e465e6ecf0" />
+    <profileInstances>
+      <packageHasProfileInstances Id="1459e77d-195e-4143-b1f4-020af6c415d2">
+        <profileInstance Id="1b7c6475-11d0-4d02-a61a-a816ff664908" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="140b9759-ad2c-4633-b05c-e07e990f212a">
+        <profileInstance Id="ebd6e824-9207-41d7-8ecb-b540159b7a63" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="06008eac-5116-4505-8369-e89020fb4142" name="UseCaseDiagram" linkedPackageId="84c3cfcf-5af8-4053-bea3-21ad9ddc6af6" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="06008eac-5116-4505-8369-e89020fb4142" name="UseCaseDiagram" linkedPackageId="84c3cfcf-5af8-4053-bea3-21ad9ddc6af6" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="72b87bda-58a5-4ed2-a320-fc995a1cf850" name="Kunde" isAbstract="false" isLeaf="false">
@@ -102,7 +102,7 @@
       </useCase>
     </packageHasNamedElement>
     <useCaseModelRootHasTypes>
-      <actor Id="916f2af8-3542-4706-8319-413e7849291d" name="Restaurant" isAbstract="false" isLeaf="false">
+      <actor Id="916f2af8-3542-4706-8319-413e7849291d" name="GasStation" isAbstract="false" isLeaf="false">
         <elementDefinition Id="10717453-3263-4e0e-ac25-7cdfd909180f" />
         <targetEnds>
           <association Id="7efc319f-1d59-4955-8018-e9d8662c07b7" isDerived="false" sourceEndRoleName="Restaurant" targetEndRoleName="Levering/Hentning" isLeaf="false" isAbstract="false">
@@ -172,11 +172,6 @@
         </subjects>
       </useCase>
     </packageHasNamedElement>
-    <useCaseModelRootHasTypes>
-      <actor Id="b0c20ce3-6f25-4355-9469-f1ab77983d14" name="Actor1" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="e0975b9d-1ce7-4dc1-b1da-4a6e7341db1b" />
-      </actor>
-    </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="84c3cfcf-5af8-4053-bea3-21ad9ddc6af6" name="Diagrammer">
     <elementDefinition Id="4de239bc-7035-4d7e-806a-64e465e6ecf0" />

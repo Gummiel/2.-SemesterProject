@@ -16,12 +16,12 @@
             Id="edf4079a-38de-40a3-b77d-2e001b1aa43a"
             isDerived="false"
             sourceEndRoleName="MainViewModel"
-            targetEndRoleName="RestaurantSingleton"
+            targetEndRoleName="GasStationSingleton"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="cf2af258-5a0f-4456-b844-b96c8d11f702"
-              LastKnownName="RestaurantSingleton"
+              LastKnownName="GasStationSingleton"
               LastKnownLocation="Package_1334.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -40,7 +40,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="8f1b4c92-106f-4115-b76c-c7317668d53d"
-                  name="RestaurantSingleton"
+                  name="GasStationSingleton"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
