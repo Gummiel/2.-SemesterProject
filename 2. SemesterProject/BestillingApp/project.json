@@ -1,5 +1,6 @@
 ﻿{
   "dependencies": {
+    "Microsoft.AspNet.WebApi.Client": "5.2.3",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0",
     "Microsoft.Xaml.Behaviors.Uwp.Managed": "2.0.0"
   },

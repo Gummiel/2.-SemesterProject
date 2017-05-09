@@ -83,63 +83,67 @@
     <ScrollViewer>
         <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="150"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid x:Name="TopBarGrid" Grid.Row="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="50" />
                 </Grid.ColumnDefinitions>
                 <Grid x:Name="AppNameGrid" Grid.Column="0">
-                    <TextBlock x:Name="TBlockAppName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Daily Tank" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20"/>
+                    <TextBlock x:Name="TBlockAppName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Daily Tank"
+                               VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" />
                 </Grid>
                 <Grid x:Name="ShoppingGrid" Grid.Column="1">
-                    <TextBlock x:Name="TBlockShoppingCart" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Shop" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="TBlockShoppingCart" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Shop"
+                               VerticalAlignment="Center" />
                 </Grid>
             </Grid>
             <Grid x:Name="SomethingGrid" Grid.Row="1">
-                <TextBlock x:Name="TBlockSomething" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Something" VerticalAlignment="Center"/>
+                <TextBlock x:Name="TBlockSomething" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Something"
+                           VerticalAlignment="Center" />
             </Grid>
             <Grid x:Name="NavigationGrid" Grid.Row="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid x:Name="MenuGrid" Grid.Column="0">
-                    <Button x:Name="BtnMenu" Content="Shop" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource NavigationButtonStyle}">
+                    <Button x:Name="BtnMenu" Content="Shop" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                            Style="{StaticResource NavigationButtonStyle}">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
-                                <core:NavigateToPageAction TargetPage="BestillingApp.View.MenuPage"/>
+                                <core:NavigateToPageAction TargetPage="BestillingApp.View.MenuPage" />
                             </core:EventTriggerBehavior>
                         </interactivity:Interaction.Behaviors>
                     </Button>
                 </Grid>
                 <Grid x:Name="ReviewsGrid" Grid.Column="1" Margin="1,0">
-                    <Button x:Name="BtnReviews" Content="Reviews" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource NavigationButtonStyle}">
+                    <Button x:Name="BtnReviews" Content="Reviews" HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch" Style="{StaticResource NavigationButtonStyle}">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
-                                <core:NavigateToPageAction TargetPage="BestillingApp.View.ReviewsPage"/>
+                                <core:NavigateToPageAction TargetPage="BestillingApp.View.ReviewsPage" />
                             </core:EventTriggerBehavior>
                         </interactivity:Interaction.Behaviors>
                     </Button>
                 </Grid>
                 <Grid x:Name="InfoGrid" Grid.Column="2">
-                    <Button x:Name="BtnInfo" Content="Info" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource NavigationButtonStyle}" BorderBrush="#FFFF0000">
+                    <Button x:Name="BtnInfo" Content="Info" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                            Style="{StaticResource NavigationButtonStyle}" BorderBrush="#FFFF0000">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
-                                <core:NavigateToPageAction TargetPage="BestillingApp.View.InfoPage"/>
+                                <core:NavigateToPageAction TargetPage="BestillingApp.View.InfoPage" />
                             </core:EventTriggerBehavior>
                         </interactivity:Interaction.Behaviors>
                     </Button>
                 </Grid>
             </Grid>
-            <Grid x:Name="ContentGrid" Grid.Row="3">
-
-            </Grid>
+            <Grid x:Name="ContentGrid" Grid.Row="3" />
         </Grid>
     </ScrollViewer>
 </Page>

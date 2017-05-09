@@ -1,20 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿#region References
+
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using BestillingWebService;
+
+#endregion
 
 namespace BestillingWebService.Controllers
 {
     public class ReviewsController : ApiController
     {
-        private BestillingContext db = new BestillingContext();
+        private readonly BestillingContext db = new BestillingContext();
 
         // GET: api/Reviews
         public IQueryable<Review> GetReview()
@@ -26,11 +25,9 @@ namespace BestillingWebService.Controllers
         [ResponseType(typeof(Review))]
         public IHttpActionResult GetReview(int id)
         {
-            Review review = db.Review.Find(id);
+            var review = db.Review.Find(id);
             if (review == null)
-            {
                 return NotFound();
-            }
 
             return Ok(review);
         }
@@ -40,14 +37,10 @@ namespace BestillingWebService.Controllers
         public IHttpActionResult PutReview(int id, Review review)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
             if (id != review.ID)
-            {
                 return BadRequest();
-            }
 
             db.Entry(review).State = EntityState.Modified;
 
@@ -58,13 +51,8 @@ namespace BestillingWebService.Controllers
             catch (DbUpdateConcurrencyException)
             {
                 if (!ReviewExists(id))
-                {
                     return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                throw;
             }
 
             return StatusCode(HttpStatusCode.NoContent);
@@ -75,9 +63,7 @@ namespace BestillingWebService.Controllers
         public IHttpActionResult PostReview(Review review)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
             db.Review.Add(review);
 
@@ -88,27 +74,20 @@ namespace BestillingWebService.Controllers
             catch (DbUpdateException)
             {
                 if (ReviewExists(review.ID))
-                {
                     return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
+                throw;
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = review.ID }, review);
+            return CreatedAtRoute("DefaultApi", new {id = review.ID}, review);
         }
 
         // DELETE: api/Reviews/5
         [ResponseType(typeof(Review))]
         public IHttpActionResult DeleteReview(int id)
         {
-            Review review = db.Review.Find(id);
+            var review = db.Review.Find(id);
             if (review == null)
-            {
                 return NotFound();
-            }
 
             db.Review.Remove(review);
             db.SaveChanges();
@@ -119,9 +98,7 @@ namespace BestillingWebService.Controllers
         protected override void Dispose(bool disposing)
         {
             if (disposing)
-            {
                 db.Dispose();
-            }
             base.Dispose(disposing);
         }
 

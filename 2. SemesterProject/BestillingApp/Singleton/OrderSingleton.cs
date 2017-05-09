@@ -23,20 +23,19 @@ namespace BestillingApp.Singleton
 
         #endregion
 
+        #region Add
+
+        public void AddOrder(int orderID)
+        {
+        }
+
+        #endregion
+
         #region Properties
 
         public static OrderSingleton Instance => _instance ?? (_instance = new OrderSingleton());
 
         public ObservableCollection<Order> Orders = new ObservableCollection<Order>();
-
-        #endregion
-
-        #region Add
-
-        public void AddOrder(int orderID)
-        {
-            
-        }
 
         #endregion
     }
