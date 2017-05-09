@@ -96,7 +96,7 @@
                     <TextBlock x:Name="TBlockAppName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Daily Tank" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20"/>
                 </Grid>
                 <Grid x:Name="ShoppingGrid" Grid.Column="1">
-                    <TextBlock x:Name="TBlockShoppingCart" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Shopping Cart" VerticalAlignment="Center" Margin="-50,15,0,15" Width="100"/>
+                    <TextBlock x:Name="TBlockShoppingCart" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Shop" VerticalAlignment="Center"/>
                 </Grid>
             </Grid>
             <Grid x:Name="SomethingGrid" Grid.Row="1">
