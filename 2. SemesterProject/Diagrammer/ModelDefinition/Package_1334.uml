@@ -25,8 +25,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="c2ed3b44-afb3-4de0-9339-8459b23cfe65"
-                LastKnownName="OberservableCollection&lt;Restaurant&gt;"
+                Id="caf47f25-8b8d-417d-97fe-cd26521b2cf5"
+                LastKnownName="OberservableCollection&lt;GasStation&gt;"
                 LastKnownLocation="Package_1334.uml" />
             </type_NamedElement>
           </property>
@@ -459,6 +459,11 @@
       <undefinedType
         Id="d33a2373-5cc6-4008-aae1-7c3f6f46a110"
         name="OberservableCollection&lt;Order&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="caf47f25-8b8d-417d-97fe-cd26521b2cf5"
+        name="OberservableCollection&lt;GasStation&gt;" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

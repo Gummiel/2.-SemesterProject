@@ -962,7 +962,7 @@
                 <property Id="22d47d34-8d5d-46ec-8e0a-3195c537722a" name="GasStation" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="1b57815f-4477-4e38-82f4-e75bd75fc58b" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="59724068-b9ef-4432-b163-34f6215bacc7" LastKnownName="OberservableCollection&lt;Restaurant&gt;" />
+                    <referencedTypeMoniker Id="3c3f6898-3806-4059-9db9-24a42a509b94" LastKnownName="OberservableCollection&lt;GasStation&gt;" />
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
@@ -1236,11 +1236,6 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="59724068-b9ef-4432-b163-34f6215bacc7" name="OberservableCollection&lt;Restaurant&gt;" isAbstract="false" isLeaf="false" cachedFullName="OberservableCollection&lt;Restaurant&gt;">
-        <elementDefinition Id="c2ed3b44-afb3-4de0-9339-8459b23cfe65" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="da879d01-60b7-4011-837b-c3fb3f1295c7" name="OberservableCollection&lt;Review&gt;" isAbstract="false" isLeaf="false" cachedFullName="OberservableCollection&lt;Review&gt;">
         <elementDefinition Id="8626808d-cfcf-4ac9-b2d9-6edc21b66645" />
       </referencedType>
@@ -1248,6 +1243,11 @@
     <packageHasNamedElement>
       <referencedType Id="6dd8d245-55bd-4694-afce-6f1290923ea2" name="OberservableCollection&lt;Order&gt;" isAbstract="false" isLeaf="false" cachedFullName="OberservableCollection&lt;Order&gt;">
         <elementDefinition Id="d33a2373-5cc6-4008-aae1-7c3f6f46a110" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3c3f6898-3806-4059-9db9-24a42a509b94" name="OberservableCollection&lt;GasStation&gt;" isAbstract="false" isLeaf="false" cachedFullName="OberservableCollection&lt;GasStation&gt;">
+        <elementDefinition Id="caf47f25-8b8d-417d-97fe-cd26521b2cf5" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

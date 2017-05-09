@@ -30,5 +30,14 @@ namespace BestillingApp.Singleton
         public ObservableCollection<Order> Orders = new ObservableCollection<Order>();
 
         #endregion
+
+        #region Add
+
+        public void AddOrder(int orderID)
+        {
+            
+        }
+
+        #endregion
     }
 }
