@@ -94,10 +94,10 @@
                     <ColumnDefinition Width="50"/>
                 </Grid.ColumnDefinitions>
                 <Grid x:Name="AppNameGrid" Grid.Column="0">
-                    <TextBlock x:Name="TBlockAppName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="EatNow" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20"/>
+                    <TextBlock x:Name="TBlockAppName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Daily Tank" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20"/>
                 </Grid>
                 <Grid x:Name="ShoppingGrid" Grid.Column="1">
-                    <TextBlock x:Name="TBlockShoppingCart" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Shop" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="TBlockShoppingCart" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Shopping Cart" VerticalAlignment="Center" Margin="-50,5,0,5" Width="100"/>
                 </Grid>
             </Grid>
             <Grid x:Name="SomethingGrid" Grid.Row="1">
@@ -110,7 +110,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Grid x:Name="MenuGrid" Grid.Column="0">
-                    <Button x:Name="BtnMenu" Content="Menu" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource NavigationButtonStyle}" BorderBrush="#FFFF0000">
+                    <Button x:Name="BtnMenu" Content="Shop" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource NavigationButtonStyle}" BorderBrush="#FFFF0000">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
                                 <core:NavigateToPageAction TargetPage="BestillingApp.View.MenuPage"/>

@@ -26,5 +26,10 @@ namespace BestillingApp.View
         {
             this.InitializeComponent();
         }
+
+        private void TBlockShoppingCart_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
