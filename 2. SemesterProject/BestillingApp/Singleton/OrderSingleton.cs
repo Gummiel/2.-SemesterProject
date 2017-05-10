@@ -46,6 +46,8 @@ namespace BestillingApp.Singleton
             }
         }
 
+        #endregion
+
         #region Add
 
         public void AddOrder(int id, int totalPrice)
