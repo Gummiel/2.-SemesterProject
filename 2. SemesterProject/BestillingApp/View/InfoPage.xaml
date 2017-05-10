@@ -102,11 +102,7 @@
                                VerticalAlignment="Center" />
                 </Grid>
             </Grid>
-            <Grid x:Name="SomethingGrid" Grid.Row="1">
-                <TextBlock x:Name="TBlockSomething" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Something"
-                           VerticalAlignment="Center" />
-            </Grid>
-            <Grid x:Name="NavigationGrid" Grid.Row="2">
+            <Grid x:Name="NavigationGrid" Grid.Row="1" Margin="0,0,0,100">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
@@ -143,7 +139,7 @@
                     </Button>
                 </Grid>
             </Grid>
-            <Grid x:Name="ContentGrid" Grid.Row="3" />
+            <Grid x:Name="ContentGrid" Grid.Row="1" Margin="0,50,0,0" Grid.RowSpan="3" />
         </Grid>
     </ScrollViewer>
 </Page>
