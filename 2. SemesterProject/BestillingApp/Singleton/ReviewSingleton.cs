@@ -44,6 +44,10 @@ namespace BestillingApp.Singleton
                     reviews.Add(rev);
                 }
             }
+            else
+            {
+                //Possibly exception
+            }
         }
 
         #endregion

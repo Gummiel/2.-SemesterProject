@@ -105,12 +105,14 @@
     <Compile Include="Model\Order.cs" />
     <Compile Include="Model\OrderItem.cs" />
     <Compile Include="Model\Payment.cs" />
+    <Compile Include="Model\Receipt.cs" />
     <Compile Include="Model\Review.cs" />
     <Compile Include="Persistency\PersistencyService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton\CustomerSingleton.cs" />
     <Compile Include="Singleton\GasStationSingleton.cs" />
     <Compile Include="Singleton\OrderSingleton.cs" />
+    <Compile Include="Singleton\ReceiptSingleton.cs" />
     <Compile Include="Singleton\ReviewSingleton.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />

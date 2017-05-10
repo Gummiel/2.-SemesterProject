@@ -451,5 +451,66 @@ namespace BestillingApp.Persistency
         }
 
         #endregion
+
+        #region Receipt
+
+        public static async void SaveReceiptAsJsonAsync(Receipt c)
+        {
+            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            try
+            {
+                var response = await Task.FromResult(_client.PostAsJsonAsync("api/Receipts/", c).Result);
+            }
+            catch (Exception ex)
+            {
+                new MessageDialog(ex.Message).ShowAsync();
+                throw;
+            }
+        }
+
+        public static async void DeleteReceiptAsync(Receipt c)
+        {
+            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            try
+            {
+                var response = await Task.FromResult(_client.DeleteAsync("api/Receipts/" + c).Result);
+            }
+            catch (Exception ex)
+            {
+                new MessageDialog(ex.Message).ShowAsync();
+                throw;
+            }
+        }
+
+        public static async Task<List<Receipt>> LoadReceiptFromJsonAsync()
+        {
+            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            try
+            {
+                var response = await Task.FromResult(_client.GetAsync("api/Receipts/").Result);
+
+                if (!response.IsSuccessStatusCode)
+                    return null;
+                var receiptData =
+                    await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<Receipt>>().Result);
+                return receiptData.ToList();
+            }
+            catch (Exception ex)
+            {
+                new MessageDialog(ex.Message).ShowAsync();
+                throw;
+            }
+        }
+
+        #endregion
     }
 }

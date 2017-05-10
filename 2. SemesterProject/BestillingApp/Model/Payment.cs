@@ -2,11 +2,11 @@
 {
     internal class Payment
     {
+        public int AccountNo { get; set; }
+
         public Payment(int accountNo)
         {
             AccountNo = accountNo;
-        }
-
-        public int AccountNo { get; set; }
+        } 
     }
 }
