@@ -39,10 +39,87 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0b6e0735-9bf8-4a80-bcfa-911c027525f5"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5c13fb1d-790e-4663-9cb7-6889f5b4f1bb"
+                  name="string name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b5c215f4-93b6-4b38-8e02-bf8506ec5551"
+                  name="string address"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f86e7bc1-5078-401c-bba1-d83522c7824e"
+                  name="string city"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2bc2b33a-7e07-4928-bdbf-fa8eb41c5b91"
+                  name="int zipcode"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bc183d7a-455b-4ea0-a528-2d9318aefe2f"
+                  name="string email"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f80f9970-6bce-4a6c-8852-0dfe85982ba8"
+                  name="int telNo"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0120b459-7b0d-4237-b661-ae5fac5e6a13"
+                  name="string openHours"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
           <operation
             Id="c5fbece7-2386-4657-98c6-a82fecc3087c"
             name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6139960d-dd29-4592-8ac2-e52e14ceb3fa"
+                  name="GasStation g"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="47d5447e-a3c9-4644-9647-48ed373f1ef6"
+            name="LoadGasStationAsync"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -91,10 +168,52 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b889ded9-6927-461c-8a93-03b0083c5835"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="22aa5d9a-f5b8-441d-87f1-57202bea16db"
+                  name="string description"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ead6dfee-f01a-49b3-9aff-0552f179d032"
+                  name="int stars"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
           <operation
             Id="1ed227c4-737f-4dc1-b7c1-8e9f59f76aac"
             name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="17b775b3-93fa-4f61-b646-ddff6d72a623"
+                  name="Review r"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9b56fd97-cf33-4f89-aef3-2cbfd43b690a"
+            name="LoadReviewAsync"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -257,10 +376,80 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="de56f50a-a012-4f12-8715-096230a133f2"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="163d368e-b66b-4cb6-bb9f-e3f55b9f108f"
+                  name="string name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a55b56e6-5207-411e-9dc3-a1b138b8eaf4"
+                  name="string email"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d0c5b109-08ca-4247-80fd-13eda1114968"
+                  name="string address"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="26fcaad1-cd75-404d-a920-65637ee96ab5"
+                  name="int telNo"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="91824ecb-1352-4ee1-bd6f-cfbcafffe0cd"
+                  name="int zipcode"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bf4abec3-325e-4170-aecd-79582ef0690c"
+                  name="string city"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
           <operation
             Id="1413bc31-904d-4aba-a2fb-56cca00c9659"
             name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d5826a3a-8c1d-4fd9-8720-1c3fb6c67890"
+                  name="Customer c"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="42b7342e-afc8-4140-b1d2-e06f193b2400"
+            name="LoadCustomerAsync"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -423,10 +612,45 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fb2407b4-874d-444d-86d5-dbc039e6c376"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e459d392-1a6b-4997-a528-54777ad3f0da"
+                  name="int totalPrice"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
           <operation
             Id="023cd7c0-5c4c-4b30-892a-e42368c896ae"
             name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b57991eb-4cf2-4edb-a7cd-674269629402"
+                  name="Order o"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="00c33c75-019c-4a51-a914-0a7722bd629a"
+            name="LoadOrderAsync"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"

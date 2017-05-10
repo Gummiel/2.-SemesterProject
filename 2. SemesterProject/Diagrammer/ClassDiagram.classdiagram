@@ -91,21 +91,6 @@
         <elementDefinition Id="0421bc01-ec82-4f18-92c3-b7b50169ecfa" />
       </referencedType>
     </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="20500e86-82b5-430f-8457-bc1fe0a6059f" name="void" isAbstract="false" isLeaf="false" cachedFullName="void">
-        <elementDefinition Id="b0acf6be-5319-4940-8f38-12534d465321" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="81b82220-793b-45cf-8cc4-48e27db057ab" name="void" isAbstract="false" isLeaf="false" cachedFullName="void">
-        <elementDefinition Id="b0acf6be-5319-4940-8f38-12534d465321" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="d735e32c-1b78-4811-afc1-f60308c02c5a" name="Item" isAbstract="false" isLeaf="false" cachedFullName="Diagrammer::Model::Item">
-        <elementDefinition Id="71e6068d-3457-41c5-a5c0-21c8fb7ed95b" />
-      </referencedType>
-    </packageHasNamedElement>
     <logicalClassDesignerModelHasPackages>
       <package Id="7e740e7f-84fa-4885-ab8d-c7dea5c3bafe" name="ViewModel">
         <elementDefinition Id="6b6be32f-b289-4239-a293-f9c24f7b97c7" />
@@ -714,50 +699,6 @@
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
-              <ownedOperationsInternal>
-                <operation Id="e24760dd-667a-40d9-aba7-7de520d8dd72" name="Add" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="3fcf4224-940d-413d-af5c-80807fd853ed" />
-                  <ownedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="d5e4356c-ca28-41ce-b551-551f683f7beb" direction="Return">
-                        <elementDefinition Id="a72f8933-8e51-4878-b815-f9e21fd5aee9" />
-                        <type_NamedElement>
-                          <referencedTypeMoniker Id="20500e86-82b5-430f-8457-bc1fe0a6059f" LastKnownName="void" />
-                        </type_NamedElement>
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="cfba2c0e-98f9-4ec2-86a6-8cc26e30b451" name="newItem" direction="In">
-                        <elementDefinition Id="2d8d9f20-b274-4d43-be40-26909cae23c0" />
-                        <type_NamedElement>
-                          <referencedTypeMoniker Id="d735e32c-1b78-4811-afc1-f60308c02c5a" LastKnownName="Item" />
-                        </type_NamedElement>
-                      </parameter>
-                    </operationHasOwnedParameters>
-                  </ownedParameters>
-                </operation>
-                <operation Id="e10459fc-ad9b-4ab8-b05c-4f2b2af44a7a" name="Delete" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="cdb4f862-2287-4185-8c77-cbf5a1a2f345" />
-                  <ownedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="7b92fe5a-38f3-46e4-9517-1570d1850abf" direction="Return">
-                        <elementDefinition Id="6591280a-9e56-4904-93f2-e0529b1824e8" />
-                        <type_NamedElement>
-                          <referencedTypeMoniker Id="81b82220-793b-45cf-8cc4-48e27db057ab" LastKnownName="void" />
-                        </type_NamedElement>
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="84d554bf-6a8c-4960-830c-506fcdd01761" name="deleteItem" direction="In" isUnique="false">
-                        <elementDefinition Id="eafb015a-6638-4ae9-a27a-14c0699290cb" />
-                        <type_NamedElement>
-                          <referencedTypeMoniker Id="d735e32c-1b78-4811-afc1-f60308c02c5a" LastKnownName="Item" />
-                        </type_NamedElement>
-                      </parameter>
-                    </operationHasOwnedParameters>
-                  </ownedParameters>
-                </operation>
-              </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
@@ -969,9 +910,61 @@
               <ownedOperationsInternal>
                 <operation Id="b2a2f6a1-590e-4b36-b26b-02acd7ce6641" name="Add" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="fa23609b-f065-4c39-9da6-d64d84a81247" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="3f30d426-3eea-435e-b970-b6e5995ef5d8" name="int id" direction="In" isUnique="false">
+                        <elementDefinition Id="0b6e0735-9bf8-4a80-bcfa-911c027525f5" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="4584da47-07ee-4d22-96c5-e5dcc4d331f0" name="string name" direction="In" isUnique="false">
+                        <elementDefinition Id="5c13fb1d-790e-4663-9cb7-6889f5b4f1bb" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="9cb54def-868f-411a-9cce-2483cc5c4939" name="string address" direction="In" isUnique="false">
+                        <elementDefinition Id="b5c215f4-93b6-4b38-8e02-bf8506ec5551" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="2e9d9c2b-2f4f-4cef-bca7-d6bb1805dea6" name="string city" direction="In" isUnique="false">
+                        <elementDefinition Id="f86e7bc1-5078-401c-bba1-d83522c7824e" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="26cc9391-41a8-454d-a738-a59b10e1b769" name="int zipcode" direction="In" isUnique="false">
+                        <elementDefinition Id="2bc2b33a-7e07-4928-bdbf-fa8eb41c5b91" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="475b9b42-91af-4488-b07e-506d27bb69c4" name="string email" direction="In" isUnique="false">
+                        <elementDefinition Id="bc183d7a-455b-4ea0-a528-2d9318aefe2f" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="9f12683e-c3d2-4248-9659-6ff10a58974a" name="int telNo" direction="In" isUnique="false">
+                        <elementDefinition Id="f80f9970-6bce-4a6c-8852-0dfe85982ba8" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="2d87e4bf-ac17-4a0e-bca4-8c38c2c83a34" name="string openHours" direction="In" isUnique="false">
+                        <elementDefinition Id="0120b459-7b0d-4237-b661-ae5fac5e6a13" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
                 </operation>
                 <operation Id="c55bcd78-c8e0-4f87-a627-9ea1efbe564c" name="Remove" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="c5fbece7-2386-4657-98c6-a82fecc3087c" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="564608bf-25c4-4074-82dd-dbbaf420b0fc" name="GasStation g" direction="In" isUnique="false">
+                        <elementDefinition Id="6139960d-dd29-4592-8ac2-e52e14ceb3fa" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="30fcb3e2-fbc3-4dc6-af10-d933a4c2fe78" name="LoadGasStationAsync" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="47d5447e-a3c9-4644-9647-48ed373f1ef6" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -990,9 +983,36 @@
               <ownedOperationsInternal>
                 <operation Id="4e5e6755-b6cc-4631-abfc-adc5675a2f11" name="Add" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="dbf9adba-016c-4f74-ae10-75b87161d52d" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="af1d9d0e-add4-428a-a8aa-47979967ca7d" name="int id" direction="In" isUnique="false">
+                        <elementDefinition Id="b889ded9-6927-461c-8a93-03b0083c5835" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="256290b2-b32f-475b-85e6-8f9ecd786be7" name="string description" direction="In" isUnique="false">
+                        <elementDefinition Id="22aa5d9a-f5b8-441d-87f1-57202bea16db" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="99294683-d55e-4208-a955-4f95d482083e" name="int stars" direction="In" isUnique="false">
+                        <elementDefinition Id="ead6dfee-f01a-49b3-9aff-0552f179d032" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
                 </operation>
                 <operation Id="d8f92a97-b928-4331-bd35-046b291c086a" name="Remove" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="1ed227c4-737f-4dc1-b7c1-8e9f59f76aac" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="f98b6bd4-2f23-47b8-a922-caaa476adc18" name="Review r" direction="In" isUnique="false">
+                        <elementDefinition Id="17b775b3-93fa-4f61-b646-ddff6d72a623" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="a2d5c81d-8a60-4cb3-8c26-9598aef82d64" name="LoadReviewAsync" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="9b56fd97-cf33-4f89-aef3-2cbfd43b690a" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -1045,9 +1065,56 @@
               <ownedOperationsInternal>
                 <operation Id="7eeae702-c862-41b9-8c0a-ca42bd469fa9" name="Add" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="6513cb27-6cc1-41ec-82b7-07da9cade9d9" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="bd443d8e-def3-4aa1-baa1-70aaa0fba68b" name="int id" direction="In" isUnique="false">
+                        <elementDefinition Id="de56f50a-a012-4f12-8715-096230a133f2" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="10d51964-8243-4ccc-b9f5-8abf22bed062" name="string name" direction="In" isUnique="false">
+                        <elementDefinition Id="163d368e-b66b-4cb6-bb9f-e3f55b9f108f" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="76199a20-71c4-4d8b-8c53-47ced27ac7dc" name="string email" direction="In" isUnique="false">
+                        <elementDefinition Id="a55b56e6-5207-411e-9dc3-a1b138b8eaf4" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="d33beb1b-4796-459b-ab02-0a9a3b85b530" name="string address" direction="In" isUnique="false">
+                        <elementDefinition Id="d0c5b109-08ca-4247-80fd-13eda1114968" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="5b1f7699-aac0-4bf1-83b2-8ca3c71cea2a" name="int telNo" direction="In" isUnique="false">
+                        <elementDefinition Id="26fcaad1-cd75-404d-a920-65637ee96ab5" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="732d8ec3-9619-494e-8d6f-91eecc5b354b" name="int zipcode" direction="In" isUnique="false">
+                        <elementDefinition Id="91824ecb-1352-4ee1-bd6f-cfbcafffe0cd" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="5a85bf49-7646-4f30-b580-ff9ce5721ca1" name="string city" direction="In" isUnique="false">
+                        <elementDefinition Id="bf4abec3-325e-4170-aecd-79582ef0690c" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
                 </operation>
                 <operation Id="d1c78811-b34b-4d57-823b-36773d452db9" name="Remove" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="1413bc31-904d-4aba-a2fb-56cca00c9659" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="34a3dd31-e8fe-4c78-83ad-49fbacd9d86c" name="Customer c" direction="In" isUnique="false">
+                        <elementDefinition Id="d5826a3a-8c1d-4fd9-8720-1c3fb6c67890" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="19d3ca8c-8895-4410-a6e3-1b832131b76f" name="LoadCustomerAsync" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="42b7342e-afc8-4140-b1d2-e06f193b2400" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -1100,9 +1167,31 @@
               <ownedOperationsInternal>
                 <operation Id="961598da-17d6-4543-bdcc-07672a915d7d" name="Add" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="2030af4e-1b01-43eb-93bd-d9a71b21caa7" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="01217020-661c-47d3-a8f3-41c79e3c3ed6" name="int id" direction="In" isUnique="false">
+                        <elementDefinition Id="fb2407b4-874d-444d-86d5-dbc039e6c376" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="99d87620-250f-4305-99a1-ce92e9a12f10" name="int totalPrice" direction="In" isUnique="false">
+                        <elementDefinition Id="e459d392-1a6b-4997-a528-54777ad3f0da" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
                 </operation>
                 <operation Id="ac35f22f-449d-4cc5-aef2-d58d1b321d23" name="Remove" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="023cd7c0-5c4c-4b30-892a-e42368c896ae" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="30df059c-24e8-4fb0-90ce-4aa5501530b8" name="Order o" direction="In" isUnique="false">
+                        <elementDefinition Id="b57991eb-4cf2-4edb-a7cd-674269629402" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="01816ac5-6794-4d60-a073-b38b8588efc2" name="LoadOrderAsync" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="00c33c75-019c-4a51-a914-0a7722bd629a" />
                 </operation>
               </ownedOperationsInternal>
             </class>
