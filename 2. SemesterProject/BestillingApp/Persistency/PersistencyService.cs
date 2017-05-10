@@ -456,7 +456,7 @@ namespace BestillingApp.Persistency
 
         public static async void SaveReceiptAsJsonAsync(Receipt c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -473,7 +473,7 @@ namespace BestillingApp.Persistency
 
         public static async void DeleteReceiptAsync(Receipt c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -490,7 +490,7 @@ namespace BestillingApp.Persistency
 
         public static async Task<List<Receipt>> LoadReceiptFromJsonAsync()
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 

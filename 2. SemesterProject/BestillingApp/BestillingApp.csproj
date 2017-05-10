@@ -98,6 +98,7 @@
     <Compile Include="Handler\CustomerHandler.cs" />
     <Compile Include="Handler\GasStationHandler.cs" />
     <Compile Include="Handler\OrderHandler.cs" />
+    <Compile Include="Handler\ReceiptHandler.cs" />
     <Compile Include="Handler\ReviewHandler.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\GasStation.cs" />

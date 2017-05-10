@@ -6,11 +6,9 @@ using BestillingApp.Persistency;
 
 #endregion
 
-
-
 namespace BestillingApp.Singleton
 {
-    class ReceiptSingleton
+    internal class ReceiptSingleton
     {
         #region Instancefield
 
@@ -19,20 +17,6 @@ namespace BestillingApp.Singleton
         #endregion
 
         #region Constructor
-
-        public ReceiptSingleton()
-        {
-            
-        }
-
-        #endregion
-
-        #region Properties
-
-        public static ReceiptSingleton Instance => _instance ?? (_instance = new ReceiptSingleton());
-
-        public ObservableCollection<Receipt> Receipt = new ObservableCollection<Receipt>();
-
 
         #endregion
 
@@ -44,27 +28,8 @@ namespace BestillingApp.Singleton
             if (receipts != null)
             {
                 foreach (var rec in receipts)
-                {
-                    receipts.Add(rec);
-                }
+                    Receipt.Add(rec);
             }
-            else
-            {
-                //possibly exception
-            }
-        }
-
-        #endregion
-
-        #region Add
-
-        public void AddReceipt(string name, string email, string address, int telNo, int zipcode, string city,
-            double totalPrice, string description, int amount, double price)
-        {
-            Receipt newReceipt = new Receipt(name, email, address, telNo, zipcode, city, totalPrice, description, amount,
-                price);
-            Receipt.Add(newReceipt);
-            PersistencyService.SaveReceiptAsJsonAsync(newReceipt);
         }
 
         #endregion
@@ -73,8 +38,42 @@ namespace BestillingApp.Singleton
 
         public void RemoveReceipt(Receipt r)
         {
-            Receipt.Remove(r);
+            //Receipt.Remove(r);
             PersistencyService.DeleteReceiptAsync(r);
+            //Hvis delete og read er på samme side
+            //LoadReceiptAsync();
+        }
+
+        #endregion
+
+        #region Properties
+
+        public static ReceiptSingleton Instance => _instance ?? (_instance = new ReceiptSingleton());
+
+        public ObservableCollection<Receipt> Receipt = new ObservableCollection<Receipt>();
+
+        #endregion
+
+        #region Add
+
+        public void AddReceipt(string name, string email, string address, int telNo, int zipcode, string city,
+            double totalPrice, string description, int amount, double price)
+        {
+            var newReceipt = new Receipt(name, email, address, telNo, zipcode, city, totalPrice, description, amount,
+                price);
+            //Receipt.Add(newReceipt);
+            PersistencyService.SaveReceiptAsJsonAsync(newReceipt);
+            //Hvis create og read er på samme side
+            //LoadReceiptAsync();
+        }
+
+        public void AddReceipt(Receipt r)
+        {
+            //Receipt newReceipt = new Receipt(name, email, address, telNo, zipcode, city, totalPrice, description, amount, price);
+            //Receipt.Add(r);
+            PersistencyService.SaveReceiptAsJsonAsync(r);
+            //Hvis create og read er på samme side
+            //LoadReceiptAsync();
         }
 
         #endregion

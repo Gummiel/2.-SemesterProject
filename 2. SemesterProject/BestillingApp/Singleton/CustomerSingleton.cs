@@ -24,14 +24,6 @@ namespace BestillingApp.Singleton
 
         #endregion
 
-        #region Properties
-
-        public static CustomerSingleton Instance => _instance ?? (_instance = new CustomerSingleton());
-
-        public ObservableCollection<Customer> Customers = new ObservableCollection<Customer>();
-
-        #endregion
-
         #region LoadCustomerAsync
 
         public async void LoadCustomersAsync()
@@ -40,15 +32,29 @@ namespace BestillingApp.Singleton
             if (customers != null)
             {
                 foreach (var cust in customers)
-                {
-                    customers.Add(cust);
-                }
-            }
-            else
-            {
-                //possibly exception
+                    Customers.Add(cust);
             }
         }
+
+        #endregion
+
+        #region Remove
+
+        public void RemoveCustomer(Customer c)
+        {
+            //Customers.Remove(c);
+            PersistencyService.DeleteCustomerAsync(c);
+            //Hvis create og read er på samme side
+            //LoadCustomersAsync();
+        }
+
+        #endregion
+
+        #region Properties
+
+        public static CustomerSingleton Instance => _instance ?? (_instance = new CustomerSingleton());
+
+        public ObservableCollection<Customer> Customers = new ObservableCollection<Customer>();
 
         #endregion
 
@@ -56,19 +62,20 @@ namespace BestillingApp.Singleton
 
         public void AddCustomer(int id, string name, string email, string address, int telNo, int zipcode, string city)
         {
-            Customer newCustomer = new Customer(id, name, email, address, telNo, zipcode, city);
-            Customers.Add(newCustomer);
+            var newCustomer = new Customer(id, name, email, address, telNo, zipcode, city);
+            //Customers.Add(newCustomer);
             PersistencyService.SaveCustomerAsJsonAsync(newCustomer);
+            //Hvis create og read er på samme side
+            //LoadCustomersAsync();
         }
 
-        #endregion
-
-        #region Remove
-
-        public void RemoveCustomer (Customer c)
+        public void AddCustomer(Customer c)
         {
-            Customers.Remove(c);
-            PersistencyService.DeleteCustomerAsync(c);
+            //Customer newCustomer = new Customer(id, name, email, address, telNo, zipcode, city);
+            //Customers.Add(newCustomer);
+            PersistencyService.SaveCustomerAsJsonAsync(c);
+            //Hvis create og read er på samme side
+            //LoadCustomersAsync();
         }
 
         #endregion

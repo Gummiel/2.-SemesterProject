@@ -24,14 +24,6 @@ namespace BestillingApp.Singleton
 
         #endregion
 
-        #region Properties
-
-        public static ReviewSingleton Instance => _instance ?? (_instance = new ReviewSingleton());
-
-        public ObservableCollection<Review> Reviews = new ObservableCollection<Review>();
-
-        #endregion
-
         #region LoadReviewAsync
 
         public async void LoadReviewAsync()
@@ -40,25 +32,8 @@ namespace BestillingApp.Singleton
             if (reviews != null)
             {
                 foreach (var rev in reviews)
-                {
-                    reviews.Add(rev);
-                }
+                    Reviews.Add(rev);
             }
-            else
-            {
-                //Possibly exception
-            }
-        }
-
-        #endregion
-
-        #region Add
-
-        public void AddReview(int id, string description, int stars)
-        {
-            Review newReview = new Review(id, description, stars);
-            Reviews.Add(newReview);
-            PersistencyService.SaveReviewAsJsonAsync(newReview);
         }
 
         #endregion
@@ -67,8 +42,40 @@ namespace BestillingApp.Singleton
 
         public void RemoveReview(Review r)
         {
-            Reviews.Remove(r);
+            //Reviews.Remove(r);
             PersistencyService.DeleteReviewAsync(r);
+            //Hvis delete og read er på samme side
+            //LoadReviewAsync();
+        }
+
+        #endregion
+
+        #region Properties
+
+        public static ReviewSingleton Instance => _instance ?? (_instance = new ReviewSingleton());
+
+        public ObservableCollection<Review> Reviews = new ObservableCollection<Review>();
+
+        #endregion
+
+        #region Add
+
+        public void AddReview(int id, string description, int stars)
+        {
+            var newReview = new Review(id, description, stars);
+            //Reviews.Add(newReview);
+            PersistencyService.SaveReviewAsJsonAsync(newReview);
+            //Hvis create og read er på samme side
+            //LoadReviewAsync();
+        }
+
+        public void AddReview(Review r)
+        {
+            //Review newReview = new Review(id, description, stars);
+            //Reviews.Add(newReview);
+            PersistencyService.SaveReviewAsJsonAsync(r);
+            //Hvis create og read er på samme side
+            //LoadReviewAsync();
         }
 
         #endregion
