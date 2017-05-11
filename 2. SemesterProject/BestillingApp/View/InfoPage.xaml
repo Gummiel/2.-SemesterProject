@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Background="Black">
     <Page.Resources>
         <Style x:Key="NavigationButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="#33000000" />
@@ -80,7 +80,7 @@
             </Setter>
         </Style>
     </Page.Resources>
-    <ScrollViewer>
+    <ScrollViewer VerticalScrollMode="Enabled">
         <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
@@ -88,7 +88,7 @@
                 <RowDefinition Height="50" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Grid x:Name="TopBarGrid" Grid.Row="0">
+            <Grid x:Name="TopBarGrid" Grid.Row="0" Background="#FFC8D5E8">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="50" />
@@ -140,6 +140,8 @@
                 </Grid>
             </Grid>
             <Grid x:Name="ContentGrid" Grid.Row="1" Margin="0,50,0,0" Grid.RowSpan="3" />
+            <Image x:Name="BackGround" Margin="0,-100,0,0" Grid.Row="2" Grid.RowSpan="2" Source="ms-appx:///Background.jpg" Stretch="Fill"/>
+            <TextBlock x:Name="textBlock" Height="120" Margin="95,0,265,-170" Grid.Row="3" TextWrapping="Wrap" Text="dfdsfdsfdsfds" VerticalAlignment="Bottom" FontSize="48"/>
         </Grid>
     </ScrollViewer>
 </Page>
