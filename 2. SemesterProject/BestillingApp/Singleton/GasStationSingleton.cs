@@ -30,10 +30,8 @@ namespace BestillingApp.Singleton
         {
             var gasstations = await PersistencyService.LoadGasStationsFromJsonAsync();
             if (gasstations != null)
-            {
                 foreach (var gas in gasstations)
                     GasStations.Add(gas);
-            }
         }
 
         #endregion
@@ -60,12 +58,12 @@ namespace BestillingApp.Singleton
 
         #region Add
 
-        public void AddGasStation(int id, string name, string address, string city, int zipcode, string email, int telNo,
+        public void AddGasStation(string name, string address, string city, int zipcode, string email, int telNo,
             string openHours)
         {
-            var newGasStation = new GasStation(id, name, address, city, zipcode, email, telNo, openHours);
+            //var newGasStation = new GasStation(name, address, city, zipcode, email, telNo, openHours);
             //GasStations.Add(newGasStation);
-            PersistencyService.SaveGasStationAsJsonAsync(newGasStation);
+            //PersistencyService.SaveGasStationAsJsonAsync(newGasStation);
             //Hvis create og read er på samme side
             //LoadGasStationAsync();
         }

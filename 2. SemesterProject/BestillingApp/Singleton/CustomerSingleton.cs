@@ -30,10 +30,8 @@ namespace BestillingApp.Singleton
         {
             var customers = await PersistencyService.LoadCustomersFromJsonAsync();
             if (customers != null)
-            {
                 foreach (var cust in customers)
                     Customers.Add(cust);
-            }
         }
 
         #endregion
@@ -60,11 +58,11 @@ namespace BestillingApp.Singleton
 
         #region Add
 
-        public void AddCustomer(int id, string name, string email, string address, int telNo, int zipcode, string city)
+        public void AddCustomer(string name, string email, string address, int telNo, int zipcode, string city)
         {
-            var newCustomer = new Customer(id, name, email, address, telNo, zipcode, city);
+            //var newCustomer = new Customer(name, email, address, telNo, zipcode, city);
             //Customers.Add(newCustomer);
-            PersistencyService.SaveCustomerAsJsonAsync(newCustomer);
+            //PersistencyService.SaveCustomerAsJsonAsync(newCustomer);
             //Hvis create og read er på samme side
             //LoadCustomersAsync();
         }

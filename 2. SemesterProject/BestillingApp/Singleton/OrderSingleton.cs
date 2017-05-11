@@ -30,10 +30,8 @@ namespace BestillingApp.Singleton
         {
             var orders = await PersistencyService.LoadOrdersFromJsonAsync();
             if (orders != null)
-            {
                 foreach (var ord in orders)
                     Orders.Add(ord);
-            }
         }
 
         #endregion
@@ -73,11 +71,11 @@ namespace BestillingApp.Singleton
 
         #region Add
 
-        public void AddOrder(int id, int totalPrice)
+        public void AddOrder(int totalPrice)
         {
-            var newOrder = new Order(id, totalPrice);
+            //var newOrder = new Order(totalPrice);
             //Orders.Add(newOrder);
-            PersistencyService.SaveOrderAsJsonAsync(newOrder);
+            //PersistencyService.SaveOrderAsJsonAsync(newOrder);
             //Hvis create og read er på samme side
             //LoadOrderAsync();
         }

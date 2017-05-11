@@ -139,20 +139,22 @@
                 </Grid>
             </Grid>
             <Grid x:Name="ContentGrid" Grid.Row="2">
-                <ListView x:Name="ListViewShop" HorizontalAlignment="Left" VerticalAlignment="Top" Width="360" Height="540">
+                <ListView x:Name="ListViewShop" HorizontalAlignment="Left" VerticalAlignment="Top" Width="360"
+                          Height="540">
                     <ListView.Resources>
                         <DataTemplate x:Key="DataTemplate">
                             <Grid HorizontalAlignment="Left" VerticalAlignment="Center">
-                                <Button x:Name="btnShop" Content="{Binding}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <Button x:Name="btnShop" Content="{Binding}" HorizontalAlignment="Left"
+                                        VerticalAlignment="Center" />
                             </Grid>
                         </DataTemplate>
                     </ListView.Resources>
                     <ListView.ItemTemplate>
-                        <StaticResource ResourceKey="DataTemplate"/>
+                        <StaticResource ResourceKey="DataTemplate" />
                     </ListView.ItemTemplate>
-                    <ListViewItem Content="Drikkevarer"/>
-                    <ListViewItem Content="Menuer"/>
-                    <ListViewItem Content="Forretter"/>
+                    <ListViewItem Content="Drikkevarer" />
+                    <ListViewItem Content="Menuer" />
+                    <ListViewItem Content="Forretter" />
                 </ListView>
             </Grid>
         </Grid>

@@ -16,20 +16,14 @@ namespace BestillingApp.Singleton
 
         #endregion
 
-        #region Constructor
-
-        #endregion
-
         #region LoadReceiptAsync
 
         public async void LoadReceiptAsync()
         {
             var receipts = await PersistencyService.LoadReceiptFromJsonAsync();
             if (receipts != null)
-            {
                 foreach (var rec in receipts)
                     Receipt.Add(rec);
-            }
         }
 
         #endregion
@@ -43,6 +37,10 @@ namespace BestillingApp.Singleton
             //Hvis delete og read er på samme side
             //LoadReceiptAsync();
         }
+
+        #endregion
+
+        #region Constructor
 
         #endregion
 

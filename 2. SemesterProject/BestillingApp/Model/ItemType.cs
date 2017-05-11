@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BestillingApp.Model
+﻿namespace BestillingApp.Model
 {
-    class ItemType
+    internal class ItemType
     {
+        #region Properties
+
+        public int ID { get; set; }
+        public string Name { get; set; }
+
+        #endregion
+
+        #region Constructor
+
+        public ItemType()
+        {
+        }
+
+        public ItemType(string name)
+        {
+            Name = name;
+        }
+
+        #endregion
     }
 }

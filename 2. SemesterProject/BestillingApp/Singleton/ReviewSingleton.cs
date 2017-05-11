@@ -30,10 +30,8 @@ namespace BestillingApp.Singleton
         {
             var reviews = await PersistencyService.LoadReviewsFromJsonAsync();
             if (reviews != null)
-            {
                 foreach (var rev in reviews)
                     Reviews.Add(rev);
-            }
         }
 
         #endregion
@@ -60,11 +58,11 @@ namespace BestillingApp.Singleton
 
         #region Add
 
-        public void AddReview(int id, string description, int stars)
+        public void AddReview(string description, int stars)
         {
-            var newReview = new Review(id, description, stars);
+            //var newReview = new Review(description, stars);
             //Reviews.Add(newReview);
-            PersistencyService.SaveReviewAsJsonAsync(newReview);
+            //PersistencyService.SaveReviewAsJsonAsync(newReview);
             //Hvis create og read er på samme side
             //LoadReviewAsync();
         }

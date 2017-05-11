@@ -2,10 +2,11 @@ namespace BestillingApp.Model
 {
     internal class GasStation
     {
-        public GasStation(int id, string name, string address, string city, int zipcode, string email, int telNo,
+        #region Constructor
+
+        public GasStation(string name, string address, string city, int zipcode, string email, int telNo,
             string openHours)
         {
-            ID = id;
             Name = name;
             Address = address;
             City = city;
@@ -14,6 +15,14 @@ namespace BestillingApp.Model
             TelNo = telNo;
         }
 
+        public GasStation()
+        {
+        }
+
+        #endregion
+
+        #region Properties
+
         public int ID { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
@@ -21,5 +30,7 @@ namespace BestillingApp.Model
         public int Zipcode { get; set; }
         public string Email { get; set; }
         public int TelNo { get; set; }
+
+        #endregion
     }
 }

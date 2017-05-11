@@ -78,7 +78,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
         <Style x:Key="ShoppingCartButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="Transparent" />
             <Setter Property="Foreground" Value="#00000000" />
@@ -166,7 +166,8 @@
                                VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" />
                 </Grid>
                 <Grid x:Name="ShoppingGrid" Grid.Column="1">
-                    <Button x:Name="BtnShoppingCart" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Transparent" Style="{StaticResource ShoppingCartButtonStyle}">
+                    <Button x:Name="BtnShoppingCart" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                            Background="Transparent" Style="{StaticResource ShoppingCartButtonStyle}">
                         <Image x:Name="ImgShoppingCart" Source="ms-appx:///Assets/shoppingcart.png" />
                     </Button>
 

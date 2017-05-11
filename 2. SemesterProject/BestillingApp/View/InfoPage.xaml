@@ -140,8 +140,10 @@
                 </Grid>
             </Grid>
             <Grid x:Name="ContentGrid" Grid.Row="1" Margin="0,50,0,0" Grid.RowSpan="3" />
-            <Image x:Name="BackGround" Margin="0,-100,0,0" Grid.Row="2" Grid.RowSpan="2" Source="ms-appx:///Background.jpg" Stretch="Fill"/>
-            <TextBlock x:Name="textBlock" Height="120" Margin="95,0,265,-170" Grid.Row="3" TextWrapping="Wrap" Text="dfdsfdsfdsfds" VerticalAlignment="Bottom" FontSize="48"/>
+            <Image x:Name="BackGround" Margin="0,-100,0,0" Grid.Row="2" Grid.RowSpan="2"
+                   Source="ms-appx:///Background.jpg" Stretch="Fill" />
+            <TextBlock x:Name="textBlock" Height="120" Margin="95,0,265,-170" Grid.Row="3" TextWrapping="Wrap"
+                       Text="dfdsfdsfdsfds" VerticalAlignment="Bottom" FontSize="48" />
         </Grid>
     </ScrollViewer>
 </Page>

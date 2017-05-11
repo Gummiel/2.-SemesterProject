@@ -2,15 +2,26 @@
 {
     internal class Review
     {
-        public Review(int id, string description, int stars)
+        #region Constructor
+
+        public Review(string description, int stars)
         {
-            ID = id;
             Description = description;
             Stars = stars;
         }
 
+        public Review()
+        {
+        }
+
+        #endregion
+
+        #region Properties
+
         public int ID { get; set; }
         public string Description { get; set; }
         public int Stars { get; set; }
+
+        #endregion
     }
 }

@@ -2,6 +2,8 @@
 {
     internal class Receipt
     {
+        #region Constructor
+
         public Receipt(string name, string email, string address, int telNo, int zipcode, string city, double totalPrice,
             string description, int amount, double price)
         {
@@ -17,6 +19,14 @@
             Price = price;
         }
 
+        public Receipt()
+        {
+        }
+
+        #endregion
+
+        #region Properties
+
         public string Name { get; set; }
         public string Email { get; set; }
         public string Address { get; set; }
@@ -27,5 +37,7 @@
         public string Description { get; set; }
         public int Amount { get; set; }
         public double Price { get; set; }
+
+        #endregion
     }
 }
