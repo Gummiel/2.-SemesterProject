@@ -103,6 +103,7 @@
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\GasStation.cs" />
     <Compile Include="Model\Item.cs" />
+    <Compile Include="Model\ItemType.cs" />
     <Compile Include="Model\Order.cs" />
     <Compile Include="Model\OrderItem.cs" />
     <Compile Include="Model\Payment.cs" />
@@ -150,6 +151,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\shoppingcart.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
