@@ -151,7 +151,7 @@ namespace BestillingApp.Persistency
 
         public static async void SaveItemAsJsonAsync(Item c)
         {
-            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
+            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -159,7 +159,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.PostAsJsonAsync("api/Items/", c).Result);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -168,7 +168,7 @@ namespace BestillingApp.Persistency
 
         public static async void DeleteItemAsync(Item c)
         {
-            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
+            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -176,7 +176,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.DeleteAsync("api/Items/" + c).Result);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -185,7 +185,7 @@ namespace BestillingApp.Persistency
 
         public static async Task<List<Item>> LoadItemsFromJsonAsync()
         {
-            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
+            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -193,13 +193,74 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.GetAsync("api/Items/").Result);
 
-                if (!response.IsSuccessStatusCode)
+                if(!response.IsSuccessStatusCode)
                     return null;
                 var itemData =
                     await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<Item>>().Result);
                 return itemData.ToList();
             }
-            catch (Exception ex)
+            catch(Exception ex)
+            {
+                new MessageDialog(ex.Message).ShowAsync();
+                throw;
+            }
+        }
+
+        #endregion
+
+        #region ItemType
+
+        public static async void SaveItemTypeAsJsonAsync(ItemType c)
+        {
+            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            try
+            {
+                var response = await Task.FromResult(_client.PostAsJsonAsync("api/ItemTypes/", c).Result);
+            }
+            catch(Exception ex)
+            {
+                new MessageDialog(ex.Message).ShowAsync();
+                throw;
+            }
+        }
+
+        public static async void DeleteItemTypeAsync(ItemType c)
+        {
+            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            try
+            {
+                var response = await Task.FromResult(_client.DeleteAsync("api/ItemTypes/" + c).Result);
+            }
+            catch(Exception ex)
+            {
+                new MessageDialog(ex.Message).ShowAsync();
+                throw;
+            }
+        }
+
+        public static async Task<List<ItemType>> LoadItemTypesFromJsonAsync()
+        {
+            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            try
+            {
+                var response = await Task.FromResult(_client.GetAsync("api/ItemTypes/").Result);
+
+                if(!response.IsSuccessStatusCode)
+                    return null;
+                var itemData =
+                    await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<ItemType>>().Result);
+                return itemData.ToList();
+            }
+            catch(Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;

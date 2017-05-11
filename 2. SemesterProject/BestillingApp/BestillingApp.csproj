@@ -113,6 +113,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton\CustomerSingleton.cs" />
     <Compile Include="Singleton\GasStationSingleton.cs" />
+    <Compile Include="Singleton\ItemSingleton.cs" />
+    <Compile Include="Singleton\ItemTypeSingleton.cs" />
     <Compile Include="Singleton\OrderSingleton.cs" />
     <Compile Include="Singleton\ReceiptSingleton.cs" />
     <Compile Include="Singleton\ReviewSingleton.cs" />
