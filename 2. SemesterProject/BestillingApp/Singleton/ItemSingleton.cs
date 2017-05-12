@@ -14,6 +14,7 @@ namespace BestillingApp.Singleton
         #region Instancefield
 
         private static ItemSingleton _instance;
+        private ObservableCollection<Item> _items;
 
         #endregion
 
@@ -52,8 +53,7 @@ namespace BestillingApp.Singleton
         #region Properties
 
         public static ItemSingleton Instance => _instance ?? (_instance = new ItemSingleton());
-
-        public ObservableCollection<Item> Items = new ObservableCollection<Item>();
+        public ObservableCollection<Item> Items => _items ?? (_items = new ObservableCollection<Item>());
 
         #endregion
 

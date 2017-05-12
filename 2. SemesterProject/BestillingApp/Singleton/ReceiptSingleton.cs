@@ -13,6 +13,7 @@ namespace BestillingApp.Singleton
         #region Instancefield
 
         private static ReceiptSingleton _instance;
+        private ObservableCollection<Receipt> _receipts;
 
         #endregion
 
@@ -23,7 +24,7 @@ namespace BestillingApp.Singleton
             var receipts = await PersistencyService.LoadReceiptFromJsonAsync();
             if (receipts != null)
                 foreach (var rec in receipts)
-                    Receipt.Add(rec);
+                    Receipts.Add(rec);
         }
 
         #endregion
@@ -47,8 +48,7 @@ namespace BestillingApp.Singleton
         #region Properties
 
         public static ReceiptSingleton Instance => _instance ?? (_instance = new ReceiptSingleton());
-
-        public ObservableCollection<Receipt> Receipt = new ObservableCollection<Receipt>();
+        public ObservableCollection<Receipt> Receipts => _receipts ?? (_receipts = new ObservableCollection<Receipt>());
 
         #endregion
 

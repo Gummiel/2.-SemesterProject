@@ -13,6 +13,7 @@ namespace BestillingApp.Singleton
         #region Instancefield
 
         private static GasStationSingleton _instance;
+        private ObservableCollection<GasStation> _gasstations;
 
         #endregion
 
@@ -51,8 +52,7 @@ namespace BestillingApp.Singleton
         #region Properties
 
         public static GasStationSingleton Instance => _instance ?? (_instance = new GasStationSingleton());
-
-        public ObservableCollection<GasStation> GasStations = new ObservableCollection<GasStation>();
+        public ObservableCollection<GasStation> GasStations => _gasstations ?? (_gasstations = new ObservableCollection<GasStation>());
 
         #endregion
 

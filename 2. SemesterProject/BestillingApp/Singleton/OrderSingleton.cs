@@ -13,6 +13,7 @@ namespace BestillingApp.Singleton
         #region Instancefield
 
         private static OrderSingleton _instance;
+        private ObservableCollection<Order> _orders;
 
         #endregion
 
@@ -29,8 +30,8 @@ namespace BestillingApp.Singleton
         public async void LoadOrderAsync()
         {
             var orders = await PersistencyService.LoadOrdersFromJsonAsync();
-            if (orders != null)
-                foreach (var ord in orders)
+            if(orders != null)
+                foreach(var ord in orders)
                     Orders.Add(ord);
         }
 
@@ -48,24 +49,10 @@ namespace BestillingApp.Singleton
 
         #endregion
 
-        #region Add
-
-        public void AddReceipt(Receipt r)
-        {
-            //Receipt newReceipt = new Receipt(name, email, address, telNo, zipcode, city, totalPrice, description, amount, price);
-            //Receipt.Add(r);
-            PersistencyService.SaveReceiptAsJsonAsync(r);
-            //Hvis create og read er på samme side
-            //LoadReceiptAsync();
-        }
-
-        #endregion
-
         #region Properties
 
         public static OrderSingleton Instance => _instance ?? (_instance = new OrderSingleton());
-
-        public ObservableCollection<Order> Orders = new ObservableCollection<Order>();
+        public ObservableCollection<Order> Orders => _orders ?? (_orders = new ObservableCollection<Order>());
 
         #endregion
 

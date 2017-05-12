@@ -32,5 +32,10 @@ namespace BestillingApp.Model
         public int TelNo { get; set; }
 
         #endregion
+
+        public override string ToString()
+        {
+            return $"ID: {ID}, Name: {Name}, Address: {Address}, City: {City}, Zipcode: {Zipcode}, Email: {Email}, TelNo: {TelNo}";
+        }
     }
 }

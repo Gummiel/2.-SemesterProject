@@ -17,12 +17,15 @@ namespace BestillingApp.ViewModel
             ReceiptSingleton = ReceiptSingleton.Instance;
             ReviewSingleton = ReviewSingleton.Instance;
             OrderSingleton = OrderSingleton.Instance;
+            //Singleton = CatalogSingleton.Instance;
+            GasStationSingleton.LoadGasStationAsync();
         }
 
         #endregion
 
         #region Properties
 
+        //public static CatalogSingleton Singleton { get; set; }
         public static CustomerSingleton CustomerSingleton { get; set; }
         public static GasStationSingleton GasStationSingleton { get; set; }
         public static ReceiptSingleton ReceiptSingleton { get; set; }
@@ -30,5 +33,6 @@ namespace BestillingApp.ViewModel
         public static OrderSingleton OrderSingleton { get; set; }
 
         #endregion
+        
     }
 }

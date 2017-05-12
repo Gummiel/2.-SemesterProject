@@ -13,6 +13,7 @@ namespace BestillingApp.Singleton
         #region Instancefield
 
         private static CustomerSingleton _instance;
+        private ObservableCollection<Customer> _customers;
 
         #endregion
 
@@ -29,8 +30,8 @@ namespace BestillingApp.Singleton
         public async void LoadCustomersAsync()
         {
             var customers = await PersistencyService.LoadCustomersFromJsonAsync();
-            if (customers != null)
-                foreach (var cust in customers)
+            if(customers != null)
+                foreach(var cust in customers)
                     Customers.Add(cust);
         }
 
@@ -52,7 +53,7 @@ namespace BestillingApp.Singleton
 
         public static CustomerSingleton Instance => _instance ?? (_instance = new CustomerSingleton());
 
-        public ObservableCollection<Customer> Customers = new ObservableCollection<Customer>();
+        public ObservableCollection<Customer> Customers => _customers ?? (_customers = new ObservableCollection<Customer>());
 
         #endregion
 

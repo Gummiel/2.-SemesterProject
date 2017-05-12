@@ -5,6 +5,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:ViewModel="using:BestillingApp.ViewModel"
     x:Class="BestillingApp.View.MainPage"
     mc:Ignorable="d">
     <Page.Resources>
@@ -148,6 +149,9 @@
             </Setter>
         </Style>
     </Page.Resources>
+    <Page.DataContext>
+        <ViewModel:MainViewModel/>
+    </Page.DataContext>
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
         <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <Grid.RowDefinitions>
@@ -215,7 +219,54 @@
                     </Button>
                 </Grid>
             </Grid>
-            <Grid x:Name="ContentGrid" Grid.Row="3" />
+            <Grid x:Name="ContentGrid" Grid.Row="3">
+                <ListView x:Name="ListViewGasStations" ItemsSource="{Binding GasStationSingleton.GasStations}" MaxHeight="390" SelectionMode="None">
+                    <ListView.Resources>
+                        <DataTemplate x:Key="DataTemplate">
+                            <Button x:Name="BtnGasStations" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="5" Width="314" Height="42">
+                                <StackPanel>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid Grid.Row="0">
+                                            <TextBlock x:Name="TextBlockGasStationName" TextWrapping="Wrap" Text="{Binding Name}" HorizontalAlignment="Left" FontSize="9"/>
+                                        </Grid>
+                                        <Grid Grid.Row="1">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid Grid.Column="0">
+                                                <TextBlock x:Name="TextBlockGasStationsAddress" TextWrapping="Wrap" Text="{Binding Address}" HorizontalAlignment="Left" FontSize="6"/>
+                                            </Grid>
+                                            <Grid Grid.Column="1">
+                                                <TextBlock x:Name="TextBlockGasStationsCommaBetweenAddressAndZipcode" TextWrapping="Wrap" Text="," HorizontalAlignment="Left" FontSize="6" Padding="0,0,1,0"/>
+                                            </Grid>
+                                            <Grid Grid.Column="2">
+                                                <TextBlock x:Name="TextBlockGasStationsZipcode" TextWrapping="Wrap" Text="{Binding Zipcode}" HorizontalAlignment="Left" FontSize="6"/>
+                                            </Grid>
+                                            <Grid Grid.Column="3">
+                                                <TextBlock x:Name="TextBlockGasStationsCommaBetweenZipcodeAndCity" TextWrapping="Wrap" Text="," HorizontalAlignment="Left" FontSize="6" Padding="0,0,1,0"/>
+                                            </Grid>
+                                            <Grid Grid.Column="4">
+                                                <TextBlock x:Name="TextBlockGasStationsCity" TextWrapping="Wrap" Text="{Binding City}" HorizontalAlignment="Left" FontSize="6"/>
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </ListView.Resources>
+                    <ListView.ItemTemplate>
+                        <StaticResource ResourceKey="DataTemplate"/>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
         </Grid>
     </ScrollViewer>
 </Page>

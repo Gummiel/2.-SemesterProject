@@ -118,6 +118,7 @@
     <Compile Include="Singleton\OrderSingleton.cs" />
     <Compile Include="Singleton\ReceiptSingleton.cs" />
     <Compile Include="Singleton\ReviewSingleton.cs" />
+    <Compile Include="Singleton\CatalogSingleton.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\OrderViewModel.cs" />
@@ -153,7 +154,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Background.jpg" />
+    <Content Include="Assets\Background.jpg" />
     <Content Include="Assets\shoppingcart.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

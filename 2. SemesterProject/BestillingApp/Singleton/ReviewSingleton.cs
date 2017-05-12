@@ -13,6 +13,7 @@ namespace BestillingApp.Singleton
         #region Instancefield
 
         private static ReviewSingleton _instance;
+        private ObservableCollection<Review> _reviews;
 
         #endregion
 
@@ -51,8 +52,7 @@ namespace BestillingApp.Singleton
         #region Properties
 
         public static ReviewSingleton Instance => _instance ?? (_instance = new ReviewSingleton());
-
-        public ObservableCollection<Review> Reviews = new ObservableCollection<Review>();
+        public ObservableCollection<Review> Reviews => _reviews ?? (_reviews = new ObservableCollection<Review>());
 
         #endregion
 
