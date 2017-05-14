@@ -255,7 +255,7 @@
                             </StackPanel>
                             <interactivity:Interaction.Behaviors>
                                 <core:EventTriggerBehavior EventName="Click">
-                                    <core:NavigateToPageAction TargetPage="BestillingApp.View.InfoPage" />
+                                    <core:InvokeCommandAction Command="{Binding SelectedGasStationCommand}" />
                                 </core:EventTriggerBehavior>
                             </interactivity:Interaction.Behaviors>
                         </Button>
