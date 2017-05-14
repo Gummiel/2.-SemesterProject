@@ -194,7 +194,7 @@ namespace BestillingApp.Persistency
             }
             catch(Exception ex)
             {
-                new MessageDialog(ex.Message).ShowAsync();
+                new MessageDialog("Der skete en fejl under hentningen af elementer i databasen").ShowAsync();
                 throw;
             }
         }

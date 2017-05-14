@@ -95,8 +95,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\RelayArgCommand.cs" />
+    <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Handler\CustomerHandler.cs" />
     <Compile Include="Handler\GasStationHandler.cs" />
+    <Compile Include="Handler\MainPageHandler.cs" />
     <Compile Include="Handler\OrderHandler.cs" />
     <Compile Include="Handler\ReceiptHandler.cs" />
     <Compile Include="Handler\ReviewHandler.cs" />

@@ -215,7 +215,54 @@
                 </Grid>
             </Grid>
             <Grid x:Name="ContentGrid" Grid.Row="2">
-                <ListView x:Name="ListViewGasStations" ItemsSource="{Binding GasStationSingleton.GasStations}" SelectionMode="None" VerticalAlignment="Top" Margin="0,10,0,0" HorizontalAlignment="Center">
+                <GridView x:Name="GridViewGasStations" ItemsSource="{Binding GasStationSingleton.GasStations}" SelectionMode="None" VerticalAlignment="Top" Margin="0,10,0,0" HorizontalAlignment="Center">
+                    <GridView.Resources>
+                        <DataTemplate x:Key="DataTemplate">
+                            <Button x:Name="BtnGasStations" BorderThickness="0" Width="350" HorizontalContentAlignment="Left">
+                                <StackPanel Orientation="Horizontal">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid Grid.Row="0">
+                                            <TextBlock x:Name="TextBlockGasStationName" TextWrapping="Wrap" Text="{Binding Name}" HorizontalAlignment="Left" FontSize="14"/>
+                                        </Grid>
+                                        <Grid Grid.Row="1">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid Grid.Column="0">
+                                                <TextBlock x:Name="TextBlockGasStationsAddress" TextWrapping="Wrap" Text="{Binding Address}" HorizontalAlignment="Left" FontSize="8"/>
+                                            </Grid>
+                                            <Grid Grid.Column="1">
+                                                <TextBlock x:Name="TextBlockGasStationsCommaBetweenAddressAndZipcode" TextWrapping="Wrap" Text="," HorizontalAlignment="Left" FontSize="8" Padding="0,0,1,0"/>
+                                            </Grid>
+                                            <Grid Grid.Column="2">
+                                                <TextBlock x:Name="TextBlockGasStationsZipcode" TextWrapping="Wrap" Text="{Binding Zipcode}" HorizontalAlignment="Left" FontSize="8"/>
+                                            </Grid>
+                                            <Grid Grid.Column="3">
+                                                <TextBlock x:Name="TextBlockGasStationsCommaBetweenZipcodeAndCity" TextWrapping="Wrap" Text="," HorizontalAlignment="Left" FontSize="8" Padding="0,0,1,0"/>
+                                            </Grid>
+                                            <Grid Grid.Column="4">
+                                                <TextBlock x:Name="TextBlockGasStationsCity" TextWrapping="Wrap" Text="{Binding City}" HorizontalAlignment="Left" FontSize="8"/>
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </GridView.Resources>
+                    <GridView.ItemTemplate>
+                        <StaticResource ResourceKey="DataTemplate"/>
+                    </GridView.ItemTemplate>
+                </GridView>
+
+                <!--<ListView x:Name="ListViewGasStations" ItemsSource="{Binding GasStationSingleton.GasStations}" SelectionMode="None" VerticalAlignment="Top" Margin="0,10,0,0" HorizontalAlignment="Center">
                     <ListView.Resources>
                         <DataTemplate x:Key="DataTemplate">
                             <Button x:Name="BtnGasStations" HorizontalAlignment="Center" VerticalAlignment="Top" Width="500">
@@ -260,7 +307,7 @@
                     <ListView.ItemTemplate>
                         <StaticResource ResourceKey="DataTemplate"/>
                     </ListView.ItemTemplate>
-                </ListView>
+                </ListView>-->
             </Grid>
         </Grid>
     </ScrollViewer>

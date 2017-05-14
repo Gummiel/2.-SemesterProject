@@ -1,6 +1,8 @@
 ﻿#region References
 
+using System;
 using System.Collections.ObjectModel;
+using Windows.UI.Popups;
 using BestillingApp.Model;
 using BestillingApp.Persistency;
 
@@ -29,10 +31,27 @@ namespace BestillingApp.Singleton
 
         public async void LoadGasStationAsync()
         {
-            var gasstations = await PersistencyService.LoadGasStationsFromJsonAsync();
-            if (gasstations != null)
-                foreach (var gas in gasstations)
-                    GasStations.Add(gas);
+            try
+            {
+                var gasstations = await PersistencyService.LoadGasStationsFromJsonAsync();
+                if (gasstations == null) return;
+                if (gasstations.Count == 0)
+                {
+                    await new MessageDialog("Der findes nogen gasstations i databasen").ShowAsync();
+                }
+                else
+                {
+                    foreach(var gas in gasstations)
+                    {
+                        GasStations.Add(gas);
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                new MessageDialog("Der kunne ikke oprettes forbindelse til databasen").ShowAsync();
+                throw;
+            }
         }
 
         #endregion
