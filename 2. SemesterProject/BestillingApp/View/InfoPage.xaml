@@ -164,10 +164,7 @@
                     <ColumnDefinition Width="50" />
                 </Grid.ColumnDefinitions>
                 <Grid x:Name="AppNameGrid" Grid.Column="0"/>
-                <Grid x:Name="ShoppingGrid" Grid.Column="1">
-                    <TextBlock x:Name="TBlockShoppingCart" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Shop"
-                               VerticalAlignment="Center" />
-                </Grid>
+                <Grid x:Name="ShoppingGrid" Grid.Column="1"/>
             </Grid>
             <Grid x:Name="NavigationGrid" Grid.Row="1" Margin="0,0,0,100">
                 <Grid.ColumnDefinitions>
@@ -307,9 +304,25 @@
                 <LineBreak/>
                 <Run Text="American Express"/>
             </TextBlock>
-            <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Label="Daily Tank" Margin="10,10,0,0" VerticalAlignment="Top" Width="123" Foreground="Black" Background="White">
+            <AppBarButton x:Name="MainPageButton" HorizontalAlignment="Left" Label="Daily Tank" Margin="10,10,0,0" VerticalAlignment="Top" Width="123" Foreground="Black" Background="White">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="BestillingApp.View.MainPage"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
                 <AppBarButton.Icon>
                     <FontIcon Glyph="Daily Tank" FontFamily="Segoe UI Semibold"/>
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarButton x:Name="ShoppingCartButton" HorizontalAlignment="Right" Label="" VerticalAlignment="Stretch" Width="96">
+                <AppBarButton.Icon>
+                    <BitmapIcon UriSource="ms-appx:///Assets/shoppingcart.png" Margin="0,-10,0,-12">
+                        <interactivity:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="PointerPressed">
+                                <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage"/>
+                            </core:EventTriggerBehavior>
+                        </interactivity:Interaction.Behaviors>
+                    </BitmapIcon>
                 </AppBarButton.Icon>
             </AppBarButton>
         </Grid>
