@@ -1,6 +1,8 @@
 ﻿#region References
 
+using System;
 using System.Collections.ObjectModel;
+using Windows.UI.Popups;
 using BestillingApp.Model;
 using BestillingApp.Persistency;
 
@@ -10,13 +12,6 @@ namespace BestillingApp.Singleton
 {
     internal class CustomerSingleton
     {
-        #region Instancefield
-
-        private static CustomerSingleton _instance;
-        private ObservableCollection<Customer> _customers;
-
-        #endregion
-
         #region Constructor
 
         private CustomerSingleton()
@@ -29,10 +24,22 @@ namespace BestillingApp.Singleton
 
         public async void LoadCustomersAsync()
         {
-            var customers = await PersistencyService.LoadCustomersFromJsonAsync();
-            if(customers != null)
-                foreach(var cust in customers)
-                    Customers.Add(cust);
+            try
+            {
+                var customers = await PersistencyService.LoadCustomersFromJsonAsync();
+                if (customers == null)
+                    return;
+                if (customers.Count == 0)
+                    await new MessageDialog("Der findes nogen customers i databasen").ShowAsync();
+                else
+                    foreach (var cust in customers)
+                        Customers.Add(cust);
+            }
+            catch (Exception ex)
+            {
+                new MessageDialog("Der kunne ikke oprettes forbindelse til databasen").ShowAsync();
+                throw;
+            }
         }
 
         #endregion
@@ -49,11 +56,19 @@ namespace BestillingApp.Singleton
 
         #endregion
 
+        #region Instancefield
+
+        private static CustomerSingleton _instance;
+        private ObservableCollection<Customer> _customers;
+
+        #endregion
+
         #region Properties
 
         public static CustomerSingleton Instance => _instance ?? (_instance = new CustomerSingleton());
 
-        public ObservableCollection<Customer> Customers => _customers ?? (_customers = new ObservableCollection<Customer>());
+        public ObservableCollection<Customer> Customers
+            => _customers ?? (_customers = new ObservableCollection<Customer>());
 
         #endregion
 

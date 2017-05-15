@@ -29,19 +29,17 @@ namespace BestillingApp.Persistency
 
         public static async void SaveCustomerAsJsonAsync(Customer c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             try
             {
                 var response = await Task.FromResult(_client.PostAsJsonAsync("api/Customers/", c).Result);
-                if(!response.IsSuccessStatusCode)
-                {
+                if (!response.IsSuccessStatusCode)
                     response.EnsureSuccessStatusCode();
-                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 string message;
 
@@ -65,7 +63,7 @@ namespace BestillingApp.Persistency
                 //}
                 //else
                 //{
-                    message = "Unknown Error";
+                message = "Unknown Error";
                 //}
 
                 //switch(ex.GetType().ToString())
@@ -94,19 +92,17 @@ namespace BestillingApp.Persistency
 
         public static async void DeleteCustomerAsync(Customer c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             try
             {
                 var response = await Task.FromResult(_client.DeleteAsync("api/Customers/" + c).Result);
-                if(!response.IsSuccessStatusCode)
-                {
+                if (!response.IsSuccessStatusCode)
                     response.EnsureSuccessStatusCode();
-                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -115,23 +111,20 @@ namespace BestillingApp.Persistency
 
         public static async Task<List<Customer>> LoadCustomersFromJsonAsync()
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             try
             {
                 var response = await Task.FromResult(_client.GetAsync("api/Customers/").Result);
-                if(!response.IsSuccessStatusCode)
-                {
+                if (!response.IsSuccessStatusCode)
                     response.EnsureSuccessStatusCode();
-                }
                 var customerData =
                     await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<Customer>>().Result);
                 return customerData.ToList();
-
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -144,7 +137,7 @@ namespace BestillingApp.Persistency
 
         public static async void SaveGasStationAsJsonAsync(GasStation c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -152,7 +145,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.PostAsJsonAsync("api/GasStations/", c).Result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -161,7 +154,7 @@ namespace BestillingApp.Persistency
 
         public static async void DeleteGasStationAsync(GasStation c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -169,7 +162,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.DeleteAsync("api/GasStations/" + c).Result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -178,7 +171,7 @@ namespace BestillingApp.Persistency
 
         public static async Task<List<GasStation>> LoadGasStationsFromJsonAsync()
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -186,13 +179,13 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.GetAsync("api/GasStations/").Result);
 
-                if(!response.IsSuccessStatusCode)
+                if (!response.IsSuccessStatusCode)
                     return null;
                 var gasStationData =
                     await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<GasStation>>().Result);
                 return gasStationData.ToList();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog("Der skete en fejl under hentningen af elementer i databasen").ShowAsync();
                 throw;
@@ -205,7 +198,7 @@ namespace BestillingApp.Persistency
 
         public static async void SaveItemAsJsonAsync(Item c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -213,7 +206,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.PostAsJsonAsync("api/Items/", c).Result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -222,7 +215,7 @@ namespace BestillingApp.Persistency
 
         public static async void DeleteItemAsync(Item c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -230,7 +223,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.DeleteAsync("api/Items/" + c).Result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -239,7 +232,7 @@ namespace BestillingApp.Persistency
 
         public static async Task<List<Item>> LoadItemsFromJsonAsync()
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -247,13 +240,13 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.GetAsync("api/Items/").Result);
 
-                if(!response.IsSuccessStatusCode)
+                if (!response.IsSuccessStatusCode)
                     return null;
                 var itemData =
                     await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<Item>>().Result);
                 return itemData.ToList();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -266,7 +259,7 @@ namespace BestillingApp.Persistency
 
         public static async void SaveItemTypeAsJsonAsync(ItemType c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -274,7 +267,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.PostAsJsonAsync("api/ItemTypes/", c).Result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -283,7 +276,7 @@ namespace BestillingApp.Persistency
 
         public static async void DeleteItemTypeAsync(ItemType c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -291,7 +284,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.DeleteAsync("api/ItemTypes/" + c).Result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -300,7 +293,7 @@ namespace BestillingApp.Persistency
 
         public static async Task<List<ItemType>> LoadItemTypesFromJsonAsync()
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -308,13 +301,13 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.GetAsync("api/ItemTypes/").Result);
 
-                if(!response.IsSuccessStatusCode)
+                if (!response.IsSuccessStatusCode)
                     return null;
                 var itemData =
                     await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<ItemType>>().Result);
                 return itemData.ToList();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -327,7 +320,7 @@ namespace BestillingApp.Persistency
 
         public static async void SaveOrderItemAsJsonAsync(OrderItem c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -335,7 +328,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.PostAsJsonAsync("api/OrderItems/", c).Result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -344,7 +337,7 @@ namespace BestillingApp.Persistency
 
         public static async void DeleteOrderItemAsync(OrderItem c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -352,7 +345,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.DeleteAsync("api/OrderItems/" + c).Result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -361,7 +354,7 @@ namespace BestillingApp.Persistency
 
         public static async Task<List<OrderItem>> LoadOrderItemsFromJsonAsync()
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -369,13 +362,13 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.GetAsync("api/OrderItems/").Result);
 
-                if(!response.IsSuccessStatusCode)
+                if (!response.IsSuccessStatusCode)
                     return null;
                 var orderItemsData =
                     await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<OrderItem>>().Result);
                 return orderItemsData.ToList();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -388,7 +381,7 @@ namespace BestillingApp.Persistency
 
         public static async void SaveOrderAsJsonAsync(Order c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -396,7 +389,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.PostAsJsonAsync("api/Orders/", c).Result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -405,7 +398,7 @@ namespace BestillingApp.Persistency
 
         public static async void DeleteOrderAsync(Order c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -413,7 +406,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.DeleteAsync("api/Orders/" + c).Result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -422,7 +415,7 @@ namespace BestillingApp.Persistency
 
         public static async Task<List<Order>> LoadOrdersFromJsonAsync()
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -430,13 +423,13 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.GetAsync("api/Orders/").Result);
 
-                if(!response.IsSuccessStatusCode)
+                if (!response.IsSuccessStatusCode)
                     return null;
                 var orderData =
                     await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<Order>>().Result);
                 return orderData.ToList();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -449,7 +442,7 @@ namespace BestillingApp.Persistency
 
         public static async void SavePaymentAsJsonAsync(Payment c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -457,7 +450,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.PostAsJsonAsync("api/Payments/", c).Result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -466,7 +459,7 @@ namespace BestillingApp.Persistency
 
         public static async void DeletePaymentAsync(Payment c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -474,7 +467,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.DeleteAsync("api/Payments/" + c).Result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -483,7 +476,7 @@ namespace BestillingApp.Persistency
 
         public static async Task<List<Payment>> LoadPaymentsFromJsonAsync()
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -491,13 +484,13 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.GetAsync("api/Payments/").Result);
 
-                if(!response.IsSuccessStatusCode)
+                if (!response.IsSuccessStatusCode)
                     return null;
                 var paymentData =
                     await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<Payment>>().Result);
                 return paymentData.ToList();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -510,7 +503,7 @@ namespace BestillingApp.Persistency
 
         public static async void SaveReviewAsJsonAsync(Review c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -518,7 +511,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.PostAsJsonAsync("api/Reviews/", c).Result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -527,7 +520,7 @@ namespace BestillingApp.Persistency
 
         public static async void DeleteReviewAsync(Review c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -535,7 +528,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.DeleteAsync("api/Reviews/" + c).Result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -544,7 +537,7 @@ namespace BestillingApp.Persistency
 
         public static async Task<List<Review>> LoadReviewsFromJsonAsync()
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -552,13 +545,13 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.GetAsync("api/Reviews/").Result);
 
-                if(!response.IsSuccessStatusCode)
+                if (!response.IsSuccessStatusCode)
                     return null;
                 var reviewData =
                     await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<Review>>().Result);
                 return reviewData.ToList();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -571,7 +564,7 @@ namespace BestillingApp.Persistency
 
         public static async void SaveReceiptAsJsonAsync(Receipt c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -579,7 +572,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.PostAsJsonAsync("api/Receipts/", c).Result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -588,7 +581,7 @@ namespace BestillingApp.Persistency
 
         public static async void DeleteReceiptAsync(Receipt c)
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -596,7 +589,7 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.DeleteAsync("api/Receipts/" + c).Result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;
@@ -605,7 +598,7 @@ namespace BestillingApp.Persistency
 
         public static async Task<List<Receipt>> LoadReceiptFromJsonAsync()
         {
-            _client = new HttpClient(Handler, false) { BaseAddress = new Uri(serverurl) };
+            _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -613,13 +606,13 @@ namespace BestillingApp.Persistency
             {
                 var response = await Task.FromResult(_client.GetAsync("api/Receipts/").Result);
 
-                if(!response.IsSuccessStatusCode)
+                if (!response.IsSuccessStatusCode)
                     return null;
                 var receiptData =
                     await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<Receipt>>().Result);
                 return receiptData.ToList();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog(ex.Message).ShowAsync();
                 throw;

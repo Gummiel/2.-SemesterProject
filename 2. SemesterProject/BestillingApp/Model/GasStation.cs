@@ -2,6 +2,12 @@ namespace BestillingApp.Model
 {
     internal class GasStation
     {
+        public override string ToString()
+        {
+            return
+                $"ID: {ID}, Name: {Name}, Address: {Address}, City: {City}, Zipcode: {Zipcode}, Email: {Email}, TelNo: {TelNo}";
+        }
+
         #region Constructor
 
         public GasStation(string name, string address, string city, int zipcode, string email, int telNo,
@@ -32,10 +38,5 @@ namespace BestillingApp.Model
         public int TelNo { get; set; }
 
         #endregion
-
-        public override string ToString()
-        {
-            return $"ID: {ID}, Name: {Name}, Address: {Address}, City: {City}, Zipcode: {Zipcode}, Email: {Email}, TelNo: {TelNo}";
-        }
     }
 }

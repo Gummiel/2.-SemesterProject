@@ -99,7 +99,6 @@
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Handler\CustomerHandler.cs" />
     <Compile Include="Handler\GasStationHandler.cs" />
-    <Compile Include="Handler\MainPageHandler.cs" />
     <Compile Include="Handler\OrderHandler.cs" />
     <Compile Include="Handler\ReceiptHandler.cs" />
     <Compile Include="Handler\ReviewHandler.cs" />
@@ -124,6 +123,7 @@
     <Compile Include="Singleton\CatalogSingleton.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\OrderViewModel.cs" />
     <Compile Include="ViewModel\PaymentViewModel.cs" />
     <Compile Include="View\InfoPage.xaml.cs">

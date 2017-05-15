@@ -1,6 +1,8 @@
 ﻿#region References
 
+using System;
 using System.Collections.ObjectModel;
+using Windows.UI.Popups;
 using BestillingApp.Model;
 using BestillingApp.Persistency;
 
@@ -10,13 +12,6 @@ namespace BestillingApp.Singleton
 {
     internal class OrderSingleton
     {
-        #region Instancefield
-
-        private static OrderSingleton _instance;
-        private ObservableCollection<Order> _orders;
-
-        #endregion
-
         #region Constructor
 
         private OrderSingleton()
@@ -29,10 +24,22 @@ namespace BestillingApp.Singleton
 
         public async void LoadOrderAsync()
         {
-            var orders = await PersistencyService.LoadOrdersFromJsonAsync();
-            if(orders != null)
-                foreach(var ord in orders)
-                    Orders.Add(ord);
+            try
+            {
+                var orders = await PersistencyService.LoadOrdersFromJsonAsync();
+                if (orders == null)
+                    return;
+                if (orders.Count == 0)
+                    await new MessageDialog("Der findes nogen orders i databasen").ShowAsync();
+                else
+                    foreach (var ord in orders)
+                        Orders.Add(ord);
+            }
+            catch (Exception ex)
+            {
+                new MessageDialog("Der kunne ikke oprettes forbindelse til databasen").ShowAsync();
+                throw;
+            }
         }
 
         #endregion
@@ -46,6 +53,13 @@ namespace BestillingApp.Singleton
             //Hvis delete og read er på samme side
             //LoadOrderAsync();
         }
+
+        #endregion
+
+        #region Instancefield
+
+        private static OrderSingleton _instance;
+        private ObservableCollection<Order> _orders;
 
         #endregion
 

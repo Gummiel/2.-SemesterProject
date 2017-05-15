@@ -1,6 +1,8 @@
 ﻿#region References
 
+using System;
 using System.Collections.ObjectModel;
+using Windows.UI.Popups;
 using BestillingApp.Model;
 using BestillingApp.Persistency;
 
@@ -10,13 +12,6 @@ namespace BestillingApp.Singleton
 {
     internal class ReviewSingleton
     {
-        #region Instancefield
-
-        private static ReviewSingleton _instance;
-        private ObservableCollection<Review> _reviews;
-
-        #endregion
-
         #region Constructor
 
         private ReviewSingleton()
@@ -29,10 +24,22 @@ namespace BestillingApp.Singleton
 
         public async void LoadReviewAsync()
         {
-            var reviews = await PersistencyService.LoadReviewsFromJsonAsync();
-            if (reviews != null)
-                foreach (var rev in reviews)
-                    Reviews.Add(rev);
+            try
+            {
+                var reviews = await PersistencyService.LoadReviewsFromJsonAsync();
+                if (reviews == null)
+                    return;
+                if (reviews.Count == 0)
+                    await new MessageDialog("Der findes nogen reviews i databasen").ShowAsync();
+                else
+                    foreach (var rev in reviews)
+                        Reviews.Add(rev);
+            }
+            catch (Exception ex)
+            {
+                new MessageDialog("Der kunne ikke oprettes forbindelse til databasen").ShowAsync();
+                throw;
+            }
         }
 
         #endregion
@@ -46,6 +53,13 @@ namespace BestillingApp.Singleton
             //Hvis delete og read er på samme side
             //LoadReviewAsync();
         }
+
+        #endregion
+
+        #region Instancefield
+
+        private static ReviewSingleton _instance;
+        private ObservableCollection<Review> _reviews;
 
         #endregion
 

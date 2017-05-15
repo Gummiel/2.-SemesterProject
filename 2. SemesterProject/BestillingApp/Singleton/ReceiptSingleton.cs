@@ -1,6 +1,8 @@
 ﻿#region References
 
+using System;
 using System.Collections.ObjectModel;
+using Windows.UI.Popups;
 using BestillingApp.Model;
 using BestillingApp.Persistency;
 
@@ -10,21 +12,26 @@ namespace BestillingApp.Singleton
 {
     internal class ReceiptSingleton
     {
-        #region Instancefield
-
-        private static ReceiptSingleton _instance;
-        private ObservableCollection<Receipt> _receipts;
-
-        #endregion
-
         #region LoadReceiptAsync
 
         public async void LoadReceiptAsync()
         {
-            var receipts = await PersistencyService.LoadReceiptFromJsonAsync();
-            if (receipts != null)
-                foreach (var rec in receipts)
-                    Receipts.Add(rec);
+            try
+            {
+                var receipts = await PersistencyService.LoadReceiptFromJsonAsync();
+                if (receipts == null)
+                    return;
+                if (receipts.Count == 0)
+                    await new MessageDialog("Der findes nogen receipts i databasen").ShowAsync();
+                else
+                    foreach (var rec in receipts)
+                        Receipts.Add(rec);
+            }
+            catch (Exception ex)
+            {
+                new MessageDialog("Der kunne ikke oprettes forbindelse til databasen").ShowAsync();
+                throw;
+            }
         }
 
         #endregion
@@ -38,6 +45,13 @@ namespace BestillingApp.Singleton
             //Hvis delete og read er på samme side
             //LoadReceiptAsync();
         }
+
+        #endregion
+
+        #region Instancefield
+
+        private static ReceiptSingleton _instance;
+        private ObservableCollection<Receipt> _receipts;
 
         #endregion
 

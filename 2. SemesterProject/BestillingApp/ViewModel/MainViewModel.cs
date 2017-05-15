@@ -22,12 +22,9 @@ namespace BestillingApp.ViewModel
 
         public MainViewModel()
         {
-            MainPageHandler = new MainPageHandler(this);
-            CustomerSingleton = CustomerSingleton.Instance;
+            OrderHandler = new OrderHandler(this, null);
             GasStationSingleton = GasStationSingleton.Instance;
-            ReceiptSingleton = ReceiptSingleton.Instance;
-            ReviewSingleton = ReviewSingleton.Instance;
-            OrderSingleton = OrderSingleton.Instance;
+            //Eksempel for hvordan det ser ud i 1 singleton
             //Singleton = CatalogSingleton.Instance;
             GasStationSingleton.LoadGasStationAsync();
         }
@@ -38,13 +35,18 @@ namespace BestillingApp.ViewModel
 
         public ICommand SelectedGasStationCommand
         {
-            get { return _selectedGasStationCommand ?? (_selectedGasStationCommand = new RelayArgCommand<GasStation>(station => MainPageHandler.SetSelectedGasStation(station))); }
+            get
+            {
+                return _selectedGasStationCommand ??
+                       (_selectedGasStationCommand =
+                           new RelayArgCommand<GasStation>(station => OrderHandler.SetSelectedGasStation(station)));
+            }
             set { _selectedGasStationCommand = value; }
         }
 
         public static GasStation SelectedGasStation { get; set; }
 
-        public MainPageHandler MainPageHandler { get; set; }
+        public OrderHandler OrderHandler { get; set; }
         //Eksempel for hvordan det ser ud i 1 singleton
         //public static CatalogSingleton Singleton { get; set; }
         public static CustomerSingleton CustomerSingleton { get; set; }
@@ -54,6 +56,5 @@ namespace BestillingApp.ViewModel
         public static OrderSingleton OrderSingleton { get; set; }
 
         #endregion
-
     }
 }

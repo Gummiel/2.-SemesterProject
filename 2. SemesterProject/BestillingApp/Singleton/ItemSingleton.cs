@@ -1,23 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿#region References
+
+using System;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Windows.UI.Popups;
 using BestillingApp.Model;
 using BestillingApp.Persistency;
 
+#endregion
+
 namespace BestillingApp.Singleton
 {
-    class ItemSingleton
+    internal class ItemSingleton
     {
-        #region Instancefield
-
-        private static ItemSingleton _instance;
-        private ObservableCollection<Item> _items;
-
-        #endregion
-
         #region Constructor
 
         private ItemSingleton()
@@ -30,10 +24,22 @@ namespace BestillingApp.Singleton
 
         public async void LoadItemsAsync()
         {
-            var items = await PersistencyService.LoadItemsFromJsonAsync();
-            if(items != null)
-                foreach(var item in items)
-                    Items.Add(item);
+            try
+            {
+                var items = await PersistencyService.LoadItemsFromJsonAsync();
+                if (items == null)
+                    return;
+                if (items.Count == 0)
+                    await new MessageDialog("Der findes nogen items i databasen").ShowAsync();
+                else
+                    foreach (var item in items)
+                        Items.Add(item);
+            }
+            catch (Exception ex)
+            {
+                new MessageDialog("Der kunne ikke oprettes forbindelse til databasen").ShowAsync();
+                throw;
+            }
         }
 
         #endregion
@@ -47,6 +53,13 @@ namespace BestillingApp.Singleton
             //Hvis create og read er på samme side
             //LoadItemsAsync();
         }
+
+        #endregion
+
+        #region Instancefield
+
+        private static ItemSingleton _instance;
+        private ObservableCollection<Item> _items;
 
         #endregion
 

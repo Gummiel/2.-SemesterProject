@@ -1,24 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿#region References
+
+using System;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Windows.UI.Popups;
 using BestillingApp.Model;
 using BestillingApp.Persistency;
 
+#endregion
+
 namespace BestillingApp.Singleton
 {
-    class ItemTypeSingleton
+    internal class ItemTypeSingleton
     {
-
-        #region Instancefield
-
-        private static ItemTypeSingleton _instance;
-        private ObservableCollection<ItemType> _itemtypes;
-
-        #endregion
-
         #region Constructor
 
         private ItemTypeSingleton()
@@ -31,10 +24,22 @@ namespace BestillingApp.Singleton
 
         public async void LoadItemTypesAsync()
         {
-            var itemtypes = await PersistencyService.LoadItemTypesFromJsonAsync();
-            if(itemtypes != null)
-                foreach(var itemtype in itemtypes)
-                    ItemTypes.Add(itemtype);
+            try
+            {
+                var itemtypes = await PersistencyService.LoadItemTypesFromJsonAsync();
+                if (itemtypes == null)
+                    return;
+                if (itemtypes.Count == 0)
+                    await new MessageDialog("Der findes nogen itemtypes i databasen").ShowAsync();
+                else
+                    foreach (var itemtype in itemtypes)
+                        ItemTypes.Add(itemtype);
+            }
+            catch (Exception ex)
+            {
+                new MessageDialog("Der kunne ikke oprettes forbindelse til databasen").ShowAsync();
+                throw;
+            }
         }
 
         #endregion
@@ -51,10 +56,19 @@ namespace BestillingApp.Singleton
 
         #endregion
 
+        #region Instancefield
+
+        private static ItemTypeSingleton _instance;
+        private ObservableCollection<ItemType> _itemtypes;
+
+        #endregion
+
         #region Properties
 
         public static ItemTypeSingleton Instance => _instance ?? (_instance = new ItemTypeSingleton());
-        public ObservableCollection<ItemType> ItemTypes => _itemtypes ?? (_itemtypes = new ObservableCollection<ItemType>());
+
+        public ObservableCollection<ItemType> ItemTypes
+            => _itemtypes ?? (_itemtypes = new ObservableCollection<ItemType>());
 
         #endregion
 

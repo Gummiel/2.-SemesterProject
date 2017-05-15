@@ -12,13 +12,6 @@ namespace BestillingApp.Singleton
 {
     internal class GasStationSingleton
     {
-        #region Instancefield
-
-        private static GasStationSingleton _instance;
-        private ObservableCollection<GasStation> _gasstations;
-
-        #endregion
-
         #region Constructor
 
         private GasStationSingleton()
@@ -36,18 +29,12 @@ namespace BestillingApp.Singleton
                 var gasstations = await PersistencyService.LoadGasStationsFromJsonAsync();
                 if (gasstations == null) return;
                 if (gasstations.Count == 0)
-                {
                     await new MessageDialog("Der findes nogen gasstations i databasen").ShowAsync();
-                }
                 else
-                {
-                    foreach(var gas in gasstations)
-                    {
+                    foreach (var gas in gasstations)
                         GasStations.Add(gas);
-                    }
-                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog("Der kunne ikke oprettes forbindelse til databasen").ShowAsync();
                 throw;
@@ -68,10 +55,19 @@ namespace BestillingApp.Singleton
 
         #endregion
 
+        #region Instancefield
+
+        private static GasStationSingleton _instance;
+        private ObservableCollection<GasStation> _gasstations;
+
+        #endregion
+
         #region Properties
 
         public static GasStationSingleton Instance => _instance ?? (_instance = new GasStationSingleton());
-        public ObservableCollection<GasStation> GasStations => _gasstations ?? (_gasstations = new ObservableCollection<GasStation>());
+
+        public ObservableCollection<GasStation> GasStations
+            => _gasstations ?? (_gasstations = new ObservableCollection<GasStation>());
 
         #endregion
 

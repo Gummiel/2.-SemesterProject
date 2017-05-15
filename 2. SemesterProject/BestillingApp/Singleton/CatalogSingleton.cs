@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿#region References
+
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BestillingApp.Model;
 using BestillingApp.Persistency;
 
+#endregion
+
 namespace BestillingApp.Singleton
 {
-    class CatalogSingleton
+    internal class CatalogSingleton
     {
         #region Instancefields
 
@@ -27,10 +26,18 @@ namespace BestillingApp.Singleton
         #region Properties
 
         public static CatalogSingleton Instance => _instance ?? (_instance = new CatalogSingleton());
-        public ObservableCollection<Customer> Customers => _customers ?? (_customers = new ObservableCollection<Customer>());
-        public ObservableCollection<GasStation> GasStations => _gasstations ?? (_gasstations = new ObservableCollection<GasStation>());
+
+        public ObservableCollection<Customer> Customers
+            => _customers ?? (_customers = new ObservableCollection<Customer>());
+
+        public ObservableCollection<GasStation> GasStations
+            => _gasstations ?? (_gasstations = new ObservableCollection<GasStation>());
+
         public ObservableCollection<Item> Items => _items ?? (_items = new ObservableCollection<Item>());
-        public ObservableCollection<ItemType> ItemTypes => _itemtypes ?? (_itemtypes = new ObservableCollection<ItemType>());
+
+        public ObservableCollection<ItemType> ItemTypes
+            => _itemtypes ?? (_itemtypes = new ObservableCollection<ItemType>());
+
         public ObservableCollection<Order> Orders => _orders ?? (_orders = new ObservableCollection<Order>());
         public ObservableCollection<Receipt> Receipts => _receipts ?? (_receipts = new ObservableCollection<Receipt>());
         public ObservableCollection<Review> Reviews => _reviews ?? (_reviews = new ObservableCollection<Review>());
@@ -44,8 +51,8 @@ namespace BestillingApp.Singleton
         public async void LoadCustomersAsync()
         {
             var customers = await PersistencyService.LoadCustomersFromJsonAsync();
-            if(customers != null)
-                foreach(var cust in customers)
+            if (customers != null)
+                foreach (var cust in customers)
                     Customers.Add(cust);
         }
 
@@ -89,14 +96,13 @@ namespace BestillingApp.Singleton
 
         #region GasStation
 
-
         #region LoadGasStationAsync
 
         public async void LoadGasStationAsync()
         {
             var gasstations = await PersistencyService.LoadGasStationsFromJsonAsync();
-            if(gasstations != null)
-                foreach(var gas in gasstations)
+            if (gasstations != null)
+                foreach (var gas in gasstations)
                     GasStations.Add(gas);
         }
 
@@ -146,8 +152,8 @@ namespace BestillingApp.Singleton
         public async void LoadItemsAsync()
         {
             var items = await PersistencyService.LoadItemsFromJsonAsync();
-            if(items != null)
-                foreach(var item in items)
+            if (items != null)
+                foreach (var item in items)
                     Items.Add(item);
         }
 
@@ -196,8 +202,8 @@ namespace BestillingApp.Singleton
         public async void LoadItemTypesAsync()
         {
             var itemtypes = await PersistencyService.LoadItemTypesFromJsonAsync();
-            if(itemtypes != null)
-                foreach(var itemtype in itemtypes)
+            if (itemtypes != null)
+                foreach (var itemtype in itemtypes)
                     ItemTypes.Add(itemtype);
         }
 
@@ -246,8 +252,8 @@ namespace BestillingApp.Singleton
         public async void LoadOrderAsync()
         {
             var orders = await PersistencyService.LoadOrdersFromJsonAsync();
-            if(orders != null)
-                foreach(var ord in orders)
+            if (orders != null)
+                foreach (var ord in orders)
                     Orders.Add(ord);
         }
 
@@ -296,8 +302,8 @@ namespace BestillingApp.Singleton
         public async void LoadReceiptAsync()
         {
             var receipts = await PersistencyService.LoadReceiptFromJsonAsync();
-            if(receipts != null)
-                foreach(var rec in receipts)
+            if (receipts != null)
+                foreach (var rec in receipts)
                     Receipts.Add(rec);
         }
 
@@ -348,8 +354,8 @@ namespace BestillingApp.Singleton
         public async void LoadReviewAsync()
         {
             var reviews = await PersistencyService.LoadReviewsFromJsonAsync();
-            if(reviews != null)
-                foreach(var rev in reviews)
+            if (reviews != null)
+                foreach (var rev in reviews)
                     Reviews.Add(rev);
         }
 
