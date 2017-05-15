@@ -1,20 +1,20 @@
-﻿#region References
-
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using BestillingWebService.Models;
-
-#endregion
+using BestillingWebService;
 
 namespace BestillingWebService.Controllers
 {
     public class ReceiptsController : ApiController
     {
-        private readonly BestillingContext db = new BestillingContext();
+        private BestillingContext db = new BestillingContext();
 
         // GET: api/Receipts
         public IQueryable<Receipt> GetReceipt()
@@ -26,9 +26,11 @@ namespace BestillingWebService.Controllers
         [ResponseType(typeof(Receipt))]
         public IHttpActionResult GetReceipt(int id)
         {
-            var receipt = db.Receipt.Find(id);
+            Receipt receipt = db.Receipt.Find(id);
             if (receipt == null)
+            {
                 return NotFound();
+            }
 
             return Ok(receipt);
         }
@@ -38,10 +40,14 @@ namespace BestillingWebService.Controllers
         public IHttpActionResult PutReceipt(int id, Receipt receipt)
         {
             if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
+            }
 
             if (id != receipt.ID)
+            {
                 return BadRequest();
+            }
 
             db.Entry(receipt).State = EntityState.Modified;
 
@@ -52,8 +58,13 @@ namespace BestillingWebService.Controllers
             catch (DbUpdateConcurrencyException)
             {
                 if (!ReceiptExists(id))
+                {
                     return NotFound();
-                throw;
+                }
+                else
+                {
+                    throw;
+                }
             }
 
             return StatusCode(HttpStatusCode.NoContent);
@@ -64,21 +75,25 @@ namespace BestillingWebService.Controllers
         public IHttpActionResult PostReceipt(Receipt receipt)
         {
             if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
+            }
 
             db.Receipt.Add(receipt);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new {id = receipt.ID}, receipt);
+            return CreatedAtRoute("DefaultApi", new { id = receipt.ID }, receipt);
         }
 
         // DELETE: api/Receipts/5
         [ResponseType(typeof(Receipt))]
         public IHttpActionResult DeleteReceipt(int id)
         {
-            var receipt = db.Receipt.Find(id);
+            Receipt receipt = db.Receipt.Find(id);
             if (receipt == null)
+            {
                 return NotFound();
+            }
 
             db.Receipt.Remove(receipt);
             db.SaveChanges();
@@ -89,7 +104,9 @@ namespace BestillingWebService.Controllers
         protected override void Dispose(bool disposing)
         {
             if (disposing)
+            {
                 db.Dispose();
+            }
             base.Dispose(disposing);
         }
 

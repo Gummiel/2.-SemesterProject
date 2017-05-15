@@ -1,18 +1,16 @@
-#region References
-
-using System.Data.Entity;
-using BestillingWebService.Models;
-
-#endregion
-
 namespace BestillingWebService
 {
-    public class BestillingContext : DbContext
+    using System;
+    using System.Data.Entity;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+
+    public partial class BestillingContext : DbContext
     {
         public BestillingContext()
             : base("name=BestillingContext")
         {
-            Configuration.ProxyCreationEnabled = false;
+            this.Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<Customer> Customer { get; set; }

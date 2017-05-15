@@ -144,6 +144,8 @@ namespace BestillingApp.Persistency
             try
             {
                 var response = await Task.FromResult(_client.PostAsJsonAsync("api/GasStations/", c).Result);
+                if(!response.IsSuccessStatusCode)
+                    response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
             {
@@ -161,6 +163,8 @@ namespace BestillingApp.Persistency
             try
             {
                 var response = await Task.FromResult(_client.DeleteAsync("api/GasStations/" + c).Result);
+                if(!response.IsSuccessStatusCode)
+                    response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
             {
@@ -178,9 +182,9 @@ namespace BestillingApp.Persistency
             try
             {
                 var response = await Task.FromResult(_client.GetAsync("api/GasStations/").Result);
-
-                if (!response.IsSuccessStatusCode)
-                    return null;
+                if(!response.IsSuccessStatusCode)
+                    response.EnsureSuccessStatusCode();
+                
                 var gasStationData =
                     await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<GasStation>>().Result);
                 return gasStationData.ToList();

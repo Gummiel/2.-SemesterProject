@@ -1,20 +1,20 @@
-﻿#region References
-
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using BestillingWebService.Models;
-
-#endregion
+using BestillingWebService;
 
 namespace BestillingWebService.Controllers
 {
     public class GasStationsController : ApiController
     {
-        private readonly BestillingContext db = new BestillingContext();
+        private BestillingContext db = new BestillingContext();
 
         // GET: api/GasStations
         public IQueryable<GasStation> GetGasStation()
@@ -26,9 +26,11 @@ namespace BestillingWebService.Controllers
         [ResponseType(typeof(GasStation))]
         public IHttpActionResult GetGasStation(int id)
         {
-            var gasStation = db.GasStation.Find(id);
+            GasStation gasStation = db.GasStation.Find(id);
             if (gasStation == null)
+            {
                 return NotFound();
+            }
 
             return Ok(gasStation);
         }
@@ -38,10 +40,14 @@ namespace BestillingWebService.Controllers
         public IHttpActionResult PutGasStation(int id, GasStation gasStation)
         {
             if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
+            }
 
             if (id != gasStation.ID)
+            {
                 return BadRequest();
+            }
 
             db.Entry(gasStation).State = EntityState.Modified;
 
@@ -52,8 +58,13 @@ namespace BestillingWebService.Controllers
             catch (DbUpdateConcurrencyException)
             {
                 if (!GasStationExists(id))
+                {
                     return NotFound();
-                throw;
+                }
+                else
+                {
+                    throw;
+                }
             }
 
             return StatusCode(HttpStatusCode.NoContent);
@@ -64,21 +75,25 @@ namespace BestillingWebService.Controllers
         public IHttpActionResult PostGasStation(GasStation gasStation)
         {
             if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
+            }
 
             db.GasStation.Add(gasStation);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new {id = gasStation.ID}, gasStation);
+            return CreatedAtRoute("DefaultApi", new { id = gasStation.ID }, gasStation);
         }
 
         // DELETE: api/GasStations/5
         [ResponseType(typeof(GasStation))]
         public IHttpActionResult DeleteGasStation(int id)
         {
-            var gasStation = db.GasStation.Find(id);
+            GasStation gasStation = db.GasStation.Find(id);
             if (gasStation == null)
+            {
                 return NotFound();
+            }
 
             db.GasStation.Remove(gasStation);
             db.SaveChanges();
@@ -89,7 +104,9 @@ namespace BestillingWebService.Controllers
         protected override void Dispose(bool disposing)
         {
             if (disposing)
+            {
                 db.Dispose();
+            }
             base.Dispose(disposing);
         }
 

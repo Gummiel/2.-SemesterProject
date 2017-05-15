@@ -1,20 +1,20 @@
-﻿#region References
-
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using BestillingWebService.Models;
-
-#endregion
+using BestillingWebService;
 
 namespace BestillingWebService.Controllers
 {
     public class ReviewsController : ApiController
     {
-        private readonly BestillingContext db = new BestillingContext();
+        private BestillingContext db = new BestillingContext();
 
         // GET: api/Reviews
         public IQueryable<Review> GetReview()
@@ -26,9 +26,11 @@ namespace BestillingWebService.Controllers
         [ResponseType(typeof(Review))]
         public IHttpActionResult GetReview(int id)
         {
-            var review = db.Review.Find(id);
+            Review review = db.Review.Find(id);
             if (review == null)
+            {
                 return NotFound();
+            }
 
             return Ok(review);
         }
@@ -38,10 +40,14 @@ namespace BestillingWebService.Controllers
         public IHttpActionResult PutReview(int id, Review review)
         {
             if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
+            }
 
             if (id != review.ID)
+            {
                 return BadRequest();
+            }
 
             db.Entry(review).State = EntityState.Modified;
 
@@ -52,8 +58,13 @@ namespace BestillingWebService.Controllers
             catch (DbUpdateConcurrencyException)
             {
                 if (!ReviewExists(id))
+                {
                     return NotFound();
-                throw;
+                }
+                else
+                {
+                    throw;
+                }
             }
 
             return StatusCode(HttpStatusCode.NoContent);
@@ -64,21 +75,25 @@ namespace BestillingWebService.Controllers
         public IHttpActionResult PostReview(Review review)
         {
             if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
+            }
 
             db.Review.Add(review);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new {id = review.ID}, review);
+            return CreatedAtRoute("DefaultApi", new { id = review.ID }, review);
         }
 
         // DELETE: api/Reviews/5
         [ResponseType(typeof(Review))]
         public IHttpActionResult DeleteReview(int id)
         {
-            var review = db.Review.Find(id);
+            Review review = db.Review.Find(id);
             if (review == null)
+            {
                 return NotFound();
+            }
 
             db.Review.Remove(review);
             db.SaveChanges();
@@ -89,7 +104,9 @@ namespace BestillingWebService.Controllers
         protected override void Dispose(bool disposing)
         {
             if (disposing)
+            {
                 db.Dispose();
+            }
             base.Dispose(disposing);
         }
 

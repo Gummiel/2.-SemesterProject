@@ -1,14 +1,13 @@
-#region References
-
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-#endregion
-
-namespace BestillingWebService.Models
+namespace BestillingWebService
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
     [Table("Customer")]
-    public class Customer
+    public partial class Customer
     {
         public int ID { get; set; }
 

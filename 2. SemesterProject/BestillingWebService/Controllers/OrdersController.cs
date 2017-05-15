@@ -1,20 +1,20 @@
-﻿#region References
-
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using BestillingWebService.Models;
-
-#endregion
+using BestillingWebService;
 
 namespace BestillingWebService.Controllers
 {
     public class OrdersController : ApiController
     {
-        private readonly BestillingContext db = new BestillingContext();
+        private BestillingContext db = new BestillingContext();
 
         // GET: api/Orders
         public IQueryable<Order> GetOrder()
@@ -26,9 +26,11 @@ namespace BestillingWebService.Controllers
         [ResponseType(typeof(Order))]
         public IHttpActionResult GetOrder(int id)
         {
-            var order = db.Order.Find(id);
+            Order order = db.Order.Find(id);
             if (order == null)
+            {
                 return NotFound();
+            }
 
             return Ok(order);
         }
@@ -38,10 +40,14 @@ namespace BestillingWebService.Controllers
         public IHttpActionResult PutOrder(int id, Order order)
         {
             if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
+            }
 
             if (id != order.ID)
+            {
                 return BadRequest();
+            }
 
             db.Entry(order).State = EntityState.Modified;
 
@@ -52,8 +58,13 @@ namespace BestillingWebService.Controllers
             catch (DbUpdateConcurrencyException)
             {
                 if (!OrderExists(id))
+                {
                     return NotFound();
-                throw;
+                }
+                else
+                {
+                    throw;
+                }
             }
 
             return StatusCode(HttpStatusCode.NoContent);
@@ -64,21 +75,25 @@ namespace BestillingWebService.Controllers
         public IHttpActionResult PostOrder(Order order)
         {
             if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
+            }
 
             db.Order.Add(order);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new {id = order.ID}, order);
+            return CreatedAtRoute("DefaultApi", new { id = order.ID }, order);
         }
 
         // DELETE: api/Orders/5
         [ResponseType(typeof(Order))]
         public IHttpActionResult DeleteOrder(int id)
         {
-            var order = db.Order.Find(id);
+            Order order = db.Order.Find(id);
             if (order == null)
+            {
                 return NotFound();
+            }
 
             db.Order.Remove(order);
             db.SaveChanges();
@@ -89,7 +104,9 @@ namespace BestillingWebService.Controllers
         protected override void Dispose(bool disposing)
         {
             if (disposing)
+            {
                 db.Dispose();
+            }
             base.Dispose(disposing);
         }
 
