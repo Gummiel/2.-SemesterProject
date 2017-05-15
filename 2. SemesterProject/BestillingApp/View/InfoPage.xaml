@@ -1,5 +1,4 @@
 ﻿<Page
-    x:Class="BestillingApp.View.InfoPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:BestillingApp.View"
@@ -7,6 +6,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:ViewModel="using:BestillingApp.ViewModel"
+    x:Class="BestillingApp.View.InfoPage"
     mc:Ignorable="d" Background="Black">
     <Page.Resources>
         <Style x:Key="NavigationButtonStyle" TargetType="Button">
@@ -162,10 +163,7 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="50" />
                 </Grid.ColumnDefinitions>
-                <Grid x:Name="AppNameGrid" Grid.Column="0">
-                    <TextBlock x:Name="TBlockAppName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Daily Tank"
-                               VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" />
-                </Grid>
+                <Grid x:Name="AppNameGrid" Grid.Column="0"/>
                 <Grid x:Name="ShoppingGrid" Grid.Column="1">
                     <TextBlock x:Name="TBlockShoppingCart" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Shop"
                                VerticalAlignment="Center" />
@@ -309,6 +307,11 @@
                 <LineBreak/>
                 <Run Text="American Express"/>
             </TextBlock>
+            <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Label="Daily Tank" Margin="10,10,0,0" VerticalAlignment="Top" Width="123" Foreground="Black" Background="White">
+                <AppBarButton.Icon>
+                    <FontIcon Glyph="Daily Tank" FontFamily="Segoe UI Semibold"/>
+                </AppBarButton.Icon>
+            </AppBarButton>
         </Grid>
     </ScrollViewer>
 </Page>
