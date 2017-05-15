@@ -157,7 +157,7 @@
                 <RowDefinition Height="50" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Grid x:Name="TopBarGrid" Grid.Row="0" Background="#FFC8D5E8">
+            <Grid x:Name="TopBarGrid" Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="50" />
@@ -179,7 +179,7 @@
                 </Grid.ColumnDefinitions>
                 <Grid x:Name="MenuGrid" Grid.Column="0">
                     <Button x:Name="BtnMenu" Content="Shop" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                            Style="{StaticResource NavigationButtonStyle}">
+                            Style="{StaticResource NavigationButtonStyle}" Background="#33FFFFFF" BorderThickness="0,1,1,0" BorderBrush="Black">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
                                 <core:NavigateToPageAction TargetPage="BestillingApp.View.MenuPage" />
@@ -189,7 +189,7 @@
                 </Grid>
                 <Grid x:Name="ReviewsGrid" Grid.Column="1" Margin="1,0">
                     <Button x:Name="BtnReviews" Content="Reviews" HorizontalAlignment="Stretch"
-                            VerticalAlignment="Stretch" Style="{StaticResource NavigationButtonStyle}">
+                            VerticalAlignment="Stretch" Style="{StaticResource NavigationButtonStyle}" Background="#33FFFFFF" BorderThickness="0,1,1,0" BorderBrush="Black">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
                                 <core:NavigateToPageAction TargetPage="BestillingApp.View.ReviewsPage" />
@@ -199,7 +199,7 @@
                 </Grid>
                 <Grid x:Name="InfoGrid" Grid.Column="2">
                     <Button x:Name="BtnInfo" Content="Info" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                            Style="{StaticResource NavigationButtonStyle}" BorderBrush="#FFFF0000">
+                            Style="{StaticResource NavigationButtonStyle}" BorderBrush="#FFFF0000" Background="#33FFFFFF" BorderThickness="0,2">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
                                 <core:NavigateToPageAction TargetPage="BestillingApp.View.InfoPage" />
@@ -209,10 +209,106 @@
                 </Grid>
             </Grid>
             <Grid x:Name="ContentGrid" Grid.Row="1" Margin="0,50,0,0" Grid.RowSpan="3" />
-            <Image x:Name="BackGround" Margin="0,-100,0,0" Grid.Row="2" Grid.RowSpan="2"
-                   Source="ms-appx:///Assets/Background.jpg" Stretch="Fill" />
-            <TextBlock x:Name="textBlock" Height="120" Margin="95,0,265,-170" Grid.Row="3" TextWrapping="Wrap"
-                       Text="dfdsfdsfdsfds" VerticalAlignment="Bottom" FontSize="48" />
+            <TextBlock x:Name="Om_os_TYKT" HorizontalAlignment="Left" Margin="406,124,0,0" Grid.Row="1" Text="Om os" VerticalAlignment="Top" Height="26" Width="92" FontWeight="Bold" TextWrapping="Wrap" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+            <TextBlock x:Name="KontaktInfo" HorizontalAlignment="Left" Margin="406,0,0,-148" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="668" Grid.RowSpan="2" Width="320">
+                <Run Text="Vi ligger i 5 forskellige bydele:"/>
+                <LineBreak/>
+                <Run/>
+                <LineBreak/>
+                <Run Text="Daily Tank"/>
+                <LineBreak/>
+                <Run Text="Addresse: Ibrahimvej 21"/>
+                <LineBreak/>
+                <Run Text="By: 4300 Holbæk"/>
+                <LineBreak/>
+                <Run Text="Tlf.: 58595756"/>
+                <LineBreak/>
+                <Run Text="E-mail: Holbaek@Dailytank.com"/>
+                <LineBreak/>
+                <Run/>
+                <LineBreak/>
+                <Run Text="Daily Tank"/>
+                <LineBreak/>
+                <Run Text="Addresse: Farhadvej 29"/>
+                <LineBreak/>
+                <Run Text="By: 4180 Sorø"/>
+                <LineBreak/>
+                <Run Text="Tlf.: 54556210"/>
+                <LineBreak/>
+                <Run Text="E-mail: Soro@Dailytank.om"/>
+                <LineBreak/>
+                <Run/>
+                <LineBreak/>
+                <Run Text="Daily Tank"/>
+                <LineBreak/>
+                <Run Text="Addresse: Korhanvej 22"/>
+                <LineBreak/>
+                <Run Text="By: 4610 Køge"/>
+                <LineBreak/>
+                <Run Text="Tlf.: 51203655"/>
+                <LineBreak/>
+                <Run Text="E-mail: Koge@Dailytank.om"/>
+                <LineBreak/>
+                <Run/>
+                <LineBreak/>
+                <Run Text="Daily Tank"/>
+                <LineBreak/>
+                <Run Text="Addresse: Mikaelvej 30"/>
+                <LineBreak/>
+                <Run Text="By: 3650 Ølstykke"/>
+                <LineBreak/>
+                <Run Text="Tlf.: 55846697"/>
+                <LineBreak/>
+                <Run Text="E-mail: Olstykke@Dailytank.om"/>
+                <LineBreak/>
+                <Run/>
+                <LineBreak/>
+                <Run Text="Daily Tank"/>
+                <LineBreak/>
+                <Run Text="Addresse: Michaelvej 20"/>
+                <LineBreak/>
+                <Run Text="By: 4000 Roskilde"/>
+                <LineBreak/>
+                <Run Text="Tlf.: 52545658"/>
+                <LineBreak/>
+                <Run Text="E-mail: Roskilde@Dailytank.om"/>
+            </TextBlock>
+            <TextBlock x:Name="Hvem_er_vi_TYKT" HorizontalAlignment="Left" Margin="0,124,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Hvem er vi?" VerticalAlignment="Top" Height="26" Width="92" FontWeight="Bold"/>
+            <TextBlock x:Name="Hvem_er_vi" HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="402" Grid.RowSpan="2" Width="320">
+                <Run Text="Daily Tank har været her siden 1992 og siden udviklet sig fra en enkelt tankstation i en lille by til flere tankstationer rundt omkring i Danmark. "/>
+                <LineBreak/>
+                <Run/>
+                <LineBreak/>
+                <Run Text="Vores sortiment var det der tiltrak kunderne."/>
+                <LineBreak/>
+                <Run Text="Vi har store udvalg af daglige varer, så børnene derhjemme ikke skulle græde efter mælk fra moren, samt moreren ikke skulle rejse flere timer for at få noget mad på bordet når vi kunne komme ud til dem."/>
+                <LineBreak/>
+                <Run Text="Navnet Daily Tank har udviklet sig stærkt gennem tiden, hvor vi sikrede friske råvarer og god leveringstid."/>
+                <LineBreak/>
+                <Run/>
+                <LineBreak/>
+                <Run Text="Vi garanter en oplevelse du ikke vil kunne finde et andet sted!"/>
+            </TextBlock>
+            <TextBlock x:Name="Betaling_TYKT" HorizontalAlignment="Left" Margin="769,124,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Betaling" VerticalAlignment="Top" Height="26" Width="92" FontWeight="Bold"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="769,0,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="486" Grid.RowSpan="2" Width="320" SelectionChanged="textBlock_SelectionChanged">
+                <Run Text="I Daily Tank kan du betale via forskellige korttyper, men du skal først logge-ind via enten Facebook eller Google for at udføre din betaling."/>
+                <LineBreak/>
+                <Run/>
+                <LineBreak/>
+                <Run Text="Korttyper du kan betale med:"/>
+                <LineBreak/>
+                <Run/>
+                <LineBreak/>
+                <Run Text="Mastercard"/>
+                <LineBreak/>
+                <Run Text="VISA"/>
+                <LineBreak/>
+                <Run Text="VISA-Electron"/>
+                <LineBreak/>
+                <Run Text="Maestro"/>
+                <LineBreak/>
+                <Run Text="American Express"/>
+            </TextBlock>
         </Grid>
     </ScrollViewer>
 </Page>

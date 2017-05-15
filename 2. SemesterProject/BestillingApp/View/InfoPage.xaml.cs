@@ -22,5 +22,15 @@ namespace BestillingApp.View
         private void TBlockShoppingCart_SelectionChanged(object sender, RoutedEventArgs e)
         {
         }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
