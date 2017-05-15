@@ -1,20 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿#region References
+
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using BestillingWebService;
+
+#endregion
 
 namespace BestillingWebService.Controllers
 {
     public class PaymentsController : ApiController
     {
-        private BestillingContext db = new BestillingContext();
+        private readonly BestillingContext db = new BestillingContext();
 
         // GET: api/Payments
         public IQueryable<Payment> GetPayment()
@@ -26,11 +25,9 @@ namespace BestillingWebService.Controllers
         [ResponseType(typeof(Payment))]
         public IHttpActionResult GetPayment(int id)
         {
-            Payment payment = db.Payment.Find(id);
+            var payment = db.Payment.Find(id);
             if (payment == null)
-            {
                 return NotFound();
-            }
 
             return Ok(payment);
         }
@@ -40,14 +37,10 @@ namespace BestillingWebService.Controllers
         public IHttpActionResult PutPayment(int id, Payment payment)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
             if (id != payment.ID)
-            {
                 return BadRequest();
-            }
 
             db.Entry(payment).State = EntityState.Modified;
 
@@ -58,13 +51,8 @@ namespace BestillingWebService.Controllers
             catch (DbUpdateConcurrencyException)
             {
                 if (!PaymentExists(id))
-                {
                     return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                throw;
             }
 
             return StatusCode(HttpStatusCode.NoContent);
@@ -75,25 +63,21 @@ namespace BestillingWebService.Controllers
         public IHttpActionResult PostPayment(Payment payment)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
             db.Payment.Add(payment);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = payment.ID }, payment);
+            return CreatedAtRoute("DefaultApi", new {id = payment.ID}, payment);
         }
 
         // DELETE: api/Payments/5
         [ResponseType(typeof(Payment))]
         public IHttpActionResult DeletePayment(int id)
         {
-            Payment payment = db.Payment.Find(id);
+            var payment = db.Payment.Find(id);
             if (payment == null)
-            {
                 return NotFound();
-            }
 
             db.Payment.Remove(payment);
             db.SaveChanges();
@@ -104,9 +88,7 @@ namespace BestillingWebService.Controllers
         protected override void Dispose(bool disposing)
         {
             if (disposing)
-            {
                 db.Dispose();
-            }
             base.Dispose(disposing);
         }
 

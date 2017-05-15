@@ -24,14 +24,16 @@ namespace BestillingApp.Singleton
 
         public async void LoadGasStationAsync()
         {
+            if (GasStations.Count > 0)
+                GasStations.Clear();
             try
             {
-                var gasstations = await PersistencyService.LoadGasStationsFromJsonAsync();
-                if (gasstations == null) return;
-                if (gasstations.Count == 0)
+                var loadedgasstations = await PersistencyService.LoadGasStationsFromJsonAsync();
+                if (loadedgasstations == null) return;
+                if (loadedgasstations.Count == 0)
                     await new MessageDialog("Der findes nogen gasstations i databasen").ShowAsync();
                 else
-                    foreach (var gas in gasstations)
+                    foreach (var gas in loadedgasstations)
                         GasStations.Add(gas);
             }
             catch (Exception ex)

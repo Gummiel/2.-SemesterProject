@@ -1,20 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿#region References
+
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using BestillingWebService;
+
+#endregion
 
 namespace BestillingWebService.Controllers
 {
     public class ItemTypesController : ApiController
     {
-        private BestillingContext db = new BestillingContext();
+        private readonly BestillingContext db = new BestillingContext();
 
         // GET: api/ItemTypes
         public IQueryable<ItemType> GetItemType()
@@ -26,11 +25,9 @@ namespace BestillingWebService.Controllers
         [ResponseType(typeof(ItemType))]
         public IHttpActionResult GetItemType(int id)
         {
-            ItemType itemType = db.ItemType.Find(id);
+            var itemType = db.ItemType.Find(id);
             if (itemType == null)
-            {
                 return NotFound();
-            }
 
             return Ok(itemType);
         }
@@ -40,14 +37,10 @@ namespace BestillingWebService.Controllers
         public IHttpActionResult PutItemType(int id, ItemType itemType)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
             if (id != itemType.ID)
-            {
                 return BadRequest();
-            }
 
             db.Entry(itemType).State = EntityState.Modified;
 
@@ -58,13 +51,8 @@ namespace BestillingWebService.Controllers
             catch (DbUpdateConcurrencyException)
             {
                 if (!ItemTypeExists(id))
-                {
                     return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                throw;
             }
 
             return StatusCode(HttpStatusCode.NoContent);
@@ -75,25 +63,21 @@ namespace BestillingWebService.Controllers
         public IHttpActionResult PostItemType(ItemType itemType)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
             db.ItemType.Add(itemType);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = itemType.ID }, itemType);
+            return CreatedAtRoute("DefaultApi", new {id = itemType.ID}, itemType);
         }
 
         // DELETE: api/ItemTypes/5
         [ResponseType(typeof(ItemType))]
         public IHttpActionResult DeleteItemType(int id)
         {
-            ItemType itemType = db.ItemType.Find(id);
+            var itemType = db.ItemType.Find(id);
             if (itemType == null)
-            {
                 return NotFound();
-            }
 
             db.ItemType.Remove(itemType);
             db.SaveChanges();
@@ -104,9 +88,7 @@ namespace BestillingWebService.Controllers
         protected override void Dispose(bool disposing)
         {
             if (disposing)
-            {
                 db.Dispose();
-            }
             base.Dispose(disposing);
         }
 

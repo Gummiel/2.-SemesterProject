@@ -17,7 +17,7 @@ namespace BestillingApp.Persistency
     {
         #region Instancefield
 
-        private const string serverurl = "http://localhost:7743/";
+        private const string serverurl = "http://localhost:5000/";
 
         private static readonly HttpClientHandler Handler = new HttpClientHandler {UseDefaultCredentials = true};
 
@@ -144,7 +144,7 @@ namespace BestillingApp.Persistency
             try
             {
                 var response = await Task.FromResult(_client.PostAsJsonAsync("api/GasStations/", c).Result);
-                if(!response.IsSuccessStatusCode)
+                if (!response.IsSuccessStatusCode)
                     response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
@@ -163,7 +163,7 @@ namespace BestillingApp.Persistency
             try
             {
                 var response = await Task.FromResult(_client.DeleteAsync("api/GasStations/" + c).Result);
-                if(!response.IsSuccessStatusCode)
+                if (!response.IsSuccessStatusCode)
                     response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
@@ -182,9 +182,9 @@ namespace BestillingApp.Persistency
             try
             {
                 var response = await Task.FromResult(_client.GetAsync("api/GasStations/").Result);
-                if(!response.IsSuccessStatusCode)
+                if (!response.IsSuccessStatusCode)
                     response.EnsureSuccessStatusCode();
-                
+
                 var gasStationData =
                     await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<GasStation>>().Result);
                 return gasStationData.ToList();

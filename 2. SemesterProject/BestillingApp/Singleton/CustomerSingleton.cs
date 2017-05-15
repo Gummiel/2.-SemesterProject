@@ -24,15 +24,17 @@ namespace BestillingApp.Singleton
 
         public async void LoadCustomersAsync()
         {
+            if (Customers.Count > 0)
+                Customers.Clear();
             try
             {
-                var customers = await PersistencyService.LoadCustomersFromJsonAsync();
-                if (customers == null)
+                var loadedcustomers = await PersistencyService.LoadCustomersFromJsonAsync();
+                if (loadedcustomers == null)
                     return;
-                if (customers.Count == 0)
+                if (loadedcustomers.Count == 0)
                     await new MessageDialog("Der findes nogen customers i databasen").ShowAsync();
                 else
-                    foreach (var cust in customers)
+                    foreach (var cust in loadedcustomers)
                         Customers.Add(cust);
             }
             catch (Exception ex)

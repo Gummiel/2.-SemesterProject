@@ -24,15 +24,17 @@ namespace BestillingApp.Singleton
 
         public async void LoadReviewAsync()
         {
+            if (Reviews.Count > 0)
+                Reviews.Clear();
             try
             {
-                var reviews = await PersistencyService.LoadReviewsFromJsonAsync();
-                if (reviews == null)
+                var loadedreview = await PersistencyService.LoadReviewsFromJsonAsync();
+                if (loadedreview == null)
                     return;
-                if (reviews.Count == 0)
+                if (loadedreview.Count == 0)
                     await new MessageDialog("Der findes nogen reviews i databasen").ShowAsync();
                 else
-                    foreach (var rev in reviews)
+                    foreach (var rev in loadedreview)
                         Reviews.Add(rev);
             }
             catch (Exception ex)

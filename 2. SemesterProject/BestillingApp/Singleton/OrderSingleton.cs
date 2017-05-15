@@ -24,15 +24,17 @@ namespace BestillingApp.Singleton
 
         public async void LoadOrderAsync()
         {
+            if (Orders.Count > 0)
+                Orders.Clear();
             try
             {
-                var orders = await PersistencyService.LoadOrdersFromJsonAsync();
-                if (orders == null)
+                var loadedorders = await PersistencyService.LoadOrdersFromJsonAsync();
+                if (loadedorders == null)
                     return;
-                if (orders.Count == 0)
+                if (loadedorders.Count == 0)
                     await new MessageDialog("Der findes nogen orders i databasen").ShowAsync();
                 else
-                    foreach (var ord in orders)
+                    foreach (var ord in loadedorders)
                         Orders.Add(ord);
             }
             catch (Exception ex)

@@ -16,15 +16,17 @@ namespace BestillingApp.Singleton
 
         public async void LoadReceiptAsync()
         {
+            if (Receipts.Count > 0)
+                Receipts.Clear();
             try
             {
-                var receipts = await PersistencyService.LoadReceiptFromJsonAsync();
-                if (receipts == null)
+                var loadedreceipts = await PersistencyService.LoadReceiptFromJsonAsync();
+                if (loadedreceipts == null)
                     return;
-                if (receipts.Count == 0)
+                if (loadedreceipts.Count == 0)
                     await new MessageDialog("Der findes nogen receipts i databasen").ShowAsync();
                 else
-                    foreach (var rec in receipts)
+                    foreach (var rec in loadedreceipts)
                         Receipts.Add(rec);
             }
             catch (Exception ex)

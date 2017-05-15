@@ -24,15 +24,17 @@ namespace BestillingApp.Singleton
 
         public async void LoadItemTypesAsync()
         {
+            if (ItemTypes.Count > 0)
+                ItemTypes.Clear();
             try
             {
-                var itemtypes = await PersistencyService.LoadItemTypesFromJsonAsync();
-                if (itemtypes == null)
+                var loadeditemtypes = await PersistencyService.LoadItemTypesFromJsonAsync();
+                if (loadeditemtypes == null)
                     return;
-                if (itemtypes.Count == 0)
+                if (loadeditemtypes.Count == 0)
                     await new MessageDialog("Der findes nogen itemtypes i databasen").ShowAsync();
                 else
-                    foreach (var itemtype in itemtypes)
+                    foreach (var itemtype in loadeditemtypes)
                         ItemTypes.Add(itemtype);
             }
             catch (Exception ex)

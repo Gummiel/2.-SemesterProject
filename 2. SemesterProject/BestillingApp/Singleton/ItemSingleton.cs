@@ -24,15 +24,17 @@ namespace BestillingApp.Singleton
 
         public async void LoadItemsAsync()
         {
+            if (Items.Count > 0)
+                Items.Clear();
             try
             {
-                var items = await PersistencyService.LoadItemsFromJsonAsync();
-                if (items == null)
+                var loadeditems = await PersistencyService.LoadItemsFromJsonAsync();
+                if (loadeditems == null)
                     return;
-                if (items.Count == 0)
+                if (loadeditems.Count == 0)
                     await new MessageDialog("Der findes nogen items i databasen").ShowAsync();
                 else
-                    foreach (var item in items)
+                    foreach (var item in loadeditems)
                         Items.Add(item);
             }
             catch (Exception ex)

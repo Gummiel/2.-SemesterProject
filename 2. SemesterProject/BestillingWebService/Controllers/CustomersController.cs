@@ -1,20 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿#region References
+
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using BestillingWebService;
+
+#endregion
 
 namespace BestillingWebService.Controllers
 {
     public class CustomersController : ApiController
     {
-        private BestillingContext db = new BestillingContext();
+        private readonly BestillingContext db = new BestillingContext();
 
         // GET: api/Customers
         public IQueryable<Customer> GetCustomer()
@@ -26,11 +25,9 @@ namespace BestillingWebService.Controllers
         [ResponseType(typeof(Customer))]
         public IHttpActionResult GetCustomer(int id)
         {
-            Customer customer = db.Customer.Find(id);
+            var customer = db.Customer.Find(id);
             if (customer == null)
-            {
                 return NotFound();
-            }
 
             return Ok(customer);
         }
@@ -40,14 +37,10 @@ namespace BestillingWebService.Controllers
         public IHttpActionResult PutCustomer(int id, Customer customer)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
             if (id != customer.ID)
-            {
                 return BadRequest();
-            }
 
             db.Entry(customer).State = EntityState.Modified;
 
@@ -58,13 +51,8 @@ namespace BestillingWebService.Controllers
             catch (DbUpdateConcurrencyException)
             {
                 if (!CustomerExists(id))
-                {
                     return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                throw;
             }
 
             return StatusCode(HttpStatusCode.NoContent);
@@ -75,25 +63,21 @@ namespace BestillingWebService.Controllers
         public IHttpActionResult PostCustomer(Customer customer)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
             db.Customer.Add(customer);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = customer.ID }, customer);
+            return CreatedAtRoute("DefaultApi", new {id = customer.ID}, customer);
         }
 
         // DELETE: api/Customers/5
         [ResponseType(typeof(Customer))]
         public IHttpActionResult DeleteCustomer(int id)
         {
-            Customer customer = db.Customer.Find(id);
+            var customer = db.Customer.Find(id);
             if (customer == null)
-            {
                 return NotFound();
-            }
 
             db.Customer.Remove(customer);
             db.SaveChanges();
@@ -104,9 +88,7 @@ namespace BestillingWebService.Controllers
         protected override void Dispose(bool disposing)
         {
             if (disposing)
-            {
                 db.Dispose();
-            }
             base.Dispose(disposing);
         }
 

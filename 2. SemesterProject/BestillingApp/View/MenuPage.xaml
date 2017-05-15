@@ -151,10 +151,11 @@
         </Style>
     </Page.Resources>
     <Page.DataContext>
-        <ViewModel:MenuViewModel/>
+        <ViewModel:MenuViewModel />
     </Page.DataContext>
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-        <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="500" MaxWidth="500" MinHeight="720" MaxHeight="720">
+        <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="500"
+              MaxWidth="500" MinHeight="720" MaxHeight="720">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
                 <RowDefinition Height="50" />
@@ -219,18 +220,18 @@
             <Grid x:Name="ContentGrid" Grid.Row="2">
                 <ScrollViewer>
                     <ItemsControl x:Name="ItemsControlGasStations" ItemsSource="{Binding ItemTypeSingleton.ItemTypes}"
-                              HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0">
+                                  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0">
                         <ItemsControl.Resources>
                             <DataTemplate x:Key="DataTemplate">
                                 <Button x:Name="BtnGasStations" Margin="0,0,0,10">
                                     <interactivity:Interaction.Behaviors>
                                         <core:EventTriggerBehavior EventName="Click">
-                                            <core:InvokeCommandAction  />
+                                            <core:InvokeCommandAction />
                                             <core:NavigateToPageAction TargetPage="BestillingApp.View.MenuPage" />
                                         </core:EventTriggerBehavior>
                                     </interactivity:Interaction.Behaviors>
                                     <StackPanel x:Name="StackPanelGasStations" Width="400" HorizontalAlignment="Center"
-                                            VerticalAlignment="Top">
+                                                VerticalAlignment="Top">
                                         <Grid x:Name="GridGasStationName">
                                             <TextBlock x:Name="TextBlockGasStationName" TextWrapping="Wrap"
                                                        Text="{Binding Name}" HorizontalAlignment="Left" FontSize="14" />
