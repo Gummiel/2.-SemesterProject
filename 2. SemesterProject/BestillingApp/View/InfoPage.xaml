@@ -321,8 +321,8 @@
                 <LineBreak />
                 <Run Text="American Express" />
             </TextBlock>
-            <AppBarButton x:Name="MainPageButton" HorizontalAlignment="Left" Label="Daily Tank" Margin="10,10,0,0"
-                          VerticalAlignment="Top" Width="123" Foreground="Black" Background="White">
+            <AppBarButton x:Name="MainPageButton" HorizontalAlignment="Left" Label=""
+                          VerticalAlignment="Top" Width="133" Foreground="Black" Background="White" Height="50">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
                         <core:NavigateToPageAction TargetPage="BestillingApp.View.MainPage" />
