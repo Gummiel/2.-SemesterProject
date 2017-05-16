@@ -1,17 +1,21 @@
 ﻿namespace BestillingApp.Model
 {
-    internal class Item
+    internal class Product
     {
         #region Constructor
 
-        public Item(string name, string description, decimal price)
+        public Product(string name, string brand, string weight, string description, decimal price,
+            int fkProductCatagory)
         {
             Name = name;
+            Brand = brand;
+            Weight = weight;
             Description = description;
             Price = price;
+            FK_ProductCatagory = fkProductCatagory;
         }
 
-        public Item()
+        public Product()
         {
         }
 
@@ -25,7 +29,7 @@
         public string Weight { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
-        public int FK_ItemType { get; set; }
+        public int FK_ProductCatagory { get; set; }
 
         #endregion
     }

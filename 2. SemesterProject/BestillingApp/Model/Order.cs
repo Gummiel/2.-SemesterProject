@@ -4,7 +4,7 @@
     {
         #region Constructor
 
-        public Order(int totalPrice)
+        public Order(decimal totalPrice)
         {
             TotalPrice = totalPrice;
         }
@@ -18,7 +18,7 @@
         #region Properties
 
         public int ID { get; set; }
-        public double TotalPrice { get; set; }
+        public decimal TotalPrice { get; set; }
 
         #endregion
     }

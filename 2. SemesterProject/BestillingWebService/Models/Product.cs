@@ -7,8 +7,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BestillingWebService.Models
 {
-    [Table("Item")]
-    public class Item
+    [Table("Product")]
+    public class Product
     {
         public int ID { get; set; }
 
@@ -29,8 +29,8 @@ namespace BestillingWebService.Models
 
         public decimal Price { get; set; }
 
-        public int ItemType { get; set; }
+        public int FK_ProductCatagory { get; set; }
 
-        public virtual ItemType ItemType1 { get; set; }
+        public virtual ProductCatagory ProductCatagory { get; set; }
     }
 }

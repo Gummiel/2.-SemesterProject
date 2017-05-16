@@ -4,6 +4,7 @@
     {
         #region Properties
 
+        public int ID { get; set; }
         public int AccountNo { get; set; }
 
         #endregion

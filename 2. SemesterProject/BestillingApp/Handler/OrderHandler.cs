@@ -30,13 +30,14 @@ namespace BestillingApp.Handler
         //{
         //    SelectedItems.Add(i);
         //}
-        public void SetSelectedItemType(ItemType i)
+        public void SetSelectedProductCatagory(ProductCatagory i)
         {
-            MenuViewModel.SelectedItemType = i;
-            var items = MenuViewModel.ItemSingleton.Items.Where(item => item.FK_ItemType == i.ID).ToList();
+            MenuViewModel.SelectedProductCatagory = i;
+            var products =
+                MenuViewModel.ProductSingleton.Products.Where(item => item.FK_ProductCatagory == i.ID).ToList();
 
-            foreach (var it in items)
-                MenuViewModel.ItemList.Add(it);
+            foreach (var prod in products)
+                MenuViewModel.ProductList.Add(prod);
         }
 
         #region Properties

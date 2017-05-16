@@ -49,7 +49,8 @@ namespace BestillingApp.Handler
         {
             try
             {
-                var receipt = new Receipt("name", "email", "address", 12345678, 1234, "city", 0.0, "description", 0, 0.0);
+                var receipt = new Receipt("name", "email", "address", 12345678, 1234, "city", new decimal(0.0),
+                    "description", 0, new decimal(0.0));
                 PaymentViewModel.ReceiptSingleton.AddReceipt(receipt);
             }
             catch (Exception e)
@@ -64,11 +65,12 @@ namespace BestillingApp.Handler
         //Når man trykker opret i view så kommer den her
         public void CreateReceipt()
         {
-            //Receipt receipt = new Receipt("name", "email", "address", 12345678, 1234, "city", 0.0, "description", 0, 0.0);
+            //Receipt receipt = new Receipt("name", "email", "address", 12345678, 1234, "city", new decimal(0.0), "description", 0, new decimal(0.0));
             //PaymentViewModel.ReceiptSingleton.AddReceipt(receipt);
             try
             {
-                var receipt = new Receipt("name", "email", "address", 12345678, 1234, "city", 0.0, "description", 0, 0.0);
+                var receipt = new Receipt("name", "email", "address", 12345678, 1234, "city", new decimal(0.0),
+                    "description", 0, new decimal(0.0));
                 PaymentViewModel.ReceiptSingleton.AddReceipt(receipt);
             }
             catch (Exception e)

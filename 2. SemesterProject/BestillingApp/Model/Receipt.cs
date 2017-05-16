@@ -4,8 +4,8 @@
     {
         #region Constructor
 
-        public Receipt(string name, string email, string address, int telNo, int zipcode, string city, double totalPrice,
-            string description, int amount, double price)
+        public Receipt(string name, string email, string address, int telNo, int zipcode, string city,
+            decimal totalPrice, string description, int amount, decimal price)
         {
             Name = name;
             Email = email;
@@ -27,16 +27,17 @@
 
         #region Properties
 
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Address { get; set; }
         public int TelNo { get; set; }
         public int Zipcode { get; set; }
         public string City { get; set; }
-        public double TotalPrice { get; set; }
+        public decimal TotalPrice { get; set; }
         public string Description { get; set; }
         public int Amount { get; set; }
-        public double Price { get; set; }
+        public decimal Price { get; set; }
 
         #endregion
     }

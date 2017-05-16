@@ -12,38 +12,38 @@ using BestillingWebService.Models;
 
 namespace BestillingWebService.Controllers
 {
-    public class ItemTypesController : ApiController
+    public class ProductsController : ApiController
     {
         private readonly BestillingContext db = new BestillingContext();
 
-        // GET: api/ItemTypes
-        public IQueryable<ItemType> GetItemType()
+        // GET: api/Products
+        public IQueryable<Product> GetProduct()
         {
-            return db.ItemType;
+            return db.Product;
         }
 
-        // GET: api/ItemTypes/5
-        [ResponseType(typeof(ItemType))]
-        public IHttpActionResult GetItemType(int id)
+        // GET: api/Products/5
+        [ResponseType(typeof(Product))]
+        public IHttpActionResult GetProduct(int id)
         {
-            var itemType = db.ItemType.Find(id);
-            if (itemType == null)
+            var product = db.Product.Find(id);
+            if (product == null)
                 return NotFound();
 
-            return Ok(itemType);
+            return Ok(product);
         }
 
-        // PUT: api/ItemTypes/5
+        // PUT: api/Products/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutItemType(int id, ItemType itemType)
+        public IHttpActionResult PutProduct(int id, Product product)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            if (id != itemType.ID)
+            if (id != product.ID)
                 return BadRequest();
 
-            db.Entry(itemType).State = EntityState.Modified;
+            db.Entry(product).State = EntityState.Modified;
 
             try
             {
@@ -51,7 +51,7 @@ namespace BestillingWebService.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ItemTypeExists(id))
+                if (!ProductExists(id))
                     return NotFound();
                 throw;
             }
@@ -59,31 +59,31 @@ namespace BestillingWebService.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/ItemTypes
-        [ResponseType(typeof(ItemType))]
-        public IHttpActionResult PostItemType(ItemType itemType)
+        // POST: api/Products
+        [ResponseType(typeof(Product))]
+        public IHttpActionResult PostProduct(Product product)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            db.ItemType.Add(itemType);
+            db.Product.Add(product);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new {id = itemType.ID}, itemType);
+            return CreatedAtRoute("DefaultApi", new {id = product.ID}, product);
         }
 
-        // DELETE: api/ItemTypes/5
-        [ResponseType(typeof(ItemType))]
-        public IHttpActionResult DeleteItemType(int id)
+        // DELETE: api/Products/5
+        [ResponseType(typeof(Product))]
+        public IHttpActionResult DeleteProduct(int id)
         {
-            var itemType = db.ItemType.Find(id);
-            if (itemType == null)
+            var product = db.Product.Find(id);
+            if (product == null)
                 return NotFound();
 
-            db.ItemType.Remove(itemType);
+            db.Product.Remove(product);
             db.SaveChanges();
 
-            return Ok(itemType);
+            return Ok(product);
         }
 
         protected override void Dispose(bool disposing)
@@ -93,9 +93,9 @@ namespace BestillingWebService.Controllers
             base.Dispose(disposing);
         }
 
-        private bool ItemTypeExists(int id)
+        private bool ProductExists(int id)
         {
-            return db.ItemType.Count(e => e.ID == id) > 0;
+            return db.Product.Count(e => e.ID == id) > 0;
         }
     }
 }

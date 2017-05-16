@@ -10,11 +10,11 @@ using BestillingApp.Persistency;
 
 namespace BestillingApp.Singleton
 {
-    internal class ItemSingleton
+    internal class ProductSingleton
     {
         #region Constructor
 
-        private ItemSingleton()
+        private ProductSingleton()
         {
         }
 
@@ -24,18 +24,18 @@ namespace BestillingApp.Singleton
 
         public async void LoadItemsAsync()
         {
-            if (Items.Count > 0)
-                Items.Clear();
+            if (Products.Count > 0)
+                Products.Clear();
             try
             {
-                var loadeditems = await PersistencyService.LoadItemsFromJsonAsync();
-                if (loadeditems == null)
+                var loadedproducts = await PersistencyService.LoadProductsFromJsonAsync();
+                if (loadedproducts == null)
                     return;
-                if (loadeditems.Count == 0)
+                if (loadedproducts.Count == 0)
                     await new MessageDialog("Der findes nogen items i databasen").ShowAsync();
                 else
-                    foreach (var item in loadeditems)
-                        Items.Add(item);
+                    foreach (var prod in loadedproducts)
+                        Products.Add(prod);
             }
             catch (Exception ex)
             {
@@ -48,7 +48,7 @@ namespace BestillingApp.Singleton
 
         #region Remove
 
-        public void RemoveItem(Item i)
+        public void RemoveItem(Product i)
         {
             //Items.Remove(c);
             PersistencyService.DeleteItemAsync(i);
@@ -60,15 +60,15 @@ namespace BestillingApp.Singleton
 
         #region Instancefield
 
-        private static ItemSingleton _instance;
-        private ObservableCollection<Item> _items;
+        private static ProductSingleton _instance;
+        private ObservableCollection<Product> _products;
 
         #endregion
 
         #region Properties
 
-        public static ItemSingleton Instance => _instance ?? (_instance = new ItemSingleton());
-        public ObservableCollection<Item> Items => _items ?? (_items = new ObservableCollection<Item>());
+        public static ProductSingleton Instance => _instance ?? (_instance = new ProductSingleton());
+        public ObservableCollection<Product> Products => _products ?? (_products = new ObservableCollection<Product>());
 
         #endregion
 
@@ -83,7 +83,7 @@ namespace BestillingApp.Singleton
             //LoadItemsAsync();
         }
 
-        public void AddItem(Item i)
+        public void AddItem(Product i)
         {
             //Item newItem = new Item(id, name, email, address, telNo, zipcode, city);
             //Items.Add(newItem);

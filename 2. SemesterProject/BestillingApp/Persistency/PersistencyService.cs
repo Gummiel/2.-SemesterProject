@@ -200,7 +200,7 @@ namespace BestillingApp.Persistency
 
         #region Item
 
-        public static async void SaveItemAsJsonAsync(Item c)
+        public static async void SaveItemAsJsonAsync(Product c)
         {
             _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
@@ -208,7 +208,9 @@ namespace BestillingApp.Persistency
 
             try
             {
-                var response = await Task.FromResult(_client.PostAsJsonAsync("api/Items/", c).Result);
+                var response = await Task.FromResult(_client.PostAsJsonAsync("api/Products/", c).Result);
+                if (!response.IsSuccessStatusCode)
+                    response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
             {
@@ -217,7 +219,7 @@ namespace BestillingApp.Persistency
             }
         }
 
-        public static async void DeleteItemAsync(Item c)
+        public static async void DeleteItemAsync(Product c)
         {
             _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
@@ -225,7 +227,9 @@ namespace BestillingApp.Persistency
 
             try
             {
-                var response = await Task.FromResult(_client.DeleteAsync("api/Items/" + c).Result);
+                var response = await Task.FromResult(_client.DeleteAsync("api/Products/" + c).Result);
+                if (!response.IsSuccessStatusCode)
+                    response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
             {
@@ -234,7 +238,7 @@ namespace BestillingApp.Persistency
             }
         }
 
-        public static async Task<List<Item>> LoadItemsFromJsonAsync()
+        public static async Task<List<Product>> LoadProductsFromJsonAsync()
         {
             _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
@@ -242,12 +246,12 @@ namespace BestillingApp.Persistency
 
             try
             {
-                var response = await Task.FromResult(_client.GetAsync("api/Items/").Result);
+                var response = await Task.FromResult(_client.GetAsync("api/Products/").Result);
 
                 if (!response.IsSuccessStatusCode)
-                    return null;
+                    response.EnsureSuccessStatusCode();
                 var itemData =
-                    await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<Item>>().Result);
+                    await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<Product>>().Result);
                 return itemData.ToList();
             }
             catch (Exception ex)
@@ -259,9 +263,9 @@ namespace BestillingApp.Persistency
 
         #endregion
 
-        #region ItemType
+        #region ProductCatagory
 
-        public static async void SaveItemTypeAsJsonAsync(ItemType c)
+        public static async void SaveProductCatagoryAsJsonAsync(ProductCatagory c)
         {
             _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
@@ -269,7 +273,9 @@ namespace BestillingApp.Persistency
 
             try
             {
-                var response = await Task.FromResult(_client.PostAsJsonAsync("api/ItemTypes/", c).Result);
+                var response = await Task.FromResult(_client.PostAsJsonAsync("api/ProductCatagory/", c).Result);
+                if (!response.IsSuccessStatusCode)
+                    response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
             {
@@ -278,7 +284,7 @@ namespace BestillingApp.Persistency
             }
         }
 
-        public static async void DeleteItemTypeAsync(ItemType c)
+        public static async void DeleteProductCatagoryAsync(ProductCatagory c)
         {
             _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
@@ -286,7 +292,9 @@ namespace BestillingApp.Persistency
 
             try
             {
-                var response = await Task.FromResult(_client.DeleteAsync("api/ItemTypes/" + c).Result);
+                var response = await Task.FromResult(_client.DeleteAsync("api/ProductCatagorys/" + c).Result);
+                if (!response.IsSuccessStatusCode)
+                    response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
             {
@@ -295,7 +303,7 @@ namespace BestillingApp.Persistency
             }
         }
 
-        public static async Task<List<ItemType>> LoadItemTypesFromJsonAsync()
+        public static async Task<List<ProductCatagory>> LoadProductCatagoriesFromJsonAsync()
         {
             _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
@@ -303,12 +311,12 @@ namespace BestillingApp.Persistency
 
             try
             {
-                var response = await Task.FromResult(_client.GetAsync("api/ItemTypes/").Result);
+                var response = await Task.FromResult(_client.GetAsync("api/ProductCatagorys/").Result);
 
                 if (!response.IsSuccessStatusCode)
-                    return null;
+                    response.EnsureSuccessStatusCode();
                 var itemData =
-                    await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<ItemType>>().Result);
+                    await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<ProductCatagory>>().Result);
                 return itemData.ToList();
             }
             catch (Exception ex)
@@ -330,7 +338,9 @@ namespace BestillingApp.Persistency
 
             try
             {
-                var response = await Task.FromResult(_client.PostAsJsonAsync("api/OrderItems/", c).Result);
+                var response = await Task.FromResult(_client.PostAsJsonAsync("api/OrderProducts/", c).Result);
+                if (!response.IsSuccessStatusCode)
+                    response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
             {
@@ -347,7 +357,9 @@ namespace BestillingApp.Persistency
 
             try
             {
-                var response = await Task.FromResult(_client.DeleteAsync("api/OrderItems/" + c).Result);
+                var response = await Task.FromResult(_client.DeleteAsync("api/OrderProducts/" + c).Result);
+                if (!response.IsSuccessStatusCode)
+                    response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
             {
@@ -356,7 +368,7 @@ namespace BestillingApp.Persistency
             }
         }
 
-        public static async Task<List<OrderItem>> LoadOrderItemsFromJsonAsync()
+        public static async Task<List<OrderItem>> LoadOrderProductsFromJsonAsync()
         {
             _client = new HttpClient(Handler, false) {BaseAddress = new Uri(serverurl)};
             _client.DefaultRequestHeaders.Clear();
@@ -364,13 +376,13 @@ namespace BestillingApp.Persistency
 
             try
             {
-                var response = await Task.FromResult(_client.GetAsync("api/OrderItems/").Result);
+                var response = await Task.FromResult(_client.GetAsync("api/OrderProducts/").Result);
 
                 if (!response.IsSuccessStatusCode)
-                    return null;
-                var orderItemsData =
+                    response.EnsureSuccessStatusCode();
+                var orderProductsData =
                     await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<OrderItem>>().Result);
-                return orderItemsData.ToList();
+                return orderProductsData.ToList();
             }
             catch (Exception ex)
             {
@@ -392,6 +404,8 @@ namespace BestillingApp.Persistency
             try
             {
                 var response = await Task.FromResult(_client.PostAsJsonAsync("api/Orders/", c).Result);
+                if (!response.IsSuccessStatusCode)
+                    response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
             {
@@ -409,6 +423,8 @@ namespace BestillingApp.Persistency
             try
             {
                 var response = await Task.FromResult(_client.DeleteAsync("api/Orders/" + c).Result);
+                if (!response.IsSuccessStatusCode)
+                    response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
             {
@@ -428,7 +444,7 @@ namespace BestillingApp.Persistency
                 var response = await Task.FromResult(_client.GetAsync("api/Orders/").Result);
 
                 if (!response.IsSuccessStatusCode)
-                    return null;
+                    response.EnsureSuccessStatusCode();
                 var orderData =
                     await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<Order>>().Result);
                 return orderData.ToList();
@@ -470,6 +486,8 @@ namespace BestillingApp.Persistency
             try
             {
                 var response = await Task.FromResult(_client.DeleteAsync("api/Payments/" + c).Result);
+                if (!response.IsSuccessStatusCode)
+                    response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
             {
@@ -487,6 +505,8 @@ namespace BestillingApp.Persistency
             try
             {
                 var response = await Task.FromResult(_client.GetAsync("api/Payments/").Result);
+                if (!response.IsSuccessStatusCode)
+                    response.EnsureSuccessStatusCode();
 
                 if (!response.IsSuccessStatusCode)
                     return null;
@@ -514,6 +534,8 @@ namespace BestillingApp.Persistency
             try
             {
                 var response = await Task.FromResult(_client.PostAsJsonAsync("api/Reviews/", c).Result);
+                if (!response.IsSuccessStatusCode)
+                    response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
             {
@@ -531,6 +553,8 @@ namespace BestillingApp.Persistency
             try
             {
                 var response = await Task.FromResult(_client.DeleteAsync("api/Reviews/" + c).Result);
+                if (!response.IsSuccessStatusCode)
+                    response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
             {
@@ -550,7 +574,7 @@ namespace BestillingApp.Persistency
                 var response = await Task.FromResult(_client.GetAsync("api/Reviews/").Result);
 
                 if (!response.IsSuccessStatusCode)
-                    return null;
+                    response.EnsureSuccessStatusCode();
                 var reviewData =
                     await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<Review>>().Result);
                 return reviewData.ToList();
@@ -575,6 +599,8 @@ namespace BestillingApp.Persistency
             try
             {
                 var response = await Task.FromResult(_client.PostAsJsonAsync("api/Receipts/", c).Result);
+                if (!response.IsSuccessStatusCode)
+                    response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
             {
@@ -592,6 +618,8 @@ namespace BestillingApp.Persistency
             try
             {
                 var response = await Task.FromResult(_client.DeleteAsync("api/Receipts/" + c).Result);
+                if (!response.IsSuccessStatusCode)
+                    response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
             {
@@ -611,7 +639,7 @@ namespace BestillingApp.Persistency
                 var response = await Task.FromResult(_client.GetAsync("api/Receipts/").Result);
 
                 if (!response.IsSuccessStatusCode)
-                    return null;
+                    response.EnsureSuccessStatusCode();
                 var receiptData =
                     await Task.FromResult(response.Content.ReadAsAsync<IEnumerable<Receipt>>().Result);
                 return receiptData.ToList();

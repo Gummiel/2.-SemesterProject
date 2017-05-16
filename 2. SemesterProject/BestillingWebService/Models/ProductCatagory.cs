@@ -9,13 +9,13 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace BestillingWebService.Models
 {
-    [Table("ItemType")]
-    public class ItemType
+    [Table("ProductCatagory")]
+    public class ProductCatagory
     {
         [SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ItemType()
+        public ProductCatagory()
         {
-            Item = new HashSet<Item>();
+            Product = new HashSet<Product>();
         }
 
         public int ID { get; set; }
@@ -25,6 +25,6 @@ namespace BestillingWebService.Models
         public string Name { get; set; }
 
         [SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Item> Item { get; set; }
+        public virtual ICollection<Product> Product { get; set; }
     }
 }

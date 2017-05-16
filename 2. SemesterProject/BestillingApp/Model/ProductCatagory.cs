@@ -1,6 +1,6 @@
 ﻿namespace BestillingApp.Model
 {
-    internal class ItemType
+    internal class ProductCatagory
     {
         #region Properties
 
@@ -11,11 +11,11 @@
 
         #region Constructor
 
-        public ItemType()
+        public ProductCatagory()
         {
         }
 
-        public ItemType(string name)
+        public ProductCatagory(string name)
         {
             Name = name;
         }
