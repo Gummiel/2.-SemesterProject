@@ -13,7 +13,7 @@ namespace BestillingApp.ViewModel
 
         public MenuViewModel()
         {
-            OrderHandler = new OrderHandler(null, this);
+            OrderHandler = new OrderHandler(null, this, null);
             ItemTypeSingleton = ItemTypeSingleton.Instance;
             ItemSingleton = ItemSingleton.Instance;
             //Eksempel for hvordan det ser ud i 1 singleton
@@ -29,6 +29,7 @@ namespace BestillingApp.ViewModel
         public OrderHandler OrderHandler { get; set; }
         public ItemTypeSingleton ItemTypeSingleton { get; set; }
         public ItemSingleton ItemSingleton { get; set; }
+        public static string SelectedGasStation { get; set; } = "";
 
         #endregion
     }

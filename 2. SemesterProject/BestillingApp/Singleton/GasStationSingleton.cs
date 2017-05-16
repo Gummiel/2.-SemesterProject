@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using Windows.UI.Popups;
 using BestillingApp.Model;
 using BestillingApp.Persistency;
@@ -29,12 +30,18 @@ namespace BestillingApp.Singleton
             try
             {
                 var loadedgasstations = await PersistencyService.LoadGasStationsFromJsonAsync();
+
+                //check if # observablecollection GasStations # is different from # var loadedgasstations #
+                var firstNotSecond = GasStations.Except(loadedgasstations).ToList();
+                //check if # var loadedgasstations # is different from # observablecollection GasStations #
+                var secondNotFirst = loadedgasstations.Except(GasStations).ToList();
+
                 if (loadedgasstations == null) return;
                 if (loadedgasstations.Count == 0)
                     await new MessageDialog("Der findes nogen gasstations i databasen").ShowAsync();
-                else
-                    foreach (var gas in loadedgasstations)
-                        GasStations.Add(gas);
+                if (!firstNotSecond.Any() && !secondNotFirst.Any()) return;
+                foreach (var gas in loadedgasstations)
+                    GasStations.Add(gas);
             }
             catch (Exception ex)
             {

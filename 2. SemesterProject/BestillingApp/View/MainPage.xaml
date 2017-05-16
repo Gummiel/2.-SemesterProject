@@ -214,107 +214,66 @@
             </Grid>
         </Grid>-->
         <Grid x:Name="ContentGrid" Grid.Row="1">
-            <ScrollViewer>
-                <ItemsControl x:Name="ItemsControlGasStations" ItemsSource="{Binding GasStationSingleton.GasStations}"
-                              HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0">
-                    <ItemsControl.Resources>
-                        <DataTemplate x:Key="DataTemplate">
-                            <Button x:Name="BtnGasStations" Margin="0,0,0,10">
-                                <interactivity:Interaction.Behaviors>
-                                    <core:EventTriggerBehavior EventName="Click">
-                                        <core:InvokeCommandAction Command="{Binding SelectedGasStationCommand}" />
-                                        <core:NavigateToPageAction TargetPage="BestillingApp.View.MenuPage" />
-                                    </core:EventTriggerBehavior>
-                                </interactivity:Interaction.Behaviors>
-                                <StackPanel x:Name="StackPanelGasStations" Width="400" HorizontalAlignment="Center"
-                                            VerticalAlignment="Top">
-                                    <Grid x:Name="GridGasStations">
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="*" />
-                                            <RowDefinition Height="*" />
-                                        </Grid.RowDefinitions>
-                                        <Grid Grid.Row="0" x:Name="GridGasStationName">
-                                            <TextBlock x:Name="TextBlockGasStationName" TextWrapping="Wrap"
-                                                       Text="{Binding Name}" HorizontalAlignment="Left" FontSize="14" />
-                                        </Grid>
-                                        <Grid Grid.Row="1" x:Name="GridGasDescription">
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*" />
-                                                <ColumnDefinition Width="*" />
-                                                <ColumnDefinition Width="*" />
-                                            </Grid.ColumnDefinitions>
-                                            <Grid Grid.Column="0" x:Name="GridGasStationsAddress">
-                                                <TextBlock x:Name="TextBlockGasStationsAddress" TextWrapping="Wrap"
-                                                           Text="{Binding Address}" HorizontalAlignment="Left"
-                                                           FontSize="8" />
-                                            </Grid>
-                                            <Grid Grid.Column="1" x:Name="GridGasStationsZipcode">
-                                                <TextBlock x:Name="TextBlockGasStationsZipcode" TextWrapping="Wrap"
-                                                           Text="{Binding Zipcode}" HorizontalAlignment="Left"
-                                                           FontSize="8" />
-                                            </Grid>
-                                            <Grid Grid.Column="2" x:Name="GridGasStationsCity">
-                                                <TextBlock x:Name="TextBlockGasStationsCity" TextWrapping="Wrap"
-                                                           Text="{Binding City}" HorizontalAlignment="Left"
-                                                           FontSize="8" />
-                                            </Grid>
-                                        </Grid>
+            <ListView x:Name="ListViewGasStations" ItemsSource="{Binding GasStationSingleton.GasStations}"
+                      VerticalAlignment="Top" Margin="0,10,0,0" HorizontalAlignment="Center" Width="400">
+                <ListView.Resources>
+                    <DataTemplate x:Key="ListViewGasStationsDataTemplate">
+                        <StackPanel>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <TextBlock x:Name="TextBlockGasStationName" TextWrapping="Wrap"
+                                               Text="{Binding Name}" HorizontalAlignment="Left" FontSize="14" />
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="0">
+                                        <TextBlock x:Name="TextBlockGasStationsAddress" TextWrapping="Wrap"
+                                                   Text="{Binding Address}" HorizontalAlignment="Left" FontSize="8" />
                                     </Grid>
-                                </StackPanel>
-                            </Button>
-                        </DataTemplate>
-                    </ItemsControl.Resources>
-                    <ItemsControl.ItemTemplate>
-                        <StaticResource ResourceKey="DataTemplate" />
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </ScrollViewer>
-            <!--<ListView x:Name="ListViewGasStations" I</StackPanel>temsSource="{Binding GasStationSingleton.GasStations}" SelectionMode="None" VerticalAlignment="Top" Margin="0,10,0,0" HorizontalAlignment="Center">
-                    <ListView.Resources>
-                        <DataTemplate x:Key="DataTemplate">
-                            <Button x:Name="BtnGasStations" HorizontalAlignment="Center" VerticalAlignment="Top" Width="500">
-                                <StackPanel>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="*"/>
-                                            <RowDefinition Height="*"/>
-                                        </Grid.RowDefinitions>
-                                        <Grid Grid.Row="0">
-                                            <TextBlock x:Name="TextBlockGasStationName" TextWrapping="Wrap" Text="{Binding Name}" HorizontalAlignment="Left" FontSize="14"/>
-                                        </Grid>
-                                        <Grid Grid.Row="1">
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*"/>
-                                                <ColumnDefinition Width="*"/>
-                                                <ColumnDefinition Width="*"/>
-                                                <ColumnDefinition Width="*"/>
-                                                <ColumnDefinition Width="*"/>
-                                            </Grid.ColumnDefinitions>
-                                            <Grid Grid.Column="0">
-                                                <TextBlock x:Name="TextBlockGasStationsAddress" TextWrapping="Wrap" Text="{Binding Address}" HorizontalAlignment="Left" FontSize="8"/>
-                                            </Grid>
-                                            <Grid Grid.Column="1">
-                                                <TextBlock x:Name="TextBlockGasStationsCommaBetweenAddressAndZipcode" TextWrapping="Wrap" Text="," HorizontalAlignment="Left" FontSize="8" Padding="0,0,1,0"/>
-                                            </Grid>
-                                            <Grid Grid.Column="2">
-                                                <TextBlock x:Name="TextBlockGasStationsZipcode" TextWrapping="Wrap" Text="{Binding Zipcode}" HorizontalAlignment="Left" FontSize="8"/>
-                                            </Grid>
-                                            <Grid Grid.Column="3">
-                                                <TextBlock x:Name="TextBlockGasStationsCommaBetweenZipcodeAndCity" TextWrapping="Wrap" Text="," HorizontalAlignment="Left" FontSize="8" Padding="0,0,1,0"/>
-                                            </Grid>
-                                            <Grid Grid.Column="4">
-                                                <TextBlock x:Name="TextBlockGasStationsCity" TextWrapping="Wrap" Text="{Binding City}" HorizontalAlignment="Left" FontSize="8"/>
-                                            </Grid>
-                                        </Grid>
+                                    <Grid Grid.Column="1">
+                                        <TextBlock x:Name="TextBlockGasStationsCommaBetweenAddressAndZipcode"
+                                                   TextWrapping="Wrap" Text="," HorizontalAlignment="Left" FontSize="8"
+                                                   Padding="0,0,1,0" />
                                     </Grid>
-                                </StackPanel>
-                            </Button>
-                        </DataTemplate>
-                    </ListView.Resources>
-                    <ListView.ItemTemplate>
-                        <StaticResource ResourceKey="DataTemplate"/>
-                    </ListView.ItemTemplate>
-                </ListView>-->
+                                    <Grid Grid.Column="2">
+                                        <TextBlock x:Name="TextBlockGasStationsZipcode" TextWrapping="Wrap"
+                                                   Text="{Binding Zipcode}" HorizontalAlignment="Left" FontSize="8" />
+                                    </Grid>
+                                    <Grid Grid.Column="3">
+                                        <TextBlock x:Name="TextBlockGasStationsCommaBetweenZipcodeAndCity"
+                                                   TextWrapping="Wrap" Text="," HorizontalAlignment="Left" FontSize="8"
+                                                   Padding="0,0,1,0" />
+                                    </Grid>
+                                    <Grid Grid.Column="4">
+                                        <TextBlock x:Name="TextBlockGasStationsCity" TextWrapping="Wrap"
+                                                   Text="{Binding City}" HorizontalAlignment="Left" FontSize="8" />
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.Resources>
+                <ListView.ItemTemplate>
+                    <StaticResource ResourceKey="ListViewGasStationsDataTemplate" />
+                </ListView.ItemTemplate>
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="SelectionChanged">
+                        <core:InvokeCommandAction Command="{Binding SelectedGasStationCommand}"
+                                                  CommandParameter="{Binding SelectedItem, ElementName=ListViewGasStations}" />
+                        <core:NavigateToPageAction TargetPage="BestillingApp.View.MenuPage" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </ListView>
         </Grid>
     </Grid>
 </Page>
