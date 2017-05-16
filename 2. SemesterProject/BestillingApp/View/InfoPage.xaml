@@ -8,7 +8,7 @@
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     xmlns:ViewModel="using:BestillingApp.ViewModel"
     x:Class="BestillingApp.View.InfoPage"
-    mc:Ignorable="d" Background="Black">
+    mc:Ignorable="d" MinWidth="500" MaxWidth="500" MinHeight="720" MaxHeight="720">
     <Page.Resources>
         <Style x:Key="NavigationButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="#33000000" />
@@ -151,7 +151,7 @@
         </Style>
     </Page.Resources>
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-        <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="500" MaxWidth="500" MinHeight="720" MaxHeight="720">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
                 <RowDefinition Height="150" />
@@ -160,13 +160,38 @@
             </Grid.RowDefinitions>
             <Grid x:Name="TopBarGrid" Grid.Row="0">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="50" />
                 </Grid.ColumnDefinitions>
-                <Grid x:Name="AppNameGrid" Grid.Column="0" />
-                <Grid x:Name="ShoppingGrid" Grid.Column="1" />
+                <Grid x:Name="GoBackGrid" Grid.Column="0">
+                    <AppBarButton x:Name="AppBarButtonGoBack" HorizontalAlignment="Center" Icon="Back"
+                              VerticalAlignment="Center" Width="50">
+                        <interactivity:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="Click">
+                                <core:NavigateToPageAction TargetPage="BestillingApp.View.MainPage" />
+                            </core:EventTriggerBehavior>
+                        </interactivity:Interaction.Behaviors>
+                    </AppBarButton>
+                </Grid>
+                <Grid x:Name="AppNameGrid" Grid.Column="1">
+                    <TextBlock x:Name="TBlockAppName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Daily Tank"
+                           VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" />
+                </Grid>
+                <Grid x:Name="ShoppingGrid" Grid.Column="2">
+                    <Button x:Name="BtnShoppingCart" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                        Background="Transparent" Style="{StaticResource ShoppingCartButtonStyle}">
+                        <Image x:Name="ImgShoppingCart" Source="ms-appx:///Assets/shoppingcart.png">
+                            <interactivity:Interaction.Behaviors>
+                                <core:EventTriggerBehavior EventName="PointerPressed">
+                                    <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage" />
+                                </core:EventTriggerBehavior>
+                            </interactivity:Interaction.Behaviors>
+                        </Image>
+                    </Button>
+                </Grid>
             </Grid>
-            <Grid x:Name="NavigationGrid" Grid.Row="1" Margin="0,0,0,100">
+            <Grid x:Name="NavigationGrid" Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
@@ -174,8 +199,7 @@
                 </Grid.ColumnDefinitions>
                 <Grid x:Name="MenuGrid" Grid.Column="0">
                     <Button x:Name="BtnMenu" Content="Shop" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                            Style="{StaticResource NavigationButtonStyle}" Background="#33FFFFFF"
-                            BorderThickness="0,1,1,0" BorderBrush="Black">
+                        Style="{StaticResource NavigationButtonStyle}" BorderBrush="#FFFF0000">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
                                 <core:NavigateToPageAction TargetPage="BestillingApp.View.MenuPage" />
@@ -185,8 +209,7 @@
                 </Grid>
                 <Grid x:Name="ReviewsGrid" Grid.Column="1" Margin="1,0">
                     <Button x:Name="BtnReviews" Content="Reviews" HorizontalAlignment="Stretch"
-                            VerticalAlignment="Stretch" Style="{StaticResource NavigationButtonStyle}"
-                            Background="#33FFFFFF" BorderThickness="0,1,1,0" BorderBrush="Black">
+                        VerticalAlignment="Stretch" Style="{StaticResource NavigationButtonStyle}">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
                                 <core:NavigateToPageAction TargetPage="BestillingApp.View.ReviewsPage" />
@@ -196,8 +219,7 @@
                 </Grid>
                 <Grid x:Name="InfoGrid" Grid.Column="2">
                     <Button x:Name="BtnInfo" Content="Info" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                            Style="{StaticResource NavigationButtonStyle}" BorderBrush="#FFFF0000"
-                            Background="#33FFFFFF" BorderThickness="0,2">
+                        Style="{StaticResource NavigationButtonStyle}">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
                                 <core:NavigateToPageAction TargetPage="BestillingApp.View.InfoPage" />
