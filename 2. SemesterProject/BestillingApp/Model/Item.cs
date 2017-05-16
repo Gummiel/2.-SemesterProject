@@ -4,7 +4,7 @@
     {
         #region Constructor
 
-        public Item(string name, string description, double price)
+        public Item(string name, string description, decimal price)
         {
             Name = name;
             Description = description;
@@ -22,7 +22,7 @@
         public int ID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public double Price { get; set; }
+        public decimal Price { get; set; }
 
         #endregion
     }

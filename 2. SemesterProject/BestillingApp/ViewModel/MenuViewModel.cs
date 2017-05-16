@@ -19,7 +19,7 @@ namespace BestillingApp.ViewModel
             //Eksempel for hvordan det ser ud i 1 singleton
             //Singleton = CatalogSingleton.Instance;
             ItemTypeSingleton.LoadItemTypesAsync();
-            //ItemSingleton.LoadItemsAsync();
+            ItemSingleton.LoadItemsAsync();
         }
 
         #endregion

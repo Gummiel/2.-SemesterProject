@@ -212,6 +212,13 @@
                 </Grid>
             </Grid>
             <Grid x:Name="ContentGrid" Grid.Row="3" />
+            <AppBarButton x:Name="appBarButton" Icon="Accept" Label="appbarbutton" Margin="566,217,0,177" Grid.Row="3" VerticalAlignment="Stretch" d:LayoutOverrides="Width, Height">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="BestillingApp.View.LoginPage"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </AppBarButton>
         </Grid>
     </ScrollViewer>
 </Page>

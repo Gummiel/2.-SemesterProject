@@ -184,7 +184,13 @@
             <Grid x:Name="ShoppingGrid" Grid.Column="2">
                 <Button x:Name="BtnShoppingCart" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                         Background="Transparent" Style="{StaticResource ShoppingCartButtonStyle}">
-                    <Image x:Name="ImgShoppingCart" Source="ms-appx:///Assets/shoppingcart.png" />
+                    <Image x:Name="ImgShoppingCart" Source="ms-appx:///Assets/shoppingcart.png" >
+                        <interactivity:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="PointerPressed">
+                                <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage"/>
+                            </core:EventTriggerBehavior>
+                        </interactivity:Interaction.Behaviors>
+                    </Image>
                 </Button>
             </Grid>
         </Grid>
@@ -226,8 +232,8 @@
             </Grid>
         </Grid>
         <Grid x:Name="ContentGrid" Grid.Row="2">
-            <ListView x:Name="ListViewItemTypes" ItemsSource="{Binding ItemTypeSingleton.ItemTypes}"
-                      VerticalAlignment="Top" Margin="0,10,0,0" HorizontalAlignment="Center" Width="400">
+            <ListView x:Name="ListViewItemTypes" ItemsSource="{Binding ItemSingleton.Items}"
+                      VerticalAlignment="Top" Margin="0,10,0,0" HorizontalAlignment="Center" Width="400" SelectionMode="Multiple">
                 <ListView.Resources>
                     <DataTemplate x:Key="ListViewGasStationsDataTemplate">
                         <TextBlock x:Name="TextBlockGasStationName" TextWrapping="Wrap" Text="{Binding Name}"
@@ -241,7 +247,7 @@
                     <core:EventTriggerBehavior EventName="SelectionChanged">
                         <core:InvokeCommandAction Command="{Binding SelectedGasStationCommand}"
                                                   CommandParameter="{Binding SelectedItem, ElementName=ListViewItemTypes}" />
-                        <core:NavigateToPageAction TargetPage="BestillingApp.View.ShoppingPage" />
+                        <!--<core:NavigateToPageAction TargetPage="BestillingApp.View.ShoppingPage" />-->
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
             </ListView>
@@ -273,7 +279,5 @@
                 </ItemsControl>
             </ScrollViewer>-->
         </Grid>
-        <TextBlock x:Name="TextBlockSelectedGasStation" HorizontalAlignment="Left" TextWrapping="Wrap"
-                   Text="{Binding SelectedGasStation}" VerticalAlignment="Top" Grid.Row="3" Width="200" />
     </Grid>
 </Page>
