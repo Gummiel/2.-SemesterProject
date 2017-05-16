@@ -32,7 +32,7 @@ namespace BestillingApp.Singleton
                 if (loadedproducts == null)
                     return;
                 if (loadedproducts.Count == 0)
-                    await new MessageDialog("Der findes nogen items i databasen").ShowAsync();
+                    await new MessageDialog("Der findes nogen products i databasen").ShowAsync();
                 else
                     foreach (var prod in loadedproducts)
                         Products.Add(prod);
@@ -48,10 +48,10 @@ namespace BestillingApp.Singleton
 
         #region Remove
 
-        public void RemoveItem(Product i)
+        public void RemoveItem(Product p)
         {
             //Items.Remove(c);
-            PersistencyService.DeleteItemAsync(i);
+            PersistencyService.DeleteProductAsync(p);
             //Hvis create og read er på samme side
             //LoadItemsAsync();
         }
@@ -74,7 +74,7 @@ namespace BestillingApp.Singleton
 
         #region Add
 
-        public void AddItem(string name, string email, string address, int telNo, int zipcode, string city)
+        public void AddProduct(string name, string email, string address, int telNo, int zipcode, string city)
         {
             //var newItem = new Item(name, email, address, telNo, zipcode, city);
             //Items.Add(newItem);
@@ -83,11 +83,11 @@ namespace BestillingApp.Singleton
             //LoadItemsAsync();
         }
 
-        public void AddItem(Product i)
+        public void AddProduct(Product p)
         {
             //Item newItem = new Item(id, name, email, address, telNo, zipcode, city);
             //Items.Add(newItem);
-            PersistencyService.SaveItemAsJsonAsync(i);
+            PersistencyService.SaveProductAsJsonAsync(p);
             //Hvis create og read er på samme side
             //LoadItemsAsync();
         }

@@ -1,6 +1,5 @@
 ﻿#region References
 
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Windows.UI.Popups;
@@ -32,6 +31,7 @@ namespace BestillingApp.Handler
         {
             new MessageDialog(MenuViewModel.SelectedProducts).ShowAsync();
         }
+
         public void SetSelectedProductCatagory(ProductCatagory i)
         {
             MenuViewModel.SelectedProductCatagory = i;

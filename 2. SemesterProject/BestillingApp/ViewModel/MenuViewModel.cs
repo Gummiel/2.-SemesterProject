@@ -53,6 +53,7 @@ namespace BestillingApp.ViewModel
             }
             set { _selectedProductCatagoryCommand = value; }
         }
+
         public ICommand SelectedProductCommand
         {
             get
@@ -76,6 +77,7 @@ namespace BestillingApp.ViewModel
                 OnPropertyChanged();
             }
         }
+
         public static List<Product> SelectedProduct { get; set; }
         public static string SelectedProducts { get; set; } = "";
 

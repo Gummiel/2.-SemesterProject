@@ -28,15 +28,14 @@ namespace BestillingApp.View
 
             var productlist = new List<string>();
             MenuViewModel.SelectedProduct = new List<Product>();
-            if(productlist.Count > 0)
+            if (productlist.Count > 0)
                 productlist.Clear();
             productlist.AddRange(from Product selectedproduct in ListViewProducts.SelectedItems
-                                  select selectedproduct.Name);
-            foreach(var selecteditem in ListViewProducts.SelectedItems)
+                select selectedproduct.Name);
+            foreach (var selecteditem in ListViewProducts.SelectedItems)
             {
-                var selectedproduct = (Product)selecteditem;
+                var selectedproduct = (Product) selecteditem;
                 MenuViewModel.SelectedProduct.Add(selectedproduct);
-
             }
 
             var selectedProducts = string.Join(", ", productlist.ToArray());

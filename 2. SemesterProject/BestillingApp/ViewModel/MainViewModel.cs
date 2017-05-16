@@ -43,7 +43,7 @@ namespace BestillingApp.ViewModel
             }
             set { _selectedGasStationCommand = value; }
         }
-        
+
         public OrderHandler OrderHandler { get; set; }
         public static CustomerSingleton CustomerSingleton { get; set; }
         public static GasStationSingleton GasStationSingleton { get; set; }
