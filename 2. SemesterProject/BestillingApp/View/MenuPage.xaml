@@ -153,7 +153,8 @@
     <Page.DataContext>
         <viewModel:MenuViewModel />
     </Page.DataContext>
-    <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="500" MaxWidth="500" MinHeight="720" MaxHeight="720">
+    <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="500"
+          MaxWidth="500" MinHeight="720" MaxHeight="720">
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
@@ -168,7 +169,7 @@
             </Grid.ColumnDefinitions>
             <Grid x:Name="GoBackGrid" Grid.Column="0">
                 <AppBarButton x:Name="AppBarButtonGoBack" HorizontalAlignment="Center" Icon="Back"
-                                  VerticalAlignment="Center" Width="50">
+                              VerticalAlignment="Center" Width="50">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Click">
                             <core:NavigateToPageAction TargetPage="BestillingApp.View.MainPage" />
@@ -178,11 +179,11 @@
             </Grid>
             <Grid x:Name="AppNameGrid" Grid.Column="1">
                 <TextBlock x:Name="TBlockAppName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Daily Tank"
-                               VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" />
+                           VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" />
             </Grid>
             <Grid x:Name="ShoppingGrid" Grid.Column="2">
                 <Button x:Name="BtnShoppingCart" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                            Background="Transparent" Style="{StaticResource ShoppingCartButtonStyle}">
+                        Background="Transparent" Style="{StaticResource ShoppingCartButtonStyle}">
                     <Image x:Name="ImgShoppingCart" Source="ms-appx:///Assets/shoppingcart.png" />
                 </Button>
             </Grid>
@@ -195,7 +196,7 @@
             </Grid.ColumnDefinitions>
             <Grid x:Name="MenuGrid" Grid.Column="0">
                 <Button x:Name="BtnMenu" Content="Shop" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                            Style="{StaticResource NavigationButtonStyle}" BorderBrush="#FFFF0000">
+                        Style="{StaticResource NavigationButtonStyle}" BorderBrush="#FFFF0000">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Click">
                             <core:NavigateToPageAction TargetPage="BestillingApp.View.MenuPage" />
@@ -205,7 +206,7 @@
             </Grid>
             <Grid x:Name="ReviewsGrid" Grid.Column="1" Margin="1,0">
                 <Button x:Name="BtnReviews" Content="Reviews" HorizontalAlignment="Stretch"
-                            VerticalAlignment="Stretch" Style="{StaticResource NavigationButtonStyle}">
+                        VerticalAlignment="Stretch" Style="{StaticResource NavigationButtonStyle}">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Click">
                             <core:NavigateToPageAction TargetPage="BestillingApp.View.ReviewsPage" />
@@ -215,7 +216,7 @@
             </Grid>
             <Grid x:Name="InfoGrid" Grid.Column="2">
                 <Button x:Name="BtnInfo" Content="Info" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                            Style="{StaticResource NavigationButtonStyle}">
+                        Style="{StaticResource NavigationButtonStyle}">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Click">
                             <core:NavigateToPageAction TargetPage="BestillingApp.View.InfoPage" />
@@ -225,19 +226,22 @@
             </Grid>
         </Grid>
         <Grid x:Name="ContentGrid" Grid.Row="2">
-            <ListView x:Name="ListViewItemTypes" ItemsSource="{Binding ItemTypeSingleton.ItemTypes}" VerticalAlignment="Top" Margin="0,10,0,0" HorizontalAlignment="Center" Width="400">
+            <ListView x:Name="ListViewItemTypes" ItemsSource="{Binding ItemTypeSingleton.ItemTypes}"
+                      VerticalAlignment="Top" Margin="0,10,0,0" HorizontalAlignment="Center" Width="400">
                 <ListView.Resources>
                     <DataTemplate x:Key="ListViewGasStationsDataTemplate">
-                        <TextBlock x:Name="TextBlockGasStationName" TextWrapping="Wrap" Text="{Binding Name}" HorizontalAlignment="Left"/>
+                        <TextBlock x:Name="TextBlockGasStationName" TextWrapping="Wrap" Text="{Binding Name}"
+                                   HorizontalAlignment="Left" />
                     </DataTemplate>
                 </ListView.Resources>
                 <ListView.ItemTemplate>
-                    <StaticResource ResourceKey="ListViewGasStationsDataTemplate"/>
+                    <StaticResource ResourceKey="ListViewGasStationsDataTemplate" />
                 </ListView.ItemTemplate>
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="SelectionChanged">
-                        <core:InvokeCommandAction Command="{Binding SelectedGasStationCommand}" CommandParameter="{Binding SelectedItem, ElementName=ListViewItemTypes}" />
-                        <core:NavigateToPageAction TargetPage="BestillingApp.View.MenuPage" />
+                        <core:InvokeCommandAction Command="{Binding SelectedGasStationCommand}"
+                                                  CommandParameter="{Binding SelectedItem, ElementName=ListViewItemTypes}" />
+                        <core:NavigateToPageAction TargetPage="BestillingApp.View.ShoppingPage" />
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
             </ListView>
@@ -269,6 +273,7 @@
                 </ItemsControl>
             </ScrollViewer>-->
         </Grid>
-        <TextBlock x:Name="TextBlockSelectedGasStation" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding SelectedGasStation}" VerticalAlignment="Top" Grid.Row="3" Width="200"/>
+        <TextBlock x:Name="TextBlockSelectedGasStation" HorizontalAlignment="Left" TextWrapping="Wrap"
+                   Text="{Binding SelectedGasStation}" VerticalAlignment="Top" Grid.Row="3" Width="200" />
     </Grid>
 </Page>

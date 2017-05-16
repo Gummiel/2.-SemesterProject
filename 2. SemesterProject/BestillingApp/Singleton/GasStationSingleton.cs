@@ -25,7 +25,6 @@ namespace BestillingApp.Singleton
 
         public async void LoadGasStationAsync()
         {
-
             if (GasStations.Count > 0)
                 GasStations.Clear();
             try

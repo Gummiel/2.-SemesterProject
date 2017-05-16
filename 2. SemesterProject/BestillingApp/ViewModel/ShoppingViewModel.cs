@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#region References
+
 using System.Windows.Input;
 using BestillingApp.Handler;
 using BestillingApp.Model;
 using BestillingApp.Singleton;
 using ZPointApp.Common;
 
+#endregion
+
 namespace BestillingApp.ViewModel
 {
-    class ShoppingViewModel
+    internal class ShoppingViewModel
     {
         #region Instancefield
 

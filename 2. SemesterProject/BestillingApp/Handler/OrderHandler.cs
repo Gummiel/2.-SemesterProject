@@ -14,7 +14,8 @@ namespace BestillingApp.Handler
 
         #region Constructor
 
-        public OrderHandler(MainViewModel mainViewModel, MenuViewModel menuViewModel, ShoppingViewModel shoppingViewModel)
+        public OrderHandler(MainViewModel mainViewModel, MenuViewModel menuViewModel,
+            ShoppingViewModel shoppingViewModel)
         {
             MainViewModel = mainViewModel;
             MenuViewModel = menuViewModel;
@@ -28,6 +29,7 @@ namespace BestillingApp.Handler
             SelectedGasStation = g;
             MenuViewModel.SelectedGasStation = g.ID + " - " + g.Name;
         }
+
         public void SetSelectedItems(Item i)
         {
             SelectedItems.Add(i);

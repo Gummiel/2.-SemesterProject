@@ -160,7 +160,7 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="50" />
                 </Grid.ColumnDefinitions>
-                <Grid x:Name="AppNameGrid" Grid.Column="0"/>
+                <Grid x:Name="AppNameGrid" Grid.Column="0" />
                 <Grid x:Name="ShoppingGrid" Grid.Column="1">
                     <TextBlock x:Name="TBlockShoppingCart" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Shop"
                                VerticalAlignment="Center" />
@@ -204,14 +204,15 @@
                 </Grid>
             </Grid>
             <Grid x:Name="ContentGrid" Grid.Row="3" />
-            <AppBarButton x:Name="MainPageButton" HorizontalAlignment="Left" Label="" VerticalAlignment="Top" Width="133" Height="50">
+            <AppBarButton x:Name="MainPageButton" HorizontalAlignment="Left" Label="" VerticalAlignment="Top"
+                          Width="133" Height="50">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
-                        <core:NavigateToPageAction TargetPage="BestillingApp.View.MainPage"/>
+                        <core:NavigateToPageAction TargetPage="BestillingApp.View.MainPage" />
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
                 <AppBarButton.Icon>
-                    <FontIcon FontFamily="Segoe UI Semibold" Glyph="Daily Tank"/>
+                    <FontIcon FontFamily="Segoe UI Semibold" Glyph="Daily Tank" />
                 </AppBarButton.Icon>
             </AppBarButton>
         </Grid>
