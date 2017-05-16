@@ -22,7 +22,7 @@ namespace BestillingApp.ViewModel
 
         public MainViewModel()
         {
-            OrderHandler = new OrderHandler(this, null, null);
+            OrderHandler = new OrderHandler(this, null);
             GasStationSingleton = GasStationSingleton.Instance;
             //Eksempel for hvordan det ser ud i 1 singleton
             //Singleton = CatalogSingleton.Instance;

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 #endregion
 
-namespace BestillingWebService
+namespace BestillingWebService.Models
 {
     [Table("Order")]
     public class Order

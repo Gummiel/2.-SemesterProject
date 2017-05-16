@@ -1,6 +1,7 @@
 ﻿#region References
 
 using System.Collections.Generic;
+using System.Linq;
 using BestillingApp.Model;
 using BestillingApp.ViewModel;
 
@@ -10,16 +11,13 @@ namespace BestillingApp.Handler
 {
     internal class OrderHandler
     {
-        private List<Item> _selectedItems;
 
         #region Constructor
 
-        public OrderHandler(MainViewModel mainViewModel, MenuViewModel menuViewModel,
-            ShoppingViewModel shoppingViewModel)
+        public OrderHandler(MainViewModel mainViewModel, MenuViewModel menuViewModel)
         {
             MainViewModel = mainViewModel;
             MenuViewModel = menuViewModel;
-            ShoppingViewModel = shoppingViewModel;
         }
 
         #endregion
@@ -30,18 +28,26 @@ namespace BestillingApp.Handler
             MenuViewModel.SelectedGasStation = g.ID + " - " + g.Name;
         }
 
-        public void SetSelectedItems(Item i)
+        //public void SetSelectedItems(Item i)
+        //{
+        //    SelectedItems.Add(i);
+        //}
+        public void SetSelectedItemType(ItemType i)
         {
-            SelectedItems.Add(i);
+            MenuViewModel.SelectedItemType = i;
+            var items = MenuViewModel.ItemSingleton.Items.Where(item => item.FK_ItemType == i.ID).ToList();
+
+            foreach (Item it in items)
+            {
+                MenuViewModel.ItemList.Add(it);
+            }
         }
 
         #region Properties
 
         public MainViewModel MainViewModel { get; set; }
         public MenuViewModel MenuViewModel { get; set; }
-        public ShoppingViewModel ShoppingViewModel { get; set; }
         private GasStation SelectedGasStation { get; set; }
-        public List<Item> SelectedItems => _selectedItems ?? (_selectedItems = new List<Item>());
 
         #endregion
     }

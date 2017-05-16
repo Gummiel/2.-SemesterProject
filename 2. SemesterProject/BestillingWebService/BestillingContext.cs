@@ -1,6 +1,7 @@
 #region References
 
 using System.Data.Entity;
+using BestillingWebService.Models;
 
 #endregion
 
