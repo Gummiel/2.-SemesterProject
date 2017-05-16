@@ -1,6 +1,7 @@
 ﻿#region References
 
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
@@ -33,8 +34,9 @@ namespace BestillingApp.ViewModel
 
         #region Instancefield
 
-        private List<Product> _productList;
+        private ObservableCollection<Product> _productList;
         private ICommand _selectedProductCatagoryCommand;
+        private ICommand _selectedProductCommand;
 
         #endregion
 
@@ -51,18 +53,31 @@ namespace BestillingApp.ViewModel
             }
             set { _selectedProductCatagoryCommand = value; }
         }
+        public ICommand SelectedProductCommand
+        {
+            get
+            {
+                return _selectedProductCommand ??
+                       (_selectedProductCommand =
+                           new RelayArgCommand<Product>(
+                               product => OrderHandler.SetSelectedProducts(product)));
+            }
+            set { _selectedProductCommand = value; }
+        }
 
         public static ProductCatagory SelectedProductCatagory { get; set; }
 
-        public List<Product> ProductList
+        public ObservableCollection<Product> ProductList
         {
-            get { return _productList ?? (_productList = new List<Product>()); }
+            get { return _productList; }
             set
             {
                 _productList = value;
                 OnPropertyChanged();
             }
         }
+        public static List<Product> SelectedProduct { get; set; }
+        public static string SelectedProducts { get; set; } = "";
 
         public OrderHandler OrderHandler { get; set; }
         public ProductCatagorySingleton ProductCatagorySingleton { get; set; }

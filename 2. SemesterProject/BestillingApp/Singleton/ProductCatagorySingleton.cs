@@ -24,8 +24,8 @@ namespace BestillingApp.Singleton
 
         public async void LoadProductCatagoryAsync()
         {
-            if (ProductCatagorys.Count > 0)
-                ProductCatagorys.Clear();
+            if (ProductCatagories.Count > 0)
+                ProductCatagories.Clear();
             try
             {
                 var loadedproductcatagories = await PersistencyService.LoadProductCatagoriesFromJsonAsync();
@@ -34,8 +34,8 @@ namespace BestillingApp.Singleton
                 if (loadedproductcatagories.Count == 0)
                     await new MessageDialog("Der findes nogen itemtypes i databasen").ShowAsync();
                 else
-                    foreach (var itemtype in loadedproductcatagories)
-                        ProductCatagorys.Add(itemtype);
+                    foreach (var prodcat in loadedproductcatagories)
+                        ProductCatagories.Add(prodcat);
             }
             catch (Exception ex)
             {
@@ -61,7 +61,7 @@ namespace BestillingApp.Singleton
         #region Instancefield
 
         private static ProductCatagorySingleton _instance;
-        private ObservableCollection<ProductCatagory> _itemtypes;
+        private ObservableCollection<ProductCatagory> _productcatagories;
 
         #endregion
 
@@ -69,8 +69,8 @@ namespace BestillingApp.Singleton
 
         public static ProductCatagorySingleton Instance => _instance ?? (_instance = new ProductCatagorySingleton());
 
-        public ObservableCollection<ProductCatagory> ProductCatagorys
-            => _itemtypes ?? (_itemtypes = new ObservableCollection<ProductCatagory>());
+        public ObservableCollection<ProductCatagory> ProductCatagories
+            => _productcatagories ?? (_productcatagories = new ObservableCollection<ProductCatagory>());
 
         #endregion
 

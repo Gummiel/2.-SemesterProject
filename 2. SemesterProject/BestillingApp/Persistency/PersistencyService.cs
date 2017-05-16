@@ -292,7 +292,7 @@ namespace BestillingApp.Persistency
 
             try
             {
-                var response = await Task.FromResult(_client.DeleteAsync("api/ProductCatagorys/" + c).Result);
+                var response = await Task.FromResult(_client.DeleteAsync("api/ProductCatagories/" + c).Result);
                 if (!response.IsSuccessStatusCode)
                     response.EnsureSuccessStatusCode();
             }
@@ -311,7 +311,7 @@ namespace BestillingApp.Persistency
 
             try
             {
-                var response = await Task.FromResult(_client.GetAsync("api/ProductCatagorys/").Result);
+                var response = await Task.FromResult(_client.GetAsync("api/ProductCatagories/").Result);
 
                 if (!response.IsSuccessStatusCode)
                     response.EnsureSuccessStatusCode();
