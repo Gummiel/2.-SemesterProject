@@ -1,21 +1,21 @@
-#region References
-
-using System.Data.Entity;
-
-#endregion
-
 namespace BestillingWebService
 {
-    public class BestillingContext : DbContext
+    using System;
+    using System.Data.Entity;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+
+    public partial class BestillingContext : DbContext
     {
         public BestillingContext()
             : base("name=BestillingContext")
         {
-            Configuration.ProxyCreationEnabled = false;
+            this.Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<Customer> Customer { get; set; }
         public virtual DbSet<GasStation> GasStation { get; set; }
+        public virtual DbSet<Information> Information { get; set; }
         public virtual DbSet<Item> Item { get; set; }
         public virtual DbSet<ItemType> ItemType { get; set; }
         public virtual DbSet<Order> Order { get; set; }
@@ -32,8 +32,9 @@ namespace BestillingWebService
 
             modelBuilder.Entity<ItemType>()
                 .HasMany(e => e.Item)
-                .WithOptional(e => e.ItemType1)
-                .HasForeignKey(e => e.ItemType);
+                .WithRequired(e => e.ItemType1)
+                .HasForeignKey(e => e.ItemType)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Order>()
                 .Property(e => e.TotalPrice)
