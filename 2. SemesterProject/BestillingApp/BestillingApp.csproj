@@ -126,7 +126,6 @@
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\OrderViewModel.cs" />
     <Compile Include="ViewModel\PaymentViewModel.cs" />
-    <Compile Include="ViewModel\ShoppingViewModel.cs" />
     <Compile Include="View\InfoPage.xaml.cs">
       <DependentUpon>InfoPage.xaml</DependentUpon>
     </Compile>
@@ -150,9 +149,6 @@
     </Compile>
     <Compile Include="View\ReviewsPage.xaml.cs">
       <DependentUpon>ReviewsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\ShoppingPage.xaml.cs">
-      <DependentUpon>ShoppingPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -182,8 +178,8 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\LoginPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -206,10 +202,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\ReviewsPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\ShoppingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

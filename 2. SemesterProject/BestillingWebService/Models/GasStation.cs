@@ -1,13 +1,14 @@
-namespace BestillingWebService
-{
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+#region References
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+#endregion
+
+namespace BestillingWebService.Models
+{
     [Table("GasStation")]
-    public partial class GasStation
+    public class GasStation
     {
         public int ID { get; set; }
 

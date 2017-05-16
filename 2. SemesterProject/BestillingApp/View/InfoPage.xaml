@@ -278,7 +278,7 @@
                        TextWrapping="Wrap" Text="Hvem er vi?" VerticalAlignment="Top" Height="26" Width="92"
                        FontWeight="Bold" />
             <TextBlock x:Name="Hvem_er_vi" HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap"
-                       VerticalAlignment="Top" Height="402" Grid.RowSpan="2" Width="320">
+                       VerticalAlignment="Top" Height="320" Grid.RowSpan="2" Width="320">
                 <Run
                     Text="Daily Tank har været her siden 1992 og siden udviklet sig fra en enkelt tankstation i en lille by til flere tankstationer rundt omkring i Danmark. " />
                 <LineBreak />
@@ -334,6 +334,11 @@
             </AppBarButton>
             <AppBarButton x:Name="ShoppingCartButton" HorizontalAlignment="Right" Label="" VerticalAlignment="Stretch"
                           Width="96">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
                 <AppBarButton.Icon>
                     <BitmapIcon UriSource="ms-appx:///Assets/shoppingcart.png" Margin="0,-10,0,-12">
                         <interactivity:Interaction.Behaviors>
