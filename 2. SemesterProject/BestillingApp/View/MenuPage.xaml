@@ -184,10 +184,10 @@
             <Grid x:Name="ShoppingGrid" Grid.Column="2">
                 <Button x:Name="BtnShoppingCart" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                         Background="Transparent" Style="{StaticResource ShoppingCartButtonStyle}">
-                    <Image x:Name="ImgShoppingCart" Source="ms-appx:///Assets/shoppingcart.png" >
+                    <Image x:Name="ImgShoppingCart" Source="ms-appx:///Assets/shoppingcart.png">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="PointerPressed">
-                                <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage"/>
+                                <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage" />
                             </core:EventTriggerBehavior>
                         </interactivity:Interaction.Behaviors>
                     </Image>
@@ -232,18 +232,23 @@
             </Grid>
         </Grid>
         <Grid Grid.Row="2">
-            <ComboBox x:Name="CBoxCatagory" HorizontalAlignment="Left" VerticalAlignment="Top" ItemsSource="{Binding ItemTypeSingleton.ItemTypes}" SelectedValue="{Binding ItemTypeSingleton.ItemTypes}" SelectedValuePath="ID" DisplayMemberPath="Name" Width="200" PlaceholderText="Select Catagory" Margin="0,10,0,0">
+            <ComboBox x:Name="CBoxCatagory" HorizontalAlignment="Left" VerticalAlignment="Top"
+                      ItemsSource="{Binding ItemTypeSingleton.ItemTypes}"
+                      SelectedValue="{Binding ItemTypeSingleton.ItemTypes}" SelectedValuePath="ID"
+                      DisplayMemberPath="Name" Width="200" PlaceholderText="Select Catagory" Margin="0,10,0,0">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="SelectionChanged">
                         <core:InvokeCommandAction Command="{Binding SelectedItemTypeCommand}"
                                                   CommandParameter="{Binding SelectedItem, ElementName=CBoxCatagory}" />
                     </core:EventTriggerBehavior>
-                </interactivity:Interaction.Behaviors></ComboBox>
+                </interactivity:Interaction.Behaviors>
+            </ComboBox>
         </Grid>
 
         <Grid x:Name="ContentGrid" Grid.Row="3">
             <ListView x:Name="ListViewItemTypes" ItemsSource="{Binding ItemList}"
-                      VerticalAlignment="Top" Margin="47,0,53,0" HorizontalAlignment="Center" Width="400" SelectionMode="Multiple" Height="400">
+                      VerticalAlignment="Top" Margin="47,0,53,0" HorizontalAlignment="Center" Width="400"
+                      SelectionMode="Multiple" Height="400">
                 <ListView.Resources>
                     <DataTemplate x:Key="ListViewGasStationsDataTemplate">
                         <TextBlock x:Name="TextBlockGasStationName" TextWrapping="Wrap" Text="{Binding Name}"

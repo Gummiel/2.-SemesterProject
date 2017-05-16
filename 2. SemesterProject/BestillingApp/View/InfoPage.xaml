@@ -336,7 +336,7 @@
                           Width="96">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
-                        <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage"/>
+                        <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage" />
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
                 <AppBarButton.Icon>

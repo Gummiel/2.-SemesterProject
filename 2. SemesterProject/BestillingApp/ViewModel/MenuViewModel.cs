@@ -13,13 +13,6 @@ namespace BestillingApp.ViewModel
 {
     internal class MenuViewModel
     {
-        #region Instancefield
-
-        private List<Item> _itemList;
-        private ICommand _selectedItemTypeCommand;
-
-        #endregion
-
         #region Constructor
 
         public MenuViewModel()
@@ -35,7 +28,15 @@ namespace BestillingApp.ViewModel
 
         #endregion
 
+        #region Instancefield
+
+        private List<Item> _itemList;
+        private ICommand _selectedItemTypeCommand;
+
+        #endregion
+
         #region Properties
+
         public ICommand SelectedItemTypeCommand
         {
             get
@@ -46,7 +47,9 @@ namespace BestillingApp.ViewModel
             }
             set { _selectedItemTypeCommand = value; }
         }
+
         public static ItemType SelectedItemType { get; set; }
+
         public List<Item> ItemList
         {
             get { return _itemList ?? (_itemList = new List<Item>()); }

@@ -1,6 +1,5 @@
 ﻿#region References
 
-using System.Collections.Generic;
 using System.Linq;
 using BestillingApp.Model;
 using BestillingApp.ViewModel;
@@ -11,7 +10,6 @@ namespace BestillingApp.Handler
 {
     internal class OrderHandler
     {
-
         #region Constructor
 
         public OrderHandler(MainViewModel mainViewModel, MenuViewModel menuViewModel)
@@ -37,10 +35,8 @@ namespace BestillingApp.Handler
             MenuViewModel.SelectedItemType = i;
             var items = MenuViewModel.ItemSingleton.Items.Where(item => item.FK_ItemType == i.ID).ToList();
 
-            foreach (Item it in items)
-            {
+            foreach (var it in items)
                 MenuViewModel.ItemList.Add(it);
-            }
         }
 
         #region Properties
