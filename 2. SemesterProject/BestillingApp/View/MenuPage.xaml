@@ -250,65 +250,80 @@
             </Grid>
 
             <Grid x:Name="ListViewProductsGrid" Grid.Row="1">
-                <ListView x:Name="ListViewProducts" ItemsSource="{Binding ProductList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                <ListView x:Name="ListViewProducts"
+                          ItemsSource="{Binding ProductList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                           VerticalAlignment="Top"
                           SelectionMode="Multiple" SelectionChanged="ListViewProducts_SelectionChanged">
                     <ListView.Resources>
                         <DataTemplate x:Key="ListViewProductsDataTemplate">
-                            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0,0,0,1" BorderBrush="Black" Width="440">
+                            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0,0,0,1"
+                                        BorderBrush="Black" Width="440">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition />
-                                        <ColumnDefinition MaxWidth="110"/>
-                                        <ColumnDefinition Width="55" MaxWidth="110"/>
-                                        <ColumnDefinition Width="55" MaxWidth="110"/>
+                                        <ColumnDefinition MaxWidth="110" />
+                                        <ColumnDefinition Width="55" MaxWidth="110" />
+                                        <ColumnDefinition Width="55" MaxWidth="110" />
                                     </Grid.ColumnDefinitions>
                                     <Grid Grid.Column="0">
-                                        <TextBlock x:Name="TextBlockProductName" TextWrapping="Wrap" Text="{Binding Name}"
-                                       HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                                        <TextBlock x:Name="TextBlockProductName" TextWrapping="Wrap"
+                                                   Text="{Binding Name}"
+                                                   HorizontalAlignment="Left" VerticalAlignment="Bottom" />
                                     </Grid>
                                     <Grid Grid.Column="1">
-                                        <TextBlock x:Name="TextBlockProductBrand" TextWrapping="Wrap" Text="{Binding Brand}"
-                                       HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                                        <TextBlock x:Name="TextBlockProductBrand" TextWrapping="Wrap"
+                                                   Text="{Binding Brand}"
+                                                   HorizontalAlignment="Left" VerticalAlignment="Bottom" />
                                     </Grid>
                                     <Grid Grid.Column="2">
-                                        <TextBlock x:Name="TextBlockProductWeight" TextWrapping="Wrap" Text="{Binding Weight}"
-                                       HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                                        <TextBlock x:Name="TextBlockProductWeight" TextWrapping="Wrap"
+                                                   Text="{Binding Weight}"
+                                                   HorizontalAlignment="Left" VerticalAlignment="Bottom" />
                                     </Grid>
                                     <Grid Grid.Column="3">
-                                        <TextBlock x:Name="TextBlockProductPrice" TextWrapping="Wrap" Text="{Binding Price}"
-                                       HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                                        <TextBlock x:Name="TextBlockProductPrice" TextWrapping="Wrap"
+                                                   Text="{Binding Price}"
+                                                   HorizontalAlignment="Left" VerticalAlignment="Bottom" />
                                     </Grid>
                                 </Grid>
                             </StackPanel>
                         </DataTemplate>
                         <DataTemplate x:Key="ListViewProductsDataTemplateHeader">
-                            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0,0,0,2" BorderBrush="Black" Margin="45,0,0,0">
+                            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0,0,0,2"
+                                        BorderBrush="Black" Margin="45,0,0,0">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="110"/>
-                                        <ColumnDefinition Width="110"/>
-                                        <ColumnDefinition Width="110"/>
-                                        <ColumnDefinition Width="110"/>
+                                        <ColumnDefinition Width="110" />
+                                        <ColumnDefinition Width="110" />
+                                        <ColumnDefinition Width="110" />
+                                        <ColumnDefinition Width="110" />
                                     </Grid.ColumnDefinitions>
                                     <Grid Grid.Column="0">
-                                        <TextBlock x:Name="TextBlockHeaderName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top" FontWeight="Bold"/>
+                                        <TextBlock x:Name="TextBlockHeaderName" HorizontalAlignment="Left"
+                                                   TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top"
+                                                   FontWeight="Bold" />
                                     </Grid>
                                     <Grid Grid.Column="1">
-                                        <TextBlock x:Name="TextBlockHeaderBrand" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Mærke" VerticalAlignment="Top" FontWeight="Bold"/>
+                                        <TextBlock x:Name="TextBlockHeaderBrand" HorizontalAlignment="Left"
+                                                   TextWrapping="Wrap" Text="Mærke" VerticalAlignment="Top"
+                                                   FontWeight="Bold" />
                                     </Grid>
                                     <Grid Grid.Column="2">
-                                        <TextBlock x:Name="TextBlockHeaderWeight" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Vægt" VerticalAlignment="Top" FontWeight="Bold"/>
+                                        <TextBlock x:Name="TextBlockHeaderWeight" HorizontalAlignment="Left"
+                                                   TextWrapping="Wrap" Text="Vægt" VerticalAlignment="Top"
+                                                   FontWeight="Bold" />
                                     </Grid>
                                     <Grid Grid.Column="3">
-                                        <TextBlock x:Name="TextBlockHeaderPrice" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Pris" VerticalAlignment="Top" FontWeight="Bold"/>
+                                        <TextBlock x:Name="TextBlockHeaderPrice" HorizontalAlignment="Left"
+                                                   TextWrapping="Wrap" Text="Pris" VerticalAlignment="Top"
+                                                   FontWeight="Bold" />
                                     </Grid>
                                 </Grid>
                             </StackPanel>
                         </DataTemplate>
                     </ListView.Resources>
                     <ListView.HeaderTemplate>
-                        <StaticResource ResourceKey="ListViewProductsDataTemplateHeader"/>
+                        <StaticResource ResourceKey="ListViewProductsDataTemplateHeader" />
                     </ListView.HeaderTemplate>
                     <ListView.ItemTemplate>
                         <StaticResource ResourceKey="ListViewProductsDataTemplate" />

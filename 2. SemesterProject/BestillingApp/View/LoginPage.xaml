@@ -330,47 +330,52 @@
         </Grid>-->
         <Grid x:Name="ContentGrid" Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="1">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0">
-                            <TextBlock x:Name="TextBlockEmail" HorizontalAlignment="Center" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="TextBlockEmail" HorizontalAlignment="Center" TextWrapping="Wrap"
+                                       Text="E-mail:" VerticalAlignment="Center" />
                         </Grid>
                         <Grid Grid.Column="1">
-                            <TextBox x:Name="TextBoxEmail" HorizontalAlignment="Center" TextWrapping="Wrap" PlaceholderText="E-mail" VerticalAlignment="Center" Width="150"/>
+                            <TextBox x:Name="TextBoxEmail" HorizontalAlignment="Center" TextWrapping="Wrap"
+                                     PlaceholderText="E-mail" VerticalAlignment="Center" Width="150" />
                         </Grid>
                     </Grid>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0">
-                            <TextBlock x:Name="TextBlockPassword" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="TextBlockPassword" HorizontalAlignment="Center" TextWrapping="Wrap"
+                                       Text="Password:" VerticalAlignment="Center" />
                         </Grid>
                         <Grid Grid.Column="1">
-                            <TextBox x:Name="TextBoxPassword" HorizontalAlignment="Center" TextWrapping="Wrap" PlaceholderText="Password" VerticalAlignment="Center" Width="150"/>
+                            <TextBox x:Name="TextBoxPassword" HorizontalAlignment="Center" TextWrapping="Wrap"
+                                     PlaceholderText="Password" VerticalAlignment="Center" Width="150" />
                         </Grid>
                     </Grid>
                 </Grid>
                 <Grid Grid.Row="2">
-                    <Button x:Name="ButtonLogin" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button x:Name="ButtonLogin" Content="Login" HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
                                 <core:InvokeCommandAction Command="{Binding LoginCommand}" />
@@ -380,13 +385,14 @@
                 </Grid>
             </Grid>
             <Grid Grid.Row="1">
-                <Button x:Name="GoogleSignUp" Background="#FFDB4C3F" BorderThickness="0" Foreground="White" Height="30" Width="240" HorizontalAlignment="Center" Style="{StaticResource GoogleSignUpButtonStyle}">
+                <Button x:Name="GoogleSignUp" Background="#FFDB4C3F" BorderThickness="0" Foreground="White" Height="30"
+                        Width="240" HorizontalAlignment="Center" Style="{StaticResource GoogleSignUpButtonStyle}">
                     <StackPanel Orientation="Horizontal">
                         <Viewbox Width="38" Height="20" HorizontalAlignment="Left" Margin="0">
                             <Canvas Width="27" Height="27">
                                 <Path
-                            Data="M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.9 8.2,4.73 12.2,4.73C15.29,4.73 17.1,6.7 17.1,6.7L19,4.72C19,4.72 16.56,2 12.1,2C6.42,2 2.03,6.8 2.03,12C2.03,17.05 6.16,22 12.25,22C17.6,22 21.5,18.33 21.5,12.91C21.5,11.76 21.35,11.1 21.35,11.1V11.1Z"
-                            Fill="White" />
+                                    Data="M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.9 8.2,4.73 12.2,4.73C15.29,4.73 17.1,6.7 17.1,6.7L19,4.72C19,4.72 16.56,2 12.1,2C6.42,2 2.03,6.8 2.03,12C2.03,17.05 6.16,22 12.25,22C17.6,22 21.5,18.33 21.5,12.91C21.5,11.76 21.35,11.1 21.35,11.1V11.1Z"
+                                    Fill="White" />
                             </Canvas>
                         </Viewbox>
                         <TextBlock Text="Log in With Google" Foreground="White" FontSize="14" Width="150" />

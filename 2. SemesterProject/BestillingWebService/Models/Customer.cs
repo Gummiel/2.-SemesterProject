@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 #endregion
 
-namespace BestillingWebService.Models
+namespace BestillingWebService
 {
     [Table("Customer")]
     public class Customer
@@ -19,6 +19,10 @@ namespace BestillingWebService.Models
         [Required]
         [StringLength(100)]
         public string Email { get; set; }
+
+        [Required]
+        [StringLength(100)]
+        public string Password { get; set; }
 
         [Required]
         [StringLength(100)]

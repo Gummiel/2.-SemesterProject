@@ -6,7 +6,6 @@ using System.Linq;
 using System.Net;
 using System.Web.Http;
 using System.Web.Http.Description;
-using BestillingWebService.Models;
 
 #endregion
 

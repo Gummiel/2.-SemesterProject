@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 #endregion
 
-namespace BestillingWebService.Models
+namespace BestillingWebService
 {
     [Table("Product")]
     public class Product

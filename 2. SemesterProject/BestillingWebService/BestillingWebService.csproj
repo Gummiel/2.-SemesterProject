@@ -209,10 +209,10 @@
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\GasStation.cs" />
+    <Compile Include="Models\Information.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Information.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderItem.cs" />
     <Compile Include="Models\Payment.cs" />

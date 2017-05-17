@@ -17,8 +17,8 @@ namespace BestillingApp.ViewModel
 
         public LoginViewModel()
         {
-            LoginHandler = new LoginHandler(this);
-            //CustomerSingleton = CustomerSingleton.Instance;
+            CustomerHandler = new CustomerHandler(this);
+            CustomerSingleton = CustomerSingleton.Instance;
             //GasStationSingleton = GasStationSingleton.Instance;
             //ReceiptSingleton = ReceiptSingleton.Instance;
             //ReviewSingleton = ReviewSingleton.Instance;
@@ -29,15 +29,17 @@ namespace BestillingApp.ViewModel
 
         #region Properties
 
-        public LoginHandler LoginHandler { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public CustomerHandler CustomerHandler { get; set; }
 
         public ICommand LoginCommand
         {
-            get { return _loginCommand ?? (_loginCommand = new RelayCommand(LoginHandler.Login())); }
+            get { return _loginCommand /*?? (_loginCommand = new RelayCommand(CustomerHandler.Login()))*/; }
             set { _loginCommand = value; }
         }
 
-        //public static CustomerSingleton CustomerSingleton { get; set; }
+        public static CustomerSingleton CustomerSingleton { get; set; }
         //public static GasStationSingleton GasStationSingleton { get; set; }
         //public static ReceiptSingleton ReceiptSingleton { get; set; }
         //public static ReviewSingleton ReviewSingleton { get; set; }

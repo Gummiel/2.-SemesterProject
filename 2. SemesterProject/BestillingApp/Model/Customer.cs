@@ -4,11 +4,11 @@
     {
         #region Constructor
 
-        public Customer(string name, string email, string address, int telNo, int zipcode, string city)
-
+        public Customer(string name, string email, string password, string address, int telNo, int zipcode, string city)
         {
             Name = name;
             Email = email;
+            Password = password;
             Address = address;
             TelNo = telNo;
             Zipcode = zipcode;
@@ -26,6 +26,7 @@
         public int ID { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
+        public string Password { get; set; }
         public string Address { get; set; }
         public int TelNo { get; set; }
         public int Zipcode { get; set; }
