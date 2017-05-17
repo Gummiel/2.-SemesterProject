@@ -221,7 +221,7 @@
             </Grid>
             <Grid x:Name="InfoGrid" Grid.Column="2">
                 <Button x:Name="BtnInfo" Content="Info" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                        Style="{StaticResource NavigationButtonStyle}">
+                        Style="{StaticResource NavigationButtonStyle}" BorderBrush="#FFFF0000">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Click">
                             <core:NavigateToPageAction TargetPage="BestillingApp.View.InfoPage" />
