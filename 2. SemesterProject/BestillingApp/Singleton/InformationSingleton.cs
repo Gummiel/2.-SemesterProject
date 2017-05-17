@@ -25,27 +25,40 @@ namespace BestillingApp.Singleton
 
         public async void LoadInformationAsync()
         {
-            if (Informations.Count > 0)
-                Informations.Clear();
+            //if(Informations.Count > 0)
+            //    Informations.Clear();
             try
             {
                 var loadedinformations = await PersistencyService.LoadInformationFromJsonAsync();
 
                 //check if # observablecollection Information # is different from # var loadedgasstations #
-                var firstNotSecond = Informations.Except(loadedinformations).ToList();
+                //var firstNotSecond = Informations.Except(loadedinformations).ToList();
                 //check if # var loadedgasstations # is different from # observablecollection Information #
-                var secondNotFirst = loadedinformations.Except(Informations).ToList();
+                //var secondNotFirst = loadedinformations.Except(Informations).ToList();
 
-                if (loadedinformations == null)
+                if(loadedinformations == null)
                     return;
-                if (loadedinformations.Count == 0)
+                if(loadedinformations.Count == 0)
                     await new MessageDialog("Der findes nogen informationer i databasen").ShowAsync();
-                if (!firstNotSecond.Any() && !secondNotFirst.Any())
-                    return;
-                foreach (var gas in loadedinformations)
-                    Informations.Add(gas);
+                //if (!firstNotSecond.Any() && !secondNotFirst.Any())
+                //    return;
+                foreach(var inf in loadedinformations)
+                {
+                    WhoAreWeTitle = inf.WhoAreWeTitle;
+                    WhoAreWeSection1 = inf.WhoAreWeSection1;
+                    WhoAreWeSection2 = inf.WhoAreWeSection2;
+                    WhoAreWeSection3 = inf.WhoAreWeSection3;
+                    AboutUsTitle = inf.AboutUsTitle;
+                    AboutUsSection1 = inf.AboutUsSection1;
+                    AboutUsSection2 = inf.AboutUsSection2;
+                    AboutUsSection3 = inf.AboutUsSection3;
+                    PaymentTitle = inf.PaymentTitle;
+                    PaymentSection1 = inf.PaymentSection1;
+                    PaymentSection2 = inf.PaymentSection2;
+                    PaymentSection3 = inf.PaymentSection3;
+                }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new MessageDialog("Der kunne ikke oprettes forbindelse til databasen").ShowAsync();
                 throw;
@@ -69,7 +82,6 @@ namespace BestillingApp.Singleton
         #region Instancefield
 
         private static InformationSingleton _instance;
-        private ObservableCollection<Information> _informations;
 
         #endregion
 
@@ -77,8 +89,18 @@ namespace BestillingApp.Singleton
 
         public static InformationSingleton Instance => _instance ?? (_instance = new InformationSingleton());
 
-        public ObservableCollection<Information> Informations
-            => _informations ?? (_informations = new ObservableCollection<Information>());
+        public string WhoAreWeTitle { get; set; }
+        public string WhoAreWeSection1 { get; set; }
+        public string WhoAreWeSection2 { get; set; }
+        public string WhoAreWeSection3 { get; set; }
+        public string AboutUsTitle { get; set; }
+        public string AboutUsSection1 { get; set; }
+        public string AboutUsSection2 { get; set; }
+        public string AboutUsSection3 { get; set; }
+        public string PaymentTitle { get; set; }
+        public string PaymentSection1 { get; set; }
+        public string PaymentSection2 { get; set; }
+        public string PaymentSection3 { get; set; }
 
         #endregion
 

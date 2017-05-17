@@ -663,7 +663,7 @@ namespace BestillingApp.Persistency
 
             try
             {
-                var response = await Task.FromResult(_client.PostAsJsonAsync("api/Informations/", c).Result);
+                var response = await Task.FromResult(_client.PostAsJsonAsync("api/Information/", c).Result);
                 if (!response.IsSuccessStatusCode)
                     response.EnsureSuccessStatusCode();
             }
@@ -682,7 +682,7 @@ namespace BestillingApp.Persistency
 
             try
             {
-                var response = await Task.FromResult(_client.DeleteAsync("api/Informations/" + c).Result);
+                var response = await Task.FromResult(_client.DeleteAsync("api/Information/" + c).Result);
                 if (!response.IsSuccessStatusCode)
                     response.EnsureSuccessStatusCode();
             }
@@ -701,7 +701,7 @@ namespace BestillingApp.Persistency
 
             try
             {
-                var response = await Task.FromResult(_client.GetAsync("api/Informations/").Result);
+                var response = await Task.FromResult(_client.GetAsync("api/Information/").Result);
 
                 if (!response.IsSuccessStatusCode)
                     response.EnsureSuccessStatusCode();

@@ -123,6 +123,7 @@
     <Compile Include="Singleton\OrderSingleton.cs" />
     <Compile Include="Singleton\ReceiptSingleton.cs" />
     <Compile Include="Singleton\ReviewSingleton.cs" />
+    <Compile Include="ViewModel\InformationViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
