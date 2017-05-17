@@ -151,7 +151,7 @@
         </Style>
     </Page.Resources>
     <Page.DataContext>
-        <viewModel:InformationViewModel/>
+        <viewModel:InformationViewModel />
     </Page.DataContext>
     <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="500"
           MaxWidth="500" MinHeight="720" MaxHeight="720">
@@ -243,12 +243,15 @@
                     </Grid>
                     <Grid x:Name="WhoAreWeDescription" Grid.Row="1">
                         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
-                            <TextBlock x:Name="TextBlockWhoAreWeDescription1" HorizontalAlignment="Left" TextWrapping="Wrap"
-                                   Text="{Binding InformationSingleton.WhoAreWeSection1}" VerticalAlignment="Top" />
-                            <TextBlock x:Name="TextBlockWhoAreWeDescription2" HorizontalAlignment="Left" TextWrapping="Wrap"
-                                   Text="{Binding InformationSingleton.WhoAreWeSection2}" VerticalAlignment="Top" />
-                            <TextBlock x:Name="TextBlockWhoAreWeDescription3" HorizontalAlignment="Left" TextWrapping="Wrap"
-                                   Text="{Binding InformationSingleton.WhoAreWeSection3}" VerticalAlignment="Top" />
+                            <TextBlock x:Name="TextBlockWhoAreWeDescription1" HorizontalAlignment="Left"
+                                       TextWrapping="Wrap"
+                                       Text="{Binding InformationSingleton.WhoAreWeSection1}" VerticalAlignment="Top" />
+                            <TextBlock x:Name="TextBlockWhoAreWeDescription2" HorizontalAlignment="Left"
+                                       TextWrapping="Wrap"
+                                       Text="{Binding InformationSingleton.WhoAreWeSection2}" VerticalAlignment="Top" />
+                            <TextBlock x:Name="TextBlockWhoAreWeDescription3" HorizontalAlignment="Left"
+                                       TextWrapping="Wrap"
+                                       Text="{Binding InformationSingleton.WhoAreWeSection3}" VerticalAlignment="Top" />
                         </StackPanel>
                     </Grid>
                 </Grid>
@@ -263,12 +266,15 @@
                     </Grid>
                     <Grid x:Name="AboutUsDescription" Grid.Row="1">
                         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
-                            <TextBlock x:Name="TextBlockAboutUsDescription1" HorizontalAlignment="Left" TextWrapping="Wrap"
-                                   Text="{Binding InformationSingleton.AboutUsSection1}" VerticalAlignment="Top" />
-                            <TextBlock x:Name="TextBlockAboutUsDescription2" HorizontalAlignment="Left" TextWrapping="Wrap"
-                                   Text="{Binding InformationSingleton.AboutUsSection2}" VerticalAlignment="Top" />
-                            <TextBlock x:Name="TextBlockAboutUsDescription3" HorizontalAlignment="Left" TextWrapping="Wrap"
-                                   Text="{Binding InformationSingleton.AboutUsSection3}" VerticalAlignment="Top" />
+                            <TextBlock x:Name="TextBlockAboutUsDescription1" HorizontalAlignment="Left"
+                                       TextWrapping="Wrap"
+                                       Text="{Binding InformationSingleton.AboutUsSection1}" VerticalAlignment="Top" />
+                            <TextBlock x:Name="TextBlockAboutUsDescription2" HorizontalAlignment="Left"
+                                       TextWrapping="Wrap"
+                                       Text="{Binding InformationSingleton.AboutUsSection2}" VerticalAlignment="Top" />
+                            <TextBlock x:Name="TextBlockAboutUsDescription3" HorizontalAlignment="Left"
+                                       TextWrapping="Wrap"
+                                       Text="{Binding InformationSingleton.AboutUsSection3}" VerticalAlignment="Top" />
                         </StackPanel>
                     </Grid>
                 </Grid>
@@ -283,12 +289,15 @@
                     </Grid>
                     <Grid x:Name="PaymentDescription" Grid.Row="1">
                         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
-                            <TextBlock x:Name="TextBlockPaymentDescription1" HorizontalAlignment="Left" TextWrapping="Wrap"
-                                   Text="{Binding InformationSingleton.PaymentSection1}" VerticalAlignment="Top" />
-                            <TextBlock x:Name="TextBlockPaymentDescription2" HorizontalAlignment="Left" TextWrapping="Wrap"
-                                   Text="{Binding InformationSingleton.PaymentSection2}" VerticalAlignment="Top" />
-                            <TextBlock x:Name="TextBlockPaymentDescription3" HorizontalAlignment="Left" TextWrapping="Wrap"
-                                   Text="{Binding InformationSingleton.PaymentSection3}" VerticalAlignment="Top" />
+                            <TextBlock x:Name="TextBlockPaymentDescription1" HorizontalAlignment="Left"
+                                       TextWrapping="Wrap"
+                                       Text="{Binding InformationSingleton.PaymentSection1}" VerticalAlignment="Top" />
+                            <TextBlock x:Name="TextBlockPaymentDescription2" HorizontalAlignment="Left"
+                                       TextWrapping="Wrap"
+                                       Text="{Binding InformationSingleton.PaymentSection2}" VerticalAlignment="Top" />
+                            <TextBlock x:Name="TextBlockPaymentDescription3" HorizontalAlignment="Left"
+                                       TextWrapping="Wrap"
+                                       Text="{Binding InformationSingleton.PaymentSection3}" VerticalAlignment="Top" />
                         </StackPanel>
                     </Grid>
                 </Grid>

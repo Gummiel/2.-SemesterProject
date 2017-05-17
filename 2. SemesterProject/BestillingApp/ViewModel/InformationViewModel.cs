@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#region References
+
 using BestillingApp.Singleton;
+
+#endregion
 
 namespace BestillingApp.ViewModel
 {
-    class InformationViewModel
+    internal class InformationViewModel
     {
-
         #region Constructor
 
         public InformationViewModel()

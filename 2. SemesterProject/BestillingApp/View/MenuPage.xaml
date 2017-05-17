@@ -253,7 +253,8 @@
                 <ListView x:Name="ListViewProducts"
                           ItemsSource="{Binding ProductList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                           VerticalAlignment="Top" Margin="0,50,0,0"
-                          SelectionMode="Multiple" Height="442" SelectionChanged="ListViewProducts_SelectionChanged" d:LayoutOverrides="LeftPosition, RightPosition">
+                          SelectionMode="Multiple" Height="442" SelectionChanged="ListViewProducts_SelectionChanged"
+                          d:LayoutOverrides="LeftPosition, RightPosition">
                     <ListView.Resources>
                         <DataTemplate x:Key="ListViewGasStationsDataTemplate">
                             <TextBlock x:Name="TextBlockGasStationName" TextWrapping="Wrap" Text="{Binding Name}"
@@ -261,21 +262,29 @@
                         </DataTemplate>
                         <DataTemplate x:Key="DataTemplate1">
                             <Grid Height="50" Width="440">
-                                <TextBlock x:Name="Name" Margin="18,0,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Width="169" Text="{Binding Name}" d:LayoutOverrides="VerticalAlignment">
-                                    <Run Text="Name"/>
+                                <TextBlock x:Name="Name" Margin="18,0,0,0" TextWrapping="Wrap"
+                                           HorizontalAlignment="Left" Width="169" Text="{Binding Name}"
+                                           d:LayoutOverrides="VerticalAlignment">
+                                    <Run Text="Name" />
                                     <!--<Run Text="TextBlock"/>
                                     <LineBreak/>
                                     <Run Text="e"/>-->
                                 </TextBlock>
-                                <TextBlock x:Name="Brand" Margin="192,3,144,9" TextWrapping="Wrap" Text="{Binding Brand}" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition"/>
-                                <TextBlock x:Name="Weight" HorizontalAlignment="Right" TextWrapping="Wrap" Text="{Binding Weight}" Margin="0,0,92,9" d:LayoutOverrides="VerticalAlignment, TopPosition, BottomPosition"/>
-                                <TextBlock x:Name="Price" Margin="399,0,0,9" TextWrapping="Wrap" Text="{Binding Price}" d:LayoutOverrides="Height"/>
-                                <Border x:Name="Line" BorderBrush="Black" BorderThickness="0,0,0,1" Height="0.5" Margin="18,0,0,1" VerticalAlignment="Bottom" Background="Black"/>
+                                <TextBlock x:Name="Brand" Margin="192,3,144,9" TextWrapping="Wrap"
+                                           Text="{Binding Brand}"
+                                           d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" />
+                                <TextBlock x:Name="Weight" HorizontalAlignment="Right" TextWrapping="Wrap"
+                                           Text="{Binding Weight}" Margin="0,0,92,9"
+                                           d:LayoutOverrides="VerticalAlignment, TopPosition, BottomPosition" />
+                                <TextBlock x:Name="Price" Margin="399,0,0,9" TextWrapping="Wrap" Text="{Binding Price}"
+                                           d:LayoutOverrides="Height" />
+                                <Border x:Name="Line" BorderBrush="Black" BorderThickness="0,0,0,1" Height="0.5"
+                                        Margin="18,0,0,1" VerticalAlignment="Bottom" Background="Black" />
                             </Grid>
                         </DataTemplate>
                     </ListView.Resources>
                     <ListView.ItemTemplate>
-                        <StaticResource ResourceKey="DataTemplate1"/>
+                        <StaticResource ResourceKey="DataTemplate1" />
                     </ListView.ItemTemplate>
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="SelectionChanged">
@@ -285,15 +294,21 @@
                         </core:EventTriggerBehavior>
                     </interactivity:Interaction.Behaviors>
                 </ListView>
-                <TextBlock x:Name="NameTitle" HorizontalAlignment="Left" Margin="61,24,0,0" TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top" RenderTransformOrigin="0.957,0.25" Height="17" Width="48" FontWeight="Bold"/>
-                <TextBlock x:Name="BrandTitle" TextWrapping="Wrap" VerticalAlignment="Top" Margin="236,23,214,0" d:LayoutOverrides="LeftPosition, RightPosition" Height="20" FontWeight="Bold">
-                    <Run Text="Mærke"/>
-                    <LineBreak/>
-                    <Run/>
+                <TextBlock x:Name="NameTitle" HorizontalAlignment="Left" Margin="61,24,0,0" TextWrapping="Wrap"
+                           Text="Navn" VerticalAlignment="Top" RenderTransformOrigin="0.957,0.25" Height="17"
+                           Width="48" FontWeight="Bold" />
+                <TextBlock x:Name="BrandTitle" TextWrapping="Wrap" VerticalAlignment="Top" Margin="236,23,214,0"
+                           d:LayoutOverrides="LeftPosition, RightPosition" Height="20" FontWeight="Bold">
+                    <Run Text="Mærke" />
+                    <LineBreak />
+                    <Run />
                 </TextBlock>
-                <TextBlock x:Name="WeightTitle" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Vægt" VerticalAlignment="Top" Margin="0,23,118,0" FontWeight="Bold"/>
-                <TextBlock x:Name="PriceTitle" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Pris" VerticalAlignment="Top" Margin="0,23,31,0" FontWeight="Bold"/>
-                <Border x:Name="Line" BorderBrush="Black" BorderThickness="1" Height="2" Margin="61,48,17,0" VerticalAlignment="Top"/>
+                <TextBlock x:Name="WeightTitle" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Vægt"
+                           VerticalAlignment="Top" Margin="0,23,118,0" FontWeight="Bold" />
+                <TextBlock x:Name="PriceTitle" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Pris"
+                           VerticalAlignment="Top" Margin="0,23,31,0" FontWeight="Bold" />
+                <Border x:Name="Line" BorderBrush="Black" BorderThickness="1" Height="2" Margin="61,48,17,0"
+                        VerticalAlignment="Top" />
                 <!--<ScrollViewer>
                 <ItemsControl x:Name="ItemsControlGasStations" ItemsSource="{Binding ItemTypeSingleton.ProductCatagories}"
                                   HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0">

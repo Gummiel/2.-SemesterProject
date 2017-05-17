@@ -1,9 +1,8 @@
 ﻿#region References
 
 using System;
-using System.Collections.ObjectModel;
-using System.Linq;
 using Windows.UI.Popups;
+using BestillingApp.Handler;
 using BestillingApp.Model;
 using BestillingApp.Persistency;
 
@@ -13,6 +12,12 @@ namespace BestillingApp.Singleton
 {
     internal class InformationSingleton
     {
+        #region Instancefield
+
+        private static InformationSingleton _instance;
+
+        #endregion
+
         #region Constructor
 
         private InformationSingleton()
@@ -25,25 +30,17 @@ namespace BestillingApp.Singleton
 
         public async void LoadInformationAsync()
         {
-            //if(Informations.Count > 0)
-            //    Informations.Clear();
             try
             {
                 var loadedinformations = await PersistencyService.LoadInformationFromJsonAsync();
 
-                //check if # observablecollection Information # is different from # var loadedgasstations #
-                //var firstNotSecond = Informations.Except(loadedinformations).ToList();
-                //check if # var loadedgasstations # is different from # observablecollection Information #
-                //var secondNotFirst = loadedinformations.Except(Informations).ToList();
-
-                if(loadedinformations == null)
+                if (loadedinformations == null)
                     return;
-                if(loadedinformations.Count == 0)
+                if (loadedinformations.Count == 0)
                     await new MessageDialog("Der findes nogen informationer i databasen").ShowAsync();
-                //if (!firstNotSecond.Any() && !secondNotFirst.Any())
-                //    return;
-                foreach(var inf in loadedinformations)
+                foreach (var inf in loadedinformations)
                 {
+                    if (inf.ID != OrderHandler.SelectedGasStation.ID) continue;
                     WhoAreWeTitle = inf.WhoAreWeTitle;
                     WhoAreWeSection1 = inf.WhoAreWeSection1;
                     WhoAreWeSection2 = inf.WhoAreWeSection2;
@@ -56,9 +53,10 @@ namespace BestillingApp.Singleton
                     PaymentSection1 = inf.PaymentSection1;
                     PaymentSection2 = inf.PaymentSection2;
                     PaymentSection3 = inf.PaymentSection3;
+                    break;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 new MessageDialog("Der kunne ikke oprettes forbindelse til databasen").ShowAsync();
                 throw;
@@ -76,12 +74,6 @@ namespace BestillingApp.Singleton
             //Hvis delete og read er på samme side
             //LoadInformationAsync();
         }
-
-        #endregion
-
-        #region Instancefield
-
-        private static InformationSingleton _instance;
 
         #endregion
 

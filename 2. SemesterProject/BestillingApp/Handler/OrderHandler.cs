@@ -46,7 +46,7 @@ namespace BestillingApp.Handler
 
         public MainViewModel MainViewModel { get; set; }
         public MenuViewModel MenuViewModel { get; set; }
-        private GasStation SelectedGasStation { get; set; }
+        public static GasStation SelectedGasStation { get; set; }
 
         #endregion
     }
