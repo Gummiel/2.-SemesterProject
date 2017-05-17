@@ -99,6 +99,7 @@
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Handler\CustomerHandler.cs" />
     <Compile Include="Handler\GasStationHandler.cs" />
+    <Compile Include="Handler\LoginHandler.cs" />
     <Compile Include="Handler\OrderHandler.cs" />
     <Compile Include="Handler\ReceiptHandler.cs" />
     <Compile Include="Handler\ReviewHandler.cs" />

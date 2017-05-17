@@ -255,29 +255,29 @@
                           SelectionMode="Multiple" SelectionChanged="ListViewProducts_SelectionChanged">
                     <ListView.Resources>
                         <DataTemplate x:Key="ListViewProductsDataTemplate">
-                            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0,0,0,1" BorderBrush="Black">
+                            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0,0,0,1" BorderBrush="Black" Width="440">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="110"/>
-                                        <ColumnDefinition Width="110"/>
-                                        <ColumnDefinition Width="110"/>
-                                        <ColumnDefinition Width="110"/>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition MaxWidth="110"/>
+                                        <ColumnDefinition Width="55" MaxWidth="110"/>
+                                        <ColumnDefinition Width="55" MaxWidth="110"/>
                                     </Grid.ColumnDefinitions>
                                     <Grid Grid.Column="0">
                                         <TextBlock x:Name="TextBlockProductName" TextWrapping="Wrap" Text="{Binding Name}"
-                                       HorizontalAlignment="Left" />
+                                       HorizontalAlignment="Left" VerticalAlignment="Bottom" />
                                     </Grid>
                                     <Grid Grid.Column="1">
                                         <TextBlock x:Name="TextBlockProductBrand" TextWrapping="Wrap" Text="{Binding Brand}"
-                                       HorizontalAlignment="Left" />
+                                       HorizontalAlignment="Left" VerticalAlignment="Bottom" />
                                     </Grid>
                                     <Grid Grid.Column="2">
                                         <TextBlock x:Name="TextBlockProductWeight" TextWrapping="Wrap" Text="{Binding Weight}"
-                                       HorizontalAlignment="Left" />
+                                       HorizontalAlignment="Left" VerticalAlignment="Bottom" />
                                     </Grid>
                                     <Grid Grid.Column="3">
                                         <TextBlock x:Name="TextBlockProductPrice" TextWrapping="Wrap" Text="{Binding Price}"
-                                       HorizontalAlignment="Left" />
+                                       HorizontalAlignment="Left" VerticalAlignment="Bottom" />
                                     </Grid>
                                 </Grid>
                             </StackPanel>

@@ -5,8 +5,150 @@
     xmlns:local="using:Win10GoogleAuthenticationDemo"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     mc:Ignorable="d">
     <Page.Resources>
+        <Style x:Key="NavigationButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#33000000" />
+            <Setter Property="Foreground" Value="#FF000000" />
+            <Setter Property="BorderThickness" Value="0,0,0,4" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <!--<Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="FontWeight" Value="Normal" />-->
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <Storyboard>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="PointerOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background"
+                                                                           Storyboard.TargetName="RootGrid">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#33000000" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground"
+                                                                           Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#FF000000" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush"
+                                                                           Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#FFFF0000" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background"
+                                                                           Storyboard.TargetName="RootGrid">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#33000000" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground"
+                                                                           Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#FF000000" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush"
+                                                                           Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#FFFF0000" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerDownThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw"
+                                              BorderBrush="{TemplateBinding BorderBrush}"
+                                              BorderThickness="{TemplateBinding BorderThickness}"
+                                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                                              ContentTransitions="{TemplateBinding ContentTransitions}"
+                                              Content="{TemplateBinding Content}"
+                                              HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              Padding="{TemplateBinding Padding}"
+                                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ShoppingCartButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="#00000000" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <Storyboard>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="PointerOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background"
+                                                                           Storyboard.TargetName="RootGrid">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#33000000" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground"
+                                                                           Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#FF000000" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush"
+                                                                           Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#FFFF0000" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background"
+                                                                           Storyboard.TargetName="RootGrid">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#33000000" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground"
+                                                                           Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#FF000000" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush"
+                                                                           Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#FFFF0000" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerDownThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw"
+                                              BorderBrush="{TemplateBinding BorderBrush}"
+                                              BorderThickness="{TemplateBinding BorderThickness}"
+                                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                                              ContentTransitions="{TemplateBinding ContentTransitions}"
+                                              Content="{TemplateBinding Content}"
+                                              HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              Padding="{TemplateBinding Padding}"
+                                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <Style x:Key="GoogleSignUpButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="{ThemeResource SystemControlBackgroundBaseLowBrush}" />
             <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseHighBrush}" />
@@ -112,19 +254,145 @@
         </Style>
     </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="GoogleSignUp" Background="#FFDB4C3F" BorderThickness="0" Foreground="White" Height="30"
-                Margin="0,10,0,15" Width="240" HorizontalAlignment="Center" VerticalAlignment="Center"
-                Style="{StaticResource GoogleSignUpButtonStyle}" Click="logIn">
-            <StackPanel Orientation="Horizontal">
-                <Viewbox Width="38" Height="20" HorizontalAlignment="Left" Margin="0">
-                    <Canvas Width="27" Height="27">
-                        <Path
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid x:Name="TopBarGrid" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="50" />
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="GoBackGrid" Grid.Column="0">
+                <AppBarButton x:Name="AppBarButtonGoBack" HorizontalAlignment="Center" Icon="Back"
+                              VerticalAlignment="Center" Width="50">
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:NavigateToPageAction TargetPage="BestillingApp.View.MainPage" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </AppBarButton>
+            </Grid>
+            <Grid x:Name="AppNameGrid" Grid.Column="1">
+                <TextBlock x:Name="TBlockAppName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Daily Tank"
+                           VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" />
+            </Grid>
+            <Grid x:Name="ShoppingGrid" Grid.Column="2">
+                <!--<Button x:Name="BtnShoppingCart" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                        Background="Transparent" Style="{StaticResource ShoppingCartButtonStyle}">
+                    <Image x:Name="ImgShoppingCart" Source="ms-appx:///Assets/shoppingcart.png">
+                        <interactivity:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="PointerPressed">
+                                <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage" />
+                            </core:EventTriggerBehavior>
+                        </interactivity:Interaction.Behaviors>
+                    </Image>
+                </Button>-->
+            </Grid>
+        </Grid>
+        <!--<Grid x:Name="NavigationGrid" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="MenuGrid" Grid.Column="0">
+                <Button x:Name="BtnMenu" Content="Shop" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                        Style="{StaticResource NavigationButtonStyle}">
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:NavigateToPageAction TargetPage="BestillingApp.View.MenuPage" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </Button>
+            </Grid>
+            <Grid x:Name="ReviewsGrid" Grid.Column="1" Margin="1,0">
+                <Button x:Name="BtnReviews" Content="Reviews" HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" Style="{StaticResource NavigationButtonStyle}">
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:NavigateToPageAction TargetPage="BestillingApp.View.ReviewsPage" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </Button>
+            </Grid>
+            <Grid x:Name="InfoGrid" Grid.Column="2">
+                <Button x:Name="BtnInfo" Content="Info" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                        Style="{StaticResource NavigationButtonStyle}">
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:NavigateToPageAction TargetPage="BestillingApp.View.InfoPage" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </Button>
+            </Grid>
+        </Grid>-->
+        <Grid x:Name="ContentGrid" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <TextBlock x:Name="TextBlockEmail" HorizontalAlignment="Center" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Center"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <TextBox x:Name="TextBoxEmail" HorizontalAlignment="Center" TextWrapping="Wrap" PlaceholderText="E-mail" VerticalAlignment="Center" Width="150"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <TextBlock x:Name="TextBlockPassword" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Center"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <TextBox x:Name="TextBoxPassword" HorizontalAlignment="Center" TextWrapping="Wrap" PlaceholderText="Password" VerticalAlignment="Center" Width="150"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Button x:Name="ButtonLogin" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <interactivity:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="Click">
+                                <core:InvokeCommandAction Command="{Binding LoginCommand}" />
+                            </core:EventTriggerBehavior>
+                        </interactivity:Interaction.Behaviors>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Button x:Name="GoogleSignUp" Background="#FFDB4C3F" BorderThickness="0" Foreground="White" Height="30" Width="240" HorizontalAlignment="Center" Style="{StaticResource GoogleSignUpButtonStyle}">
+                    <StackPanel Orientation="Horizontal">
+                        <Viewbox Width="38" Height="20" HorizontalAlignment="Left" Margin="0">
+                            <Canvas Width="27" Height="27">
+                                <Path
                             Data="M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.9 8.2,4.73 12.2,4.73C15.29,4.73 17.1,6.7 17.1,6.7L19,4.72C19,4.72 16.56,2 12.1,2C6.42,2 2.03,6.8 2.03,12C2.03,17.05 6.16,22 12.25,22C17.6,22 21.5,18.33 21.5,12.91C21.5,11.76 21.35,11.1 21.35,11.1V11.1Z"
                             Fill="White" />
-                    </Canvas>
-                </Viewbox>
-                <TextBlock Text="Log in With Google" Foreground="White" FontSize="14" Width="150" />
-            </StackPanel>
-        </Button>
+                            </Canvas>
+                        </Viewbox>
+                        <TextBlock Text="Log in With Google" Foreground="White" FontSize="14" Width="150" />
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>

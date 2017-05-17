@@ -1,5 +1,9 @@
 ﻿#region References
 
+using System;
+using System.IO;
+using System.IO.IsolatedStorage;
+using System.Runtime.Serialization;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -17,10 +21,6 @@ namespace BestillingApp.View
         public LoginPage()
         {
             InitializeComponent();
-        }
-
-        private void logIn(object sender, RoutedEventArgs e)
-        {
         }
     }
 }
