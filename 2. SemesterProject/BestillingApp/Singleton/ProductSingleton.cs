@@ -32,7 +32,7 @@ namespace BestillingApp.Singleton
                 if (loadedproducts == null)
                     return;
                 if (loadedproducts.Count == 0)
-                    await new MessageDialog("Der findes nogen products i databasen").ShowAsync();
+                    await new MessageDialog("Der findes ikke nogen produkter i databasen").ShowAsync();
                 else
                     foreach (var prod in loadedproducts)
                         Products.Add(prod);
