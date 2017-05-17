@@ -259,9 +259,15 @@
                             <TextBlock x:Name="TextBlockGasStationName" TextWrapping="Wrap" Text="{Binding Name}"
                                        HorizontalAlignment="Left" />
                         </DataTemplate>
+                        <DataTemplate x:Key="DataTemplate1">
+                            <Grid>
+                                <TextBlock x:Name="textBlock" Margin="0,0,2,4" TextWrapping="Wrap" Text="{Binding Name}" d:LayoutOverrides="Width, Height"/>
+                                <TextBlock x:Name="textBlock1" Margin="240,0,-216,9" TextWrapping="Wrap" Text="{Binding Price}" d:LayoutOverrides="Width, Height"/>
+                            </Grid>
+                        </DataTemplate>
                     </ListView.Resources>
                     <ListView.ItemTemplate>
-                        <StaticResource ResourceKey="ListViewGasStationsDataTemplate" />
+                        <StaticResource ResourceKey="DataTemplate1"/>
                     </ListView.ItemTemplate>
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="SelectionChanged">
