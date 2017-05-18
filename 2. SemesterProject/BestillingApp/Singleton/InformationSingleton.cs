@@ -40,7 +40,7 @@ namespace BestillingApp.Singleton
                     await new MessageDialog("Der findes nogen informationer i databasen").ShowAsync();
                 foreach (var inf in loadedinformations)
                 {
-                    if (inf.ID != OrderHandler.SelectedGasStation.ID) continue;
+                    if (inf.ID != OrderHandler.SelectedGasStation.ID) /*continue;*/
                     WhoAreWeTitle = inf.WhoAreWeTitle;
                     WhoAreWeSection1 = inf.WhoAreWeSection1;
                     WhoAreWeSection2 = inf.WhoAreWeSection2;
@@ -53,7 +53,7 @@ namespace BestillingApp.Singleton
                     PaymentSection1 = inf.PaymentSection1;
                     PaymentSection2 = inf.PaymentSection2;
                     PaymentSection3 = inf.PaymentSection3;
-                    break;
+                    //break;
                 }
             }
             catch (Exception ex)
