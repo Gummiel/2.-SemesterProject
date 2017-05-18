@@ -150,7 +150,7 @@
         </Style>
     </Page.Resources>
     <Page.DataContext>
-        <ViewModel:OrderViewModel/>
+        <ViewModel:MenuViewModel/>
     </Page.DataContext>
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
         <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="432">
@@ -212,12 +212,7 @@
                 </Grid>
             </Grid>
             <Grid x:Name="ListViewGrid" Grid.Row="1" Margin="0,50,0,0" Grid.RowSpan="3" >
-                <ListView x:Name="listViewOrder" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" Margin="0,0,0,64">
-                    <TextBlock x:Name="textBlock" TextWrapping="Wrap" Height="34" Width="81" FontSize="22">
-                        <Run Text="Varer"/>
-                        <Run Text=":"/>
-                    </TextBlock>
-                </ListView>
+                <ListView x:Name="listViewOrder" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" Margin="0,0,0,64" ItemsSource="{Binding OrderSingleton.OrderItems}"/>
             </Grid>
         </Grid>
     </ScrollViewer>

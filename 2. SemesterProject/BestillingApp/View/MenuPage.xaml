@@ -340,6 +340,13 @@
                     </interactivity:Interaction.Behaviors>
                 </ListView>
             </Grid>
+            <AppBarButton x:Name="appBarButton" Icon="Accept" Label="appbarbutton" VerticalAlignment="Bottom" d:LayoutOverrides="Width" HorizontalAlignment="Right" Margin="0,0,37,156" Grid.Row="1">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </AppBarButton>
         </Grid>
     </Grid>
 </Page>

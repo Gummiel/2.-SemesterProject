@@ -28,6 +28,7 @@ namespace BestillingApp.ViewModel
             //Singleton = CatalogSingleton.Instance;
             ProductCatagorySingleton.LoadProductCatagoryAsync();
             ProductSingleton.LoadItemsAsync();
+            OrderSingleton = OrderSingleton.Instance;
         }
 
         #endregion
@@ -85,6 +86,7 @@ namespace BestillingApp.ViewModel
         public ProductCatagorySingleton ProductCatagorySingleton { get; set; }
         public ProductSingleton ProductSingleton { get; set; }
         public static string SelectedGasStation { get; set; } = "";
+        public OrderSingleton OrderSingleton { get; set; }
 
         #endregion
 
