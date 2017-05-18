@@ -167,52 +167,8 @@
                 <TextBlock x:Name="TBlockAppName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Daily Tank"
                            VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" />
             </Grid>
-            <!--<Grid x:Name="ShoppingGrid" Grid.Column="1">
-                <Button x:Name="BtnShoppingCart" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                            Background="Transparent" Style="{StaticResource ShoppingCartButtonStyle}">
-                    <Image x:Name="ImgShoppingCart" Source="ms-appx:///Assets/shoppingcart.png" />
-                </Button>
-
-            </Grid>-->
         </Grid>
-        <!--<Grid x:Name="NavigationGrid" Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-
-            <Grid x:Name="MenuGrid" Grid.Column="0">
-                <Button x:Name="BtnMenu" Content="Shop" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                            Style="{StaticResource NavigationButtonStyle}">
-                    <interactivity:Interaction.Behaviors>
-                        <core:EventTriggerBehavior EventName="Click">
-                            <core:NavigateToPageAction TargetPage="BestillingApp.View.MenuPage" />
-                        </core:EventTriggerBehavior>
-                    </interactivity:Interaction.Behaviors>
-                </Button>
-            </Grid>
-            <Grid x:Name="ReviewsGrid" Grid.Column="1" Margin="1,0">
-                <Button x:Name="BtnReviews" Content="Reviews" HorizontalAlignment="Stretch"
-                            VerticalAlignment="Stretch" Style="{StaticResource NavigationButtonStyle}">
-                    <interactivity:Interaction.Behaviors>
-                        <core:EventTriggerBehavior EventName="Click">
-                            <core:NavigateToPageAction TargetPage="BestillingApp.View.ReviewsPage" />
-                        </core:EventTriggerBehavior>
-                    </interactivity:Interaction.Behaviors>
-                </Button>
-            </Grid>
-            <Grid x:Name="InfoGrid" Grid.Column="2">
-                <Button x:Name="BtnInfo" Content="Info" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                            Style="{StaticResource NavigationButtonStyle}">
-                    <interactivity:Interaction.Behaviors>
-                        <core:EventTriggerBehavior EventName="Click">
-                            <core:NavigateToPageAction TargetPage="BestillingApp.View.InfoPage" />
-                        </core:EventTriggerBehavior>
-                    </interactivity:Interaction.Behaviors>
-                </Button>
-            </Grid>
-        </Grid>-->
+        
         <Grid x:Name="ContentGrid" Grid.Row="1">
             <ListView x:Name="ListViewGasStations" ItemsSource="{Binding GasStationSingleton.GasStations}"
                       VerticalAlignment="Top" Margin="0,10,0,0" HorizontalAlignment="Center" Width="400">
