@@ -2,9 +2,11 @@
 
 using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using Windows.UI.Popups;
 using BestillingApp.Model;
 using BestillingApp.Persistency;
+using BestillingApp.ViewModel;
 
 #endregion
 
@@ -56,12 +58,18 @@ namespace BestillingApp.Singleton
             //LoadOrderAsync();
         }
 
+        public void RemoveOrderItem(OrderItem or)
+        {
+            
+        }
+
         #endregion
 
         #region Instancefield
 
         private static OrderSingleton _instance;
         private ObservableCollection<Order> _orders;
+        private ObservableCollection<OrderItem> _orderItems;
 
         #endregion
 
@@ -69,29 +77,26 @@ namespace BestillingApp.Singleton
 
         public static OrderSingleton Instance => _instance ?? (_instance = new OrderSingleton());
         public ObservableCollection<Order> Orders => _orders ?? (_orders = new ObservableCollection<Order>());
+        public ObservableCollection<OrderItem> OrderItems => _orderItems ?? (_orderItems = new ObservableCollection<OrderItem>());
 
         #endregion
 
         #region Add
 
-        public void AddOrder(int totalPrice)
+        public void AddOrderItem(OrderItem newOrderItem)
         {
-            //var newOrder = new Order(totalPrice);
+         
+            OrderItems.Add(newOrderItem);
+        }
+        public void AddOrder()
+        {
+            Order newOrder = new Order();
+            Orders.Add(newOrder);
             //Orders.Add(newOrder);
             //PersistencyService.SaveOrderAsJsonAsync(newOrder);
             //Hvis create og read er på samme side
             //LoadOrderAsync();
         }
-
-        public void AddOrder(Order o)
-        {
-            //Order newOrder = new Order(name, email, address, telNo, zipcode, city, totalPrice, description, amount, price);
-            //Orders.Add(r);
-            PersistencyService.SaveOrderAsJsonAsync(o);
-            //Hvis create og read er på samme side
-            //LoadOrderAsync();
-        }
-
         #endregion
     }
 }

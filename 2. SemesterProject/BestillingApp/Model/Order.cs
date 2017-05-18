@@ -4,13 +4,9 @@
     {
         #region Constructor
 
-        public Order(decimal totalPrice)
-        {
-            TotalPrice = totalPrice;
-        }
-
         public Order()
         {
+            TotalPrice = 0;
         }
 
         #endregion

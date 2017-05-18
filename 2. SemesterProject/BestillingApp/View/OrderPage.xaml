@@ -1,11 +1,12 @@
 ﻿<Page
-    x:Class="BestillingApp.View.OrderPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:ViewModel="using:BestillingApp.ViewModel"
+    x:Class="BestillingApp.View.OrderPage"
     mc:Ignorable="d">
     <Page.Resources>
         <Style x:Key="NavigationButtonStyle" TargetType="Button">
@@ -148,8 +149,11 @@
             </Setter>
         </Style>
     </Page.Resources>
+    <Page.DataContext>
+        <ViewModel:OrderViewModel/>
+    </Page.DataContext>
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-        <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="432">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
                 <RowDefinition Height="150" />
@@ -170,11 +174,7 @@
                                VerticalAlignment="Center" />
                 </Grid>
             </Grid>
-            <Grid x:Name="SomethingGrid" Grid.Row="1">
-                <TextBlock x:Name="TBlockSomething" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Something"
-                           VerticalAlignment="Center" />
-            </Grid>
-            <Grid x:Name="NavigationGrid" Grid.Row="2">
+            <Grid x:Name="NavigationGrid" Grid.Row="1" Margin="0,0,0,100">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
@@ -211,15 +211,14 @@
                     </Button>
                 </Grid>
             </Grid>
-            <Grid x:Name="ContentGrid" Grid.Row="3" />
-            <AppBarButton x:Name="AppBarButton" Icon="Accept" Label="appbarbutton" Margin="566,217,0,177" Grid.Row="3"
-                          VerticalAlignment="Stretch" d:LayoutOverrides="Width, Height">
-                <interactivity:Interaction.Behaviors>
-                    <core:EventTriggerBehavior EventName="Click">
-                        <core:NavigateToPageAction TargetPage="BestillingApp.View.LoginPage" />
-                    </core:EventTriggerBehavior>
-                </interactivity:Interaction.Behaviors>
-            </AppBarButton>
+            <Grid x:Name="ListViewGrid" Grid.Row="1" Margin="0,50,0,0" Grid.RowSpan="3" >
+                <ListView x:Name="listViewOrder" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" Margin="0,0,0,64">
+                    <TextBlock x:Name="textBlock" TextWrapping="Wrap" Height="34" Width="81" FontSize="22">
+                        <Run Text="Varer"/>
+                        <Run Text=":"/>
+                    </TextBlock>
+                </ListView>
+            </Grid>
         </Grid>
     </ScrollViewer>
 </Page>
