@@ -70,7 +70,7 @@
             <elementDefinition Id="941d6488-bde2-4b11-94ff-8720d292b43a" />
           </association>
           <association Id="ee96b00e-6f7c-47f5-9978-d43c716e133a" isDerived="false" sourceEndRoleName="Kunde" targetEndRoleName="Levering/Hentning" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="c58048ab-aa82-40a5-a802-c3879d04e26f" LastKnownName="Levering/Hentning" />
+            <useCaseMoniker Id="c58048ab-aa82-40a5-a802-c3879d04e26f" LastKnownName="Hentning" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="70cb0c8b-fb5c-4d7d-8b1d-cbe39c1ad076" name="Kunde" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -106,7 +106,7 @@
         <elementDefinition Id="10717453-3263-4e0e-ac25-7cdfd909180f" />
         <targetEnds>
           <association Id="7efc319f-1d59-4955-8018-e9d8662c07b7" isDerived="false" sourceEndRoleName="Restaurant" targetEndRoleName="Levering/Hentning" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="c58048ab-aa82-40a5-a802-c3879d04e26f" LastKnownName="Levering/Hentning" />
+            <useCaseMoniker Id="c58048ab-aa82-40a5-a802-c3879d04e26f" LastKnownName="Hentning" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="ea6e2d35-3382-4a9b-8d99-f552051a7715" name="Restaurant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -165,7 +165,7 @@
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <useCase Id="c58048ab-aa82-40a5-a802-c3879d04e26f" name="Levering/Hentning" isAbstract="false" isLeaf="false">
+      <useCase Id="c58048ab-aa82-40a5-a802-c3879d04e26f" name="Hentning" isAbstract="false" isLeaf="false">
         <elementDefinition Id="f77e55ee-d6f3-4da5-9e0d-e9c74d8b72ee" />
         <subjects>
           <subsystemMoniker Id="3b526fb8-fb5d-4ed7-b0ce-d69114b37e50" LastKnownName="Online bestilling" />

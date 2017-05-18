@@ -298,22 +298,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="f4da77bd-34fd-454e-9bf0-27efc444bb7e"
-            name="MessageOccurrenceSpecification37">
-            <covered>
-              <lifelineMoniker
-                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
-                LastKnownName="System"
-                LastKnownLocation="Diagrammer.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="d635a0ee-8469-45d2-8b6e-a7083559739f"
             name="MessageOccurrenceSpecification38">
             <covered>
               <lifelineMoniker
                 Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
                 LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f4da77bd-34fd-454e-9bf0-27efc444bb7e"
+            name="MessageOccurrenceSpecification37">
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -355,6 +355,114 @@
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="9ee89817-3c97-4ec2-99e5-4ec5d40bddde"
+            name="BehaviorExecutionSpecification15">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="96c22689-1392-4a53-b017-a932c5ec2b54"
+                LastKnownName="ExecutionOccurrenceSpecification30"
+                LastKnownLocation="Diagrammer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="47eb087f-8354-427f-a0c5-473a6ce46a7b"
+                LastKnownName="ExecutionOccurrenceSpecification29"
+                LastKnownLocation="Diagrammer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="0da613a9-8d3a-41eb-b78a-dbeafd1b6bb6"
+                LastKnownName="MessageOccurrenceSpecification40"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="cf759200-84c0-4f2f-a1a5-4f42cfa0e0cd"
+                LastKnownName="MessageOccurrenceSpecification41"
+                LastKnownLocation="Diagrammer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="47eb087f-8354-427f-a0c5-473a6ce46a7b"
+            name="ExecutionOccurrenceSpecification29">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f0aae303-1231-4d41-b81b-dcbce867b701"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ce0a315f-0428-4790-aa11-7604d4c39bc2"
+            name="MessageOccurrenceSpecification39">
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0da613a9-8d3a-41eb-b78a-dbeafd1b6bb6"
+            name="MessageOccurrenceSpecification40">
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="cf759200-84c0-4f2f-a1a5-4f42cfa0e0cd"
+            name="MessageOccurrenceSpecification41">
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d0bfe4e0-d06a-4f44-a67a-a54a3810a8ef"
+            name="MessageOccurrenceSpecification42">
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="96c22689-1392-4a53-b017-a932c5ec2b54"
+            name="ExecutionOccurrenceSpecification30">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="121b245b-1a89-4690-96bd-d1fa3221cec6"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
           <behaviorExecutionSpecification
             Id="1c130c63-a0a8-4e4f-b90a-bc4aad025d91"
             name="BehaviorExecutionSpecification3">
@@ -490,16 +598,6 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="d9999e0b-2386-47ff-8c06-5948bf6fff46"
-            name="MessageOccurrenceSpecification14">
-            <covered>
-              <lifelineMoniker
-                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
-                LastKnownName="System"
-                LastKnownLocation="Diagrammer.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="f9db8eea-2414-43f5-b5cb-f9f5a987afc9"
             name="MessageOccurrenceSpecification13">
             <covered>
@@ -510,12 +608,12 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="43be2325-586a-4810-b291-4be0d3f94b15"
-            name="MessageOccurrenceSpecification16">
+            Id="d9999e0b-2386-47ff-8c06-5948bf6fff46"
+            name="MessageOccurrenceSpecification14">
             <covered>
               <lifelineMoniker
-                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
-                LastKnownName="Kunde"
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -526,6 +624,16 @@
               <lifelineMoniker
                 Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
                 LastKnownName="System"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="43be2325-586a-4810-b291-4be0d3f94b15"
+            name="MessageOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
+                LastKnownName="Kunde"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -594,22 +702,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="66d8225c-b751-4796-87ce-226bd401bf83"
-            name="MessageOccurrenceSpecification31">
-            <covered>
-              <lifelineMoniker
-                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
-                LastKnownName="System"
-                LastKnownLocation="Diagrammer.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="eb3c53db-86b9-4cba-b2f7-150d8901304a"
             name="MessageOccurrenceSpecification32">
             <covered>
               <lifelineMoniker
                 Id="86d1d7d1-b5eb-406f-9a6a-cf1248a00591"
                 LastKnownName="Kunde"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="66d8225c-b751-4796-87ce-226bd401bf83"
+            name="MessageOccurrenceSpecification31">
+            <covered>
+              <lifelineMoniker
+                Id="2a9ede1d-8d8e-4e52-8360-41145e107c1b"
+                LastKnownName="System"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -656,6 +764,14 @@
                 LastKnownName="OperandOccurrenceSpecification2"
                 LastKnownLocation="Diagrammer.uml" />
               <messageOccurrenceSpecificationMoniker
+                Id="ce0a315f-0428-4790-aa11-7604d4c39bc2"
+                LastKnownName="MessageOccurrenceSpecification39"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d0bfe4e0-d06a-4f44-a67a-a54a3810a8ef"
+                LastKnownName="MessageOccurrenceSpecification42"
+                LastKnownLocation="Diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
                 Id="3c572d85-23a3-439a-bc0e-24f24c36c25a"
                 LastKnownName="MessageOccurrenceSpecification7"
                 LastKnownLocation="Diagrammer.uml" />
@@ -698,6 +814,14 @@
               <operandOccurrenceSpecificationMoniker
                 Id="0eeb1426-a1ac-4f26-8418-efccbdb5f3de"
                 LastKnownName="OperandOccurrenceSpecification4"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="47eb087f-8354-427f-a0c5-473a6ce46a7b"
+                LastKnownName="ExecutionOccurrenceSpecification29"
+                LastKnownLocation="Diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="96c22689-1392-4a53-b017-a932c5ec2b54"
+                LastKnownName="ExecutionOccurrenceSpecification30"
                 LastKnownLocation="Diagrammer.uml" />
               <executionOccurrenceSpecificationMoniker
                 Id="ec9d2b6d-cf94-43b9-9308-87e3d07c0bfb"
@@ -758,6 +882,44 @@
               <messageOccurrenceSpecificationMoniker
                 Id="d635a0ee-8469-45d2-8b6e-a7083559739f"
                 LastKnownName="MessageOccurrenceSpecification38"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="0dda6572-5b55-4793-8d52-1e2d17478e27"
+            name="Logger ind"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ce0a315f-0428-4790-aa11-7604d4c39bc2"
+                LastKnownName="MessageOccurrenceSpecification39"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0da613a9-8d3a-41eb-b78a-dbeafd1b6bb6"
+                LastKnownName="MessageOccurrenceSpecification40"
+                LastKnownLocation="Diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="cdd360fb-0cfb-4b11-ac97-96fea40ee81d"
+            name="Login godkenens"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="cf759200-84c0-4f2f-a1a5-4f42cfa0e0cd"
+                LastKnownName="MessageOccurrenceSpecification41"
+                LastKnownLocation="Diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d0bfe4e0-d06a-4f44-a67a-a54a3810a8ef"
+                LastKnownName="MessageOccurrenceSpecification42"
                 LastKnownLocation="Diagrammer.uml" />
             </receiveEvent>
           </message>
@@ -1042,7 +1204,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="f77e55ee-d6f3-4da5-9e0d-e9c74d8b72ee"
-              LastKnownName="Levering/Hentning"
+              LastKnownName="Hentning"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1141,7 +1303,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="f77e55ee-d6f3-4da5-9e0d-e9c74d8b72ee"
-              LastKnownName="Levering/Hentning"
+              LastKnownName="Hentning"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1293,7 +1455,7 @@
     <packageHasNamedElement>
       <useCase
         Id="f77e55ee-d6f3-4da5-9e0d-e9c74d8b72ee"
-        name="Levering/Hentning"
+        name="Hentning"
         isAbstract="false"
         isLeaf="false">
         <subjects>
@@ -2334,22 +2496,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="7e42b72a-fbf0-4bb3-af56-038c75e4dc49"
-            name="MessageOccurrenceSpecification18">
-            <covered>
-              <lifelineMoniker
-                Id="de546a36-3b8d-425e-9823-ceb508c8277d"
-                LastKnownName="Varer"
-                LastKnownLocation="Diagrammer.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="f16ff8a8-a160-434f-bab3-e514da339a88"
             name="MessageOccurrenceSpecification17">
             <covered>
               <lifelineMoniker
                 Id="925e9084-69c7-4448-a04a-7cd0b9c99cd3"
                 LastKnownName="Bestilling"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7e42b72a-fbf0-4bb3-af56-038c75e4dc49"
+            name="MessageOccurrenceSpecification18">
+            <covered>
+              <lifelineMoniker
+                Id="de546a36-3b8d-425e-9823-ceb508c8277d"
+                LastKnownName="Varer"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2460,22 +2622,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="4c855276-247f-4f52-a071-57438b38de83"
-            name="MessageOccurrenceSpecification23">
-            <covered>
-              <lifelineMoniker
-                Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
-                LastKnownName="Kunde"
-                LastKnownLocation="Diagrammer.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="b16a5620-bb2f-4bf3-a2d8-1fb007496be6"
             name="MessageOccurrenceSpecification24">
             <covered>
               <lifelineMoniker
                 Id="a6fa5101-72a8-4f46-8699-21c7c6315ab4"
                 LastKnownName="Log-In"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4c855276-247f-4f52-a071-57438b38de83"
+            name="MessageOccurrenceSpecification23">
+            <covered>
+              <lifelineMoniker
+                Id="d3170e5b-de99-4fdf-8cc7-4598a8a22a23"
+                LastKnownName="Kunde"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4717,6 +4879,16 @@
     <packageHasNamedElement>
       <executionEvent
         Id="5c96e3c7-d5e8-41e9-8730-a3e86d43d561"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f0aae303-1231-4d41-b81b-dcbce867b701"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="121b245b-1a89-4690-96bd-d1fa3221cec6"
         name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
