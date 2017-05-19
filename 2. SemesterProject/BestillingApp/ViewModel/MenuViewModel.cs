@@ -29,6 +29,7 @@ namespace BestillingApp.ViewModel
             ProductCatagorySingleton.LoadProductCatagoryAsync();
             ProductSingleton.LoadItemsAsync();
             OrderSingleton = OrderSingleton.Instance;
+            OrderItemCount = OrderSingleton.OrderItems.Count;
         }
 
         #endregion
@@ -70,7 +71,6 @@ namespace BestillingApp.ViewModel
 
         public static ProductCatagory SelectedProductCatagory { get; set; }
         public static Product SelectedProduct { get; set; }
-        public static Product SelectedOrderItem { get; set; }
 
         public ObservableCollection<Product> ProductList
         {

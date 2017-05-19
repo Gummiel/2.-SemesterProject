@@ -43,6 +43,7 @@ namespace BestillingApp.Handler
 
         public async void AddSelectedProductToOrderItems(Product p)
         {
+            if (p == null) return;
             MenuViewModel.SelectedProduct = p;
             MenuViewModel.OrderSingleton.OrderItems.Add(p);
             await new MessageDialog(p.Brand + " " + p.Name + " ER BLEVET TILFØJET TIL KURVEN!").ShowAsync();
@@ -50,8 +51,9 @@ namespace BestillingApp.Handler
         }
         public void RemoveSelectedProductToOrderItems(Product p)
         {
-            MenuViewModel.SelectedOrderItem = p;
-            ConfirmRemoveSelectedProductToOrderItems("Are you sure you want to delete?");
+            if(p == null) return;
+            OrderViewModel.SelectedOrderItem = p;
+            ConfirmRemoveSelectedProductToOrderItems("ER DU SIKKER PÅ AT DU VIL SLETTE "+ p.Brand + " " + p.Name + "?");
         }
 
         public async void ConfirmRemoveSelectedProductToOrderItems(string message)
@@ -76,12 +78,16 @@ namespace BestillingApp.Handler
         {
             try
             {
-                OrderViewModel.OrderSingleton.OrderItems.Remove(MenuViewModel.SelectedProduct);
+                OrderViewModel.OrderSingleton.OrderItems.Remove(OrderViewModel.SelectedOrderItem);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                StatusRemoveSelectedProductToOrderItems("There was an error with the remove, try again." + ex);
+                StatusRemoveSelectedProductToOrderItems("Der skete en fejl under sletning, prøv igen." + ex);
                 throw;
+            }
+            finally
+            {
+                StatusRemoveSelectedProductToOrderItems("Sletning af " + OrderViewModel.SelectedOrderItem.Brand + " " + OrderViewModel.SelectedOrderItem.Name + " blev fuldført");
             }
         }
 

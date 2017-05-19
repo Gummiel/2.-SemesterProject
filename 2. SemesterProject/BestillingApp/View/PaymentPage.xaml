@@ -164,7 +164,7 @@
                               VerticalAlignment="Center" Width="50">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
-                                <core:NavigateToPageAction TargetPage="BestillingApp.View.MainPage" />
+                                <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage" />
                             </core:EventTriggerBehavior>
                         </interactivity:Interaction.Behaviors>
                     </AppBarButton>
@@ -174,7 +174,9 @@
                            VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" />
                 </Grid>
             </Grid>
-            <Grid x:Name="ContentGrid" Grid.Row="1" />
+            <Grid x:Name="ContentGrid" Grid.Row="1">
+                <TextBlock Text="PaymentPage" />
+            </Grid>
         </Grid>
     </ScrollViewer>
 </Page>

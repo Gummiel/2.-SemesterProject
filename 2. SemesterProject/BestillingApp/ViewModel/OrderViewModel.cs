@@ -28,6 +28,7 @@ namespace BestillingApp.ViewModel
         private ICommand _selectedOrderItemsCommand;
 
         #endregion
+
         #region Properties
 
         public ICommand SelectedOrderItemsCommand
@@ -41,6 +42,7 @@ namespace BestillingApp.ViewModel
             }
             set { _selectedOrderItemsCommand = value; }
         }
+        public static Product SelectedOrderItem { get; set; }
         public OrderHandler OrderHandler { get; set; }
         public static CustomerSingleton CustomerSingleton { get; set; }
         public static ReceiptSingleton ReceiptSingleton { get; set; }
