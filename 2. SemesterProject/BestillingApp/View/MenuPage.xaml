@@ -183,13 +183,12 @@
             <Grid x:Name="ShoppingGrid" Grid.Column="2">
                 <Button x:Name="BtnShoppingCart" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                         Background="Transparent" Style="{StaticResource ShoppingCartButtonStyle}">
-                    <Image x:Name="ImgShoppingCart" Source="ms-appx:///Assets/shoppingcart.png">
-                        <interactivity:Interaction.Behaviors>
-                            <core:EventTriggerBehavior EventName="PointerPressed">
-                                <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage" />
-                            </core:EventTriggerBehavior>
-                        </interactivity:Interaction.Behaviors>
-                    </Image>
+                    <Image x:Name="ImgShoppingCart" Source="ms-appx:///Assets/shoppingcart.png"/>
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
                 </Button>
             </Grid>
         </Grid>
@@ -333,7 +332,7 @@
                     </interactivity:Interaction.Behaviors>
                 </ListView>
             </Grid>
-            <AppBarButton x:Name="appBarButton" Icon="Accept" Label="appbarbutton" VerticalAlignment="Bottom" d:LayoutOverrides="Width" HorizontalAlignment="Right" Margin="0,0,37,156" Grid.Row="1">
+            <AppBarButton x:Name="AppBarButton" Icon="Accept" Label="appbarbutton" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,37,156" Grid.Row="1" Width="Auto">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
                         <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage"/>
