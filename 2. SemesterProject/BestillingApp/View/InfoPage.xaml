@@ -84,7 +84,7 @@
         <Style x:Key="ShoppingCartButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="Transparent" />
             <Setter Property="Foreground" Value="#00000000" />
-            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderThickness" Value="0" />
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="VerticalAlignment" Value="Center" />
             <Setter Property="FontSize" Value="16" />
@@ -183,13 +183,16 @@
             <Grid x:Name="ShoppingGrid" Grid.Column="2">
                 <Button x:Name="BtnShoppingCart" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                         Background="Transparent" Style="{StaticResource ShoppingCartButtonStyle}">
-                    <Image x:Name="ImgShoppingCart" Source="ms-appx:///Assets/shoppingcart.png">
-                        <interactivity:Interaction.Behaviors>
-                            <core:EventTriggerBehavior EventName="PointerPressed">
-                                <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage" />
-                            </core:EventTriggerBehavior>
-                        </interactivity:Interaction.Behaviors>
-                    </Image>
+                    <Grid>
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.ZIndex="1" FontSize="20" Foreground="Red" Text="{Binding OrderItemCount, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,-7,20" />
+                        <Image x:Name="ImgShoppingCart" Source="ms-appx:///Assets/shoppingcart.png" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Grid>
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+
                 </Button>
             </Grid>
         </Grid>

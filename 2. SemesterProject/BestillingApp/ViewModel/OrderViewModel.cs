@@ -1,6 +1,10 @@
 ﻿#region References
 
+using System.Windows.Input;
+using BestillingApp.Handler;
+using BestillingApp.Model;
 using BestillingApp.Singleton;
+using ZPointApp.Common;
 
 #endregion
 
@@ -12,6 +16,7 @@ namespace BestillingApp.ViewModel
 
         public OrderViewModel()
         {
+            OrderHandler = new OrderHandler(this, null, null);
             CustomerSingleton = CustomerSingleton.Instance;
             ReceiptSingleton = ReceiptSingleton.Instance;
             OrderSingleton = OrderSingleton.Instance;
@@ -19,8 +24,24 @@ namespace BestillingApp.ViewModel
 
         #endregion
 
+        #region Instancefield
+        private ICommand _selectedOrderItemsCommand;
+
+        #endregion
         #region Properties
 
+        public ICommand SelectedOrderItemsCommand
+        {
+            get
+            {
+                return _selectedOrderItemsCommand ??
+                       (_selectedOrderItemsCommand =
+                           new RelayArgCommand<Product>(
+                               product => OrderHandler.RemoveSelectedProductToOrderItems(product)));
+            }
+            set { _selectedOrderItemsCommand = value; }
+        }
+        public OrderHandler OrderHandler { get; set; }
         public static CustomerSingleton CustomerSingleton { get; set; }
         public static ReceiptSingleton ReceiptSingleton { get; set; }
         public static OrderSingleton OrderSingleton { get; set; }
