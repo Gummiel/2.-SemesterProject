@@ -102,7 +102,7 @@
       </useCase>
     </packageHasNamedElement>
     <useCaseModelRootHasTypes>
-      <actor Id="916f2af8-3542-4706-8319-413e7849291d" name="GasStation" isAbstract="false" isLeaf="false">
+      <actor Id="916f2af8-3542-4706-8319-413e7849291d" name="Daily Tank" isAbstract="false" isLeaf="false">
         <elementDefinition Id="10717453-3263-4e0e-ac25-7cdfd909180f" />
         <targetEnds>
           <association Id="7efc319f-1d59-4955-8018-e9d8662c07b7" isDerived="false" sourceEndRoleName="Restaurant" targetEndRoleName="Levering/Hentning" isLeaf="false" isAbstract="false">

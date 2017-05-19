@@ -7,7 +7,7 @@
       <relativeChildShapes />
     </actorShape>
     <actorShape Id="aaeefa27-57bf-4330-be8e-e6385fe9165d" absoluteBounds="9, 3.125, 0.5, 0.5" isReference="false" heightOffset="0">
-      <actorMoniker Id="916f2af8-3542-4706-8319-413e7849291d" LastKnownName="GasStation" />
+      <actorMoniker Id="916f2af8-3542-4706-8319-413e7849291d" LastKnownName="Daily Tank" />
       <relativeChildShapes />
     </actorShape>
     <SubsystemShape Id="24dce6ee-e925-49c8-8b5b-a44fffdffe97" absoluteBounds="4.5, 0.5, 3, 4" customColor="White">
@@ -35,7 +35,7 @@
         </useCaseShape>
       </nestedChildShapes>
     </SubsystemShape>
-    <useCaseAssociationConnector edgePoints="[(2.875 : 2.40909090909091); (5.57636408793425 : 1.42677669529664)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(2.875 : 2.40909090909091); (5.57636408793425 : 1.42677669529664)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="a2fb6cc6-2f14-433b-a34b-a44373c3945f" />
       <relativeChildShapes />
       <nodes>
@@ -43,7 +43,7 @@
         <useCaseShapeMoniker Id="9363d0d2-be09-4dc2-b48a-8dd6b377eee1" />
       </nodes>
     </useCaseAssociationConnector>
-    <useCaseAssociationConnector edgePoints="[(2.875 : 2.45454545454545); (5.44758130618756 : 1.98680339887499)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(2.875 : 2.45454545454545); (5.44758130618756 : 1.98680339887499)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="8d850084-e5d8-4b2f-a80f-6f992a75e5e3" />
       <relativeChildShapes />
       <nodes>

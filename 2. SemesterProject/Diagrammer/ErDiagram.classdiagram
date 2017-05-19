@@ -17,14 +17,14 @@
   </ownedCommentsInternal>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
-      <class Id="4c4aa0e2-1f89-47b4-8ae9-697903d3a04d" name="GasStation" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="4c4aa0e2-1f89-47b4-8ae9-697903d3a04d" name="Daily Tank" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="a9558576-0d7d-4e86-bd9d-2989f6184903" />
         <targetEnds>
-          <association Id="8c013a18-6d6d-48c2-be90-ead363bf5418" isDerived="false" sourceEndRoleName="GasStation" targetEndRoleName="Varer" isLeaf="false" isAbstract="false">
+          <association Id="8c013a18-6d6d-48c2-be90-ead363bf5418" isDerived="false" sourceEndRoleName="Daily Tank" targetEndRoleName="Varer" isLeaf="false" isAbstract="false">
             <classMoniker Id="6e9cede7-c09d-423e-8140-51160be45a02" LastKnownName="Varer" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="6c1f369f-62dc-4cbd-9b22-60a48d6448b0" name="GasStation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                <memberEnd Id="6c1f369f-62dc-4cbd-9b22-60a48d6448b0" name="Daily Tank" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <elementDefinition Id="2fc929bd-74e1-4d6d-a6d0-1fc0e52e23ef" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -84,8 +84,8 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="36067374-61a1-4779-b91c-d560574c7b21" />
           </association>
-          <association Id="aba73bf5-1176-42f5-9c57-b769e9ed4af0" isDerived="false" sourceEndRoleName="Kunde" targetEndRoleName="GasStation" isLeaf="false" isAbstract="false">
-            <classMoniker Id="4c4aa0e2-1f89-47b4-8ae9-697903d3a04d" LastKnownName="GasStation" />
+          <association Id="aba73bf5-1176-42f5-9c57-b769e9ed4af0" isDerived="false" sourceEndRoleName="Kunde" targetEndRoleName="Daily Tank" isLeaf="false" isAbstract="false">
+            <classMoniker Id="4c4aa0e2-1f89-47b4-8ae9-697903d3a04d" LastKnownName="Daily Tank" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="27a02184-8416-40e4-b9c2-0b5c63535113" name="Kunde" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -93,7 +93,7 @@
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="edfd3ca9-1750-436b-94a7-f3629bc795c3" name="GasStation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="edfd3ca9-1750-436b-94a7-f3629bc795c3" name="Daily Tank" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="6389d0d5-4aa6-46c7-a075-03ac52cd9013" />
                 </memberEnd>
               </associationHasOwnedEnds>

@@ -3,7 +3,7 @@
   <logicalClassDesignerModelMoniker Id="51626cd8-978f-4ff5-baee-8131d910d30d" />
   <nestedChildShapes>
     <classShape Id="e37e7006-573c-4447-8ca8-adff9baf5dcb" absoluteBounds="5.125, 4.5, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
-      <classMoniker Id="4c4aa0e2-1f89-47b4-8ae9-697903d3a04d" LastKnownName="GasStation" />
+      <classMoniker Id="4c4aa0e2-1f89-47b4-8ae9-697903d3a04d" LastKnownName="Daily Tank" />
       <nestedChildShapes>
         <AttributeElementListCompartment Id="83b81e60-bbf0-407d-b816-86103022f2b6" absoluteBounds="5.14, 4.89, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
         <OperationElementListCompartment Id="22f9ece7-d625-4151-b073-fc453921509b" absoluteBounds="5.14, 5.10117186754942, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />

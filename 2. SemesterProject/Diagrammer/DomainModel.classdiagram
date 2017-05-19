@@ -2,14 +2,14 @@
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="0e124c98-1969-4f9c-8450-f4faddbbe38e" name="DomainModel" linkedPackageId="bee30bbe-bf90-4a6c-ab25-370d5fb5cbc7" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
-      <class Id="894e1df8-b9f9-4777-80da-b48a6a46b45b" name="GasStation" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="894e1df8-b9f9-4777-80da-b48a6a46b45b" name="Daily Tank" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="376074dc-3466-4796-b91a-0bf7268f94bb" />
         <targetEnds>
-          <association Id="d37b783f-13b8-46c3-9cee-09317d142d1a" isDerived="false" sourceEndRoleName="GasStation" targetEndRoleName="Varer" isLeaf="false" isAbstract="false">
+          <association Id="d37b783f-13b8-46c3-9cee-09317d142d1a" isDerived="false" sourceEndRoleName="Daily Tank" targetEndRoleName="Varer" isLeaf="false" isAbstract="false">
             <classMoniker Id="b1257155-85bc-4b31-b724-d296cc1409e7" LastKnownName="Varer" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="e4a74b7f-1439-4121-b168-80397c24c5ad" name="GasStation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                <memberEnd Id="e4a74b7f-1439-4121-b168-80397c24c5ad" name="Daily Tank" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <elementDefinition Id="08ce13ab-9596-4f7c-8daf-e5fb151da83f" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -155,8 +155,8 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="3167fdb5-482a-4134-a34b-5e3fb95488ff" />
           </association>
-          <association Id="ab18cbba-79a8-47f0-87b0-a8bdc119d7c0" isDerived="false" sourceEndRoleName="Bestilling" targetEndRoleName="GasStation" isLeaf="false" isAbstract="false">
-            <classMoniker Id="894e1df8-b9f9-4777-80da-b48a6a46b45b" LastKnownName="GasStation" />
+          <association Id="ab18cbba-79a8-47f0-87b0-a8bdc119d7c0" isDerived="false" sourceEndRoleName="Bestilling" targetEndRoleName="Daily Tank" isLeaf="false" isAbstract="false">
+            <classMoniker Id="894e1df8-b9f9-4777-80da-b48a6a46b45b" LastKnownName="Daily Tank" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="6861077f-2f41-48e2-98e8-e87b4c34de06" name="Bestilling" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -174,7 +174,7 @@
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="d312924a-c588-40d3-9ecc-7f4ffddcf778" name="GasStation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="d312924a-c588-40d3-9ecc-7f4ffddcf778" name="Daily Tank" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="093c121a-e32a-4d39-975b-41dd0f6ec84a" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -262,8 +262,8 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="f1e0a5c7-8671-4f71-a884-2d6f3350a27a" />
           </association>
-          <association Id="6f9f9b89-e9de-4f6b-8b12-18d55ae33661" isDerived="false" sourceEndRoleName="Betaling" targetEndRoleName="GasStation" isLeaf="false" isAbstract="false">
-            <classMoniker Id="894e1df8-b9f9-4777-80da-b48a6a46b45b" LastKnownName="GasStation" />
+          <association Id="6f9f9b89-e9de-4f6b-8b12-18d55ae33661" isDerived="false" sourceEndRoleName="Betaling" targetEndRoleName="Daily Tank" isLeaf="false" isAbstract="false">
+            <classMoniker Id="894e1df8-b9f9-4777-80da-b48a6a46b45b" LastKnownName="Daily Tank" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="24ff56a8-a5e8-49f3-9555-9c8dee2d08a3" name="Betaling" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -271,7 +271,7 @@
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="2b6ccdae-b790-46e4-8c9e-0ea23fd42ce3" name="GasStation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="2b6ccdae-b790-46e4-8c9e-0ea23fd42ce3" name="Daily Tank" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="75fd3086-12d0-46a2-af7e-7ac079b72412" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -296,8 +296,8 @@
       <class Id="a5233b38-1cab-49e8-bed6-c9aaeb4489bc" name="Leverandør" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="775bd2ed-34d4-4cc9-97a5-8bde9c8b98c0" />
         <targetEnds>
-          <association Id="61411a9a-dc50-49ed-ac11-116e3d7e89dd" isDerived="false" sourceEndRoleName="Leverandør" targetEndRoleName="GasStation" isLeaf="false" isAbstract="false">
-            <classMoniker Id="894e1df8-b9f9-4777-80da-b48a6a46b45b" LastKnownName="GasStation" />
+          <association Id="61411a9a-dc50-49ed-ac11-116e3d7e89dd" isDerived="false" sourceEndRoleName="Leverandør" targetEndRoleName="Daily Tank" isLeaf="false" isAbstract="false">
+            <classMoniker Id="894e1df8-b9f9-4777-80da-b48a6a46b45b" LastKnownName="Daily Tank" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="c091be5f-b532-4e87-b581-1b2c3d15a687" name="Leverandør" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -315,7 +315,7 @@
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="07632a1d-b00c-4af6-8df7-881a0c66361b" name="GasStation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="07632a1d-b00c-4af6-8df7-881a0c66361b" name="Daily Tank" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <lowerValueInternal>
                     <literalString Id="6cb5713b-cc99-4d3c-905c-a9f9979c5dcf" name="Lower" value="1">
                       <elementDefinition Id="71b9f464-501b-42b8-8a0b-f685a9528641" />

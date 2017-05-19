@@ -55,7 +55,7 @@
       </nodes>
     </associationConnector>
     <classShape Id="b110f24a-6b2d-4e15-8b8a-32c59272fdbc" absoluteBounds="10.5, 0.625, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
-      <classMoniker Id="ab3fe052-ef88-4a7f-a691-cfd7f59d1ca6" LastKnownName="GasStation" />
+      <classMoniker Id="ab3fe052-ef88-4a7f-a691-cfd7f59d1ca6" LastKnownName="Daily Tank" />
       <nestedChildShapes>
         <AttributeElementListCompartment Id="90a9f2e1-2f73-46df-8cfe-de45bde1a425" absoluteBounds="10.515, 1.0150000000000006, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
         <OperationElementListCompartment Id="b3ea4d45-eb06-4cb6-808a-840aef1ac2bb" absoluteBounds="10.515, 1.2261718675494198, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
@@ -96,7 +96,7 @@
       <associationMoniker Id="6a4784fe-dee1-443e-b210-f167d9245666" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
-        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="7.0764410292862969, 3.93783679920723, 0.125, 0.14800345897674561" shapeFieldName="SourceMultiplicity" />
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="7.0833854733167909, 3.9378367992072549, 0.125, 0.14800345897674561" shapeFieldName="SourceMultiplicity" />
         <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="7.9999508909279573, 3.6249815683028368, 0.44241893291473389, 0.14800345897674561" shapeFieldName="TargetRoleName" />
       </moveableDecoratorHostShapes>
       <nodes>
