@@ -31,7 +31,7 @@ namespace BestillingApp.ViewModel
 
         public ICommand LoginCommand
         {
-            get { return _loginCommand /*?? (_loginCommand = new RelayCommand(CustomerHandler.Login()))*/; }
+            get { return _loginCommand ?? (_loginCommand = new RelayCommand(CustomerHandler.Login)); }
             set { _loginCommand = value; }
         }
 
