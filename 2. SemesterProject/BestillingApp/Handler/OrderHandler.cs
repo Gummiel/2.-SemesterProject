@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using Windows.UI.Popups;
 using BestillingApp.Model;
+using BestillingApp.Singleton;
 using BestillingApp.ViewModel;
 
 #endregion
@@ -42,6 +43,13 @@ namespace BestillingApp.Handler
                 MenuViewModel.ProductList.Add(prod);
         }
 
+        public void SetSelectedProduct(Product i)
+        {
+            //MenuViewModel.SelectedProduct= i;
+            MenuViewModel.OrderSingleton.OrderItems.Add(i);
+                
+     
+        }
         #region Properties
 
         public MainViewModel MainViewModel { get; set; }

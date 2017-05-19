@@ -15,7 +15,7 @@ namespace BestillingApp.ViewModel
         #region Instancefield
 
         private ICommand _selectedGasStationCommand;
-
+        private ICommand _selectedProductCommand;
         #endregion
 
         #region Constructor
@@ -43,7 +43,16 @@ namespace BestillingApp.ViewModel
             }
             set { _selectedGasStationCommand = value; }
         }
-
+      public ICommand SelectedProductCommand
+        {
+            get
+            {
+                return _selectedProductCommand ??
+                       (_selectedProductCommand =
+                           new RelayArgCommand<GasStation>(station => OrderHandler.SetSelectedGasStation(station)));
+            }
+            set { _selectedProductCommand = value; }
+        }
         public OrderHandler OrderHandler { get; set; }
         public static CustomerSingleton CustomerSingleton { get; set; }
         public static GasStationSingleton GasStationSingleton { get; set; }

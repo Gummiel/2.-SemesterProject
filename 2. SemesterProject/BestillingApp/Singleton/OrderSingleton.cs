@@ -69,7 +69,7 @@ namespace BestillingApp.Singleton
 
         private static OrderSingleton _instance;
         private ObservableCollection<Order> _orders;
-        private ObservableCollection<OrderItem> _orderItems;
+        private ObservableCollection<Product> _orderItems;
 
         #endregion
 
@@ -77,13 +77,14 @@ namespace BestillingApp.Singleton
 
         public static OrderSingleton Instance => _instance ?? (_instance = new OrderSingleton());
         public ObservableCollection<Order> Orders => _orders ?? (_orders = new ObservableCollection<Order>());
-        public ObservableCollection<OrderItem> OrderItems => _orderItems ?? (_orderItems = new ObservableCollection<OrderItem>());
+        public ObservableCollection<Product> OrderItems => _orderItems ?? (_orderItems = new ObservableCollection<Product>());
+
 
         #endregion
 
         #region Add
 
-        public void AddOrderItem(OrderItem newOrderItem)
+        public void AddOrderItem(Product newOrderItem)
         {
          
             OrderItems.Add(newOrderItem);
