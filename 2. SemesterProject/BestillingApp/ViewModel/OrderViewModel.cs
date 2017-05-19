@@ -13,9 +13,7 @@ namespace BestillingApp.ViewModel
         public OrderViewModel()
         {
             CustomerSingleton = CustomerSingleton.Instance;
-            GasStationSingleton = GasStationSingleton.Instance;
             ReceiptSingleton = ReceiptSingleton.Instance;
-            ReviewSingleton = ReviewSingleton.Instance;
             OrderSingleton = OrderSingleton.Instance;
         }
 
@@ -24,9 +22,7 @@ namespace BestillingApp.ViewModel
         #region Properties
 
         public static CustomerSingleton CustomerSingleton { get; set; }
-        public static GasStationSingleton GasStationSingleton { get; set; }
         public static ReceiptSingleton ReceiptSingleton { get; set; }
-        public static ReviewSingleton ReviewSingleton { get; set; }
         public static OrderSingleton OrderSingleton { get; set; }
 
         #endregion
