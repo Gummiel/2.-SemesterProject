@@ -12,7 +12,7 @@ namespace BestillingWebService
         public BestillingContext()
             : base("name=BestillingContext")
         {
-            this.Configuration.ProxyCreationEnabled = false;
+            Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<Customer> Customer { get; set; }
