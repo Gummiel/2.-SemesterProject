@@ -113,7 +113,9 @@ namespace BestillingApp.Handler
         public void GetReviews()
         {
             //Without user credentials
-            var reviews = ReviewViewModel.ReviewSingleton.Reviews.Where(review => review.FK_GasStation == SelectedGasStation.ID).ToList();
+            var reviews =
+                ReviewViewModel.ReviewSingleton.Reviews.Where(review => review.FK_GasStation == SelectedGasStation.ID)
+                    .ToList();
             //With user credentials
             //var reviews = ReviewViewModel.ReviewSingleton.Reviews.Where(delegate(Review review) { return review.FK_GasStation == SelectedGasStation.ID; }).ToList();
             ReviewViewModel.ReviewList = new ObservableCollection<Review>();
