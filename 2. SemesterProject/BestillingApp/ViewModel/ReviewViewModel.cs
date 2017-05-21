@@ -17,7 +17,9 @@ namespace BestillingApp.ViewModel
         {
             OrderHandler = new OrderHandler(this, null, null, null);
             ReviewSingleton = ReviewSingleton.Instance;
+            CustomerSingleton = CustomerSingleton.Instance;
             ReviewSingleton.LoadReviewAsync();
+            CustomerSingleton.LoadCustomersAsync();
             OrderHandler.GetReviews();
         }
 
@@ -26,9 +28,10 @@ namespace BestillingApp.ViewModel
         #region Properties
 
         public OrderHandler OrderHandler { get; set; }
-
+        public CustomerSingleton CustomerSingleton { get; set; }
         public ReviewSingleton ReviewSingleton { get; set; }
         public ObservableCollection<Review> ReviewList { get; set; }
+        public ObservableCollection<Customer> CustomerList { get; set; }
 
         #endregion
     }

@@ -12,7 +12,7 @@ namespace BestillingWebService
         public BestillingContext()
             : base("name=BestillingContext")
         {
-            Configuration.ProxyCreationEnabled = false;
+            this.Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<Customer> Customer { get; set; }
@@ -28,6 +28,11 @@ namespace BestillingWebService
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Customer>()
+                .HasMany(e => e.Review)
+                .WithOptional(e => e.Customer)
+                .HasForeignKey(e => e.FK_Customer);
+
             modelBuilder.Entity<GasStation>()
                 .HasMany(e => e.Review)
                 .WithRequired(e => e.GasStation)

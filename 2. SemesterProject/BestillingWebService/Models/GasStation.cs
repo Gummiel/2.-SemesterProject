@@ -7,7 +7,7 @@ using System.Diagnostics.CodeAnalysis;
 
 #endregion
 
-namespace BestillingWebService
+namespace BestillingWebService.Models
 {
     [Table("GasStation")]
     public class GasStation

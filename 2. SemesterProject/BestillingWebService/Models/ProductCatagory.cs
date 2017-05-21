@@ -7,7 +7,7 @@ using System.Diagnostics.CodeAnalysis;
 
 #endregion
 
-namespace BestillingWebService
+namespace BestillingWebService.Models
 {
     [Table("ProductCatagory")]
     public class ProductCatagory
