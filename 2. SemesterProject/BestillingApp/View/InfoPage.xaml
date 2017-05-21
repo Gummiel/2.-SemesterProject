@@ -151,7 +151,7 @@
         </Style>
     </Page.Resources>
     <Page.DataContext>
-        <viewModel:InformationViewModel />
+        <viewModel:InfoViewModel />
     </Page.DataContext>
     <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="500"
           MaxWidth="500" MinHeight="720" MaxHeight="720">
@@ -161,7 +161,8 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid x:Name="TopBarGrid" Grid.Row="0">
-            <TextBlock x:Name="TBlockAppName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Daily Tank" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" />
+            <TextBlock x:Name="TBlockAppName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Daily Tank"
+                       VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" />
         </Grid>
         <Grid x:Name="NavigationGrid" Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -191,7 +192,7 @@
             </Grid>
             <Grid x:Name="InfoGrid" Grid.Column="2">
                 <Button x:Name="BtnInfo" Content="Info" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                        Style="{StaticResource NavigationButtonStyle}" BorderBrush="#FFFF0000">
+                        Style="{StaticResource NavigationButtonStyle}" BorderBrush="#FFFF0000" IsEnabled="False">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Click">
                             <core:NavigateToPageAction TargetPage="BestillingApp.View.InfoPage" />

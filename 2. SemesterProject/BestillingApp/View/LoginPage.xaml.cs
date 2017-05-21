@@ -2,8 +2,8 @@
 
 using System;
 using Windows.UI.Popups;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using BestillingApp.Handler;
 using BestillingApp.ViewModel;
 
 #endregion
@@ -22,18 +22,13 @@ namespace BestillingApp.View
             InitializeComponent();
         }
 
-        private async void ButtonLogin_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
             var customer = LoginViewModel.LoginHandler.Login();
-            if(customer != null)
-            {
-                //navigate to payment if credentials are correct.
+            if (customer != null)
                 Frame.Navigate(typeof(PaymentPage));
-            }
             else
-            {
                 await new MessageDialog("Forkert email eller kode").ShowAsync();
-            }
         }
     }
 }

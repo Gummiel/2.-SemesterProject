@@ -149,7 +149,8 @@
         </Style>
     </Page.Resources>
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-        <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="500" MaxWidth="500" MinHeight="720" MaxHeight="720">
+        <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="500"
+              MaxWidth="500" MinHeight="720" MaxHeight="720">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
                 <RowDefinition Height="*" />
@@ -162,7 +163,7 @@
                 </Grid.ColumnDefinitions>
                 <Grid x:Name="GoBackGrid" Grid.Column="0">
                     <AppBarButton x:Name="AppBarButtonGoBack" HorizontalAlignment="Center" Icon="Back"
-                              VerticalAlignment="Center" Width="50">
+                                  VerticalAlignment="Center" Width="50">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
                                 <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage" />
@@ -172,7 +173,7 @@
                 </Grid>
                 <Grid x:Name="AppNameGrid" Grid.Column="1">
                     <TextBlock x:Name="TBlockAppName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Daily Tank"
-                           VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" />
+                               VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" />
                 </Grid>
             </Grid>
             <Grid x:Name="ContentGrid" Grid.Row="1" />

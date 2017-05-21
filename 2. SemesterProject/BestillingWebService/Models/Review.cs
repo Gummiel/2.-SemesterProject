@@ -17,5 +17,9 @@ namespace BestillingWebService
         public string Description { get; set; }
 
         public int Stars { get; set; }
+
+        public int FK_GasStation { get; set; }
+
+        public virtual GasStation GasStation { get; set; }
     }
 }

@@ -2,11 +2,9 @@
 
 using System;
 using System.Collections.ObjectModel;
-using System.Linq;
 using Windows.UI.Popups;
 using BestillingApp.Model;
 using BestillingApp.Persistency;
-using BestillingApp.ViewModel;
 
 #endregion
 
@@ -60,7 +58,6 @@ namespace BestillingApp.Singleton
 
         public void RemoveOrderItem(OrderItem or)
         {
-            
         }
 
         #endregion
@@ -77,8 +74,9 @@ namespace BestillingApp.Singleton
 
         public static OrderSingleton Instance => _instance ?? (_instance = new OrderSingleton());
         public ObservableCollection<Order> Orders => _orders ?? (_orders = new ObservableCollection<Order>());
-        public ObservableCollection<Product> OrderItems => _orderItems ?? (_orderItems = new ObservableCollection<Product>());
 
+        public ObservableCollection<Product> OrderItems
+            => _orderItems ?? (_orderItems = new ObservableCollection<Product>());
 
         #endregion
 
@@ -86,18 +84,19 @@ namespace BestillingApp.Singleton
 
         public void AddOrderItem(Product newOrderItem)
         {
-         
             OrderItems.Add(newOrderItem);
         }
+
         public void AddOrder()
         {
-            Order newOrder = new Order();
+            var newOrder = new Order();
             Orders.Add(newOrder);
             //Orders.Add(newOrder);
             //PersistencyService.SaveOrderAsJsonAsync(newOrder);
             //Hvis create og read er på samme side
             //LoadOrderAsync();
         }
+
         #endregion
     }
 }

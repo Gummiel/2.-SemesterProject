@@ -1,10 +1,6 @@
 ﻿#region References
 
-using System.Collections.Generic;
-using System.Linq;
 using Windows.UI.Xaml.Controls;
-using BestillingApp.Model;
-using BestillingApp.ViewModel;
 
 #endregion
 

@@ -255,9 +255,10 @@
         </Style>
     </Page.Resources>
     <Page.DataContext>
-        <viewModel:LoginViewModel/>
+        <viewModel:LoginViewModel />
     </Page.DataContext>
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="500" MaxWidth="500" MinHeight="720" MaxHeight="720">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="500" MaxWidth="500"
+          MinHeight="720" MaxHeight="720">
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
             <RowDefinition Height="*" />
@@ -299,7 +300,8 @@
                 </Grid>
                 <Grid Grid.Column="1">
                     <TextBox x:Name="TextBoxEmail" HorizontalAlignment="Center" TextWrapping="Wrap"
-                             Text="{Binding Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="150" />
+                             Text="{Binding Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                             VerticalAlignment="Center" Width="150" />
                 </Grid>
             </Grid>
             <Grid Grid.Row="1">
@@ -312,12 +314,14 @@
                                Text="Password:" VerticalAlignment="Center" />
                 </Grid>
                 <Grid Grid.Column="1">
-                    <PasswordBox x:Name="TextBoxPassword" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Password="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <PasswordBox x:Name="TextBoxPassword" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                 Width="150"
+                                 Password="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 </Grid>
             </Grid>
             <Grid Grid.Row="2">
                 <Button x:Name="ButtonLogin" Content="Login" HorizontalAlignment="Center"
-                        VerticalAlignment="Center" Width="200" Height="50" Click="ButtonLogin_Click">
+                        VerticalAlignment="Center" Height="50" Width="200" Click="ButtonLogin_Click">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Click">
                             <core:InvokeCommandAction Command="{Binding LoginCommand}" />

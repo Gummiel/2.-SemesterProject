@@ -3,10 +3,8 @@
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Threading;
 using Windows.UI.Popups;
 using BestillingApp.Model;
-using BestillingApp.Singleton;
 using BestillingApp.ViewModel;
 
 #endregion
@@ -17,14 +15,18 @@ namespace BestillingApp.Handler
     {
         #region Constructor
 
-        public OrderHandler(OrderViewModel orderViewModel, MainViewModel mainViewModel, MenuViewModel menuViewModel)
+        public OrderHandler(ReviewViewModel reviewViewModel, OrderViewModel orderViewModel, MainViewModel mainViewModel,
+            MenuViewModel menuViewModel)
         {
+            ReviewViewModel = reviewViewModel;
             OrderViewModel = orderViewModel;
             MainViewModel = mainViewModel;
             MenuViewModel = menuViewModel;
         }
 
         #endregion
+
+        public ReviewViewModel ReviewViewModel { get; set; }
 
         public void SetSelectedGasStation(GasStation g)
         {
@@ -37,9 +39,10 @@ namespace BestillingApp.Handler
             var products =
                 MenuViewModel.ProductSingleton.Products.Where(product => product.FK_ProductCatagory == i.ID).ToList();
             MenuViewModel.ProductList = new ObservableCollection<Product>();
-            foreach(var prod in products)
+            foreach (var prod in products)
                 MenuViewModel.ProductList.Add(prod);
         }
+
 
         public async void AddSelectedProductToOrderItems(Product p)
         {
@@ -49,11 +52,12 @@ namespace BestillingApp.Handler
             await new MessageDialog(p.Brand + " " + p.Name + " ER BLEVET TILFØJET TIL KURVEN!").ShowAsync();
             MenuViewModel.OrderItemCount = MenuViewModel.OrderSingleton.OrderItems.Count;
         }
+
         public void RemoveSelectedProductToOrderItems(Product p)
         {
-            if(p == null) return;
+            if (p == null) return;
             OrderViewModel.SelectedOrderItem = p;
-            ConfirmRemoveSelectedProductToOrderItems("ER DU SIKKER PÅ AT DU VIL SLETTE "+ p.Brand + " " + p.Name + "?");
+            ConfirmRemoveSelectedProductToOrderItems("ER DU SIKKER PÅ AT DU VIL SLETTE " + p.Brand + " " + p.Name + "?");
         }
 
         public async void ConfirmRemoveSelectedProductToOrderItems(string message)
@@ -87,7 +91,8 @@ namespace BestillingApp.Handler
             }
             finally
             {
-                StatusRemoveSelectedProductToOrderItems("Sletning af " + OrderViewModel.SelectedOrderItem.Brand + " " + OrderViewModel.SelectedOrderItem.Name + " blev fuldført");
+                StatusRemoveSelectedProductToOrderItems("Sletning af " + OrderViewModel.SelectedOrderItem.Brand + " " +
+                                                        OrderViewModel.SelectedOrderItem.Name + " blev fuldført");
             }
         }
 
@@ -103,6 +108,17 @@ namespace BestillingApp.Handler
 
             // Show the message dialog
             await messageDialog.ShowAsync();
+        }
+
+        public void GetReviews()
+        {
+            //Without user credentials
+            var reviews = ReviewViewModel.ReviewSingleton.Reviews.Where(review => review.FK_GasStation == SelectedGasStation.ID).ToList();
+            //With user credentials
+            //var reviews = ReviewViewModel.ReviewSingleton.Reviews.Where(delegate(Review review) { return review.FK_GasStation == SelectedGasStation.ID; }).ToList();
+            ReviewViewModel.ReviewList = new ObservableCollection<Review>();
+            foreach (var rev in reviews)
+                ReviewViewModel.ReviewList.Add(rev);
         }
 
         #region Properties

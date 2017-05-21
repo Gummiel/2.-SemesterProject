@@ -12,20 +12,21 @@ namespace BestillingApp.ViewModel
 {
     internal class OrderViewModel
     {
+        #region Instancefield
+
+        private ICommand _selectedOrderItemsCommand;
+
+        #endregion
+
         #region Constructor
 
         public OrderViewModel()
         {
-            OrderHandler = new OrderHandler(this, null, null);
+            OrderHandler = new OrderHandler(null, this, null, null);
             CustomerSingleton = CustomerSingleton.Instance;
             ReceiptSingleton = ReceiptSingleton.Instance;
             OrderSingleton = OrderSingleton.Instance;
         }
-
-        #endregion
-
-        #region Instancefield
-        private ICommand _selectedOrderItemsCommand;
 
         #endregion
 
@@ -42,6 +43,7 @@ namespace BestillingApp.ViewModel
             }
             set { _selectedOrderItemsCommand = value; }
         }
+
         public static Product SelectedOrderItem { get; set; }
         public OrderHandler OrderHandler { get; set; }
         public static CustomerSingleton CustomerSingleton { get; set; }

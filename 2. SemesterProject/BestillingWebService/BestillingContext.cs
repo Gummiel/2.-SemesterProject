@@ -1,6 +1,7 @@
 #region References
 
 using System.Data.Entity;
+using BestillingWebService.Models;
 
 #endregion
 
@@ -27,6 +28,12 @@ namespace BestillingWebService
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<GasStation>()
+                .HasMany(e => e.Review)
+                .WithRequired(e => e.GasStation)
+                .HasForeignKey(e => e.FK_GasStation)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<Order>()
                 .Property(e => e.TotalPrice)
                 .HasPrecision(9, 2);

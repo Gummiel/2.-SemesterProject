@@ -21,6 +21,8 @@
         public int ID { get; set; }
         public string Description { get; set; }
         public int Stars { get; set; }
+        public int FK_GasStation { get; set; }
+        public int FK_Customer { get; set; }
 
         #endregion
     }

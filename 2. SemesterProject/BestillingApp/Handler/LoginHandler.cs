@@ -1,10 +1,8 @@
 ﻿#region References
 
 using System.Linq;
-using Windows.UI.Xaml.Controls;
 using BestillingApp.Model;
 using BestillingApp.ViewModel;
-using Microsoft.Xaml.Interactions.Core;
 
 #endregion
 
@@ -22,7 +20,7 @@ namespace BestillingApp.Handler
         public Customer Login()
         {
             //Returner den customer som matcher email og password
-            var firstOrDefault = LoginViewModel.CustomerSingleton.Customers.FirstOrDefault(delegate (Customer customer)
+            var firstOrDefault = LoginViewModel.CustomerSingleton.Customers.FirstOrDefault(delegate(Customer customer)
             {
                 var email = customer.Email == LoginViewModel.Email;
                 var pass = customer.Password == LoginViewModel.Password;

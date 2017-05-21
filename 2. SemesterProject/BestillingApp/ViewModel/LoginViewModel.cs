@@ -1,9 +1,7 @@
 ﻿#region References
 
-using System.Windows.Input;
 using BestillingApp.Handler;
 using BestillingApp.Singleton;
-using ZPointApp.Common;
 
 #endregion
 
@@ -11,8 +9,6 @@ namespace BestillingApp.ViewModel
 {
     internal class LoginViewModel
     {
-        private static ICommand _loginCommand;
-
         #region Constructor
 
         public LoginViewModel()
