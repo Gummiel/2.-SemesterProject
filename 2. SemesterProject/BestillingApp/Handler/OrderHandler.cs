@@ -46,7 +46,8 @@ namespace BestillingApp.Handler
 
         public async void AddSelectedProductToOrderItems(Product p)
         {
-            if (p == null) return;
+            if (p == null)
+                return;
             MenuViewModel.SelectedProduct = p;
             MenuViewModel.OrderSingleton.OrderItems.Add(p);
             await new MessageDialog(p.Brand + " " + p.Name + " ER BLEVET TILFØJET TIL KURVEN!").ShowAsync();
@@ -55,7 +56,8 @@ namespace BestillingApp.Handler
 
         public void RemoveSelectedProductToOrderItems(Product p)
         {
-            if (p == null) return;
+            if (p == null)
+                return;
             OrderViewModel.SelectedOrderItem = p;
             ConfirmRemoveSelectedProductToOrderItems("ER DU SIKKER PÅ AT DU VIL SLETTE " + p.Brand + " " + p.Name + "?");
         }
@@ -112,12 +114,11 @@ namespace BestillingApp.Handler
 
         public void GetReviews()
         {
-            //Without user credentials
             var reviews =
                 ReviewViewModel.ReviewSingleton.Reviews.Where(review => review.FK_GasStation == SelectedGasStation.ID)
                     .ToList();
-            //With user credentials
-            //var reviews = ReviewViewModel.ReviewSingleton.Reviews.Where(delegate(Review review) { return review.FK_GasStation == SelectedGasStation.ID; }).ToList();
+            //Skal få customer info på reviews
+            //var firstOrDefault = ReviewViewModel.CustomerSingleton.Customers.Where(customer => customer.ID == reviews.Where(review => review.FK_Customer == customer.ID).FK_Customer);
             ReviewViewModel.ReviewList = new ObservableCollection<Review>();
             foreach (var rev in reviews)
                 ReviewViewModel.ReviewList.Add(rev);
