@@ -12,16 +12,31 @@ namespace BestillingApp.ViewModel
 {
     internal class LoginViewModel
     {
+        private ICommand _registerCommand;
+
         #region Constructor
-        public ICommand RegisterCommand { get; set; }
-        //public Customer ACustomer { get; set; }
+        
+        public LoginViewModel()
+        {
+            LoginHandler = new LoginHandler(this);
+            CustomerSingleton = CustomerSingleton.Instance;
+            CustomerSingleton.LoadCustomersAsync();
 
-
+            //RegisterCommand = new RelayCommand(LoginHandler.Register);
+        }
 
         #endregion
 
         #region Properties
 
+        public ICommand RegisterCommand
+        {
+            get { return _registerCommand; }
+            //Hvis _registerCommand er null, så opretter den en ny.a
+            set { _registerCommand = value ?? (_registerCommand = new RelayCommand(LoginHandler.Register)); }
+        }
+
+        //public Customer ACustomer { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
@@ -32,14 +47,6 @@ namespace BestillingApp.ViewModel
         public static LoginHandler LoginHandler { get; set; }
         public static CustomerSingleton CustomerSingleton { get; set; }
 
-        public LoginViewModel()
-        {
-            LoginHandler = new LoginHandler(this);
-            CustomerSingleton = CustomerSingleton.Instance;
-            CustomerSingleton.LoadCustomersAsync();
-
-            RegisterCommand = new RelayCommand(LoginHandler.Register);
-        }
         #endregion
     }
 }
