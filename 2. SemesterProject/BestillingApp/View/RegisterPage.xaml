@@ -199,7 +199,7 @@
                     <TextBlock x:Name="TextBlockRegisterUsername" Text="Brugernavn:" VerticalAlignment="Bottom" />
                 </Grid>
                 <Grid Grid.Row="1">
-                    <TextBox x:Name="TextBoxRegisterUsername" PlaceholderText="Brugernavn:" VerticalAlignment="Top"
+                    <TextBox x:Name="TextBoxRegisterUsername" PlaceholderText="Brugernavn:" VerticalAlignment="Top"  Text="{Binding Name, Mode=TwoWay}"
                              HorizontalAlignment="Left" Width="200" Height="50" />
                 </Grid>
             </Grid>
@@ -212,7 +212,7 @@
                     <TextBlock x:Name="TextBlockRegisterEmail" Text="E-mail:" VerticalAlignment="Bottom" />
                 </Grid>
                 <Grid Grid.Row="1">
-                    <TextBox x:Name="TextBoxRegisterEmail" PlaceholderText="E-mail:" VerticalAlignment="Top"
+                    <TextBox x:Name="TextBoxRegisterEmail" PlaceholderText="E-mail:" VerticalAlignment="Top" Text="{Binding Email, Mode=TwoWay}"
                              HorizontalAlignment="Left" Width="200" Height="50" />
                 </Grid>
             </Grid>
@@ -225,7 +225,7 @@
                     <TextBlock x:Name="TextBlockRegisterPassword" Text="Kodeord:" VerticalAlignment="Bottom" />
                 </Grid>
                 <Grid Grid.Row="1">
-                    <PasswordBox x:Name="PasswordBoxRegisterPassword" PlaceholderText="Kodeord:"
+                    <PasswordBox x:Name="PasswordBoxRegisterPassword" PlaceholderText="Kodeord:" Password="{Binding Password,Mode=TwoWay}"
                                  VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" Height="50" />
                 </Grid>
             </Grid>
@@ -238,7 +238,7 @@
                     <TextBlock x:Name="TextBlockRegisterAddress" Text="Address:" VerticalAlignment="Bottom" />
                 </Grid>
                 <Grid Grid.Row="1">
-                    <TextBox x:Name="TextBoxRegisterAddress" PlaceholderText="Address:" VerticalAlignment="Top"
+                    <TextBox x:Name="TextBoxRegisterAddress" PlaceholderText="Address:" VerticalAlignment="Top" Text="{Binding Address, Mode=TwoWay}"
                              HorizontalAlignment="Left" Width="200" Height="50" />
                 </Grid>
             </Grid>
@@ -251,7 +251,7 @@
                     <TextBlock x:Name="TextBlockRegisterTelNo" Text="TelNo:" VerticalAlignment="Bottom" />
                 </Grid>
                 <Grid Grid.Row="1">
-                    <TextBox x:Name="TextBoxRegisterTelNo" PlaceholderText="TelNo:" VerticalAlignment="Top"
+                    <TextBox x:Name="TextBoxRegisterTelNo" PlaceholderText="TelNo:" VerticalAlignment="Top" Text="{Binding TelNo, Mode=TwoWay}"
                              HorizontalAlignment="Left" Width="200" Height="50" />
                 </Grid>
             </Grid>
@@ -264,7 +264,7 @@
                     <TextBlock x:Name="TextBlockRegisterZipCode" Text="ZipCode:" VerticalAlignment="Bottom" />
                 </Grid>
                 <Grid Grid.Row="1">
-                    <TextBox x:Name="TextBoxRegisterZipCode" PlaceholderText="ZipCode:" VerticalAlignment="Top"
+                    <TextBox x:Name="TextBoxRegisterZipCode" PlaceholderText="ZipCode:" VerticalAlignment="Top" Text="{Binding Zipcode, Mode=TwoWay}"
                              HorizontalAlignment="Left" Width="200" Height="50" />
                 </Grid>
             </Grid>
@@ -277,12 +277,12 @@
                     <TextBlock x:Name="TextBlockRegisterCity" Text="City:" VerticalAlignment="Bottom" />
                 </Grid>
                 <Grid Grid.Row="1">
-                    <TextBox x:Name="TextBoxRegisterCity" PlaceholderText="City:" VerticalAlignment="Top"
+                    <TextBox x:Name="TextBoxRegisterCity" PlaceholderText="City:" VerticalAlignment="Top" Text="{Binding c, Mode=TwoWay}"
                              HorizontalAlignment="Left" Width="200" Height="50" />
                 </Grid>
             </Grid>
             <Grid Grid.Row="7">
-                <Button x:Name="ButtonRegister" Content="Registrer" HorizontalAlignment="Right"
+                <Button x:Name="ButtonRegister" Content="Registrer" HorizontalAlignment="Right" Command="{Binding RegisterCommand}"
                         VerticalAlignment="Center" Foreground="Black" Background="#FF94CB7B" Width="100">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Click">

@@ -2,6 +2,7 @@
 
 using System.Linq;
 using BestillingApp.Model;
+using BestillingApp.Singleton;
 using BestillingApp.ViewModel;
 
 #endregion
@@ -29,6 +30,12 @@ namespace BestillingApp.Handler
                 return email && pass;
             });
             return firstOrDefault;
+        }
+
+        public void Register()
+        {
+            Customer aCustomer = new Customer(LoginViewModel.Name,LoginViewModel.Email,LoginViewModel.Password,LoginViewModel.Address,LoginViewModel.TelNo,LoginViewModel.Zipcode,LoginViewModel.City);
+            LoginViewModel.CustomerSingleton.AddCustomer(aCustomer);
         }
     }
 }

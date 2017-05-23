@@ -307,7 +307,7 @@
                         <TextBlock x:Name="TextBlockLoginEmail" Text="E-Mail:" VerticalAlignment="Bottom" />
                     </Grid>
                     <Grid Grid.Row="1">
-                        <TextBox x:Name="TextBoxLoginEmail" Text="E-Mail:" VerticalAlignment="Top"
+                        <TextBox x:Name="TextBoxLoginEmail" Text="{Binding Email, Mode=TwoWay}" VerticalAlignment="Top"
                                  HorizontalAlignment="Left" Width="150" Height="40" />
                     </Grid>
                 </Grid>
@@ -320,76 +320,32 @@
                         <TextBlock x:Name="TextBlockLoginPassword" Text="Kodeord:" VerticalAlignment="Bottom" />
                     </Grid>
                     <Grid Grid.Row="1">
-                        <PasswordBox x:Name="PasswordBoxLoginPassword" PlaceholderText="Kodeord:"
-                                     VerticalAlignment="Top" HorizontalAlignment="Left" Width="150" Height="40" />
+                        <TextBox x:Name="TextBoxPassword" HorizontalAlignment="Left" Margin="0,0,0,18" TextWrapping="Wrap" Text="{Binding Password, Mode=TwoWay}" d:LayoutOverrides="Height"/>
                     </Grid>
                 </Grid>
                 <Grid Grid.Row="3">
-                    <Button x:Name="ButtonLogin01" Content="Login" HorizontalAlignment="Left"
+                    <Button x:Name="ButtonLogin01" HorizontalAlignment="Left"
                             VerticalAlignment="Center" Click="ButtonLogin_Click" Foreground="Black"
-                            Background="#FF94CB7B" Width="100" />
+                            Background="#FF94CB7B" Width="100" Content="Login" />
                 </Grid>
             </Grid>
             <Grid Grid.Column="1" Padding="50,0,0,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50" />
-                    <RowDefinition Height="100" />
-                    <RowDefinition Height="100" />
-                    <RowDefinition Height="100" />
                     <RowDefinition Height="50" />
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" BorderThickness="0,0,0,1" BorderBrush="Black" Width="150" HorizontalAlignment="Left">
                     <TextBlock x:Name="TextBlockRegisterTitle" Text="Registrer" FontSize="18"
                                VerticalAlignment="Center" />
                 </Grid>
-                <Grid Grid.Row="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="0">
-                        <TextBlock x:Name="TextBlockRegisterUsername" Text="Brugernavn:" VerticalAlignment="Bottom" />
-                    </Grid>
-                    <Grid Grid.Row="1">
-                        <TextBox x:Name="TextBoxRegisterUsername" Text="Brugernavn:" VerticalAlignment="Top"
-                                 HorizontalAlignment="Left" Width="150" Height="40" />
-                    </Grid>
-                </Grid>
-                <Grid Grid.Row="2">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="0">
-                        <TextBlock x:Name="TextBlockRegisterEmail" Text="E-Mail:" VerticalAlignment="Bottom" />
-                    </Grid>
-                    <Grid Grid.Row="1">
-                        <TextBox x:Name="TextBoxRegisterEmail" Text="E-Mail:" VerticalAlignment="Top"
-                                 HorizontalAlignment="Left" Width="150" Height="40" />
-                    </Grid>
-                </Grid>
-                <Grid Grid.Row="3">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="0">
-                        <TextBlock x:Name="TextBlockRegisterPassword" Text="Kodeord:" VerticalAlignment="Bottom" />
-                    </Grid>
-                    <Grid Grid.Row="1">
-                        <PasswordBox x:Name="PasswordBoxRegisterPassword" PlaceholderText="Kodeord:"
-                                     VerticalAlignment="Top" HorizontalAlignment="Left" Width="150" Height="40" />
-                    </Grid>
-                </Grid>
                 <Grid Grid.Row="4">
-                    <Button x:Name="ButtonRegister" Content="Registrer" HorizontalAlignment="Left"
-                            VerticalAlignment="Center" Foreground="Black" Background="#FF94CB7B" Width="100">
+                    <AppBarButton x:Name="appBarButton" Icon="Accept" Label="appbarbutton" VerticalAlignment="Stretch" d:LayoutOverrides="Width, Height">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
-                                <core:InvokeCommandAction Command="{Binding LoginCommand}" />
+                                <core:NavigateToPageAction TargetPage="BestillingApp.View.RegisterPage" />
                             </core:EventTriggerBehavior>
                         </interactivity:Interaction.Behaviors>
-                    </Button>
+                    </AppBarButton>
                 </Grid>
             </Grid>
         </Grid>
