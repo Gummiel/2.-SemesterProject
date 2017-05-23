@@ -326,7 +326,7 @@
                 </Grid>
             </Grid>
             <Grid Margin="0,314,12,0" BorderThickness="0,1,0,0" BorderBrush="White">
-                <AppBarButton x:Name="appBarButton" Label="Click here to register" VerticalAlignment="Stretch" Width="168" Margin="10,-2,0,0" BorderThickness="0" Foreground="#FF157200" Background="Transparent">
+                <AppBarButton x:Name="appBarButton" Label="" VerticalAlignment="Stretch" Width="168" Margin="10,-2,0,0" BorderThickness="0" Foreground="#FF157200" Background="Transparent">
                     <AppBarButton.Icon>
                         <FontIcon FontFamily="Segoe UI Semilight" Glyph="Click here to register" FontSize="17"/>
                     </AppBarButton.Icon>
