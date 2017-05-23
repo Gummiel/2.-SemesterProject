@@ -282,8 +282,7 @@
                 </Grid>
             </Grid>
             <Grid Grid.Row="7">
-                <Button x:Name="ButtonRegister" Content="Registrer" HorizontalAlignment="Right" Command="{Binding RegisterCommand}"
-                        VerticalAlignment="Center" Foreground="Black" Background="#FF94CB7B" Width="100">
+                <Button x:Name="ButtonRegister" Content="Registrer" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="Black" Background="#FF94CB7B" Width="100">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Click">
                             <core:InvokeCommandAction Command="{Binding RegisterCommand}" />
