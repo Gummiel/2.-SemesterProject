@@ -277,7 +277,7 @@
                     <TextBlock x:Name="TextBlockRegisterCity" Text="City:" VerticalAlignment="Bottom" />
                 </Grid>
                 <Grid Grid.Row="1">
-                    <TextBox x:Name="TextBoxRegisterCity" PlaceholderText="City:" VerticalAlignment="Top" Text="{Binding c, Mode=TwoWay}"
+                    <TextBox x:Name="TextBoxRegisterCity" PlaceholderText="City:" VerticalAlignment="Top" Text="{Binding City, Mode=TwoWay}"
                              HorizontalAlignment="Left" Width="200" Height="50" />
                 </Grid>
             </Grid>
