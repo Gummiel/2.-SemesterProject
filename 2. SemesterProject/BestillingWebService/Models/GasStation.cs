@@ -1,15 +1,23 @@
 #region References
 
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 #endregion
 
-namespace BestillingWebService
+namespace BestillingWebService.Models
 {
     [Table("GasStation")]
     public class GasStation
     {
+        [SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public GasStation()
+        {
+            Review = new HashSet<Review>();
+        }
+
         public int ID { get; set; }
 
         [Required]
@@ -31,5 +39,8 @@ namespace BestillingWebService
         public string Email { get; set; }
 
         public int TelNo { get; set; }
+
+        [SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Review> Review { get; set; }
     }
 }

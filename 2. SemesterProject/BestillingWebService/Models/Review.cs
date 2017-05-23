@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 #endregion
 
-namespace BestillingWebService
+namespace BestillingWebService.Models
 {
     [Table("Review")]
     public class Review
@@ -17,5 +17,13 @@ namespace BestillingWebService
         public string Description { get; set; }
 
         public int Stars { get; set; }
+
+        public int FK_GasStation { get; set; }
+
+        public int? FK_Customer { get; set; }
+
+        public virtual Customer Customer { get; set; }
+
+        public virtual GasStation GasStation { get; set; }
     }
 }

@@ -1,6 +1,5 @@
 ﻿#region References
 
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -21,7 +20,7 @@ namespace BestillingApp.ViewModel
 
         public MenuViewModel()
         {
-            OrderHandler = new OrderHandler(null, this);
+            OrderHandler = new OrderHandler(null, null, null, this);
             ProductCatagorySingleton = ProductCatagorySingleton.Instance;
             ProductSingleton = ProductSingleton.Instance;
             //Eksempel for hvordan det ser ud i 1 singleton
@@ -29,6 +28,7 @@ namespace BestillingApp.ViewModel
             ProductCatagorySingleton.LoadProductCatagoryAsync();
             ProductSingleton.LoadItemsAsync();
             OrderSingleton = OrderSingleton.Instance;
+            OrderItemCount = OrderSingleton.OrderItems.Count;
         }
 
         #endregion
@@ -38,6 +38,7 @@ namespace BestillingApp.ViewModel
         private ObservableCollection<Product> _productList;
         private ICommand _selectedProductCatagoryCommand;
         private ICommand _selectedProductCommand;
+        private int _orderItemCount;
 
         #endregion
 
@@ -62,12 +63,13 @@ namespace BestillingApp.ViewModel
                 return _selectedProductCommand ??
                        (_selectedProductCommand =
                            new RelayArgCommand<Product>(
-                               product => OrderHandler.SetSelectedProducts(product)));
+                               product => OrderHandler.AddSelectedProductToOrderItems(product)));
             }
             set { _selectedProductCommand = value; }
         }
 
         public static ProductCatagory SelectedProductCatagory { get; set; }
+        public static Product SelectedProduct { get; set; }
 
         public ObservableCollection<Product> ProductList
         {
@@ -79,13 +81,19 @@ namespace BestillingApp.ViewModel
             }
         }
 
-        public static List<Product> SelectedProduct { get; set; }
-        public static string SelectedProducts { get; set; } = "";
+        public int OrderItemCount
+        {
+            get { return _orderItemCount; }
+            set
+            {
+                _orderItemCount = value;
+                OnPropertyChanged();
+            }
+        }
 
         public OrderHandler OrderHandler { get; set; }
         public ProductCatagorySingleton ProductCatagorySingleton { get; set; }
         public ProductSingleton ProductSingleton { get; set; }
-        public static string SelectedGasStation { get; set; } = "";
         public OrderSingleton OrderSingleton { get; set; }
 
         #endregion

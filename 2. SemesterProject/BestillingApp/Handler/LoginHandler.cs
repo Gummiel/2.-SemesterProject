@@ -1,5 +1,7 @@
 ﻿#region References
 
+using System.Linq;
+using BestillingApp.Model;
 using BestillingApp.ViewModel;
 
 #endregion
@@ -15,9 +17,18 @@ namespace BestillingApp.Handler
 
         public LoginViewModel LoginViewModel { get; set; }
 
-        public void Login()
+        public Customer Login()
         {
-            //login
+            //Returner den customer som matcher email og password
+            var firstOrDefault = LoginViewModel.CustomerSingleton.Customers.FirstOrDefault(delegate(Customer customer)
+            {
+                var email = customer.Email == LoginViewModel.Email;
+                var pass = customer.Password == LoginViewModel.Password;
+
+
+                return email && pass;
+            });
+            return firstOrDefault;
         }
     }
 }

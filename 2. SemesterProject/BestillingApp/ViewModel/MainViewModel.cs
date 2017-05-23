@@ -12,22 +12,23 @@ namespace BestillingApp.ViewModel
 {
     internal class MainViewModel
     {
-        #region Instancefield
-
-        private ICommand _selectedGasStationCommand;
-
-        #endregion
-
         #region Constructor
 
         public MainViewModel()
         {
-            OrderHandler = new OrderHandler(this, null);
+            OrderHandler = new OrderHandler(null, null, this, null);
             GasStationSingleton = GasStationSingleton.Instance;
             //Eksempel for hvordan det ser ud i 1 singleton
             //Singleton = CatalogSingleton.Instance;
             GasStationSingleton.LoadGasStationAsync();
         }
+
+        #endregion
+
+        #region Instancefield
+
+        private ICommand _selectedGasStationCommand;
+        private ICommand _selectedProductCommand;
 
         #endregion
 
@@ -42,6 +43,17 @@ namespace BestillingApp.ViewModel
                            new RelayArgCommand<GasStation>(station => OrderHandler.SetSelectedGasStation(station)));
             }
             set { _selectedGasStationCommand = value; }
+        }
+
+        public ICommand SelectedProductCommand
+        {
+            get
+            {
+                return _selectedProductCommand ??
+                       (_selectedProductCommand =
+                           new RelayArgCommand<GasStation>(station => OrderHandler.SetSelectedGasStation(station)));
+            }
+            set { _selectedProductCommand = value; }
         }
 
         public OrderHandler OrderHandler { get; set; }

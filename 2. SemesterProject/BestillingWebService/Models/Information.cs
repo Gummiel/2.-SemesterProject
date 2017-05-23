@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 #endregion
 
-namespace BestillingWebService
+namespace BestillingWebService.Models
 {
     public class Information
     {

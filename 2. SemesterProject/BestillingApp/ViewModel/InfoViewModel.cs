@@ -6,11 +6,11 @@ using BestillingApp.Singleton;
 
 namespace BestillingApp.ViewModel
 {
-    internal class InformationViewModel
+    internal class InfoViewModel
     {
         #region Constructor
 
-        public InformationViewModel()
+        public InfoViewModel()
         {
             InformationSingleton = InformationSingleton.Instance;
             InformationSingleton.LoadInformationAsync();
