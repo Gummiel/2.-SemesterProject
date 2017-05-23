@@ -192,36 +192,30 @@
                                     <ColumnDefinition Width="51" MaxWidth="110" />
                                     <ColumnDefinition Width="59" MaxWidth="110" />
                                 </Grid.ColumnDefinitions>
-                                <Grid Grid.Column="0"
-                                      d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+                                <Grid Grid.Column="0">
                                     <TextBlock x:Name="TextBlockProductName" TextWrapping="Wrap"
                                                Text="{Binding Name}" HorizontalAlignment="Left"
                                                VerticalAlignment="Bottom" FontSize="14" />
                                 </Grid>
-                                <Grid Grid.Column="1"
-                                      d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+                                <Grid Grid.Column="1">
                                     <TextBlock x:Name="TextBlockProductBrand" TextWrapping="Wrap"
                                                Text="{Binding Brand}"
                                                HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="14" />
                                 </Grid>
-                                <Grid Grid.Column="2"
-                                      d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+                                <Grid Grid.Column="2">
                                     <TextBlock x:Name="TextBlockProductWeight" TextWrapping="Wrap"
                                                Text="{Binding Weight}"
                                                HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="14" />
                                 </Grid>
-                                <Grid Grid.Column="3" RenderTransformOrigin="0.5,0.5"
-                                      d:LayoutOverrides="TopMargin, BottomMargin, LeftPosition, RightPosition"
-                                      HorizontalAlignment="Left">
+                                <Grid Grid.Column="3" HorizontalAlignment="Left">
 
                                     <TextBlock x:Name="TextBlockProductPrice" TextWrapping="Wrap"
                                                Text="{Binding Price}" HorizontalAlignment="Right" Width="37"
                                                FontSize="14" />
                                 </Grid>
-                                <Grid HorizontalAlignment="Right" Width="22" Grid.Column="3"
-                                      d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+                                <Grid HorizontalAlignment="Right" Width="22" Grid.Column="3">
                                     <TextBlock x:Name="textBlockKr" Margin="0,0,3,0" TextWrapping="Wrap" Text="Kr."
-                                               d:LayoutOverrides="Width, Height" FontSize="14" />
+                                               FontSize="14" />
                                 </Grid>
                             </Grid>
                         </StackPanel>
@@ -236,26 +230,22 @@
                                     <ColumnDefinition Width="50" />
                                     <ColumnDefinition Width="60" />
                                 </Grid.ColumnDefinitions>
-                                <Grid Grid.Column="0"
-                                      d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+                                <Grid Grid.Column="0">
                                     <TextBlock x:Name="TextBlockHeaderName" HorizontalAlignment="Left"
                                                TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top"
                                                FontWeight="Bold" />
                                 </Grid>
-                                <Grid Grid.Column="1"
-                                      d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+                                <Grid Grid.Column="1">
                                     <TextBlock x:Name="TextBlockHeaderBrand" HorizontalAlignment="Left"
                                                TextWrapping="Wrap" Text="Mærke" VerticalAlignment="Top"
                                                FontWeight="Bold" />
                                 </Grid>
-                                <Grid Grid.Column="2"
-                                      d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+                                <Grid Grid.Column="2">
                                     <TextBlock x:Name="TextBlockHeaderWeight" HorizontalAlignment="Left"
                                                TextWrapping="Wrap" Text="Vægt" VerticalAlignment="Top"
                                                FontWeight="Bold" />
                                 </Grid>
-                                <Grid Grid.Column="3"
-                                      d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+                                <Grid Grid.Column="3">
                                     <TextBlock x:Name="TextBlockHeaderPrice" HorizontalAlignment="Left"
                                                TextWrapping="Wrap" Text="Pris" VerticalAlignment="Top"
                                                FontWeight="Bold" />

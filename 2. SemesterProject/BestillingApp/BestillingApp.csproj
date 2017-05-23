@@ -152,6 +152,9 @@
     <Compile Include="View\ReceiptPage.xaml.cs">
       <DependentUpon>ReceiptPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\RegisterPage.xaml.cs">
+      <DependentUpon>RegisterPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ReviewsPage.xaml.cs">
       <DependentUpon>ReviewsPage.xaml</DependentUpon>
     </Compile>
@@ -205,6 +208,10 @@
     <Page Include="View\ReceiptPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\RegisterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ReviewsPage.xaml">
       <SubType>Designer</SubType>

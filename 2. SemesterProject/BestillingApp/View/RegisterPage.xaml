@@ -1,13 +1,13 @@
 ﻿<Page
+    x:Class="BestillingApp.View.RegisterPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:BestillingApp.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:BestillingApp.ViewModel"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
-    xmlns:viewModel="using:BestillingApp.ViewModel"
-    x:Class="BestillingApp.View.MenuPage"
     mc:Ignorable="d" MinWidth="500" MaxWidth="500" MinHeight="720" MaxHeight="720">
     <Page.Resources>
         <Style x:Key="NavigationButtonStyle" TargetType="Button">
@@ -84,7 +84,7 @@
         <Style x:Key="ShoppingCartButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="Transparent" />
             <Setter Property="Foreground" Value="#00000000" />
-            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="BorderThickness" Value="1" />
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="VerticalAlignment" Value="Center" />
             <Setter Property="FontSize" Value="16" />
@@ -151,12 +151,11 @@
         </Style>
     </Page.Resources>
     <Page.DataContext>
-        <viewModel:MenuViewModel />
+        <viewModel:LoginViewModel />
     </Page.DataContext>
-    <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="500"
-          MaxWidth="500" MinHeight="720" MaxHeight="720">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="500" MaxWidth="500"
+          MinHeight="720" MaxHeight="720">
         <Grid.RowDefinitions>
-            <RowDefinition Height="50" />
             <RowDefinition Height="50" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
@@ -164,14 +163,13 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50" />
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="50" />
             </Grid.ColumnDefinitions>
             <Grid x:Name="GoBackGrid" Grid.Column="0">
                 <AppBarButton x:Name="AppBarButtonGoBack" HorizontalAlignment="Center" Icon="Back"
                               VerticalAlignment="Center" Width="50">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Click">
-                            <core:NavigateToPageAction TargetPage="BestillingApp.View.MainPage" />
+                            <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage" />
                         </core:EventTriggerBehavior>
                     </interactivity:Interaction.Behaviors>
                 </AppBarButton>
@@ -180,172 +178,119 @@
                 <TextBlock x:Name="TBlockAppName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Daily Tank"
                            VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" />
             </Grid>
-            <Grid x:Name="ShoppingGrid" Grid.Column="2">
-                <Button x:Name="BtnShoppingCart" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                        Background="Transparent" Style="{StaticResource ShoppingCartButtonStyle}">
-                    <Grid>
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.ZIndex="1"
-                                   FontSize="20" Foreground="Red"
-                                   Text="{Binding OrderItemCount, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                   Margin="0,0,-7,20" />
-                        <Image x:Name="ImgShoppingCart" Source="ms-appx:///Assets/shoppingcart.png"
-                               VerticalAlignment="Center" HorizontalAlignment="Center" />
-                    </Grid>
-                    <interactivity:Interaction.Behaviors>
-                        <core:EventTriggerBehavior EventName="Click">
-                            <core:NavigateToPageAction TargetPage="BestillingApp.View.OrderPage" />
-                        </core:EventTriggerBehavior>
-                    </interactivity:Interaction.Behaviors>
-
-                </Button>
-            </Grid>
         </Grid>
-        <Grid x:Name="NavigationGrid" Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Grid x:Name="MenuGrid" Grid.Column="0">
-                <Button x:Name="BtnMenu" Content="Shop" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                        Style="{StaticResource NavigationButtonStyle}" BorderBrush="#FFFF0000" IsEnabled="False">
-                    <interactivity:Interaction.Behaviors>
-                        <core:EventTriggerBehavior EventName="Click">
-                            <core:NavigateToPageAction TargetPage="BestillingApp.View.MenuPage" />
-                        </core:EventTriggerBehavior>
-                    </interactivity:Interaction.Behaviors>
-                </Button>
-            </Grid>
-            <Grid x:Name="ReviewsGrid" Grid.Column="1" Margin="1,0">
-                <Button x:Name="BtnReviews" Content="Reviews" HorizontalAlignment="Stretch"
-                        VerticalAlignment="Stretch" Style="{StaticResource NavigationButtonStyle}">
-                    <interactivity:Interaction.Behaviors>
-                        <core:EventTriggerBehavior EventName="Click">
-                            <core:NavigateToPageAction TargetPage="BestillingApp.View.ReviewsPage" />
-                        </core:EventTriggerBehavior>
-                    </interactivity:Interaction.Behaviors>
-                </Button>
-            </Grid>
-            <Grid x:Name="InfoGrid" Grid.Column="2">
-                <Button x:Name="BtnInfo" Content="Info" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                        Style="{StaticResource NavigationButtonStyle}">
-                    <interactivity:Interaction.Behaviors>
-                        <core:EventTriggerBehavior EventName="Click">
-                            <core:NavigateToPageAction TargetPage="BestillingApp.View.InfoPage" />
-                        </core:EventTriggerBehavior>
-                    </interactivity:Interaction.Behaviors>
-                </Button>
-            </Grid>
-        </Grid>
-        <Grid x:Name="ContentGrid" Grid.Row="2">
+        <Grid x:Name="ContentGrid" Grid.Row="1" VerticalAlignment="Center">
             <Grid.RowDefinitions>
+                <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
                 <RowDefinition Height="50" />
-                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Grid x:Name="CBoxProductCatagoryGrid" Grid.Row="0">
-                <ComboBox x:Name="CBoxProductCatagory" HorizontalAlignment="Center" VerticalAlignment="Center"
-                          ItemsSource="{Binding ProductCatagorySingleton.ProductCatagories}"
-                          SelectedValue="{Binding ProductCatagorySingleton.ProductCatagories}" SelectedValuePath="ID"
-                          DisplayMemberPath="Name" PlaceholderText="Select Catagory" Width="300" Height="35">
-                    <interactivity:Interaction.Behaviors>
-                        <core:EventTriggerBehavior EventName="SelectionChanged">
-                            <core:InvokeCommandAction Command="{Binding SelectedProductCatagoryCommand}"
-                                                      CommandParameter="{Binding SelectedItem, ElementName=CBoxProductCatagory}" />
-                        </core:EventTriggerBehavior>
-                    </interactivity:Interaction.Behaviors>
-                </ComboBox>
+            <Grid Grid.Row="0" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock x:Name="TextBlockRegisterUsername" Text="Brugernavn:" VerticalAlignment="Bottom" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBox x:Name="TextBoxRegisterUsername" PlaceholderText="Brugernavn:" VerticalAlignment="Top"
+                             HorizontalAlignment="Left" Width="200" Height="50" />
+                </Grid>
             </Grid>
-
-            <Grid x:Name="ListViewProductsGrid" Grid.Row="1">
-                <ListView x:Name="ListViewProducts"
-                          ItemsSource="{Binding ProductList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                          HorizontalAlignment="Center" VerticalAlignment="Top">
-                    <ListView.Resources>
-                        <DataTemplate x:Key="ListViewProductsDataTemplate">
-                            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0,0,0,1"
-                                        BorderBrush="Black" Width="440">
-                                <Grid HorizontalAlignment="Left" Width="440">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition MaxWidth="110" />
-                                        <ColumnDefinition Width="50" MaxWidth="110" />
-                                        <ColumnDefinition Width="80" MaxWidth="110" />
-                                    </Grid.ColumnDefinitions>
-                                    <Grid Grid.Column="0">
-                                        <TextBlock x:Name="TextBlockProductName" TextWrapping="Wrap"
-                                                   Text="{Binding Name}" HorizontalAlignment="Left"
-                                                   VerticalAlignment="Bottom" FontSize="14" />
-                                    </Grid>
-                                    <Grid Grid.Column="1">
-                                        <TextBlock x:Name="TextBlockProductBrand" TextWrapping="Wrap"
-                                                   Text="{Binding Brand}"
-                                                   HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="14" />
-                                    </Grid>
-                                    <Grid Grid.Column="2">
-                                        <TextBlock x:Name="TextBlockProductWeight" TextWrapping="Wrap"
-                                                   Text="{Binding Weight}"
-                                                   HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="14" />
-                                    </Grid>
-                                    <Grid Grid.Column="3" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left">
-
-                                        <TextBlock x:Name="TextBlockProductPrice" TextWrapping="Wrap"
-                                                   Text="{Binding Price}" HorizontalAlignment="Right" Width="37"
-                                                   FontSize="14" />
-                                    </Grid>
-                                    <Grid HorizontalAlignment="Right" Width="22" Grid.Column="3">
-                                        <TextBlock x:Name="textBlockKr" Margin="0,0,3,0" TextWrapping="Wrap" Text="Kr."
-                                                   FontSize="14" />
-                                    </Grid>
-                                </Grid>
-                            </StackPanel>
-                        </DataTemplate>
-                        <DataTemplate x:Key="ListViewProductsDataTemplateHeader">
-                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="0,0,0,2"
-                                        BorderBrush="Black">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="200" />
-                                        <ColumnDefinition Width="110" />
-                                        <ColumnDefinition Width="50" />
-                                        <ColumnDefinition Width="80" />
-                                    </Grid.ColumnDefinitions>
-                                    <Grid Grid.Column="0">
-                                        <TextBlock x:Name="TextBlockHeaderName" HorizontalAlignment="Left"
-                                                   TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top"
-                                                   FontWeight="Bold" />
-                                    </Grid>
-                                    <Grid Grid.Column="1">
-                                        <TextBlock x:Name="TextBlockHeaderBrand" HorizontalAlignment="Left"
-                                                   TextWrapping="Wrap" Text="Mærke" VerticalAlignment="Top"
-                                                   FontWeight="Bold" />
-                                    </Grid>
-                                    <Grid Grid.Column="2">
-                                        <TextBlock x:Name="TextBlockHeaderWeight" HorizontalAlignment="Left"
-                                                   TextWrapping="Wrap" Text="Vægt" VerticalAlignment="Top"
-                                                   FontWeight="Bold" />
-                                    </Grid>
-                                    <Grid Grid.Column="3">
-                                        <TextBlock x:Name="TextBlockHeaderPrice" HorizontalAlignment="Left"
-                                                   TextWrapping="Wrap" Text="Pris" VerticalAlignment="Top"
-                                                   FontWeight="Bold" />
-                                    </Grid>
-                                </Grid>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListView.Resources>
-                    <ListView.HeaderTemplate>
-                        <StaticResource ResourceKey="ListViewProductsDataTemplateHeader" />
-                    </ListView.HeaderTemplate>
-                    <ListView.ItemTemplate>
-                        <StaticResource ResourceKey="ListViewProductsDataTemplate" />
-                    </ListView.ItemTemplate>
+            <Grid Grid.Row="1" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock x:Name="TextBlockRegisterEmail" Text="E-mail:" VerticalAlignment="Bottom" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBox x:Name="TextBoxRegisterEmail" PlaceholderText="E-mail:" VerticalAlignment="Top"
+                             HorizontalAlignment="Left" Width="200" Height="50" />
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock x:Name="TextBlockRegisterPassword" Text="Kodeord:" VerticalAlignment="Bottom" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <PasswordBox x:Name="PasswordBoxRegisterPassword" PlaceholderText="Kodeord:"
+                                 VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" Height="50" />
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="3" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock x:Name="TextBlockRegisterAddress" Text="Address:" VerticalAlignment="Bottom" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBox x:Name="TextBoxRegisterAddress" PlaceholderText="Address:" VerticalAlignment="Top"
+                             HorizontalAlignment="Left" Width="200" Height="50" />
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="4" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock x:Name="TextBlockRegisterTelNo" Text="TelNo:" VerticalAlignment="Bottom" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBox x:Name="TextBoxRegisterTelNo" PlaceholderText="TelNo:" VerticalAlignment="Top"
+                             HorizontalAlignment="Left" Width="200" Height="50" />
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="5" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock x:Name="TextBlockRegisterZipCode" Text="ZipCode:" VerticalAlignment="Bottom" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBox x:Name="TextBoxRegisterZipCode" PlaceholderText="ZipCode:" VerticalAlignment="Top"
+                             HorizontalAlignment="Left" Width="200" Height="50" />
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="6" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock x:Name="TextBlockRegisterCity" Text="City:" VerticalAlignment="Bottom" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBox x:Name="TextBoxRegisterCity" PlaceholderText="City:" VerticalAlignment="Top"
+                             HorizontalAlignment="Left" Width="200" Height="50" />
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="7">
+                <Button x:Name="ButtonRegister" Content="Registrer" HorizontalAlignment="Right"
+                        VerticalAlignment="Center" Foreground="Black" Background="#FF94CB7B" Width="100">
                     <interactivity:Interaction.Behaviors>
-                        <core:EventTriggerBehavior EventName="SelectionChanged">
-                            <core:InvokeCommandAction Command="{Binding SelectedProductCommand}"
-                                                      CommandParameter="{Binding SelectedItem, ElementName=ListViewProducts}" />
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:InvokeCommandAction Command="{Binding RegisterCommand}" />
+                            <core:NavigateToPageAction TargetPage="BestillingApp.View.LoginPage" />
                         </core:EventTriggerBehavior>
                     </interactivity:Interaction.Behaviors>
-                </ListView>
+                </Button>
             </Grid>
         </Grid>
     </Grid>
