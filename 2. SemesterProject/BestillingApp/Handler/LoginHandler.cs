@@ -31,11 +31,5 @@ namespace BestillingApp.Handler
             });
             return firstOrDefault;
         }
-
-        public void Register()
-        {
-            Customer aCustomer = new Customer(LoginViewModel.Name,LoginViewModel.Email,LoginViewModel.Password,LoginViewModel.Address,LoginViewModel.TelNo,LoginViewModel.Zipcode,LoginViewModel.City);
-            LoginViewModel.CustomerSingleton.AddCustomer(aCustomer);
-        }
     }
 }

@@ -102,6 +102,7 @@
     <Compile Include="Handler\LoginHandler.cs" />
     <Compile Include="Handler\OrderHandler.cs" />
     <Compile Include="Handler\ReceiptHandler.cs" />
+    <Compile Include="Handler\RegisterHandler.cs" />
     <Compile Include="Handler\ReviewHandler.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\GasStation.cs" />
@@ -130,6 +131,7 @@
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\OrderViewModel.cs" />
     <Compile Include="ViewModel\PaymentViewModel.cs" />
+    <Compile Include="ViewModel\RegisterViewModel.cs" />
     <Compile Include="ViewModel\ReviewViewModel.cs" />
     <Compile Include="View\InfoPage.xaml.cs">
       <DependentUpon>InfoPage.xaml</DependentUpon>

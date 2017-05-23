@@ -151,7 +151,7 @@
         </Style>
     </Page.Resources>
     <Page.DataContext>
-        <viewModel:LoginViewModel />
+        <viewModel:RegisterViewModel />
     </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="500" MaxWidth="500"
           MinHeight="720" MaxHeight="720">
