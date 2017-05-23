@@ -5,7 +5,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
-    xmlns:ViewModel="using:BestillingApp.ViewModel"
+    xmlns:viewModel="using:BestillingApp.ViewModel"
     x:Class="BestillingApp.View.PaymentPage"
     mc:Ignorable="d" MinWidth="500" MaxWidth="500" MinHeight="720" MaxHeight="720">
     <Page.Resources>
@@ -150,7 +150,7 @@
         </Style>
     </Page.Resources>
     <Page.DataContext>
-        <ViewModel:PaymentViewModel />
+        <viewModel:PaymentViewModel />
     </Page.DataContext>
     <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="500"
           MaxWidth="500" MinHeight="720" MaxHeight="720">

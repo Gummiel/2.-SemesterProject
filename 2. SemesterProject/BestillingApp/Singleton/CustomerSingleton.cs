@@ -78,9 +78,9 @@ namespace BestillingApp.Singleton
 
         public void AddCustomer(string name, string email, string password, string address, int telNo, int zipcode, string city)
         {
-            var newCustomer = new Customer(name, email, password, address, telNo, zipcode, city);
-            Customers.Add(newCustomer);
-            PersistencyService.SaveCustomerAsJsonAsync(newCustomer);
+            //var newCustomer = new Customer(name, email, password, address, telNo, zipcode, city);
+            //Customers.Add(newCustomer);
+            //PersistencyService.SaveCustomerAsJsonAsync(newCustomer);
             //Hvis create og read er på samme side
             //LoadCustomersAsync();
         }
