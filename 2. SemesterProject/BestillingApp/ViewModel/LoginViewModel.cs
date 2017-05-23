@@ -31,9 +31,9 @@ namespace BestillingApp.ViewModel
 
         public ICommand RegisterCommand
         {
-            get { return _registerCommand; }
+            get { return _registerCommand ?? (_registerCommand = new RelayCommand(LoginHandler.Register)); }
             //Hvis _registerCommand er null, så opretter den en ny.a
-            set { _registerCommand = value ?? (_registerCommand = new RelayCommand(LoginHandler.Register)); }
+            set { _registerCommand = value; }
         }
 
         //public Customer ACustomer { get; set; }

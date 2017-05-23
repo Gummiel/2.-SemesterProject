@@ -283,11 +283,7 @@
                            VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" />
             </Grid>
         </Grid>
-        <Grid x:Name="ContentGrid" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="154,137,148,179" Width="198" Height="354">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200" />
-                <ColumnDefinition Width="200" />
-            </Grid.ColumnDefinitions>
+        <Grid x:Name="ContentGrid" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid Grid.Column="0" BorderThickness="0" BorderBrush="Black">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50" />
