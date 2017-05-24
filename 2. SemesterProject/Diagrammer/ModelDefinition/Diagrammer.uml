@@ -199,63 +199,51 @@
     </comment>
     <comment
       Id="19755371-b9d2-4ef2-abb7-e7eec128836e">
-      <body>CPK</body>
+      <body>FK CPK</body>
     </comment>
     <comment
       Id="6368023c-b2df-45d5-910e-ae530e35f976">
-      <body>CPK</body>
+      <body>FK CPK</body>
     </comment>
     <comment
       Id="6a8fe408-d61d-4ec4-889f-e77ce5c2fc3e">
-      <body>PK</body>
-    </comment>
-    <comment
-      Id="40a88a62-3e23-47f4-80cb-04dee55379ef">
-      <body>PK</body>
-    </comment>
-    <comment
-      Id="215999a8-5454-4d99-8de8-00e0d8f903c9">
-      <body>PK</body>
-    </comment>
-    <comment
-      Id="45563466-5417-4c47-8e5f-cc1fcdf6e648">
-      <body>PK</body>
-    </comment>
-    <comment
-      Id="27bff2f9-44f5-43f1-812f-4278db9babfd">
-      <body>PK</body>
-    </comment>
-    <comment
-      Id="a0403f51-e4db-42a0-ab7e-cc52d3fdc781">
-      <body>PK</body>
-    </comment>
-    <comment
-      Id="f06e677f-2642-4784-8329-c2dbe146cfe3">
-      <body>FK</body>
-    </comment>
-    <comment
-      Id="cfc522c8-f561-4857-97db-49ea61abf0e4">
-      <body>FK</body>
-    </comment>
-    <comment
-      Id="8112c47d-35fb-465f-a95c-80a41800d5e0">
-      <body>FK</body>
-    </comment>
-    <comment
-      Id="45982e00-82f0-43d5-b344-c6701efcc3ea">
-      <body>FK</body>
-    </comment>
-    <comment
-      Id="845ebbae-eb11-4af8-b4df-d88859983b0a">
-      <body>FK</body>
-    </comment>
-    <comment
-      Id="2c1a5a55-35fa-4e3f-b1e1-26c031bc7648">
       <body>CPK</body>
     </comment>
     <comment
-      Id="7a077c8c-fbde-4d88-95fc-16044a18b89b">
-      <body>FK</body>
+      Id="215999a8-5454-4d99-8de8-00e0d8f903c9">
+      <body>CPK</body>
+    </comment>
+    <comment
+      Id="45563466-5417-4c47-8e5f-cc1fcdf6e648">
+      <body>CPK</body>
+    </comment>
+    <comment
+      Id="27bff2f9-44f5-43f1-812f-4278db9babfd">
+      <body>CPK</body>
+    </comment>
+    <comment
+      Id="a0403f51-e4db-42a0-ab7e-cc52d3fdc781">
+      <body>CPK</body>
+    </comment>
+    <comment
+      Id="2c1a5a55-35fa-4e3f-b1e1-26c031bc7648">
+      <body>FK CPK</body>
+    </comment>
+    <comment
+      Id="1a761977-3e2c-4d8b-83b6-04329afbf29e">
+      <body>PK</body>
+    </comment>
+    <comment
+      Id="d1e33590-90fb-4695-9f2a-0d36f88b8bef">
+      <body>PK</body>
+    </comment>
+    <comment
+      Id="fb41d114-8ffd-4750-b0b4-775e85d17b3d">
+      <body>PK</body>
+    </comment>
+    <comment
+      Id="2d7cf06c-a2f6-4910-8cec-59bcdf261323">
+      <body>CPK</body>
     </comment>
   </ownedCommentsInternal>
   <profileInstances>
@@ -5296,7 +5284,7 @@
           </objectNode>
           <objectNode
             Id="fc49ee11-e518-499b-8317-c2f7d41a350b"
-            name="Orderitem ID2"
+            name="Orderitem ID"
             isLeaf="false"
             ordering="Unordered"
             isControlType="false">
@@ -5711,19 +5699,6 @@
             </upperBound>
           </objectNode>
           <objectNode
-            Id="99336087-9538-4cfb-b240-64a55bdc07ca"
-            name="Order TotalPrice1"
-            isLeaf="false"
-            ordering="Unordered"
-            isControlType="false">
-            <upperBound>
-              <literalInteger
-                Id="10df5435-6066-419b-aadf-eea98137b94b"
-                name="2147483647"
-                value="2147483647" />
-            </upperBound>
-          </objectNode>
-          <objectNode
             Id="68d50df0-47a2-4046-a29d-1d16214a24e1"
             name="Infomation Text"
             isLeaf="false"
@@ -5789,71 +5764,6 @@
             </upperBound>
           </objectNode>
           <objectNode
-            Id="ea63097e-1f7c-4614-8bbf-130a8d7d218a"
-            name="Produck ID"
-            isLeaf="false"
-            ordering="Unordered"
-            isControlType="false">
-            <upperBound>
-              <literalInteger
-                Id="d3b4f1ef-a4de-4b3c-b9e0-6627a1eed204"
-                name="2147483647"
-                value="2147483647" />
-            </upperBound>
-          </objectNode>
-          <objectNode
-            Id="6846afcf-cc15-477c-9243-84abcf6b2ee4"
-            name="Review"
-            isLeaf="false"
-            ordering="Unordered"
-            isControlType="false">
-            <upperBound>
-              <literalInteger
-                Id="3766d135-ff6a-4765-b1c7-c739996f0dbe"
-                name="2147483647"
-                value="2147483647" />
-            </upperBound>
-          </objectNode>
-          <objectNode
-            Id="c1c45028-8967-46b5-b04e-564c00d2ff7e"
-            name="ProductCatagory ID"
-            isLeaf="false"
-            ordering="Unordered"
-            isControlType="false">
-            <upperBound>
-              <literalInteger
-                Id="844ddfb9-1486-454a-a516-2fbf43806131"
-                name="2147483647"
-                value="2147483647" />
-            </upperBound>
-          </objectNode>
-          <objectNode
-            Id="7cc67b22-0a34-4991-8b1f-ac5285570e19"
-            name="Payment ID"
-            isLeaf="false"
-            ordering="Unordered"
-            isControlType="false">
-            <upperBound>
-              <literalInteger
-                Id="ab326448-faaa-4141-870f-370a2cdaf52a"
-                name="2147483647"
-                value="2147483647" />
-            </upperBound>
-          </objectNode>
-          <objectNode
-            Id="5f988a1e-b36d-4881-bb7e-05baed105351"
-            name="Orderitem ID"
-            isLeaf="false"
-            ordering="Unordered"
-            isControlType="false">
-            <upperBound>
-              <literalInteger
-                Id="cb4145a3-f696-4d3c-bdd7-661ac932dd50"
-                name="2147483647"
-                value="2147483647" />
-            </upperBound>
-          </objectNode>
-          <objectNode
             Id="8c66b73f-78f0-4b9e-8f66-bf056465b21d"
             name="Order ID"
             isLeaf="false"
@@ -5867,14 +5777,53 @@
             </upperBound>
           </objectNode>
           <objectNode
-            Id="689d2fec-318d-4e98-9822-cc790a1cd46f"
-            name="Infomation ID"
+            Id="85e6e0ea-02b0-4e83-a631-bdb808268c32"
+            name="GasStation ID1"
             isLeaf="false"
             ordering="Unordered"
             isControlType="false">
             <upperBound>
               <literalInteger
-                Id="59e2bb2f-25a0-49d0-880b-9503a52680f6"
+                Id="4e6e95c9-a4e6-4a12-b948-b1626c6c3567"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="e54ce5f1-c5bf-4c54-b015-4344b7c04645"
+            name="Customer ID1"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="250bd4a5-a1bf-4ec9-a19d-0953e8d33a82"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="ea45411e-4f33-43dd-8698-41cfc4cd27fb"
+            name="Order TotalPrice11"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="247dac93-7d9a-440a-8b9a-cddd3ed142ab"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="0f9435c7-b1bd-4630-95f0-389e2d0dcd14"
+            name="Order ID1"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="4454f982-e206-43bc-abd2-034ef2e6d412"
                 name="2147483647"
                 value="2147483647" />
             </upperBound>
