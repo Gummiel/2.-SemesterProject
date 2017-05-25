@@ -181,7 +181,7 @@
                 </Button>
             </Grid>
             <Grid x:Name="ReviewsGrid" Grid.Column="1" Margin="1,0">
-                <Button x:Name="BtnReviews" Content="Reviews" HorizontalAlignment="Stretch"
+                <Button x:Name="BtnReviews" Content="Anmeldelser" HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch" Style="{StaticResource NavigationButtonStyle}">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Click">
