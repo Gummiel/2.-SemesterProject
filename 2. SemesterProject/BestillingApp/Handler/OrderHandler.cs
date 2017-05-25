@@ -16,12 +16,13 @@ namespace BestillingApp.Handler
         #region Constructor
 
         public OrderHandler(ReviewViewModel reviewViewModel, OrderViewModel orderViewModel, MainViewModel mainViewModel,
-            MenuViewModel menuViewModel)
+            MenuViewModel menuViewModel, PaymentViewModel paymentViewModel)
         {
             ReviewViewModel = reviewViewModel;
             OrderViewModel = orderViewModel;
             MainViewModel = mainViewModel;
             MenuViewModel = menuViewModel;
+            PaymentViewModel = paymentViewModel;
         }
 
         #endregion
@@ -39,14 +40,14 @@ namespace BestillingApp.Handler
             var products =
                 MenuViewModel.ProductSingleton.Products.Where(product => product.FK_ProductCatagory == i.ID).ToList();
             MenuViewModel.ProductList = new ObservableCollection<Product>();
-            foreach (var prod in products)
+            foreach(var prod in products)
                 MenuViewModel.ProductList.Add(prod);
         }
 
 
         public async void AddSelectedProductToOrderItems(Product p)
         {
-            if (p == null)
+            if(p == null)
                 return;
             MenuViewModel.SelectedProduct = p;
             MenuViewModel.OrderSingleton.OrderItems.Add(p);
@@ -56,7 +57,7 @@ namespace BestillingApp.Handler
 
         public void RemoveSelectedProductToOrderItems(Product p)
         {
-            if (p == null)
+            if(p == null)
                 return;
             OrderViewModel.SelectedOrderItem = p;
             ConfirmRemoveSelectedProductToOrderItems("ER DU SIKKER PÅ AT DU VIL SLETTE " + p.Brand + " " + p.Name + "?");
@@ -86,7 +87,7 @@ namespace BestillingApp.Handler
             {
                 OrderViewModel.OrderSingleton.OrderItems.Remove(OrderViewModel.SelectedOrderItem);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 StatusRemoveSelectedProductToOrderItems("Der skete en fejl under sletning, prøv igen." + ex);
                 throw;
@@ -120,12 +121,18 @@ namespace BestillingApp.Handler
             //Skal få customer info på reviews
             //var firstOrDefault = ReviewViewModel.CustomerSingleton.Customers.Where(customer => customer.ID == reviews.Where(review => review.FK_Customer == customer.ID).FK_Customer);
             ReviewViewModel.ReviewList = new ObservableCollection<Review>();
-            foreach (var rev in reviews)
+            foreach(var rev in reviews)
                 ReviewViewModel.ReviewList.Add(rev);
         }
+        public void Pay()
+        {
+            
+        }
+
 
         #region Properties
 
+        public PaymentViewModel PaymentViewModel { get; set; }
         public OrderViewModel OrderViewModel { get; set; }
         public MainViewModel MainViewModel { get; set; }
         public MenuViewModel MenuViewModel { get; set; }

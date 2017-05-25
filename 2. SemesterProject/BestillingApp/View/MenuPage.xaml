@@ -217,7 +217,7 @@
                 </Button>
             </Grid>
             <Grid x:Name="ReviewsGrid" Grid.Column="1" Margin="1,0">
-                <Button x:Name="BtnReviews" Content="Reviews" HorizontalAlignment="Stretch"
+                <Button x:Name="BtnReviews" Content="Anmeldelser" HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch" Style="{StaticResource NavigationButtonStyle}">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Click">
@@ -246,7 +246,7 @@
                 <ComboBox x:Name="CBoxProductCatagory" HorizontalAlignment="Center" VerticalAlignment="Center"
                           ItemsSource="{Binding ProductCatagorySingleton.ProductCatagories}"
                           SelectedValue="{Binding ProductCatagorySingleton.ProductCatagories}" SelectedValuePath="ID"
-                          DisplayMemberPath="Name" PlaceholderText="Select Catagory" Width="300" Height="35">
+                          DisplayMemberPath="Name" PlaceholderText="Vælg Kategori" Width="300" Height="35">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="SelectionChanged">
                             <core:InvokeCommandAction Command="{Binding SelectedProductCatagoryCommand}"

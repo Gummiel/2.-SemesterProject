@@ -235,10 +235,10 @@
                     <RowDefinition Height="50" />
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
-                    <TextBlock x:Name="TextBlockRegisterAddress" Text="Address:" VerticalAlignment="Bottom" />
+                    <TextBlock x:Name="TextBlockRegisterAddress" Text="Adresse:" VerticalAlignment="Bottom" />
                 </Grid>
                 <Grid Grid.Row="1">
-                    <TextBox x:Name="TextBoxRegisterAddress" PlaceholderText="Address:" VerticalAlignment="Top" Text="{Binding Address, Mode=TwoWay}"
+                    <TextBox x:Name="TextBoxRegisterAddress" PlaceholderText="Adresse:" VerticalAlignment="Top" Text="{Binding Address, Mode=TwoWay}"
                              HorizontalAlignment="Left" Width="200" Height="50" />
                 </Grid>
             </Grid>
@@ -248,10 +248,10 @@
                     <RowDefinition Height="50" />
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
-                    <TextBlock x:Name="TextBlockRegisterTelNo" Text="TelNo:" VerticalAlignment="Bottom" />
+                    <TextBlock x:Name="TextBlockRegisterTelNo" Text="Tlf.:" VerticalAlignment="Bottom" />
                 </Grid>
                 <Grid Grid.Row="1">
-                    <TextBox x:Name="TextBoxRegisterTelNo" PlaceholderText="TelNo:" VerticalAlignment="Top" Text="{Binding TelNo, Mode=TwoWay}"
+                    <TextBox x:Name="TextBoxRegisterTelNo"  VerticalAlignment="Top" Text="{Binding TelNo, Mode=TwoWay}" PlaceholderText="TelNo:"
                              HorizontalAlignment="Left" Width="200" Height="50" />
                 </Grid>
             </Grid>
@@ -261,7 +261,7 @@
                     <RowDefinition Height="50" />
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
-                    <TextBlock x:Name="TextBlockRegisterZipCode" Text="ZipCode:" VerticalAlignment="Bottom" />
+                    <TextBlock x:Name="TextBlockRegisterZipCode" Text="Post nummer:" VerticalAlignment="Bottom" />
                 </Grid>
                 <Grid Grid.Row="1">
                     <TextBox x:Name="TextBoxRegisterZipCode" PlaceholderText="ZipCode:" VerticalAlignment="Top" Text="{Binding Zipcode, Mode=TwoWay}"
@@ -274,10 +274,10 @@
                     <RowDefinition Height="50" />
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
-                    <TextBlock x:Name="TextBlockRegisterCity" Text="City:" VerticalAlignment="Bottom" />
+                    <TextBlock x:Name="TextBlockRegisterCity" Text="By:" VerticalAlignment="Bottom" />
                 </Grid>
                 <Grid Grid.Row="1">
-                    <TextBox x:Name="TextBoxRegisterCity" PlaceholderText="City:" VerticalAlignment="Top" Text="{Binding City, Mode=TwoWay}"
+                    <TextBox x:Name="TextBoxRegisterCity" PlaceholderText="By:" VerticalAlignment="Top" Text="{Binding City, Mode=TwoWay}"
                              HorizontalAlignment="Left" Width="200" Height="50" />
                 </Grid>
             </Grid>

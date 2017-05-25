@@ -178,8 +178,8 @@
                            VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" />
             </Grid>
         </Grid>
-        <Grid x:Name="ContentGrid" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Grid Grid.Column="0" BorderThickness="0" BorderBrush="Black">
+        <Grid x:Name="ContentGrid" Grid.Row="1">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50" />
                     <RowDefinition Height="100" />
@@ -196,10 +196,10 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
-                        <TextBlock x:Name="TextBlockLoginEmail" Text="E-Mail:" VerticalAlignment="Bottom" />
+                        <TextBlock x:Name="TextBlockLoginEmail" Text="E-mail:" VerticalAlignment="Bottom" />
                     </Grid>
                     <Grid Grid.Row="1">
-                        <TextBox x:Name="TextBoxLoginEmail" Text="{Binding Email, Mode=TwoWay}" VerticalAlignment="Top"
+                        <TextBox x:Name="TextBoxLoginEmail" Text="{Binding Email, Mode=TwoWay}" PlaceholderText="Skriv din e-mail" VerticalAlignment="Top"
                                  HorizontalAlignment="Left" Width="150" Height="40" />
                     </Grid>
                 </Grid>
@@ -209,28 +209,25 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
-                        <TextBlock x:Name="TextBlockLoginPassword" Text="Kodeord:" VerticalAlignment="Bottom" />
+                        <TextBlock x:Name="TextBlockLoginPassword" Text="Adgangskode:" VerticalAlignment="Bottom" />
                     </Grid>
                     <Grid Grid.Row="1">
-                        <TextBox x:Name="TextBoxPassword" HorizontalAlignment="Left" Margin="0,0,0,10" TextWrapping="Wrap" Text="{Binding Password, Mode=TwoWay}" Width="151"/>
+                        <PasswordBox x:Name="TextBoxPassword" HorizontalAlignment="Left" Password="{Binding Password, Mode=TwoWay}" PlaceholderText="Skriv din kode" Width="150" Height="40" VerticalAlignment="Top" />
                     </Grid>
                 </Grid>
-                <Grid Grid.Row="3" Background="White" BorderThickness="0,0,0,1" BorderBrush="Black">
+                <Grid Grid.Row="3" BorderThickness="0,0,0,1" BorderBrush="Black">
                     <Button x:Name="ButtonLogin01" HorizontalAlignment="Left"
                             VerticalAlignment="Center" Click="ButtonLogin_Click" Foreground="Black"
                             Background="#FF559946" Width="100" Content="Login" />
                 </Grid>
-                <Grid Grid.Row="4" BorderThickness="0,1,0,0" BorderBrush="White">
-                    <AppBarButton x:Name="appBarButton" Label="" VerticalAlignment="Stretch" Width="168" Margin="10,-2,0,0" BorderThickness="0" Foreground="#FF157200" Background="Transparent">
-                        <AppBarButton.Icon>
-                            <FontIcon FontFamily="Segoe UI Semilight" Glyph="Click here to register" FontSize="17"/>
-                        </AppBarButton.Icon>
+                <Grid Grid.Row="4">
+                    <Button x:Name="ButtonCreateAccount" VerticalAlignment="Stretch" BorderThickness="0" Foreground="#FF157200" Background="Transparent" HorizontalAlignment="Stretch" Content="Opret konto" FontSize="17" FontFamily="Segoe UI Semilight">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
                                 <core:NavigateToPageAction TargetPage="BestillingApp.View.RegisterPage" />
                             </core:EventTriggerBehavior>
                         </interactivity:Interaction.Behaviors>
-                    </AppBarButton>
+                    </Button>
                 </Grid>
             </Grid>
         </Grid>
