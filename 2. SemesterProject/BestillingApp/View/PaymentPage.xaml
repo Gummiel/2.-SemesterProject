@@ -179,7 +179,46 @@
             </Grid>
         </Grid>
         <Grid x:Name="ContentGrid" Grid.Row="1">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <TextBlock x:Name="TextBlockAccountHolder" Text="Account Holder:" VerticalAlignment="Bottom" />
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <TextBox x:Name="TextBoxAccountHolder" Text="{Binding AccountHolder, Mode=TwoWay}" VerticalAlignment="Top"
+                                 HorizontalAlignment="Left" Width="150" Height="40" />
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <TextBlock x:Name="TextBlockLoginEmail" Text="E-mail:" VerticalAlignment="Bottom" />
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <TextBox x:Name="TextBoxLoginEmail" Text="{Binding Email, Mode=TwoWay}" VerticalAlignment="Top"
+                                 HorizontalAlignment="Left" Width="150" Height="40" />
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="2">
 
+                </Grid>
+                <Grid Grid.Row="3">
+
+                </Grid>
+            </Grid>
             <Button Content="Betal" HorizontalAlignment="Left" VerticalAlignment="Top" />
         </Grid>
     </Grid>

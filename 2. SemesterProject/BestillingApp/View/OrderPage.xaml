@@ -180,7 +180,7 @@
         </Grid>
         <Grid x:Name="ContentGrid" Grid.Row="1">
             <ListView x:Name="ListViewOrderItems" ItemsSource="{Binding OrderSingleton.OrderItems}"
-                      HorizontalAlignment="Center" VerticalAlignment="Top">
+                      HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,40">
                 <ListView.Resources>
                     <DataTemplate x:Key="ListViewProductsDataTemplate">
                         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0,0,0,1"
@@ -267,14 +267,13 @@
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
             </ListView>
-            <AppBarButton x:Name="AppBarButton" Icon="Accept" Label=""
-                          VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="60">
+            <Button x:Name="ButtonPay" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="200" Height="40" Content="Betal">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
                         <core:NavigateToPageAction TargetPage="BestillingApp.View.LoginPage" />
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
-            </AppBarButton>
+            </Button>
         </Grid>
     </Grid>
 </Page>

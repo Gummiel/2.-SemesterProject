@@ -251,7 +251,7 @@
                     <TextBlock x:Name="TextBlockRegisterTelNo" Text="Tlf.:" VerticalAlignment="Bottom" />
                 </Grid>
                 <Grid Grid.Row="1">
-                    <TextBox x:Name="TextBoxRegisterTelNo" PlaceholderText="TelNo:" VerticalAlignment="Top" Text="{Binding TelNo, Mode=TwoWay}"
+                    <TextBox x:Name="TextBoxRegisterTelNo"  VerticalAlignment="Top" Text="{Binding TelNo, Mode=TwoWay}" PlaceholderText="TelNo:"
                              HorizontalAlignment="Left" Width="200" Height="50" />
                 </Grid>
             </Grid>

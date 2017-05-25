@@ -29,6 +29,8 @@ namespace BestillingApp.ViewModel
         public static ReviewSingleton ReviewSingleton { get; set; }
         public static OrderSingleton OrderSingleton { get; set; }
 
+        public string AccountHolder { get; set; }
+
         #endregion
     }
 }
