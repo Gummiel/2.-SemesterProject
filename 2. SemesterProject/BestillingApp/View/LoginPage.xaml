@@ -223,7 +223,7 @@
                 <Grid Grid.Row="4" BorderThickness="0,1,0,0" BorderBrush="White">
                     <AppBarButton x:Name="appBarButton" Label="" VerticalAlignment="Stretch" Width="168" Margin="10,-2,0,0" BorderThickness="0" Foreground="#FF157200" Background="Transparent">
                         <AppBarButton.Icon>
-                            <FontIcon FontFamily="Segoe UI Semilight" Glyph="Click here to register" FontSize="17"/>
+                            <FontIcon FontFamily="Segoe UI Semilight" Glyph="Opret konto" FontSize="17"/>
                         </AppBarButton.Icon>
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
