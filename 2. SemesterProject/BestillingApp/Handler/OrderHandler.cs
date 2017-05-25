@@ -68,8 +68,8 @@ namespace BestillingApp.Handler
             // Create the message dialog and set its content
             var messageDialog = new MessageDialog(message);
 
-            messageDialog.Commands.Add(new UICommand("YES", ConfirmedRemoveSelectedProductToOrderItems));
-            messageDialog.Commands.Add(new UICommand("NO", null));
+            messageDialog.Commands.Add(new UICommand("JA", ConfirmedRemoveSelectedProductToOrderItems));
+            messageDialog.Commands.Add(new UICommand("NEJ", null));
 
             // Set the command that will be invoked by default
             messageDialog.DefaultCommandIndex = 0;
@@ -108,6 +108,9 @@ namespace BestillingApp.Handler
 
             // Set the command that will be invoked by default
             messageDialog.DefaultCommandIndex = 0;
+
+            // Set the command to be invoked when escape is pressed
+            messageDialog.CancelCommandIndex = 0;
 
             // Show the message dialog
             await messageDialog.ShowAsync();

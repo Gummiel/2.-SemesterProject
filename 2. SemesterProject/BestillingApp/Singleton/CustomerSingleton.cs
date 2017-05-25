@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using Windows.UI.Popups;
 using BestillingApp.Model;
 using BestillingApp.Persistency;
@@ -29,19 +30,43 @@ namespace BestillingApp.Singleton
             try
             {
                 var loadedcustomers = await PersistencyService.LoadCustomersFromJsonAsync();
-                if (loadedcustomers == null)
+
+                //check if # observablecollection GasStations # is different from # var loadedgasstations #
+                var firstNotSecond = Customers.Except(loadedcustomers).ToList();
+                //check if # var loadedgasstations # is different from # observablecollection GasStations #
+                var secondNotFirst = loadedcustomers.Except(Customers).ToList();
+
+                if(loadedcustomers == null)
                     return;
-                if (loadedcustomers.Count == 0)
-                    await new MessageDialog("Der findes nogen customers i databasen").ShowAsync();
-                else
-                    foreach (var cust in loadedcustomers)
+                if(loadedcustomers.Count == 0)
+                    LoadStatus("Der findes nogen customers i databasen");
+                if(!firstNotSecond.Any() && !secondNotFirst.Any())
+                    return;
+                foreach (var cust in loadedcustomers)
                         Customers.Add(cust);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                new MessageDialog("Der kunne ikke oprettes forbindelse til databasen").ShowAsync();
+                LoadStatus("Der kunne ikke oprettes forbindelse til databasen");
                 throw;
             }
+        }
+        
+        public async void LoadStatus(string message)
+        {
+            // Create the message dialog and set its content
+            var messageDialog = new MessageDialog(message);
+
+            messageDialog.Commands.Add(new UICommand("OK", null));
+
+            // Set the command that will be invoked by default
+            messageDialog.DefaultCommandIndex = 0;
+
+            // Set the command to be invoked when escape is pressed
+            messageDialog.CancelCommandIndex = 0;
+
+            // Show the message dialog
+            await messageDialog.ShowAsync();
         }
 
         #endregion

@@ -15,7 +15,7 @@ namespace BestillingApp.ViewModel
 
         public ReviewViewModel()
         {
-            OrderHandler = new OrderHandler(this, null, null, null);
+            OrderHandler = new OrderHandler(this, null, null, null, null);
             ReviewSingleton = ReviewSingleton.Instance;
             CustomerSingleton = CustomerSingleton.Instance;
             ReviewSingleton.LoadReviewAsync();

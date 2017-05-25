@@ -37,7 +37,7 @@ namespace BestillingApp.Singleton
                 if (loadedinformations == null)
                     return;
                 if (loadedinformations.Count == 0)
-                    await new MessageDialog("Der findes nogen informationer i databasen").ShowAsync();
+                    LoadStatus("Der findes nogen informationer i databasen");
                 foreach (var inf in loadedinformations)
                 {
                     if (inf.ID != OrderHandler.SelectedGasStation.ID) continue;
@@ -56,11 +56,28 @@ namespace BestillingApp.Singleton
                     break;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                new MessageDialog("Der kunne ikke oprettes forbindelse til databasen").ShowAsync();
+                LoadStatus("Der kunne ikke oprettes forbindelse til databasen");
                 throw;
             }
+        }
+
+        public async void LoadStatus(string message)
+        {
+            // Create the message dialog and set its content
+            var messageDialog = new MessageDialog(message);
+
+            messageDialog.Commands.Add(new UICommand("OK", null));
+
+            // Set the command that will be invoked by default
+            messageDialog.DefaultCommandIndex = 0;
+
+            // Set the command to be invoked when escape is pressed
+            messageDialog.CancelCommandIndex = 0;
+
+            // Show the message dialog
+            await messageDialog.ShowAsync();
         }
 
         #endregion

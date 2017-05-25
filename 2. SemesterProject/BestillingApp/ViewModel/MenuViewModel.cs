@@ -20,7 +20,7 @@ namespace BestillingApp.ViewModel
 
         public MenuViewModel()
         {
-            OrderHandler = new OrderHandler(null, null, null, this);
+            OrderHandler = new OrderHandler(null, null, null, this, null);
             ProductCatagorySingleton = ProductCatagorySingleton.Instance;
             ProductSingleton = ProductSingleton.Instance;
             //Eksempel for hvordan det ser ud i 1 singleton

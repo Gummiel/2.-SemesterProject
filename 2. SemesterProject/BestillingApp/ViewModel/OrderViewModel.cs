@@ -22,7 +22,7 @@ namespace BestillingApp.ViewModel
 
         public OrderViewModel()
         {
-            OrderHandler = new OrderHandler(null, this, null, null);
+            OrderHandler = new OrderHandler(null, this, null, null, null);
             CustomerSingleton = CustomerSingleton.Instance;
             ReceiptSingleton = ReceiptSingleton.Instance;
             OrderSingleton = OrderSingleton.Instance;

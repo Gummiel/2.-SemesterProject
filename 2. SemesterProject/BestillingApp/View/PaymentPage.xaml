@@ -261,7 +261,7 @@
                     <Button Content="Betal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
-                                <core:InvokeCommandAction Command="BestillingApp.View.RegisterPage" />
+                                <core:InvokeCommandAction Command="{Binding PayCommand}" />
                             </core:EventTriggerBehavior>
                         </interactivity:Interaction.Behaviors>
                     </Button>

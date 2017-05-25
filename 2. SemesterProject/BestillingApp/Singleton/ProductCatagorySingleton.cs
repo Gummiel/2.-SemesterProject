@@ -32,16 +32,32 @@ namespace BestillingApp.Singleton
                 if (loadedproductcatagories == null)
                     return;
                 if (loadedproductcatagories.Count == 0)
-                    await new MessageDialog("Der findes nogen itemtypes i databasen").ShowAsync();
+                    LoadStatus("Der findes nogen itemtypes i databasen");
                 else
                     foreach (var prodcat in loadedproductcatagories)
                         ProductCatagories.Add(prodcat);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                new MessageDialog("Der kunne ikke oprettes forbindelse til databasen").ShowAsync();
+                LoadStatus("Der kunne ikke oprettes forbindelse til databasen");
                 throw;
             }
+        }
+        public async void LoadStatus(string message)
+        {
+            // Create the message dialog and set its content
+            var messageDialog = new MessageDialog(message);
+
+            messageDialog.Commands.Add(new UICommand("OK", null));
+
+            // Set the command that will be invoked by default
+            messageDialog.DefaultCommandIndex = 0;
+
+            // Set the command to be invoked when escape is pressed
+            messageDialog.CancelCommandIndex = 0;
+
+            // Show the message dialog
+            await messageDialog.ShowAsync();
         }
 
         #endregion
