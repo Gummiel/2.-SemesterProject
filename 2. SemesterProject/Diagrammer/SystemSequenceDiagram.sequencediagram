@@ -404,7 +404,7 @@
               <messageOccurrenceSpecificationMoniker Id="a8385d26-e4e8-4353-9d04-e432c79c0784" LastKnownName="MessageOccurrenceSpecification70" />
             </receiveEvent>
           </message>
-          <message Id="3fca3834-762f-4ff2-9ecb-cacc1d946d69" name="Bruger vælger Productcatagori og vare" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+          <message Id="3fca3834-762f-4ff2-9ecb-cacc1d946d69" name="Bruger vælger produktkategori og vare" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
             <elementDefinition Id="2da1e7ac-4655-43c1-85e1-c46e6568e131" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="23c7ccb1-4bd1-441b-82cf-36180c4b3581" LastKnownName="MessageOccurrenceSpecification71" />

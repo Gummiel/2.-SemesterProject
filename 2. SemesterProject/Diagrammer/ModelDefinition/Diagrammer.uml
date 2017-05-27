@@ -1015,7 +1015,7 @@
           </message>
           <message
             Id="2da1e7ac-4655-43c1-85e1-c46e6568e131"
-            name="Bruger vælger Productcatagori og vare"
+            name="Bruger vælger produktkategori og vare"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
