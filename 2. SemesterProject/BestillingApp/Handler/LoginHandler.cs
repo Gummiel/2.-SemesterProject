@@ -25,7 +25,7 @@ namespace BestillingApp.Handler
         public Customer Login()
         {
             //Returner den customer som matcher email og password
-            var firstOrDefault = LoginViewModel.CustomerSingleton.Customers.FirstOrDefault(delegate(Customer customer)
+            var customerlogin = LoginViewModel.CustomerSingleton.Customers.FirstOrDefault(delegate (Customer customer)
             {
                 var email = customer.Email == LoginViewModel.Email;
                 var pass = customer.Password == LoginViewModel.Password;
@@ -34,9 +34,10 @@ namespace BestillingApp.Handler
 
                 return email && pass;
             });
-            LoginSingleton.Email = firstOrDefault.Email;
-            LoginSingleton.Name = firstOrDefault.Name;
-            return firstOrDefault;
+            if (customerlogin == null) return null;
+            LoginSingleton.Email = customerlogin.Email;
+            LoginSingleton.Name = customerlogin.Name;
+            return customerlogin;
         }
     }
 }
