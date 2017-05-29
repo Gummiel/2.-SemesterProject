@@ -21,6 +21,26 @@ namespace BestillingApp.Singleton
 
         #endregion
 
+        #region Remove
+
+        public void RemoveCustomer(Customer c)
+        {
+            //Customers.Remove(c);
+            PersistencyService.DeleteCustomerAsync(c);
+            //Hvis create og read er på samme side
+            //LoadCustomersAsync();
+        }
+
+        #endregion
+
+        public string GetName(string email)
+        {
+            foreach (var e in Customers)
+                if (e.Email == email)
+                    return e.Name;
+            return "findes ikke";
+        }
+
         #region LoadCustomerAsync
 
         public async void LoadCustomersAsync()
@@ -36,14 +56,14 @@ namespace BestillingApp.Singleton
                 //check if # var loadedgasstations # is different from # observablecollection GasStations #
                 var secondNotFirst = loadedcustomers.Except(Customers).ToList();
 
-                if(loadedcustomers == null)
+                if (loadedcustomers == null)
                     return;
-                if(loadedcustomers.Count == 0)
+                if (loadedcustomers.Count == 0)
                     LoadStatus("Der findes nogen customers i databasen");
-                if(!firstNotSecond.Any() && !secondNotFirst.Any())
+                if (!firstNotSecond.Any() && !secondNotFirst.Any())
                     return;
                 foreach (var cust in loadedcustomers)
-                        Customers.Add(cust);
+                    Customers.Add(cust);
             }
             catch (Exception)
             {
@@ -51,7 +71,7 @@ namespace BestillingApp.Singleton
                 throw;
             }
         }
-        
+
         public async void LoadStatus(string message)
         {
             // Create the message dialog and set its content
@@ -67,18 +87,6 @@ namespace BestillingApp.Singleton
 
             // Show the message dialog
             await messageDialog.ShowAsync();
-        }
-
-        #endregion
-
-        #region Remove
-
-        public void RemoveCustomer(Customer c)
-        {
-            //Customers.Remove(c);
-            PersistencyService.DeleteCustomerAsync(c);
-            //Hvis create og read er på samme side
-            //LoadCustomersAsync();
         }
 
         #endregion
@@ -101,7 +109,8 @@ namespace BestillingApp.Singleton
 
         #region Add
 
-        public void AddCustomer(string name, string email, string password, string address, int telNo, int zipcode, string city)
+        public void AddCustomer(string name, string email, string password, string address, int telNo, int zipcode,
+            string city)
         {
             //var newCustomer = new Customer(name, email, password, address, telNo, zipcode, city);
             //Customers.Add(newCustomer);

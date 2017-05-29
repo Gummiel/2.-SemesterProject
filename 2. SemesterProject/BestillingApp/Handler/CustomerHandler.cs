@@ -1,7 +1,5 @@
 ﻿#region References
 
-using System.Linq;
-using BestillingApp.Model;
 using BestillingApp.ViewModel;
 
 #endregion
@@ -28,7 +26,5 @@ namespace BestillingApp.Handler
         //        return email && pass;
         //    });
         //}
-
-        
     }
 }

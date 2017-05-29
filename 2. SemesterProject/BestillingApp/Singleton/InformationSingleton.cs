@@ -26,6 +26,18 @@ namespace BestillingApp.Singleton
 
         #endregion
 
+        #region Remove
+
+        public void RemoveInformation(Information i)
+        {
+            //Information.Remove(g);
+            PersistencyService.DeleteInformationAsync(i);
+            //Hvis delete og read er på samme side
+            //LoadInformationAsync();
+        }
+
+        #endregion
+
         #region LoadInformationAsync
 
         public async void LoadInformationAsync()
@@ -78,18 +90,6 @@ namespace BestillingApp.Singleton
 
             // Show the message dialog
             await messageDialog.ShowAsync();
-        }
-
-        #endregion
-
-        #region Remove
-
-        public void RemoveInformation(Information i)
-        {
-            //Information.Remove(g);
-            PersistencyService.DeleteInformationAsync(i);
-            //Hvis delete og read er på samme side
-            //LoadInformationAsync();
         }
 
         #endregion

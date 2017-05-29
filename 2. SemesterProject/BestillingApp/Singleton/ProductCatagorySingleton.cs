@@ -20,6 +20,18 @@ namespace BestillingApp.Singleton
 
         #endregion
 
+        #region Remove
+
+        public void RemoveProductCatagory(ProductCatagory c)
+        {
+            //ProductCatagorys.Remove(c);
+            PersistencyService.DeleteProductCatagoryAsync(c);
+            //Hvis create og read er på samme side
+            //LoadProductCatagorysAsync();
+        }
+
+        #endregion
+
         #region LoadProductCatagoryAsync
 
         public async void LoadProductCatagoryAsync()
@@ -43,6 +55,7 @@ namespace BestillingApp.Singleton
                 throw;
             }
         }
+
         public async void LoadStatus(string message)
         {
             // Create the message dialog and set its content
@@ -58,18 +71,6 @@ namespace BestillingApp.Singleton
 
             // Show the message dialog
             await messageDialog.ShowAsync();
-        }
-
-        #endregion
-
-        #region Remove
-
-        public void RemoveProductCatagory(ProductCatagory c)
-        {
-            //ProductCatagorys.Remove(c);
-            PersistencyService.DeleteProductCatagoryAsync(c);
-            //Hvis create og read er på samme side
-            //LoadProductCatagorysAsync();
         }
 
         #endregion

@@ -120,6 +120,7 @@
     <Compile Include="Singleton\CustomerSingleton.cs" />
     <Compile Include="Singleton\GasStationSingleton.cs" />
     <Compile Include="Singleton\InformationSingleton.cs" />
+    <Compile Include="Singleton\LoginSingleton.cs" />
     <Compile Include="Singleton\ProductSingleton.cs" />
     <Compile Include="Singleton\ProductCatagorySingleton.cs" />
     <Compile Include="Singleton\OrderSingleton.cs" />

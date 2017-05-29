@@ -1,5 +1,9 @@
+#region References
+
 using System;
 using System.Reflection;
+
+#endregion
 
 namespace BestillingWebService.Areas.HelpPage.ModelDescriptions
 {

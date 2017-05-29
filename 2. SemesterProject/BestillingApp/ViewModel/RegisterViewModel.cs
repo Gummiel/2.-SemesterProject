@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#region References
+
 using System.Windows.Input;
 using BestillingApp.Handler;
 using BestillingApp.Singleton;
 using ZPointApp.Common;
 
+#endregion
+
 namespace BestillingApp.ViewModel
 {
-    class RegisterViewModel
+    internal class RegisterViewModel
     {
-
         #region Constructor
 
         public RegisterViewModel()
@@ -29,6 +27,7 @@ namespace BestillingApp.ViewModel
         #region Properties
 
         private ICommand _registerCommand;
+
         public ICommand RegisterCommand
         {
             //Hvis _registerCommand er null, så opretter den en ny.

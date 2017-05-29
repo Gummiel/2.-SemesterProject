@@ -24,17 +24,11 @@ namespace BestillingApp.View
 
         private async void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
-
-            if (TextBlockLoginEmail.Text == "" || TextBlockLoginPassword.Text == "")
-            {
-
-                new MessageDialog("Forkert email eller kode");
-            }
-            //var customer = LoginViewModel.LoginHandler.Login();
-            //if (customer != null)
-            //    Frame.Navigate(typeof(PaymentPage));
-            //else
-            //    await new MessageDialog("Forkert email eller kode").ShowAsync();
+            var customer = LoginViewModel.LoginHandler.Login();
+            if (customer != null)
+                Frame.Navigate(typeof(PaymentPage));
+            else
+                await new MessageDialog("Forkert email eller kode").ShowAsync();
         }
     }
 }

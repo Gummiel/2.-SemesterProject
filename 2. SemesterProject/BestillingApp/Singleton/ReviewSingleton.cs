@@ -20,6 +20,18 @@ namespace BestillingApp.Singleton
 
         #endregion
 
+        #region Remove
+
+        public void RemoveReview(Review r)
+        {
+            //Reviews.Remove(r);
+            PersistencyService.DeleteReviewAsync(r);
+            //Hvis delete og read er på samme side
+            //LoadReviewAsync();
+        }
+
+        #endregion
+
         #region LoadReviewAsync
 
         public async void LoadReviewAsync()
@@ -43,6 +55,7 @@ namespace BestillingApp.Singleton
                 throw;
             }
         }
+
         public async void LoadStatus(string message)
         {
             // Create the message dialog and set its content
@@ -58,18 +71,6 @@ namespace BestillingApp.Singleton
 
             // Show the message dialog
             await messageDialog.ShowAsync();
-        }
-
-        #endregion
-
-        #region Remove
-
-        public void RemoveReview(Review r)
-        {
-            //Reviews.Remove(r);
-            PersistencyService.DeleteReviewAsync(r);
-            //Hvis delete og read er på samme side
-            //LoadReviewAsync();
         }
 
         #endregion

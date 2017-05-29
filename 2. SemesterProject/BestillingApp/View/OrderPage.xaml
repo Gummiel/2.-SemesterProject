@@ -267,7 +267,8 @@
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
             </ListView>
-            <Button x:Name="ButtonPay" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="200" Height="40" Content="Betal">
+            <Button x:Name="ButtonPay" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="200" Height="40"
+                    Content="Betal">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
                         <core:NavigateToPageAction TargetPage="BestillingApp.View.LoginPage" />

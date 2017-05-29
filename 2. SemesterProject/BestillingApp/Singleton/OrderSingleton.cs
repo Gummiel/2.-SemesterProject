@@ -43,6 +43,7 @@ namespace BestillingApp.Singleton
                 throw;
             }
         }
+
         public async void LoadStatus(string message)
         {
             // Create the message dialog and set its content

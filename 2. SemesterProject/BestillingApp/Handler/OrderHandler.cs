@@ -3,6 +3,8 @@
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using Windows.UI.Popups;
 using BestillingApp.Model;
 using BestillingApp.ViewModel;
@@ -27,7 +29,41 @@ namespace BestillingApp.Handler
 
         #endregion
 
-        public ReviewViewModel ReviewViewModel { get; set; }
+        public async Task<bool> Pay(string textBoxAccountHolder, string textBoxExpireDateMonth,
+            string textBoxExpireDateYear, string textBoxCvcNumber, string textBoxCreditCardNumber)
+        {
+            if ((textBoxAccountHolder != "") && (textBoxExpireDateMonth != "") && (textBoxExpireDateYear != "") &&
+                (textBoxCvcNumber != "") && (textBoxCreditCardNumber != ""))
+            {
+                var onlynumbers = new Regex("[0-9]");
+                var onlyletters = new Regex("^[a-zA-Z]*$");
+                if (!onlyletters.IsMatch(textBoxAccountHolder) || !onlynumbers.IsMatch(textBoxCreditCardNumber) ||
+                    !onlynumbers.IsMatch(textBoxCvcNumber))
+                {
+                    if (!onlyletters.IsMatch(textBoxAccountHolder))
+                        await new MessageDialog("DER MÅ IKKE VÆRE TAL I KORTHOLDER").ShowAsync();
+                    if (!onlynumbers.IsMatch(textBoxCreditCardNumber))
+                        await new MessageDialog("DER MÅ IKKE VÆRE BOGSTAVER I KORTNUMMER").ShowAsync();
+                    if (!onlynumbers.IsMatch(textBoxCvcNumber))
+                        await new MessageDialog("DER MÅ IKKE VÆRE BOGSTAVER I CVC").ShowAsync();
+                    if (!onlynumbers.IsMatch(textBoxExpireDateMonth))
+                        await new MessageDialog("DER MÅ IKKE VÆRE BOGSTAVER I MÅNED").ShowAsync();
+                    if (!onlynumbers.IsMatch(textBoxExpireDateYear))
+                        await new MessageDialog("DER MÅ IKKE VÆRE BOGSTAVER I ÅRSTAL").ShowAsync();
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                await new MessageDialog("DER ER FELTER SOM IKKE ER UDFYLDT").ShowAsync();
+            }
+            return false;
+        }
+
+        #region Method
 
         public void SetSelectedGasStation(GasStation g)
         {
@@ -40,14 +76,14 @@ namespace BestillingApp.Handler
             var products =
                 MenuViewModel.ProductSingleton.Products.Where(product => product.FK_ProductCatagory == i.ID).ToList();
             MenuViewModel.ProductList = new ObservableCollection<Product>();
-            foreach(var prod in products)
+            foreach (var prod in products)
                 MenuViewModel.ProductList.Add(prod);
         }
 
 
         public async void AddSelectedProductToOrderItems(Product p)
         {
-            if(p == null)
+            if (p == null)
                 return;
             MenuViewModel.SelectedProduct = p;
             MenuViewModel.OrderSingleton.OrderItems.Add(p);
@@ -57,7 +93,7 @@ namespace BestillingApp.Handler
 
         public void RemoveSelectedProductToOrderItems(Product p)
         {
-            if(p == null)
+            if (p == null)
                 return;
             OrderViewModel.SelectedOrderItem = p;
             ConfirmRemoveSelectedProductToOrderItems("ER DU SIKKER PÅ AT DU VIL SLETTE " + p.Brand + " " + p.Name + "?");
@@ -87,7 +123,7 @@ namespace BestillingApp.Handler
             {
                 OrderViewModel.OrderSingleton.OrderItems.Remove(OrderViewModel.SelectedOrderItem);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 StatusRemoveSelectedProductToOrderItems("Der skete en fejl under sletning, prøv igen." + ex);
                 throw;
@@ -124,14 +160,11 @@ namespace BestillingApp.Handler
             //Skal få customer info på reviews
             //var firstOrDefault = ReviewViewModel.CustomerSingleton.Customers.Where(customer => customer.ID == reviews.Where(review => review.FK_Customer == customer.ID).FK_Customer);
             ReviewViewModel.ReviewList = new ObservableCollection<Review>();
-            foreach(var rev in reviews)
+            foreach (var rev in reviews)
                 ReviewViewModel.ReviewList.Add(rev);
         }
-        public void Pay()
-        {
-            
-        }
 
+        #endregion
 
         #region Properties
 
@@ -140,6 +173,7 @@ namespace BestillingApp.Handler
         public MainViewModel MainViewModel { get; set; }
         public MenuViewModel MenuViewModel { get; set; }
         public static GasStation SelectedGasStation { get; set; }
+        public ReviewViewModel ReviewViewModel { get; set; }
 
         #endregion
     }

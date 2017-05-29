@@ -14,6 +14,7 @@
         #region Properties
 
         public int ID { get; set; }
+
         public decimal TotalPrice { get; set; }
 
         #endregion

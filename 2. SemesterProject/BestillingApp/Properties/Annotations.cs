@@ -29,9 +29,9 @@ namespace BestillingApp.Annotations
     /// </code>
     /// </example>
     [AttributeUsage(
-        AttributeTargets.Method | AttributeTargets.Parameter | AttributeTargets.Property |
-        AttributeTargets.Delegate | AttributeTargets.Field | AttributeTargets.Event |
-        AttributeTargets.Class | AttributeTargets.Interface | AttributeTargets.GenericParameter)]
+         AttributeTargets.Method | AttributeTargets.Parameter | AttributeTargets.Property |
+         AttributeTargets.Delegate | AttributeTargets.Field | AttributeTargets.Event |
+         AttributeTargets.Class | AttributeTargets.Interface | AttributeTargets.GenericParameter)]
     public sealed class CanBeNullAttribute : Attribute
     {
     }
@@ -47,9 +47,9 @@ namespace BestillingApp.Annotations
     /// </code>
     /// </example>
     [AttributeUsage(
-        AttributeTargets.Method | AttributeTargets.Parameter | AttributeTargets.Property |
-        AttributeTargets.Delegate | AttributeTargets.Field | AttributeTargets.Event |
-        AttributeTargets.Class | AttributeTargets.Interface | AttributeTargets.GenericParameter)]
+         AttributeTargets.Method | AttributeTargets.Parameter | AttributeTargets.Property |
+         AttributeTargets.Delegate | AttributeTargets.Field | AttributeTargets.Event |
+         AttributeTargets.Class | AttributeTargets.Interface | AttributeTargets.GenericParameter)]
     public sealed class NotNullAttribute : Attribute
     {
     }
@@ -60,8 +60,8 @@ namespace BestillingApp.Annotations
     ///     or of the Lazy.Value property can never be null.
     /// </summary>
     [AttributeUsage(
-        AttributeTargets.Method | AttributeTargets.Parameter | AttributeTargets.Property |
-        AttributeTargets.Delegate | AttributeTargets.Field)]
+         AttributeTargets.Method | AttributeTargets.Parameter | AttributeTargets.Property |
+         AttributeTargets.Delegate | AttributeTargets.Field)]
     public sealed class ItemNotNullAttribute : Attribute
     {
     }
@@ -72,8 +72,8 @@ namespace BestillingApp.Annotations
     ///     or of the Lazy.Value property can be null.
     /// </summary>
     [AttributeUsage(
-        AttributeTargets.Method | AttributeTargets.Parameter | AttributeTargets.Property |
-        AttributeTargets.Delegate | AttributeTargets.Field)]
+         AttributeTargets.Method | AttributeTargets.Parameter | AttributeTargets.Property |
+         AttributeTargets.Delegate | AttributeTargets.Field)]
     public sealed class ItemCanBeNullAttribute : Attribute
     {
     }
@@ -94,8 +94,8 @@ namespace BestillingApp.Annotations
     /// </code>
     /// </example>
     [AttributeUsage(
-        AttributeTargets.Constructor | AttributeTargets.Method |
-        AttributeTargets.Property | AttributeTargets.Delegate)]
+         AttributeTargets.Constructor | AttributeTargets.Method |
+         AttributeTargets.Property | AttributeTargets.Delegate)]
     public sealed class StringFormatMethodAttribute : Attribute
     {
         /// <param name="formatParameterName">
@@ -115,8 +115,8 @@ namespace BestillingApp.Annotations
     ///     Specify fields of which type should be used as values for this parameter.
     /// </summary>
     [AttributeUsage(
-        AttributeTargets.Parameter | AttributeTargets.Property | AttributeTargets.Field,
-        AllowMultiple = true)]
+         AttributeTargets.Parameter | AttributeTargets.Property | AttributeTargets.Field,
+         AllowMultiple = true)]
     public sealed class ValueProviderAttribute : Attribute
     {
         public ValueProviderAttribute([NotNull] string name)
@@ -565,9 +565,9 @@ namespace BestillingApp.Annotations
     /// </code>
     /// </example>
     [AttributeUsage(
-        AttributeTargets.Field | AttributeTargets.Property | AttributeTargets.Parameter | AttributeTargets.Method |
-        AttributeTargets.Class | AttributeTargets.Interface | AttributeTargets.Struct |
-        AttributeTargets.GenericParameter)]
+         AttributeTargets.Field | AttributeTargets.Property | AttributeTargets.Parameter | AttributeTargets.Method |
+         AttributeTargets.Class | AttributeTargets.Interface | AttributeTargets.Struct |
+         AttributeTargets.GenericParameter)]
     public sealed class ProvidesContextAttribute : Attribute
     {
     }
@@ -1085,7 +1085,7 @@ namespace BestillingApp.Annotations
     ///     The attribute must be mentioned in your member reordering patterns
     /// </remarks>
     [AttributeUsage(
-        AttributeTargets.Class | AttributeTargets.Interface | AttributeTargets.Struct | AttributeTargets.Enum)]
+         AttributeTargets.Class | AttributeTargets.Interface | AttributeTargets.Struct | AttributeTargets.Enum)]
     public sealed class NoReorderAttribute : Attribute
     {
     }

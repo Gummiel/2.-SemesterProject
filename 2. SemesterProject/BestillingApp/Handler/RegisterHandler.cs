@@ -1,24 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#region References
+
 using BestillingApp.Model;
 using BestillingApp.ViewModel;
 
+#endregion
+
 namespace BestillingApp.Handler
 {
-    class RegisterHandler
+    internal class RegisterHandler
     {
-        public RegisterViewModel RegisterViewModel { get; set; }
-
         public RegisterHandler(RegisterViewModel registerViewModel)
         {
             RegisterViewModel = registerViewModel;
         }
+
+        public RegisterViewModel RegisterViewModel { get; set; }
+
         public void Register()
         {
-            Customer aCustomer = new Customer(RegisterViewModel.Name, RegisterViewModel.Email, RegisterViewModel.Password, RegisterViewModel.Address, RegisterViewModel.TelNo, RegisterViewModel.Zipcode, RegisterViewModel.City);
+            var aCustomer = new Customer(RegisterViewModel.Name, RegisterViewModel.Email, RegisterViewModel.Password,
+                RegisterViewModel.Address, RegisterViewModel.TelNo, RegisterViewModel.Zipcode, RegisterViewModel.City);
             RegisterViewModel.CustomerSingleton.AddCustomer(aCustomer);
         }
     }
