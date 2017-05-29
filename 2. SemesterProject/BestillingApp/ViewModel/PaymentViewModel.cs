@@ -44,7 +44,7 @@ namespace BestillingApp.ViewModel
         public string ExpireDateMonth { get; set; }
         public string ExpireDateYear { get; set; }
 
-        public int CVCNumber { get; set; }
+        public int CvcNumber { get; set; }
 
         #endregion
     }

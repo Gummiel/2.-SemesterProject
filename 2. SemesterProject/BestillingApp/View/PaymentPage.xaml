@@ -240,7 +240,7 @@
                             <TextBlock x:Name="TextBlockCreditCardNumber" Text="Credit Card Number:" VerticalAlignment="Bottom" />
                         </Grid>
                         <Grid Grid.Row="1">
-                            <TextBox x:Name="TextBoxCreditCardNumber" Text="{Binding CreditCardNumber, Mode=TwoWay}" VerticalAlignment="Top"
+                            <TextBox x:Name="TextBoxCreditCardNumber" VerticalAlignment="Top"
                                  HorizontalAlignment="Left" Height="40" Width="150" />
                         </Grid>
                     </Grid>
@@ -253,17 +253,13 @@
                             <TextBlock x:Name="TextBlockCVCNumber" Text="CVC:" VerticalAlignment="Bottom" />
                         </Grid>
                         <Grid Grid.Row="1">
-                            <TextBox x:Name="TextBoxCVCNumber" Text="{Binding CVCNumber, Mode=TwoWay}" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <TextBox x:Name="TextBoxCVCNumber" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" />
                         </Grid>
                     </Grid>
                 </Grid>
                 <Grid Grid.Row="2">
-                    <Button Content="Betal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <interactivity:Interaction.Behaviors>
-                            <core:EventTriggerBehavior EventName="Click">
-                                <core:InvokeCommandAction Command="{Binding PayCommand}" />
-                            </core:EventTriggerBehavior>
-                        </interactivity:Interaction.Behaviors>
+                    <Button Content="Betal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click">
+                     
                     </Button>
                 </Grid>
             </Grid>

@@ -217,8 +217,8 @@
                 </Grid>
                 <Grid Grid.Row="3" BorderThickness="0,0,0,1" BorderBrush="Black">
                     <Button x:Name="ButtonLogin01" HorizontalAlignment="Left"
-                            VerticalAlignment="Center" Click="ButtonLogin_Click" Foreground="Black"
-                            Background="#FF559946" Width="100" Content="Login" />
+                            VerticalAlignment="Bottom" Click="ButtonLogin_Click" Foreground="Black"
+                            Background="#FF559946" Width="100" Content="Login" Margin="0,0,0,9" />
                 </Grid>
                 <Grid Grid.Row="4">
                     <Button x:Name="ButtonCreateAccount" VerticalAlignment="Stretch" BorderThickness="0" Foreground="#FF157200" Background="Transparent" HorizontalAlignment="Stretch" Content="Opret konto" FontSize="17" FontFamily="Segoe UI Semilight">

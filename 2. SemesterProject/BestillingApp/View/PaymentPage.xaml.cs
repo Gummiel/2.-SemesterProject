@@ -1,5 +1,7 @@
 ﻿#region References
 
+using System;
+using Windows.UI.Popups;
 using Windows.UI.Xaml.Controls;
 
 #endregion
@@ -16,6 +18,16 @@ namespace BestillingApp.View
         public PaymentPage()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            
+            if (TextBlockAccountHolder.Text == "" || TextBlockExpireDate.Text == "")
+            {
+                
+                new MessageDialog("Forkert email eller kode");
+            }
         }
     }
 }
