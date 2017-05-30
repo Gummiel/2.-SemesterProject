@@ -179,102 +179,114 @@
             </Grid>
         </Grid>
         <Grid x:Name="ContentGrid" Grid.Row="1">
-            <ListView x:Name="ListViewOrderItems" ItemsSource="{Binding OrderSingleton.OrderItems}"
-                      HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,40">
-                <ListView.Resources>
-                    <DataTemplate x:Key="ListViewProductsDataTemplate">
-                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0,0,0,1"
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <ListView x:Name="ListViewOrderItems" ItemsSource="{Binding OrderSingleton.OrderItems}"
+                      HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <ListView.Resources>
+                        <DataTemplate x:Key="ListViewProductsDataTemplate">
+                            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0,0,0,1"
                                     BorderBrush="Black" Width="440">
-                            <Grid HorizontalAlignment="Left" Width="440">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition MaxWidth="110" />
-                                    <ColumnDefinition Width="51" MaxWidth="110" />
-                                    <ColumnDefinition Width="59" MaxWidth="110" />
-                                </Grid.ColumnDefinitions>
-                                <Grid Grid.Column="0">
-                                    <TextBlock x:Name="TextBlockProductName" TextWrapping="Wrap"
+                                <Grid HorizontalAlignment="Left" Width="440">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition MaxWidth="110" />
+                                        <ColumnDefinition Width="51" MaxWidth="110" />
+                                        <ColumnDefinition Width="59" MaxWidth="110" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="0">
+                                        <TextBlock x:Name="TextBlockProductName" TextWrapping="Wrap"
                                                Text="{Binding Name}" HorizontalAlignment="Left"
                                                VerticalAlignment="Bottom" FontSize="14" />
-                                </Grid>
-                                <Grid Grid.Column="1">
-                                    <TextBlock x:Name="TextBlockProductBrand" TextWrapping="Wrap"
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <TextBlock x:Name="TextBlockProductBrand" TextWrapping="Wrap"
                                                Text="{Binding Brand}"
                                                HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="14" />
-                                </Grid>
-                                <Grid Grid.Column="2">
-                                    <TextBlock x:Name="TextBlockProductWeight" TextWrapping="Wrap"
+                                    </Grid>
+                                    <Grid Grid.Column="2">
+                                        <TextBlock x:Name="TextBlockProductWeight" TextWrapping="Wrap"
                                                Text="{Binding Weight}"
                                                HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="14" />
-                                </Grid>
-                                <Grid Grid.Column="3" HorizontalAlignment="Left">
+                                    </Grid>
+                                    <Grid Grid.Column="3" HorizontalAlignment="Left">
 
-                                    <TextBlock x:Name="TextBlockProductPrice" TextWrapping="Wrap"
+                                        <TextBlock x:Name="TextBlockProductPrice" TextWrapping="Wrap"
                                                Text="{Binding Price}" HorizontalAlignment="Right" Width="37"
                                                FontSize="14" />
-                                </Grid>
-                                <Grid HorizontalAlignment="Right" Width="22" Grid.Column="3">
-                                    <TextBlock x:Name="textBlockKr" Margin="0,0,3,0" TextWrapping="Wrap" Text="Kr."
+                                    </Grid>
+                                    <Grid HorizontalAlignment="Right" Width="22" Grid.Column="3">
+                                        <TextBlock x:Name="textBlockKr" Margin="0,0,3,0" TextWrapping="Wrap" Text="Kr."
                                                FontSize="14" />
+                                    </Grid>
                                 </Grid>
-                            </Grid>
-                        </StackPanel>
-                    </DataTemplate>
-                    <DataTemplate x:Key="ListViewProductsDataTemplateHeader">
-                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="0,0,0,2"
+                            </StackPanel>
+                        </DataTemplate>
+                        <DataTemplate x:Key="ListViewProductsDataTemplateHeader">
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="0,0,0,2"
                                     BorderBrush="Black">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="220" />
-                                    <ColumnDefinition Width="110" />
-                                    <ColumnDefinition Width="50" />
-                                    <ColumnDefinition Width="60" />
-                                </Grid.ColumnDefinitions>
-                                <Grid Grid.Column="0">
-                                    <TextBlock x:Name="TextBlockHeaderName" HorizontalAlignment="Left"
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="220" />
+                                        <ColumnDefinition Width="110" />
+                                        <ColumnDefinition Width="50" />
+                                        <ColumnDefinition Width="60" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="0">
+                                        <TextBlock x:Name="TextBlockHeaderName" HorizontalAlignment="Left"
                                                TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top"
                                                FontWeight="Bold" />
-                                </Grid>
-                                <Grid Grid.Column="1">
-                                    <TextBlock x:Name="TextBlockHeaderBrand" HorizontalAlignment="Left"
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <TextBlock x:Name="TextBlockHeaderBrand" HorizontalAlignment="Left"
                                                TextWrapping="Wrap" Text="Mærke" VerticalAlignment="Top"
                                                FontWeight="Bold" />
-                                </Grid>
-                                <Grid Grid.Column="2">
-                                    <TextBlock x:Name="TextBlockHeaderWeight" HorizontalAlignment="Left"
+                                    </Grid>
+                                    <Grid Grid.Column="2">
+                                        <TextBlock x:Name="TextBlockHeaderWeight" HorizontalAlignment="Left"
                                                TextWrapping="Wrap" Text="Vægt" VerticalAlignment="Top"
                                                FontWeight="Bold" />
-                                </Grid>
-                                <Grid Grid.Column="3">
-                                    <TextBlock x:Name="TextBlockHeaderPrice" HorizontalAlignment="Left"
+                                    </Grid>
+                                    <Grid Grid.Column="3">
+                                        <TextBlock x:Name="TextBlockHeaderPrice" HorizontalAlignment="Left"
                                                TextWrapping="Wrap" Text="Pris" VerticalAlignment="Top"
                                                FontWeight="Bold" />
+                                    </Grid>
                                 </Grid>
-                            </Grid>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.Resources>
-                <ListView.HeaderTemplate>
-                    <StaticResource ResourceKey="ListViewProductsDataTemplateHeader" />
-                </ListView.HeaderTemplate>
-                <ListView.ItemTemplate>
-                    <StaticResource ResourceKey="ListViewProductsDataTemplate" />
-                </ListView.ItemTemplate>
-                <interactivity:Interaction.Behaviors>
-                    <core:EventTriggerBehavior EventName="SelectionChanged">
-                        <core:InvokeCommandAction Command="{Binding SelectedOrderItemsCommand}"
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.Resources>
+                    <ListView.HeaderTemplate>
+                        <StaticResource ResourceKey="ListViewProductsDataTemplateHeader" />
+                    </ListView.HeaderTemplate>
+                    <ListView.ItemTemplate>
+                        <StaticResource ResourceKey="ListViewProductsDataTemplate" />
+                    </ListView.ItemTemplate>
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="SelectionChanged">
+                            <core:InvokeCommandAction Command="{Binding SelectedOrderItemsCommand}"
                                                   CommandParameter="{Binding SelectedItem, ElementName=ListViewOrderItems}" />
-                    </core:EventTriggerBehavior>
-                </interactivity:Interaction.Behaviors>
-            </ListView>
-            <Button x:Name="ButtonPay" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="200" Height="40"
-                    Content="Betal">
-                <interactivity:Interaction.Behaviors>
-                    <core:EventTriggerBehavior EventName="Click">
-                        <core:NavigateToPageAction TargetPage="BestillingApp.View.LoginPage" />
-                    </core:EventTriggerBehavior>
-                </interactivity:Interaction.Behaviors>
-            </Button>
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </ListView>
+            </Grid>
+            <Grid Grid.Row="1">
+                <TextBlock Text="Total" HorizontalAlignment="Center" />
+            </Grid>
+            <Grid Grid.Row="2">
+                <Button x:Name="ButtonPay" HorizontalAlignment="Center" Width="200" Height="40"
+                    Content="Betal" BorderThickness="0">
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:NavigateToPageAction TargetPage="BestillingApp.View.LoginPage" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </Button>
+            </Grid>
         </Grid>
     </Grid>
 </Page>
