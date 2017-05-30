@@ -231,84 +231,6 @@
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="697c5019-f82f-4fb9-bb7b-86ea5858450f"
-            isDerived="false"
-            sourceEndRoleName="CustomerSingleton"
-            targetEndRoleName="LoginViewModel"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="798a306b-c286-48e4-99c2-862fb4941f6c"
-              LastKnownName="LoginViewModel"
-              LastKnownLocation="Package_1248.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="898e9bb9-e624-4bd8-8217-5ec79bc727a7"
-                  name="CustomerSingleton"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="14c973d0-f4fa-4f1f-aae6-5a89cdea5170"
-                  name="LoginViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="8c1afb95-9b5b-4631-bf21-ffca4d0d9dbc"
-            isDerived="false"
-            sourceEndRoleName="CustomerSingleton"
-            targetEndRoleName="PaymentViewModel"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="de04cd44-85e1-4bfe-9ff5-020686e15b1e"
-              LastKnownName="PaymentViewModel"
-              LastKnownLocation="Package_1248.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="6ac1eef9-ad1b-4d82-ba06-13eadb0621bf"
-                  name="CustomerSingleton"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="8395c72d-caa5-42ad-9b6b-f9c00a3e724c"
-                  name="PaymentViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
             Id="1e66acd4-222f-49dc-9235-41f3add1f8dc"
             isDerived="false"
             sourceEndRoleName="CustomerSingleton"
@@ -467,45 +389,6 @@
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="86c73cca-d2aa-4962-84ad-44204fc631aa"
-            isDerived="false"
-            sourceEndRoleName="OrderSingleton"
-            targetEndRoleName="OrderViewModel"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="632adfaf-efba-4675-a3ca-54328182c572"
-              LastKnownName="OrderViewModel"
-              LastKnownLocation="Package_1248.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="60ee9b32-72da-4889-99bc-b3d771a66372"
-                  name="OrderSingleton"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="be547409-006e-4dbc-86e8-47c67f5241f8"
-                  name="OrderViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
             Id="6d796091-8c9e-4779-a4a3-9b64e2f54c4b"
             isDerived="false"
             sourceEndRoleName="OrderSingleton"
@@ -534,45 +417,6 @@
                 <memberEnd
                   Id="0f2f8c2d-097b-4c04-8df3-d85587fda127"
                   name="ReceiptViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="b7564f1d-52d6-4d6e-b1a3-91bf514bf469"
-            isDerived="false"
-            sourceEndRoleName="OrderSingleton"
-            targetEndRoleName="PaymentViewModel"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="de04cd44-85e1-4bfe-9ff5-020686e15b1e"
-              LastKnownName="PaymentViewModel"
-              LastKnownLocation="Package_1248.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="7062efa0-0c8e-4e74-9541-bd924acadaa1"
-                  name="OrderSingleton"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="f855c215-1a2f-4fb6-b494-76975e058e17"
-                  name="PaymentViewModel"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"

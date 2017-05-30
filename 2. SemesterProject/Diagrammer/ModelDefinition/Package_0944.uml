@@ -11,6 +11,86 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="30d73154-eae8-49b2-bdb6-cb2ee45c010e"
+            isDerived="false"
+            sourceEndRoleName="LoginHandler"
+            targetEndRoleName="LoginSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a8a63fab-604e-4561-865b-a6e9617a0725"
+              LastKnownName="LoginSingleton"
+              LastKnownLocation="Package_1334.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="72db702c-1944-4a1c-b1b4-7adc34e67eb7"
+                  name="LoginHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7320a6b7-5cde-459e-ab6b-15d9d0ed9265"
+                  name="LoginSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8d294e58-1d1a-4692-aee4-871782b99b60"
+            isDerived="false"
+            sourceEndRoleName="LoginHandler"
+            targetEndRoleName="LoginViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="798a306b-c286-48e4-99c2-862fb4941f6c"
+              LastKnownName="LoginViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="272f6b19-2e9c-4b33-b0bf-f5b18e777383"
+                  name="LoginHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a58d7bbe-a5af-4b41-aed9-244ecba265e2"
+                  name="LoginViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="ba5f9ec4-9bec-48cb-b59c-3484c6e55a66"
@@ -94,6 +174,203 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="ed2b5eda-7e80-422f-8413-1be1b81089f5"
+            isDerived="false"
+            sourceEndRoleName="OrderHandler"
+            targetEndRoleName="PaymentViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="de04cd44-85e1-4bfe-9ff5-020686e15b1e"
+              LastKnownName="PaymentViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="51784518-23d9-4e52-b4b1-2d04ac1e34b4"
+                  name="OrderHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a084a98c-85eb-4e76-8fc9-b1a886c0f54a"
+                  name="PaymentViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6eb55993-bd74-4ad4-bed1-9a2569e738bc"
+            isDerived="false"
+            sourceEndRoleName="OrderHandler"
+            targetEndRoleName="OrderViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="632adfaf-efba-4675-a3ca-54328182c572"
+              LastKnownName="OrderViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="07993a66-4832-40d0-9774-d1e03036ac32"
+                  name="OrderHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4c5b2e49-5017-40b7-b192-38b378f61d93"
+                  name="OrderViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f622dc2a-2048-49b7-b7c6-f27ff2b33338"
+            isDerived="false"
+            sourceEndRoleName="OrderHandler"
+            targetEndRoleName="MainViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ce9dbc5f-ac24-47f3-a5db-b6d437df39fe"
+              LastKnownName="MainViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="82f1d47b-903d-442c-9bde-fdb1ac3b141a"
+                  name="OrderHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9e4b2bfb-e89d-4174-9910-23bc4c79b64f"
+                  name="MainViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ff83ba96-b010-4d76-8b37-37ff3b6225d8"
+            isDerived="false"
+            sourceEndRoleName="OrderHandler"
+            targetEndRoleName="MenuViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="62b8a43c-6c4d-405b-847a-99e75422d515"
+              LastKnownName="MenuViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="13540cbb-356e-4548-9afe-144ff25564b0"
+                  name="OrderHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cd78edde-4f6d-4e95-8c17-611079333f6a"
+                  name="MenuViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ad542f5c-3de4-4e9d-8293-1b7bae19698b"
+            isDerived="false"
+            sourceEndRoleName="OrderHandler"
+            targetEndRoleName="ReviewViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="8f7055ff-b92d-4fad-9dd4-48a5d464a93d"
+              LastKnownName="ReviewViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="80183154-570d-4e96-af59-b1d681fc3c9f"
+                  name="OrderHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0a5ef120-4ff6-497b-bc9f-70af117b580a"
+                  name="ReviewViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="be5ca537-943a-4941-91cc-6dd87dbf8352"
@@ -212,7 +489,49 @@
         name="ReceiptHandler"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="063e6b1f-4e46-489c-9b6d-988cea150e3d"
+            isDerived="false"
+            sourceEndRoleName="ReceiptHandler"
+            targetEndRoleName="PaymentViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="de04cd44-85e1-4bfe-9ff5-020686e15b1e"
+              LastKnownName="PaymentViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="31bbedee-0626-4bbe-bc3b-ebd289bbeb80"
+                  name="ReceiptHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="afcb86aa-30ac-4423-88e9-41f7667394a9"
+                  name="PaymentViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -221,6 +540,86 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="7982ac4e-feb8-42c4-a007-16c023f30fe7"
+            isDerived="false"
+            sourceEndRoleName="RegisterHandler"
+            targetEndRoleName="RelayCommand"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="8d12f306-8eec-43b6-a912-fffe3865bdb3"
+              LastKnownName="RelayCommand"
+              LastKnownLocation="Package_1024.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c6398721-f555-4aad-9168-83997ba9049e"
+                  name="RegisterHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="50a158ae-fc00-4440-aea3-1a42182d0c8a"
+                  name="RelayCommand"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7d957d23-be3d-4896-9646-2d18918750f4"
+            isDerived="false"
+            sourceEndRoleName="RegisterHandler"
+            targetEndRoleName="RegisterViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="84690dc9-1eab-429d-9a0d-443970875e03"
+              LastKnownName="RegisterViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="01790b43-cb28-48e3-bdf1-be027e7bc73a"
+                  name="RegisterHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6e8c8127-4fca-4798-8425-eb3799f8907b"
+                  name="RegisterViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="f8fc0876-1694-44d4-8b63-308d0ddb50b1"
@@ -250,6 +649,47 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="78b29510-8c97-4aca-8084-6c44b8066e3d"
+            isDerived="false"
+            sourceEndRoleName="ReviewHandler"
+            targetEndRoleName="ReviewViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="8f7055ff-b92d-4fad-9dd4-48a5d464a93d"
+              LastKnownName="ReviewViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="205fe98c-07c3-4c5a-9942-506621552e5d"
+                  name="ReviewHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="018febb3-3122-4785-b4d9-1eaf61e1ead7"
+                  name="ReviewViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="5a8dee85-8420-4bf5-a0c9-2fed66432bbf"

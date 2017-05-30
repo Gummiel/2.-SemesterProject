@@ -2,4 +2,185 @@
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="c0da2309-34e3-4130-8dda-3fb98542a3c4"
-  name="Common" xmlns="http://schemas.microsoft.com/dsltools/ModelStore" />
+  name="Common" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="8d12f306-8eec-43b6-a912-fffe3865bdb3"
+        name="RelayCommand"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="b3a5e3b6-c0e4-4028-9a50-c8079c1090b0"
+            isDerived="false"
+            sourceEndRoleName="RelayCommand"
+            targetEndRoleName="RegisterViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="84690dc9-1eab-429d-9a0d-443970875e03"
+              LastKnownName="RegisterViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7e9efa33-876e-4da4-b7b4-918c95fd4f54"
+                  name="RelayCommand"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="53886e20-8193-4b2e-af9c-2902ef76ebf6"
+                  name="RegisterViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1577107d-0467-4f67-b016-fd18fbce4938"
+        name="RelayArgCommand"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="0a94321c-743b-4c25-9468-ce333726eed3"
+            isDerived="false"
+            sourceEndRoleName="RelayArgCommand"
+            targetEndRoleName="MainViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ce9dbc5f-ac24-47f3-a5db-b6d437df39fe"
+              LastKnownName="MainViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c0893626-2410-4add-89b0-78113343f369"
+                  name="RelayArgCommand"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8304004b-ae40-4c71-b446-3807eae508a7"
+                  name="MainViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="071474ac-eed8-49db-86b5-29a76606f765"
+            isDerived="false"
+            sourceEndRoleName="RelayArgCommand"
+            targetEndRoleName="MenuViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="62b8a43c-6c4d-405b-847a-99e75422d515"
+              LastKnownName="MenuViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="97c53fad-cca0-4ce5-b981-9b5a8bc2092a"
+                  name="RelayArgCommand"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6d88c0ef-1181-4e5e-8600-5e9dc3d9a1bf"
+                  name="MenuViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f67d63bd-e52f-4e1f-a3f9-4baeab5fe2ef"
+            isDerived="false"
+            sourceEndRoleName="RelayArgCommand"
+            targetEndRoleName="OrderViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="632adfaf-efba-4675-a3ca-54328182c572"
+              LastKnownName="OrderViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6d803f99-7ac4-40b2-8cf5-9536123cea74"
+                  name="RelayArgCommand"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="db73d8a9-c187-4725-9ab0-fa21d3bd5191"
+                  name="OrderViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
