@@ -57,6 +57,18 @@
       <SubType>Content</SubType>
       <DependentUpon>login.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="ModelDefinition\Package_0944.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0948.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0954.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1024.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package_1248.uml">
       <SubType>Content</SubType>
     </Content>

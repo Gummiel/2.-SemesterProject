@@ -35,8 +35,8 @@ namespace BestillingApp.ViewModel
         public string AccountHolder { get; set; }
         public int CreditCardNumber { get; set; }
         public DateTime DateTime { get; set; }
-        public string ExpireDateMonth { get; set; }
-        public string ExpireDateYear { get; set; }
+        public int ExpireDateMonth { get; set; }
+        public int ExpireDateYear { get; set; }
         public int CvcNumber { get; set; }
         public string Email { get; set; }
         public string Name { get; set; }

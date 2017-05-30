@@ -301,5 +301,37 @@
         </targetEnds>
       </class>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="353a8e53-79f5-4304-8769-c2bb0638f5c2"
+        name="InfoPage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9f8b05dc-ca58-4327-9112-a64c07ac95c8"
+        name="MenuPage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3e0a88d6-a35f-4e6b-bee8-486d603580a5"
+        name="RegisterPage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4c8b1bc7-46a0-4dd1-800f-ac6e741cce7a"
+        name="ReviewsPage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
   </packagedElements>
 </package>

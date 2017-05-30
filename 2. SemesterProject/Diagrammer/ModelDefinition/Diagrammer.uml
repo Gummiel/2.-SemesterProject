@@ -7537,6 +7537,46 @@
         Id="0d6ce489-56c6-4cf9-adbe-650072b5c8c3"
         name="ExecutionEvent" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="27a24f1b-a237-469c-8b62-af20a62438d6"
+        LastKnownName="Handler"
+        LastKnownLocation="Package_0944.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b9df8df7-fad7-4fe5-b1ef-06535f87ecdf"
+        name="Class2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9dc133f6-08f0-42eb-aa62-66e90736637d"
+        LastKnownName="Persistency"
+        LastKnownLocation="Package_0948.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f6a3bc6f-8278-4d5d-9bb7-a69ce61c5015"
+        name="Class3"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="09df46ee-e92b-4574-a845-aea48ae1a57a"
+        LastKnownName="DummyClasses"
+        LastKnownLocation="Package_0954.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c0da2309-34e3-4130-8dda-3fb98542a3c4"
+        LastKnownName="Common"
+        LastKnownLocation="Package_1024.uml" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
