@@ -2,6 +2,7 @@
 
 using System.Web.Http;
 using System.Web.Mvc;
+using BestillingWebService.Areas.HelpPage.App_Start;
 
 #endregion
 

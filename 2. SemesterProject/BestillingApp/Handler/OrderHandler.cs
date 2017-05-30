@@ -1,7 +1,6 @@
 ﻿#region References
 
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -74,7 +73,8 @@ namespace BestillingApp.Handler
         public void SetSelectedProductCatagory(ProductCatagory i)
         {
             MenuViewModel.SelectedProductCatagory = i;
-            var products = MenuViewModel.ProductSingleton.Products.Where(product => product.FK_ProductCatagory == i.ID).ToList();
+            var products =
+                MenuViewModel.ProductSingleton.Products.Where(product => product.FK_ProductCatagory == i.ID).ToList();
 
             //var products = new List<Product>();
             //foreach (var product in MenuViewModel.ProductSingleton.Products)

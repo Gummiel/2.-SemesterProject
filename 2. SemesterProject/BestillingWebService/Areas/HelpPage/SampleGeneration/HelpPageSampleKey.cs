@@ -7,7 +7,7 @@ using System.Net.Http.Headers;
 
 #endregion
 
-namespace BestillingWebService.Areas.HelpPage
+namespace BestillingWebService.Areas.HelpPage.SampleGeneration
 {
     /// <summary>
     ///     This is used to identify the place where the sample should be applied.

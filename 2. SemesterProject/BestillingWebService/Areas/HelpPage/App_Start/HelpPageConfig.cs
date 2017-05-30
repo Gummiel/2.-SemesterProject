@@ -3,6 +3,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Net.Http.Headers;
 using System.Web.Http;
+using BestillingWebService.Areas.HelpPage.SampleGeneration;
 
 #endregion
 
@@ -10,7 +11,7 @@ using System.Web.Http;
 using System.Web.Http.OData;
 #endif
 
-namespace BestillingWebService.Areas.HelpPage
+namespace BestillingWebService.Areas.HelpPage.App_Start
 {
     /// <summary>
     ///     Use this class to customize the Help Page.

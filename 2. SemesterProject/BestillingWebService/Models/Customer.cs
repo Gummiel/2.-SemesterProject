@@ -15,6 +15,7 @@ namespace BestillingWebService.Models
         [SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Customer()
         {
+            Receipt = new HashSet<Receipt>();
             Review = new HashSet<Review>();
         }
 
@@ -43,6 +44,9 @@ namespace BestillingWebService.Models
         [Required]
         [StringLength(50)]
         public string City { get; set; }
+
+        [SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Receipt> Receipt { get; set; }
 
         [SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Review> Review { get; set; }

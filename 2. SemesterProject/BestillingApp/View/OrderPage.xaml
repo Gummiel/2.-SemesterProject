@@ -180,17 +180,17 @@
         </Grid>
         <Grid x:Name="ContentGrid" Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="40"/>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="40" />
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <ListView x:Name="ListViewOrderItems" ItemsSource="{Binding OrderSingleton.OrderItems}"
-                      HorizontalAlignment="Center" VerticalAlignment="Top">
+                          HorizontalAlignment="Center" VerticalAlignment="Top">
                     <ListView.Resources>
                         <DataTemplate x:Key="ListViewProductsDataTemplate">
                             <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0,0,0,1"
-                                    BorderBrush="Black" Width="440">
+                                        BorderBrush="Black" Width="440">
                                 <Grid HorizontalAlignment="Left" Width="440">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" />
@@ -200,35 +200,35 @@
                                     </Grid.ColumnDefinitions>
                                     <Grid Grid.Column="0">
                                         <TextBlock x:Name="TextBlockProductName" TextWrapping="Wrap"
-                                               Text="{Binding Name}" HorizontalAlignment="Left"
-                                               VerticalAlignment="Bottom" FontSize="14" />
+                                                   Text="{Binding Name}" HorizontalAlignment="Left"
+                                                   VerticalAlignment="Bottom" FontSize="14" />
                                     </Grid>
                                     <Grid Grid.Column="1">
                                         <TextBlock x:Name="TextBlockProductBrand" TextWrapping="Wrap"
-                                               Text="{Binding Brand}"
-                                               HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="14" />
+                                                   Text="{Binding Brand}"
+                                                   HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="14" />
                                     </Grid>
                                     <Grid Grid.Column="2">
                                         <TextBlock x:Name="TextBlockProductWeight" TextWrapping="Wrap"
-                                               Text="{Binding Weight}"
-                                               HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="14" />
+                                                   Text="{Binding Weight}"
+                                                   HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="14" />
                                     </Grid>
                                     <Grid Grid.Column="3" HorizontalAlignment="Left">
 
                                         <TextBlock x:Name="TextBlockProductPrice" TextWrapping="Wrap"
-                                               Text="{Binding Price}" HorizontalAlignment="Right" Width="37"
-                                               FontSize="14" />
+                                                   Text="{Binding Price}" HorizontalAlignment="Right" Width="37"
+                                                   FontSize="14" />
                                     </Grid>
                                     <Grid HorizontalAlignment="Right" Width="22" Grid.Column="3">
                                         <TextBlock x:Name="textBlockKr" Margin="0,0,3,0" TextWrapping="Wrap" Text="Kr."
-                                               FontSize="14" />
+                                                   FontSize="14" />
                                     </Grid>
                                 </Grid>
                             </StackPanel>
                         </DataTemplate>
                         <DataTemplate x:Key="ListViewProductsDataTemplateHeader">
                             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="0,0,0,2"
-                                    BorderBrush="Black">
+                                        BorderBrush="Black">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="220" />
@@ -238,23 +238,23 @@
                                     </Grid.ColumnDefinitions>
                                     <Grid Grid.Column="0">
                                         <TextBlock x:Name="TextBlockHeaderName" HorizontalAlignment="Left"
-                                               TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top"
-                                               FontWeight="Bold" />
+                                                   TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top"
+                                                   FontWeight="Bold" />
                                     </Grid>
                                     <Grid Grid.Column="1">
                                         <TextBlock x:Name="TextBlockHeaderBrand" HorizontalAlignment="Left"
-                                               TextWrapping="Wrap" Text="Mærke" VerticalAlignment="Top"
-                                               FontWeight="Bold" />
+                                                   TextWrapping="Wrap" Text="Mærke" VerticalAlignment="Top"
+                                                   FontWeight="Bold" />
                                     </Grid>
                                     <Grid Grid.Column="2">
                                         <TextBlock x:Name="TextBlockHeaderWeight" HorizontalAlignment="Left"
-                                               TextWrapping="Wrap" Text="Vægt" VerticalAlignment="Top"
-                                               FontWeight="Bold" />
+                                                   TextWrapping="Wrap" Text="Vægt" VerticalAlignment="Top"
+                                                   FontWeight="Bold" />
                                     </Grid>
                                     <Grid Grid.Column="3">
                                         <TextBlock x:Name="TextBlockHeaderPrice" HorizontalAlignment="Left"
-                                               TextWrapping="Wrap" Text="Pris" VerticalAlignment="Top"
-                                               FontWeight="Bold" />
+                                                   TextWrapping="Wrap" Text="Pris" VerticalAlignment="Top"
+                                                   FontWeight="Bold" />
                                     </Grid>
                                 </Grid>
                             </StackPanel>
@@ -269,7 +269,7 @@
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="SelectionChanged">
                             <core:InvokeCommandAction Command="{Binding SelectedOrderItemsCommand}"
-                                                  CommandParameter="{Binding SelectedItem, ElementName=ListViewOrderItems}" />
+                                                      CommandParameter="{Binding SelectedItem, ElementName=ListViewOrderItems}" />
                         </core:EventTriggerBehavior>
                     </interactivity:Interaction.Behaviors>
                 </ListView>
@@ -279,7 +279,7 @@
             </Grid>
             <Grid Grid.Row="2">
                 <Button x:Name="ButtonPay" HorizontalAlignment="Center" Width="200" Height="40"
-                    Content="Betal" BorderThickness="0">
+                        Content="Betal" BorderThickness="0">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Click">
                             <core:NavigateToPageAction TargetPage="BestillingApp.View.LoginPage" />
