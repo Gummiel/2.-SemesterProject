@@ -269,7 +269,7 @@
 
                                     <Grid Grid.Column="0">
                                         <TextBlock x:Name="TextBlockFooterTotalPriceText" HorizontalAlignment="Left"
-                                                   TextWrapping="Wrap" Text="I alt bliver det:" VerticalAlignment="Top"
+                                                   TextWrapping="Wrap" Text="I alt:" VerticalAlignment="Top"
                                                    FontWeight="Bold" />
                                     </Grid>
                                     <Grid Grid.Column="1">

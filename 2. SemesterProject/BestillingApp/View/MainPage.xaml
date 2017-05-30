@@ -170,8 +170,7 @@
         </Grid>
 
         <Grid x:Name="ContentGrid" Grid.Row="1">
-            <ListView x:Name="ListViewGasStations" ItemsSource="{Binding GasStationSingleton.GasStations}"
-                      VerticalAlignment="Top" Margin="0,10,0,0" HorizontalAlignment="Center" Width="400">
+            <ListView x:Name="ListViewGasStations" ItemsSource="{Binding GasStationSingleton.GasStations}" Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <ListView.Resources>
                     <DataTemplate x:Key="ListViewGasStationsDataTemplate">
                         <StackPanel>
@@ -182,7 +181,7 @@
                                 </Grid.RowDefinitions>
                                 <Grid Grid.Row="0">
                                     <TextBlock x:Name="TextBlockGasStationName" TextWrapping="Wrap"
-                                               Text="{Binding Name}" HorizontalAlignment="Left" FontSize="14" />
+                                               Text="{Binding Name}" HorizontalAlignment="Left" FontSize="18" />
                                 </Grid>
                                 <Grid Grid.Row="1">
                                     <Grid.ColumnDefinitions>
@@ -194,25 +193,25 @@
                                     </Grid.ColumnDefinitions>
                                     <Grid Grid.Column="0">
                                         <TextBlock x:Name="TextBlockGasStationsAddress" TextWrapping="Wrap"
-                                                   Text="{Binding Address}" HorizontalAlignment="Left" FontSize="8" />
+                                                   Text="{Binding Address}" HorizontalAlignment="Left" FontSize="12" />
                                     </Grid>
                                     <Grid Grid.Column="1">
                                         <TextBlock x:Name="TextBlockGasStationsCommaBetweenAddressAndZipcode"
-                                                   TextWrapping="Wrap" Text="," HorizontalAlignment="Left" FontSize="8"
+                                                   TextWrapping="Wrap" Text=", " HorizontalAlignment="Left" FontSize="12"
                                                    Padding="0,0,1,0" />
                                     </Grid>
                                     <Grid Grid.Column="2">
                                         <TextBlock x:Name="TextBlockGasStationsZipcode" TextWrapping="Wrap"
-                                                   Text="{Binding Zipcode}" HorizontalAlignment="Left" FontSize="8" />
+                                                   Text="{Binding Zipcode}" HorizontalAlignment="Left" FontSize="12" />
                                     </Grid>
                                     <Grid Grid.Column="3">
                                         <TextBlock x:Name="TextBlockGasStationsCommaBetweenZipcodeAndCity"
-                                                   TextWrapping="Wrap" Text="," HorizontalAlignment="Left" FontSize="8"
+                                                   TextWrapping="Wrap" Text=", " HorizontalAlignment="Left" FontSize="12"
                                                    Padding="0,0,1,0" />
                                     </Grid>
                                     <Grid Grid.Column="4">
                                         <TextBlock x:Name="TextBlockGasStationsCity" TextWrapping="Wrap"
-                                                   Text="{Binding City}" HorizontalAlignment="Left" FontSize="8" />
+                                                   Text="{Binding City}" HorizontalAlignment="Left" FontSize="12" />
                                     </Grid>
                                 </Grid>
                             </Grid>
