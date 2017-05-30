@@ -14,9 +14,9 @@ namespace BestillingApp.Handler
         }
 
         public LoginViewModel LoginViewModel { get; set; }
+        //{
 
         //public void Login()
-        //{
         //    //login
         //    //Returner den customer som matcher email og password
         //    var firstOrDefault = LoginViewModel.CustomerSingleton.Customers.FirstOrDefault(delegate(Customer customer)

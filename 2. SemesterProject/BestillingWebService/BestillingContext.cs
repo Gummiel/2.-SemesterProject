@@ -29,9 +29,21 @@ namespace BestillingWebService
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Customer>()
+                .HasMany(e => e.Receipt)
+                .WithRequired(e => e.Customer)
+                .HasForeignKey(e => e.FK_Customer_ID)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Customer>()
                 .HasMany(e => e.Review)
                 .WithOptional(e => e.Customer)
                 .HasForeignKey(e => e.FK_Customer);
+
+            modelBuilder.Entity<GasStation>()
+                .HasMany(e => e.Receipt)
+                .WithRequired(e => e.GasStation)
+                .HasForeignKey(e => e.FK_GasStation_ID)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<GasStation>()
                 .HasMany(e => e.Review)
@@ -42,6 +54,12 @@ namespace BestillingWebService
             modelBuilder.Entity<Order>()
                 .Property(e => e.TotalPrice)
                 .HasPrecision(9, 2);
+
+            modelBuilder.Entity<Order>()
+                .HasMany(e => e.Receipt)
+                .WithRequired(e => e.Order)
+                .HasForeignKey(e => e.FK_Order_ID)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<OrderItem>()
                 .Property(e => e.Price)
@@ -56,14 +74,6 @@ namespace BestillingWebService
                 .WithRequired(e => e.ProductCatagory)
                 .HasForeignKey(e => e.FK_ProductCatagory)
                 .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Receipt>()
-                .Property(e => e.TotalPrice)
-                .HasPrecision(9, 2);
-
-            modelBuilder.Entity<Receipt>()
-                .Property(e => e.Price)
-                .HasPrecision(7, 2);
         }
     }
 }

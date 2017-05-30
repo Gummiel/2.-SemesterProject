@@ -1,6 +1,5 @@
 #region References
 
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 #endregion
@@ -12,33 +11,16 @@ namespace BestillingWebService.Models
     {
         public int ID { get; set; }
 
-        [Required]
-        [StringLength(100)]
-        public string Name { get; set; }
+        public int FK_GasStation_ID { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string Email { get; set; }
+        public int FK_Customer_ID { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string Address { get; set; }
+        public int FK_Order_ID { get; set; }
 
-        public int TelNo { get; set; }
+        public virtual Customer Customer { get; set; }
 
-        public int Zipcode { get; set; }
+        public virtual GasStation GasStation { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string City { get; set; }
-
-        public decimal TotalPrice { get; set; }
-
-        [Required]
-        public string Description { get; set; }
-
-        public int Amount { get; set; }
-
-        public decimal Price { get; set; }
+        public virtual Order Order { get; set; }
     }
 }

@@ -4,11 +4,11 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
-using BestillingApp.Annotations;
+using BestillingApp.Common;
 using BestillingApp.Handler;
 using BestillingApp.Model;
+using BestillingApp.Properties;
 using BestillingApp.Singleton;
-using ZPointApp.Common;
 
 #endregion
 

@@ -5,7 +5,7 @@ using System.Windows.Input;
 
 #endregion
 
-namespace ZPointApp.Common
+namespace BestillingApp.Common
 {
     /// <summary>
     ///     A command whose sole purpose is to relay its functionality

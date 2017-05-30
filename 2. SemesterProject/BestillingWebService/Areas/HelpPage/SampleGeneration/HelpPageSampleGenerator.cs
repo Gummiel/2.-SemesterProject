@@ -17,7 +17,7 @@ using Newtonsoft.Json;
 
 #endregion
 
-namespace BestillingWebService.Areas.HelpPage
+namespace BestillingWebService.Areas.HelpPage.SampleGeneration
 {
     /// <summary>
     ///     This class will generate the samples for the help page.

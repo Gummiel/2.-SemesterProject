@@ -25,7 +25,7 @@ namespace BestillingApp.Handler
         public Customer Login()
         {
             //Returner den customer som matcher email og password
-            var customerlogin = LoginViewModel.CustomerSingleton.Customers.FirstOrDefault(delegate (Customer customer)
+            var customerlogin = LoginViewModel.CustomerSingleton.Customers.FirstOrDefault(delegate(Customer customer)
             {
                 var email = customer.Email == LoginViewModel.Email;
                 var pass = customer.Password == LoginViewModel.Password;

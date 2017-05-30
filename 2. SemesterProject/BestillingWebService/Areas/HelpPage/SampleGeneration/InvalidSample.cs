@@ -4,7 +4,7 @@ using System;
 
 #endregion
 
-namespace BestillingWebService.Areas.HelpPage
+namespace BestillingWebService.Areas.HelpPage.SampleGeneration
 {
     /// <summary>
     ///     This represents an invalid sample on the help page. There's a display template named InvalidSample associated with

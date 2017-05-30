@@ -13,6 +13,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using BestillingWebService.Areas.HelpPage.ModelDescriptions;
 using BestillingWebService.Areas.HelpPage.Models;
+using BestillingWebService.Areas.HelpPage.SampleGeneration;
 
 #endregion
 

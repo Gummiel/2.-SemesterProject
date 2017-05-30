@@ -5,7 +5,7 @@ using System.Windows.Input;
 
 #endregion
 
-namespace ZPointApp.Common
+namespace BestillingApp.Common
 {
     internal class RelayArgCommand<T> : ICommand
     {
