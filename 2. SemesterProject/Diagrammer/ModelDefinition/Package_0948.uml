@@ -11,6 +11,125 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="cb69baa6-ebf7-43ad-80ec-a7ac883db047"
+            isDerived="false"
+            sourceEndRoleName="PersistencyService"
+            targetEndRoleName="CustomerSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3d67f97a-9d08-4467-9ec8-2e954ca490b4"
+              LastKnownName="CustomerSingleton"
+              LastKnownLocation="Package_1334.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7263bddc-0109-4266-8e95-9f7a30726ec8"
+                  name="PersistencyService"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="606c4967-f188-4d85-a961-9a8c017663d1"
+                  name="CustomerSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f45eb6c2-e96b-4191-aa38-f947aabad2dd"
+            isDerived="false"
+            sourceEndRoleName="PersistencyService"
+            targetEndRoleName="GasStationSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="cf2af258-5a0f-4456-b844-b96c8d11f702"
+              LastKnownName="GasStationSingleton"
+              LastKnownLocation="Package_1334.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fdcb0844-d764-4712-9405-7dbbc2d8a61b"
+                  name="PersistencyService"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d2081b0d-527c-499d-b532-a079975f210f"
+                  name="GasStationSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="64f10fac-2eac-4cdd-b12f-d1c16f8d53fb"
+            isDerived="false"
+            sourceEndRoleName="PersistencyService"
+            targetEndRoleName="OrderSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4994e127-1652-40b4-91cc-18edf654b111"
+              LastKnownName="OrderSingleton"
+              LastKnownLocation="Package_1334.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5792d869-6fdb-41b4-a9d6-dd38ac2ca537"
+                  name="PersistencyService"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="761ee49b-973f-4742-98d7-fd9903a7b363"
+                  name="OrderSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="72ace17c-fd9f-4cbf-967f-7d80feebdbb1"

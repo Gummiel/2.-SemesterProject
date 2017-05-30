@@ -90,6 +90,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="825acb2e-c1a5-4348-83aa-1905402013fe"
+            isDerived="false"
+            sourceEndRoleName="Order"
+            targetEndRoleName="OrderSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4994e127-1652-40b4-91cc-18edf654b111"
+              LastKnownName="OrderSingleton"
+              LastKnownLocation="Package_1334.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="764d002d-ae81-4238-976b-fd572702a8db"
+                  name="Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="87eb4c51-93da-43fa-980d-d56d46383a26"
+                  name="OrderSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -247,6 +286,45 @@
                 <memberEnd
                   Id="7e107369-c1bf-4f2b-aa26-e12abd891efc"
                   name="PersistencyService"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="311dc29c-d7a3-481d-8a54-ac5e3fe1f89a"
+            isDerived="false"
+            sourceEndRoleName="Customer"
+            targetEndRoleName="ReviewViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="8f7055ff-b92d-4fad-9dd4-48a5d464a93d"
+              LastKnownName="ReviewViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c26588fc-dbe9-43ba-bae9-479baa5bf701"
+                  name="Customer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="de869dc3-ce56-4d56-8a50-9987dfaa592c"
+                  name="ReviewViewModel"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -758,6 +836,84 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="4412411a-5c98-4a8a-9549-f21f3a66f820"
+            isDerived="false"
+            sourceEndRoleName="Review"
+            targetEndRoleName="ReviewSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="75754609-1e18-4af2-bf15-6147ead53577"
+              LastKnownName="ReviewSingleton"
+              LastKnownLocation="Package_1334.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1859a5e1-4f66-416b-9961-2d986e54b013"
+                  name="Review"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="47f68b09-dd79-4caf-b7c8-df0c36d64ee6"
+                  name="ReviewSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c5f9053b-6593-480f-b917-65a56430cb08"
+            isDerived="false"
+            sourceEndRoleName="Review"
+            targetEndRoleName="ReviewViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="8f7055ff-b92d-4fad-9dd4-48a5d464a93d"
+              LastKnownName="ReviewViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e1613eb3-f0bb-44fd-b844-7344a114833c"
+                  name="Review"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ab21fdd1-be6d-4f9c-b075-3d01c59b878a"
+                  name="ReviewViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -939,6 +1095,45 @@
                 <memberEnd
                   Id="6fbd9ade-3669-4d56-9f76-d3fae718aab1"
                   name="PersistencyService"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="bcc712c4-3340-4fb0-b4e2-97c6c8fceb6d"
+            isDerived="false"
+            sourceEndRoleName="Order Item"
+            targetEndRoleName="OrderSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4994e127-1652-40b4-91cc-18edf654b111"
+              LastKnownName="OrderSingleton"
+              LastKnownLocation="Package_1334.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aef63813-958f-443c-afcf-2ad26ef588a1"
+                  name="Order Item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6fa77966-27d9-41e2-b8de-ec2579014b2f"
+                  name="OrderSingleton"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1233,7 +1428,7 @@
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="ce265fe8-e139-4a7c-b154-7956053af786"
+            Id="ef209cdf-5ddc-456d-85b8-4d54353f19b1"
             isDerived="false"
             sourceEndRoleName="Information"
             targetEndRoleName="PersistencyService"
@@ -1246,7 +1441,7 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="b0bbabd0-85ca-40dd-9508-82a72416ac4c"
+                  Id="2d66582a-486b-4679-a611-702e7a95db7b"
                   name="Information"
                   isLeaf="false"
                   isStatic="false"
@@ -1259,8 +1454,47 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="13b81200-aa52-4eb4-85d6-80ae77b01efd"
+                  Id="71251212-5268-477c-b8b6-f54621732718"
                   name="PersistencyService"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="cef02ad8-43c7-4a53-8e9f-5ea80e08f60b"
+            isDerived="false"
+            sourceEndRoleName="Information"
+            targetEndRoleName="InformationSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3a91851a-6ac2-46e1-b6a9-e0a3d17e142c"
+              LastKnownName="InformationSingleton"
+              LastKnownLocation="Package_1334.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a1d3a365-2310-4416-8237-9894912f56fc"
+                  name="Information"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4a38faf7-41b1-4983-9cab-e31d8572a531"
+                  name="InformationSingleton"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1648,6 +1882,123 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="c1003b20-6cb1-4207-a6ed-4c4c1f75e64f"
+            isDerived="false"
+            sourceEndRoleName="Product"
+            targetEndRoleName="OrderSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4994e127-1652-40b4-91cc-18edf654b111"
+              LastKnownName="OrderSingleton"
+              LastKnownLocation="Package_1334.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="430697da-d0e0-4f73-b29d-f25251ab73ed"
+                  name="Product"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fbd8d847-38be-4f6b-85bb-6dff852fcc7e"
+                  name="OrderSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="bec38e84-0c4e-44dd-8ab9-f4e1ac2bb008"
+            isDerived="false"
+            sourceEndRoleName="Product"
+            targetEndRoleName="ProductSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="046297b2-fcc5-46ea-b27e-f3a3e576cfd5"
+              LastKnownName="ProductSingleton"
+              LastKnownLocation="Package_1334.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5dfa6b87-5081-4efd-b11c-8410b585ec19"
+                  name="Product"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5642bdad-0cf5-4d3c-83e0-52098cff6143"
+                  name="ProductSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="0cc7b14f-cf7d-467b-a085-8381a3697907"
+            isDerived="false"
+            sourceEndRoleName="Product"
+            targetEndRoleName="MenuViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="62b8a43c-6c4d-405b-847a-99e75422d515"
+              LastKnownName="MenuViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f26f0eec-a450-463d-a816-aeaec28a5d45"
+                  name="Product"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aa8ea1f1-0200-4483-9cd1-6da029afd287"
+                  name="MenuViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -1891,6 +2242,84 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="84d7c993-4ca6-4cae-a886-78d568877e32"
+            isDerived="false"
+            sourceEndRoleName="ProductCatagory"
+            targetEndRoleName="ProductCatagorySingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a704d9f2-3c02-4c9a-9235-b3df3bf69fd3"
+              LastKnownName="ProductCatagorySingleton"
+              LastKnownLocation="Package_1334.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="17cec9b4-0a51-4c07-9e6f-4e71562e38f1"
+                  name="ProductCatagory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0e2d24b7-a867-4d96-a9a2-a328b7b146b1"
+                  name="ProductCatagorySingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2007dab9-be5b-4f85-b8d8-dad523340a82"
+            isDerived="false"
+            sourceEndRoleName="ProductCatagory"
+            targetEndRoleName="MenuViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="62b8a43c-6c4d-405b-847a-99e75422d515"
+              LastKnownName="MenuViewModel"
+              LastKnownLocation="Package_1248.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a9e27228-5a24-4170-bb8b-3a79c0c45e08"
+                  name="ProductCatagory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8a4795a8-3bb1-432a-95b7-ec3bd294c4f7"
+                  name="MenuViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -2010,6 +2439,45 @@
                 <memberEnd
                   Id="f636a014-54cd-4932-94f1-724ec7487119"
                   name="PersistencyService"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="362fe110-93ea-4857-b183-9fa013039f3d"
+            isDerived="false"
+            sourceEndRoleName="Receipt"
+            targetEndRoleName="ReceiptSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9b3fa52a-487f-41df-9e2a-a92d9adee632"
+              LastKnownName="ReceiptSingleton"
+              LastKnownLocation="Package_1334.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="25772faf-9496-4fac-98f9-d564a5395ce5"
+                  name="Receipt"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3f5152b4-1d43-4355-afec-c0283f558850"
+                  name="ReceiptSingleton"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
