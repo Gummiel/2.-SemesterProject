@@ -185,11 +185,11 @@
                 <Grid x:Name="TakGrid" HorizontalAlignment="Left" VerticalAlignment="Top">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="50" />
-                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="150" />
                             <ColumnDefinition Width="150" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
@@ -199,10 +199,6 @@
                         </Grid>
                         <Grid Grid.Column="1">
                             <TextBlock x:Name="TextBlockName" Text="{Binding LoginSingleton.Name}"
-                                       VerticalAlignment="Top" HorizontalAlignment="Left" />
-                        </Grid>
-                        <Grid Grid.ColumnSpan="2" Margin="0,102,149,-102">
-                            <TextBlock x:Name="TextBlockEmail" Text="{Binding LoginSingleton.Email}"
                                        VerticalAlignment="Top" HorizontalAlignment="Left" />
                         </Grid>
                     </Grid>
@@ -220,6 +216,10 @@
                                        Text="Der vil blive tilsendt en ordrebekræftelse til følgende e-mail adresse:"
                                        HorizontalAlignment="Left" VerticalAlignment="Top" />
                         </Grid>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <TextBlock x:Name="TextBlockEmail" Text="{Binding LoginSingleton.Email}"
+                                       VerticalAlignment="Top" HorizontalAlignment="Left" />
                     </Grid>
                 </Grid>
             </Grid>
