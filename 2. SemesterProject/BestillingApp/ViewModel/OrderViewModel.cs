@@ -1,5 +1,6 @@
 ﻿#region References
 
+using System.Linq;
 using System.Windows.Input;
 using BestillingApp.Handler;
 using BestillingApp.Model;
@@ -26,6 +27,12 @@ namespace BestillingApp.ViewModel
             CustomerSingleton = CustomerSingleton.Instance;
             ReceiptSingleton = ReceiptSingleton.Instance;
             OrderSingleton = OrderSingleton.Instance;
+            //OrderSingleton.OrderItems.Sum(delegate(Product product) { return product.Price; });
+            TotalPrice = OrderSingleton.OrderItems.Sum(product => product.Price);
+            //decimal sum = 0;
+            //foreach (var product in OrderSingleton.OrderItems)
+            //    sum += product.Price;
+            //sum;
         }
 
         #endregion
@@ -43,6 +50,8 @@ namespace BestillingApp.ViewModel
             }
             set { _selectedOrderItemsCommand = value; }
         }
+
+        public decimal TotalPrice { get; set; }
 
         public static Product SelectedOrderItem { get; set; }
         public OrderHandler OrderHandler { get; set; }
