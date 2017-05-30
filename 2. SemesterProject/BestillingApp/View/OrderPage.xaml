@@ -181,7 +181,6 @@
         <Grid x:Name="ContentGrid" Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
-                <RowDefinition Height="20" />
                 <RowDefinition Height="40" />
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
@@ -259,10 +258,35 @@
                                 </Grid>
                             </StackPanel>
                         </DataTemplate>
+                        <DataTemplate x:Key="ListViewProductsDataTemplateFooter">
+                            <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" BorderThickness="0,0,0,2"
+                                        BorderBrush="Black">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100" />
+                                        <ColumnDefinition Width="60" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid Grid.Column="0">
+                                        <TextBlock x:Name="TextBlockFooterTotalPriceText" HorizontalAlignment="Left"
+                                                   TextWrapping="Wrap" Text="I alt bliver det:" VerticalAlignment="Top"
+                                                   FontWeight="Bold" />
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <TextBlock x:Name="TextBlockHeaderTotalPrice" HorizontalAlignment="Left"
+                                                   TextWrapping="Wrap" Text="{Binding TotalPrice}" VerticalAlignment="Top"
+                                                   FontWeight="Bold" />
+                                    </Grid>
+                                </Grid>
+                            </StackPanel>
+                        </DataTemplate>
                     </ListView.Resources>
                     <ListView.HeaderTemplate>
                         <StaticResource ResourceKey="ListViewProductsDataTemplateHeader" />
                     </ListView.HeaderTemplate>
+                    <ListView.FooterTemplate>
+                        <StaticResource ResourceKey="ListViewProductsDataTemplateFooter" />
+                    </ListView.FooterTemplate>
                     <ListView.ItemTemplate>
                         <StaticResource ResourceKey="ListViewProductsDataTemplate" />
                     </ListView.ItemTemplate>
@@ -273,9 +297,6 @@
                         </core:EventTriggerBehavior>
                     </interactivity:Interaction.Behaviors>
                 </ListView>
-            </Grid>
-            <Grid Grid.Row="1">
-                <TextBlock Text="Total" HorizontalAlignment="Center" />
             </Grid>
             <Grid Grid.Row="2">
                 <Button x:Name="ButtonPay" HorizontalAlignment="Center" Width="200" Height="40"

@@ -11,8 +11,6 @@ namespace BestillingApp.ViewModel
 {
     internal class PaymentViewModel
     {
-        private ICommand _payCommand;
-
         #region Constructor
 
         public PaymentViewModel()
