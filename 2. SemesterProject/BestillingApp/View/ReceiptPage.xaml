@@ -201,7 +201,7 @@
                             <TextBlock x:Name="TextBlockName" Text="{Binding LoginSingleton.Name}"
                                        VerticalAlignment="Top" HorizontalAlignment="Left" />
                         </Grid>
-                        <Grid Grid.Column="2">
+                        <Grid Grid.ColumnSpan="2" Margin="0,102,149,-102">
                             <TextBlock x:Name="TextBlockEmail" Text="{Binding LoginSingleton.Email}"
                                        VerticalAlignment="Top" HorizontalAlignment="Left" />
                         </Grid>
