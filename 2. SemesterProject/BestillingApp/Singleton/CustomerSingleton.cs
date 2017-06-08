@@ -11,12 +11,13 @@ using BestillingApp.Persistency;
 
 namespace BestillingApp.Singleton
 {
-    internal class CustomerSingleton
+    public class CustomerSingleton
     {
         #region Constructor
 
         private CustomerSingleton()
         {
+            //LoadCustomersAsync();
         }
 
         #endregion
@@ -124,7 +125,6 @@ namespace BestillingApp.Singleton
             //Customer newCustomer = new Customer(id, name, email, address, telNo, zipcode, city);
             Customers.Add(c);
             PersistencyService.SaveCustomerAsJsonAsync(c);
-            //Hvis create og read er på samme side
             //LoadCustomersAsync();
         }
 

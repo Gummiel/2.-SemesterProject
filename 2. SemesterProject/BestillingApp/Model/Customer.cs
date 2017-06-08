@@ -1,6 +1,6 @@
 ﻿namespace BestillingApp.Model
 {
-    internal class Customer
+    public class Customer
     {
         #region Constructor
 
